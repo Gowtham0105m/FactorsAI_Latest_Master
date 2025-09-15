@@ -178,7 +178,7 @@ describe('Funnel Report Login', () => {
         cy.wait(Timeout.xs)
     })
 
-    it('Funnel Report - Edit Details', () => {
+    it.only('Funnel Report - Edit Details', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;

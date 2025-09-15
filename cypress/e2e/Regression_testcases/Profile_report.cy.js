@@ -418,7 +418,7 @@ describe('Profile Report Regression', () => {
         cy.wait(Timeout.xs)
     })
 
-    it('TC_RE_16 - Profile Report - report to the dashboard ', () => {
+    it.only('TC_RE_16 - Profile Report - report to the dashboard ', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
