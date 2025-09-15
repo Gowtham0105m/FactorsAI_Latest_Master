@@ -145,7 +145,7 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.xs)
   })
 
-  it('Engagements HubSpot Forms', () => {
+  it.only('Engagements HubSpot Forms', () => {
 
     const randomNumber = Math.floor(Math.random() * 90) + 10;
     const testName = `HubSpot Forms Demo ES ${randomNumber}`;

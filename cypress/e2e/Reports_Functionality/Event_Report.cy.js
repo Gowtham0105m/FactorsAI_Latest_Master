@@ -331,7 +331,7 @@ describe('Event Report Login', () => {
     cy.wait(Timeout.xs)
   })
 
-  it.only('Event Report - Share to Slack', () => {
+  it('Event Report - Share to Slack', () => {
 
     const nowTime = dayjs().format('H:m:s');
     const testName = `Demo_${nowTime}`;

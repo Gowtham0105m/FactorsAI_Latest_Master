@@ -1296,6 +1296,7 @@ class locators {
     this.Yes_Delete = '//span[text()="Yes, Delete"]';
     this.Factors_Icon = '#fa-at-link--home';
     this.Subscribe_Digest_Segment = '[data-icon="envelope-circle-check"]';
+    this.Google_Conversion_Action_Dropdown_Option = '//div[@class="rc-virtual-list-holder"]//div[@title]';
 
   }
 }

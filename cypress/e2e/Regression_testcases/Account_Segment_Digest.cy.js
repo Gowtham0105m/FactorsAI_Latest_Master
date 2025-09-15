@@ -18,7 +18,7 @@ describe('Accounts Segment Digest Login', () => {
         Login1();
 
     })
-    it.only('Account Segment Digest', () => {
+    it('Account Segment Digest', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
