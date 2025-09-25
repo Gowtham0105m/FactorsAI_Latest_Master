@@ -19,7 +19,7 @@ describe('Google Enhanced Conversions Login', () => {
 
     })
 
-    it('Google Enhanced Conversions - Conversion feedback for Leads with Use the Deal amount', () => {
+    it.only('Google Enhanced Conversions - Conversion feedback for Leads with Use the Deal amount', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const Ad_Account = "7108784795";
@@ -65,7 +65,6 @@ describe('Google Enhanced Conversions Login', () => {
         methods.clickElement(`div[title="${Ad_Account}"]`)
         methods.clickElement0(locators.Search, 1)
         methods.VisibilityofElement(locators.Slack_Channel_List)
-        // methods.clickElement(locators.GetStartedButtonClick)
         methods.clickElementIndexXpath(locators.Google_Conversion_Action_Dropdown_Option, 1)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.select_event_1)
@@ -173,7 +172,6 @@ describe('Google Enhanced Conversions Login', () => {
         methods.clickElement(`div[title="${Ad_Account}"]`)
         methods.clickElement0(locators.Search, 1)
         methods.VisibilityofElement(locators.Slack_Channel_List)
-        // methods.clickElement(locators.GetStartedButtonClick)
         methods.clickElementIndexXpath(locators.Google_Conversion_Action_Dropdown_Option, 1)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.select_event_1)
@@ -276,7 +274,6 @@ describe('Google Enhanced Conversions Login', () => {
         methods.clickElement(locators.ConversionfeedbackforLeads_Option)
         methods.clickElement0(locators.Search, 1)
         methods.VisibilityofElement(locators.Slack_Channel_List)
-        // methods.clickElement(locators.GetStartedButtonClick)
         methods.clickElementIndexXpath(locators.Google_Conversion_Action_Dropdown_Option, 1)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.select_event_1)
@@ -376,7 +373,6 @@ describe('Google Enhanced Conversions Login', () => {
         methods.clickElement(locators.ConversionfeedbackforLeads_Option)
         methods.clickElement0(locators.Search, 1)
         methods.VisibilityofElement(locators.Slack_Channel_List)
-        // methods.clickElement(locators.GetStartedButtonClick)
         methods.clickElementIndexXpath(locators.Google_Conversion_Action_Dropdown_Option, 1)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.select_event_1)
@@ -469,7 +465,6 @@ describe('Google Enhanced Conversions Login', () => {
         methods.clickElement(`div[title="${Ad_Account}"]`)
         methods.clickElement0(locators.Search, 1)
         methods.VisibilityofElement(locators.Slack_Channel_List)
-        // methods.clickElement(locators.GetStartedButtonClick)
         methods.clickElementIndexXpath(locators.Google_Conversion_Action_Dropdown_Option, 1)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.select_event_1)

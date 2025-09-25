@@ -40,6 +40,7 @@ describe('Linkedin_Conversion(CAPI) Login', () => {
         methods.clickElementByXPath(locators.pageview_option1)
         methods.clickElementByXPath(locators.pageview_option1)
         methods.clickElementByXPath(locators.SelectConversionEvent)
+        cy.wait(Timeout.sm)
         methods.VisibilityofElement(locators.Slack_Channel_List)
         methods.typeElementByXPath(locators.SelectConversionEvent, "test c")
         methods.clickElementByXPath(locators.test_capi)

@@ -18,7 +18,7 @@ describe('Hidden Accounts', () => {
 
     })
 
-    it('Hidden Accounts', () => {
+    it.only('Hidden Accounts', () => {
 
         cy.wait(Timeout.md)
         methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
@@ -61,6 +61,7 @@ describe('Hidden Accounts', () => {
         methods.clickElementByXPath(locators.Account_Configurations)
         methods.assertElementContainsText(locators.Page_title, 'Account Configurations')
         cy.wait(Timeout.sm)
+        // methods.CompareScreenShot('Configurations')
         methods.VisibilityofElementXpath(locators.panel_engagementScoring)
         methods.clickElementByXPath(locators.Hidden_Accounts)
         methods.VisibilityofElementXpath(locators.panel_hiddenAccounts)

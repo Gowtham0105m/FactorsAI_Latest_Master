@@ -1,5 +1,5 @@
 import Login1 from '../PageObjects/Login1';
-import { deviceViewport, Timeout} from '../Utils.js';
+import { deviceViewport, Timeout } from '../Utils.js';
 import methods from '../../support/Common_Method.js'
 import locators from '../../support/Locators.js'
 
@@ -38,6 +38,4 @@ describe('Settings Page Login', () => {
             methods.Titletextcontains1(locators.Page_title, 0, item.key)
         });
     });
-
-
 })

@@ -87,6 +87,7 @@ describe('Event Report Login', () => {
     methods.clickElementIndexXpath(locators.Run_Analysis1, 0)
     methods.VisibilityofElement(locators.Profile_report_gen)
     cy.wait(Timeout.xs)
+    methods.ElementToBeClickableXpath(locators.Save_1)
     methods.MouseoverWithXpath(locators.Save_dropdown)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Save_as_New)
@@ -114,6 +115,7 @@ describe('Event Report Login', () => {
     methods.clickElementByXPath(locators.Run_Analysis1)
     methods.VisibilityofElement(locators.Profile_report_gen)
     cy.wait(Timeout.sm)
+    methods.ElementToBeClickableXpath(locators.Save_1)
     methods.MouseoverWithXpath(locators.Save_dropdown)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.save1)
@@ -331,7 +333,7 @@ describe('Event Report Login', () => {
     cy.wait(Timeout.xs)
   })
 
-  it('Event Report - Share to Slack', () => {
+  it.only('Event Report - Share to Slack', () => {
 
     const nowTime = dayjs().format('H:m:s');
     const testName = `Demo_${nowTime}`;

@@ -59,6 +59,7 @@ describe('Global search Login', () => {
         methods.VisibilityofElementXpath(locators.kpi_Heading)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Expand_1)
+        methods.CompareScreenShot('Global_Search')
         methods.VisibilityofElementXpath(locators.filter_By_Option)
         methods.clickElementByXPath(locators.collapse_All)
         cy.wait(Timeout.sm)

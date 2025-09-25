@@ -76,6 +76,7 @@ describe('Funnel Report Login', () => {
         methods.clickElementByXPath(locators.Run_Analysis1)
         methods.VisibilityofElement(locators.Attri_pageloaded)
         cy.wait(Timeout.xs)
+        methods.ElementToBeClickableXpath(locators.Save_1)
         methods.MouseoverWithXpath(locators.Save_dropdown)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Save_as_New)
@@ -178,7 +179,7 @@ describe('Funnel Report Login', () => {
         cy.wait(Timeout.xs)
     })
 
-    it.only('Funnel Report - Edit Details', () => {
+    it('Funnel Report - Edit Details', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
@@ -218,6 +219,7 @@ describe('Funnel Report Login', () => {
         methods.clickElementByXPath(locators.Expand_1)
         cy.wait(Timeout.sm)
         methods.MouseoverWithXpath(locators.ReportOptions)
+        cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.EditDetails)
         methods.VisibilityofElement(locators.SegmentTemplatePopup)
         methods.ClearAndType(locators.Report_Name, testName1)

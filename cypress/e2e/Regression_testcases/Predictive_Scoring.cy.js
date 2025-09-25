@@ -76,7 +76,7 @@ describe('Predictive Scoring Login', () => {
 
     })
 
-    it('Predictive Scoring - Clone', () => {
+    it.only('Predictive Scoring - Clone', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const testName = `Predictive Score Demo ${randomNumber}`;

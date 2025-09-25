@@ -26,7 +26,7 @@ describe('WorkFlow - HeyReach Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo HeyReach List_${nowTime}`;
         const IntegrateName = "Configuration for HeyReach";
-        
+
 
         cy.wait(Timeout.md)
         methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
@@ -34,6 +34,9 @@ describe('WorkFlow - HeyReach Login', () => {
         cy.wait(Timeout.sm)
         methods.assertElementContainsTextxpath(locators.workflows_Title, 'Workflows')
         cy.wait(Timeout.xs)
+        methods.VisibilityofElementXpath(locators.account_pageloaded)
+        methods.ElementToBeClickableXpath(locators.workflow)
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.workflow)
         methods.clickElementByXPath(locators.HeyReach)
         methods.clickElementByXPath(locators.HeyReach_Template)
@@ -99,7 +102,7 @@ describe('WorkFlow - HeyReach Login', () => {
         cy.wait(Timeout.xs)
     })
 
-    it('WorkFlow - HeyReach - Campaign', () => {
+    it.only('WorkFlow - HeyReach - Campaign', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo HeyReach Campaign_${nowTime}`;
@@ -111,6 +114,9 @@ describe('WorkFlow - HeyReach Login', () => {
         cy.wait(Timeout.sm)
         methods.assertElementContainsTextxpath(locators.workflows_Title, 'Workflows')
         cy.wait(Timeout.xs)
+        methods.VisibilityofElementXpath(locators.account_pageloaded)
+        methods.ElementToBeClickableXpath(locators.workflow)
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.workflow)
         methods.clickElementByXPath(locators.HeyReach)
         methods.clickElementByXPath(locators.Heyreach_campaign)

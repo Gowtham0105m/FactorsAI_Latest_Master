@@ -60,6 +60,7 @@ describe('Start_Fresh_Icon', () => {
         methods.MouseoverAndClick(locators.calender_Icon)
         methods.clickElementByXPath(locators.ninety_days)
         cy.wait(Timeout.sm)
+         methods.CompareScreenShot('startfresh')
         methods.clickElementByXPath(locators.Save_segments1)
         methods.ClearAndType(locators.Paid_search_visitors, testName)
         methods.clickElementByXPath(locators.Save_1)

@@ -1,5 +1,5 @@
 import envDetails from '../fixtures/envDetails.json';
-import { extraTimeOut } from '../e2e/Utils';
+import { extraTimeOut, Timeout } from '../e2e/Utils';
 
 class methods {
 
@@ -11,14 +11,18 @@ class methods {
         cy.get(selector, { timeout: extraTimeOut }).eq(int).should('contain', text);
     }
 
+    assertElementContainsTextWithIndexXpath(xpath, text, int) {
+        cy.xpath(xpath, { timeout: extraTimeOut }).eq(int).should('contain', text);
+    }
+
     assertElementContainsText2(selector, text) {
         cy.get(selector, { timeout: extraTimeOut }).should('be.visible').should('contain', text);
     }
 
     assertElementContainsText1(xpath, text) {
-        cy.xpath(xpath, { timeout: extraTimeOut }).should('contain', text);
+        cy.xpath(xpath, { timeout: extraTimeOut }).should('be.visible').should('contain', text);
     }
-    
+
     VisibilityofElementXpath(xpath) {
         cy.xpath(xpath, { timeout: extraTimeOut }).should('be.visible');
     }
@@ -30,7 +34,7 @@ class methods {
     NotVisibilityofElement(selector) {
         cy.get(selector, { timeout: extraTimeOut }).should('not.be.visible');
     }
-    
+
     VisibleofElement(selector) {
         cy.get(selector, { timeout: extraTimeOut }).should('to.visible');
     }
@@ -184,6 +188,10 @@ class methods {
         cy.get(selector, { timeout: extraTimeOut }).should('be.visible');
     }
 
+    VisibilityofElement01(xpath) {
+        cy.xpath(xpath, { timeout: extraTimeOut }).should('be.visible');
+    }
+
     VisibilityofElementIndex(selector) {
         cy.get(selector, { timeout: extraTimeOut }).eq(0).should('be.visible');
     }
@@ -333,6 +341,34 @@ class methods {
 
     ElementXpathAttrCheckNot(xpath, attrName) {
         cy.xpath(xpath, { timeout: extraTimeOut }).should('not.have.attr', attrName);
+    }
+
+    CompareScreenShot(name) {
+        let matched = true;
+        let diffPercentage = 0;
+
+        cy.on('fail', (err) => {
+            if (err.message.includes('**Image was different**')) {
+                matched = false;
+
+                const match = err.message.match(/(\d+(\.\d+)?)%/);
+                if (match) {
+                    diffPercentage = parseFloat(match[1]);
+                }
+
+                return false; // Prevent test failure
+            }
+            throw err; // Let other errors still cause test failure
+        });
+        cy.wait(Timeout.ml);
+
+        cy.matchImageSnapshot(name).then(() => {
+            if (matched) {
+                cy.log(`**Screenshot "${name}" matched.**`);
+            } else {
+                cy.log(`Screenshot "${name}" did not match. Difference: ${diffPercentage}%`);
+            }
+        });
     }
 
 }

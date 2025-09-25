@@ -21,8 +21,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - Page View', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `IG Page View Demo ${randomNumber}`;
-        const testName1 = `IG Page View Demo New ${randomNumber}`;
+        const testName = `Page Interest View Demo ${randomNumber}`;
+        const testName1 = `Page Interest View Demo New ${randomNumber}`;
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -91,8 +91,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - Hubspot Forms', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `IG Hubspot Forms Demo ${randomNumber}`;
-        const testName1 = `IG Hubspot Forms Demo New ${randomNumber}`;
+        const testName = `Hubspot Testing Forms Demo ${randomNumber}`;
+        const testName1 = `Hubspot Testing Forms Demo New ${randomNumber}`;
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -162,8 +162,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - Salesforce Campaigns', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `IG Salesforce Campaigns Demo ${randomNumber}`;
-        const testName1 = `IG Salesforce Campaigns Demo New ${randomNumber}`;
+        const testName = `Salesforce Interest Campaigns Demo ${randomNumber}`;
+        const testName1 = `Salesforce Interest Campaigns Demo New ${randomNumber}`;
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -233,8 +233,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - LinkedIn Ads', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `IG LinkedIn Ads Demo ${randomNumber}`;
-        const testName1 = `IG LinkedIn Ads Demo New ${randomNumber}`;
+        const testName = `LinkedIn Interest Ads Demo ${randomNumber}`;
+        const testName1 = `LinkedIn Interest Ads Demo New ${randomNumber}`;
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -304,8 +304,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - G2 Intent', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `IG G2 Intent Demo ${randomNumber}`;
-        const testName1 = `IG G2 Intent Demo New ${randomNumber}`;
+        const testName = `G2 Interest Intent Demo ${randomNumber}`;
+        const testName1 = `G2 Interest Intent Demo New ${randomNumber}`;
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -375,8 +375,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - Custom Event', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `IG Custom Event Demo ${randomNumber}`;
-        const testName1 = `IG Custom Event Demo New ${randomNumber}`;
+        const testName = `Custom Interest Event Demo ${randomNumber}`;
+        const testName1 = `Custom Interest Event Demo New ${randomNumber}`;
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -443,8 +443,8 @@ describe('Interest Group Login', () => {
     it('Interest group Popup verification', () => {
     
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `IG Popup Demo ${randomNumber}`;
-        const testName1 = `IG Popup Demo New ${randomNumber}`;
+        const testName = `Popup Interest Demo ${randomNumber}`;
+        const testName1 = `Popup Interest Demo New ${randomNumber}`;
     
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Account_Pagetitle)

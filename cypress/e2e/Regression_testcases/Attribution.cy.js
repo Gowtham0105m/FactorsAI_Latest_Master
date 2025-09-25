@@ -260,8 +260,7 @@ describe('Attribution Regression', () => {
         methods.clickElementByXPath(locators.Run_Analysis1)
         methods.clickElement0(locators.Attri_pageloaded, 0)
     })
-
-    it.only('Attribution - New flow', () => {
+it('Attribution - New flow', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;

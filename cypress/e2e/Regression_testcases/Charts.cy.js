@@ -29,6 +29,7 @@ describe('Charts Login', () => {
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         methods.clickElementByXPath(locators.Add_Report_1)
         methods.clickElementByXPath(locators.Event_Report)
+        methods.CompareScreenShot('Charts')
         methods.clickElementByXPath(locators.Add_First_Event)
         methods.typeElement(locators.search_1, 'webs')
         cy.wait(Timeout.sm)
