@@ -39,6 +39,7 @@ describe('Engagement Category Login', () => {
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Engagement_Category)
         cy.wait(Timeout.xs)
+        methods.CompareScreenShot('Engagement Category')
         methods.Exist(locators.DownloadCSV_Popup)
         methods.clickElementByXPath(locators.Reset_to_Default)
         cy.wait(Timeout.xs)

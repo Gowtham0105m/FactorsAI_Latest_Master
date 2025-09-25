@@ -23,7 +23,7 @@ describe('Alert Login', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo Alert ${nowTime}`;
-        const testName1= `Demo Editted Alert ${nowTime}_1`;
+        const testName1 = `Demo Editted Alert ${nowTime}_1`;
 
         cy.wait(Timeout.md)
         methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
@@ -80,21 +80,17 @@ describe('Alert Login', () => {
         methods.clickElementByXPath(locators.Company_option)
         methods.clickElement(locators.Add_property)
         methods.clickElementByXPath(locators.Filter_option1)
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Filter_option1)
-        methods.clickElementByXPath(locators.adpilot_publish)
-        methods.clickElementByXPath(locators.Alert_Confirm_CheckBox)
-        methods.ElementToBeClickableXpath(locators.Save_Alert)
-        methods.clickElementByXPath(locators.Save_Alert)
-        methods.GetText(locators.notification_popup, "ErrorPlease select atleast one delivery option to send alert.")
         cy.wait(Timeout.sm)
 
         // Where to get the alert
 
+        methods.scrollWithXpath(locators.Enable_button)
         methods.clickElementByXPath(locators.Enable_button)
-        methods.clickElementByXPath(locators.Select_channel)
-        methods.typeElement(locators.search_channel, 'stag')
-        methods.clickElementByXPath(locators.choose_channel)
-        methods.clickElementByXPath(locators.save_channel)
+        methods.clickElementByXPath(locators.Select_Channel1)
+        methods.typeElementByXPath(locators.SelectClick, 'stagi')
+        methods.clickElementByXPath(locators.alertteststaging)
         methods.clickElementByXPath(locators.Mention_member)
         methods.typeElementByXPath(locators.Mention_member, 'sara')
         methods.clickElementByXPath(locators.sarath)
@@ -102,12 +98,9 @@ describe('Alert Login', () => {
         // save the alert
 
         methods.clickElementByXPath(locators.adpilot_publish)
-        methods.clickElementByXPath(locators.Alert_Confirm_CheckBox)
-        methods.ElementToBeClickableXpath(locators.Save_Alert)
-        methods.clickElementByXPath(locators.Save_Alert)
+        methods.clickElementByXPath(locators.Confirm_publish)
         methods.GetText(locators.notification_popup, "Alerts SavedNew Alerts is created and saved successfully.")
         cy.wait(Timeout.sm)
-
         methods.clickElementByXPath(`//h4[text()="${testName}"]`)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.Alert_name)
@@ -132,29 +125,22 @@ describe('Alert Login', () => {
         cy.wait(Timeout.sm)
         methods.scrollWithXpath(locators.Alert_Hide_Option)
         methods.clickElementIndexXpath(locators.Advancedsettings_Dropdown, 0)
-        methods.typeElementByXPathwithIndex(locators.Advancedsettings_Dropdown, "page tit" ,0)
+        methods.typeElementByXPathwithIndex(locators.Advancedsettings_Dropdown, "page tit", 0)
         methods.clickElement(locators.Alert_PageTitle)
-
         methods.clickElementIndexXpath(locators.Advancedsettings_Dropdown, 1)
         methods.ScrollAndClick(locators.Twelve_Hours)
         methods.clickElementByXPath(locators.Alert_Update_Btn)
-        methods.clickElementByXPath(locators.Alert_Confirm_CheckBox)
-        methods.ElementToBeClickableXpath(locators.Update_Alert)
-        methods.clickElementByXPath(locators.Update_Alert)
+        methods.clickElementByXPath(locators.Confirm_publish)
         methods.GetText(locators.notification_popup, "Alerts SavedAlerts is edited and saved successfully.")
-
         methods.assertElementContainsTextxpath(`//h4[text()="${testName1}"]//following::td[2]`, "Active")
         methods.clickElementByXPath(`//h4[text()="${testName1}"]`)
         cy.wait(Timeout.sm)
         methods.clickElement0(locators.Alert_Toogle, 0)
-        methods.VisibilityofElementXpath(locators.confirm_Publish_Box)
         methods.clickElementByXPath(locators.pause)
         cy.wait(Timeout.xs)
-        methods.clickElementByXPath(locators.Ok)
-        methods.assertElementContainsText(locators.Popup_Message, "Successfully paused/disabled alerts.")
+        methods.assertElementContainsText(locators.Popup_Message, "Successfully paused alerts.")
         cy.wait(Timeout.sm)
         methods.assertElementContainsTextxpath(`//h4[text()="${testName1}"]//following::td[2]`, "Paused")
-
 
         // Deleting the alert
 
@@ -176,7 +162,7 @@ describe('Alert Login', () => {
         cy.wait(Timeout.md)
         methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
         methods.clickElementByXPath(locators.Automation)
-        
+
 
         // New alert
 
@@ -234,18 +220,16 @@ describe('Alert Login', () => {
 
         // Where to get the alert
 
+        methods.scrollWithXpath(locators.Enable_button)
         methods.clickElementByXPath(locators.Enable_button)
-        methods.clickElementByXPath(locators.Select_channel)
-        methods.typeElement(locators.search_channel, 'stag')
-        methods.clickElementByXPath(locators.choose_channel)
-        methods.clickElementByXPath(locators.save_channel)
+        methods.clickElementByXPath(locators.Select_Channel1)
+        methods.typeElementByXPath(locators.SelectClick, 'stagi')
+        methods.clickElementByXPath(locators.alertteststaging)
 
         // save the alert
 
         methods.clickElementByXPath(locators.adpilot_publish)
-        methods.clickElementByXPath(locators.Alert_Confirm_CheckBox)
-        methods.ElementToBeClickableXpath(locators.Save_Alert)
-        methods.clickElementByXPath(locators.Save_Alert)
+        methods.clickElementByXPath(locators.Confirm_publish)
         methods.GetText(locators.notification_popup, "Alerts SavedNew Alerts is created and saved successfully.")
         cy.wait(Timeout.sm)
 
@@ -271,7 +255,7 @@ describe('Alert Login', () => {
         cy.wait(Timeout.xs)
     })
 
-    it('Alert Template', ()=>{
+    it('Alert Template', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo Alert Template ${nowTime}`;
@@ -300,21 +284,18 @@ describe('Alert Login', () => {
         cy.wait(Timeout.sm)
         methods.scrollWithXpath(locators.Enable_button)
         methods.clickElementByXPath(locators.Enable_button)
-        methods.clickElementByXPath(locators.Select_channel)
-        methods.typeElement(locators.search_channel, 'stag')
-        methods.clickElementByXPath(locators.choose_channel)
-        methods.clickElementByXPath(locators.save_channel)
+        methods.clickElementByXPath(locators.Select_Channel1)
+        methods.typeElementByXPath(locators.SelectClick, 'stagi')
+        methods.clickElementByXPath(locators.alertteststaging)
         methods.clickElementByXPath(locators.Mention_member)
         methods.typeElementByXPath(locators.Mention_member, 'sara')
-        methods.clickElementByXPath(locators.sarath)        
+        methods.clickElementByXPath(locators.sarath)
 
 
         // save the alert
 
         methods.clickElementByXPath(locators.adpilot_publish)
-        methods.clickElementByXPath(locators.Alert_Confirm_CheckBox)
-        methods.ElementToBeClickableXpath(locators.Save_Alert)
-        methods.clickElementByXPath(locators.Save_Alert)
+        methods.clickElementByXPath(locators.Confirm_publish)
         methods.GetText(locators.notification_popup, "Alerts SavedNew Alerts is created and saved successfully.")
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(`//h4[text()='${testName}']//following::button[2]`)

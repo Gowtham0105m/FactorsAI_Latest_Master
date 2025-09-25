@@ -20,7 +20,7 @@ describe('People Login', () => {
     })
 
 
-    it('People', () => {
+    it.only('People', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
@@ -33,6 +33,7 @@ describe('People Login', () => {
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         methods.UrlvalidationPeople()
+        methods.CompareScreenShot('Peoples')
         methods.assertElementContainsTextxpath(locators.all_People_Title, 'All People')
 
         // Search username

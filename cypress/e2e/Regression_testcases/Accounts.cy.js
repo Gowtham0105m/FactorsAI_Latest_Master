@@ -254,7 +254,7 @@ describe('Accounts Regression', () => {
         cy.wait(Timeout.md)
         methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.clickElement(locators.search_button)
         methods.typeElementByXPath(locators.search_area, 'infosys.com')
         methods.EnterXpath(locators.search_area)

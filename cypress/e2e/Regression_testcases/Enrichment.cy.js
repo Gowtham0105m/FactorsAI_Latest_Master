@@ -28,6 +28,8 @@ describe('Enrichment Rules Login', () => {
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElement(locators.setting)
         methods.clickElementByXPath(locators.Integrations)
+        cy.wait(Timeout.xs)
+        methods.CompareScreenShot('Enrichment')
         methods.clickElementByXPath(locators.Acc_Iden_enrich)
         methods.clickElementByXPath(locators.Enrichment_Rules)
         cy.wait(Timeout.xs)

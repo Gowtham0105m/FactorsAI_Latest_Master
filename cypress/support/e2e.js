@@ -16,7 +16,14 @@
 // Import commands.js using ES2015 syntax:
 
 import './commands'
+import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 require('cypress-xpath');
+
+addMatchImageSnapshotCommand({
+  failureThreshold: 0.05,
+  failureThresholdType: 'pixel',
+  capture: 'fullPage'
+});

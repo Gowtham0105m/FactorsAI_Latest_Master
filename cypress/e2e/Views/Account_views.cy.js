@@ -25,6 +25,7 @@ describe('Accounts view Login', () => {
         methods.VisibilityofElementXpath(locators.account_pageloaded)
 
         // select account & birdview
+        cy.wait(Timeout.md)
         methods.clickElement(locators.search_button)
         methods.typeElementByXPath(locators.search_area, 'infosys.com')
         methods.EnterXpath(locators.search_area)

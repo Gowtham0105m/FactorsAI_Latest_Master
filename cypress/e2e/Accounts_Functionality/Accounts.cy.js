@@ -20,7 +20,7 @@ describe('Accounts Login', () => {
     })
 
 
-    it('Accounts', () => {
+    it.only('Accounts', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;

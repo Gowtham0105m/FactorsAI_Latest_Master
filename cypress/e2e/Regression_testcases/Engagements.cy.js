@@ -23,6 +23,7 @@ describe('Engagements scoring Login', () => {
     const randomNumber = Math.floor(Math.random() * 90) + 10;
     const testName = `Custom Events Demo ES ${randomNumber}`;
     const testName1 = `Custom Events Demo ES New ${randomNumber}`;
+    const testName2 = `Custom Events Demo ES Rename ${randomNumber}`;
 
     cy.wait(Timeout.md)
     methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -48,6 +49,8 @@ describe('Engagements scoring Login', () => {
     });
 
     methods.clickElementByXPath(locators.Add_signal)
+    cy.wait(Timeout.xs)
+    methods.CompareScreenShot('Custom Events')
     methods.clickElementByXPath(locators.CustomEvents)
     methods.clickElementByXPath(locators.select_event)
     methods.clickElementByXPath(locators.hubspot_Cmpny_Opt)
@@ -72,7 +75,15 @@ describe('Engagements scoring Login', () => {
     methods.clickElementByXPath(locators.save2)
     methods.GetText(locators.notification_popup, "Signal updated successfullySignal has been saved with changes. Updates will reflect across accounts within 24 hours.")
     cy.wait(Timeout.sm)
-    methods.clickElementByXPath(`//td[text()='${testName1}']//following::button[2]`)
+    methods.clickElementByXPath(`//td[text()='${testName1}']//following::button[1]`)
+    methods.VisibilityofElement(locators.SegmentTemplatePopup)
+    methods.VisibilityofElementXpath(locators.Rename_Signal_Popup)
+    methods.ClearAndType(locators.ES_Rename_InputField, testName2)
+    methods.ElementToBeClickableXpath(locators.Save_Changes_New)
+    methods.clickElementByXPath(locators.Save_Changes_New)
+    methods.GetText(locators.notification_popup, "Signal renamed successfullySignal name has been updated and changes will reflect within 24 hours.")
+    cy.wait(Timeout.sm)
+    methods.clickElementByXPath(`//td[text()='${testName2}']//following::button[2]`)
     cy.wait(Timeout.sm)
     methods.clickElementByXPath(locators.Yes)
     methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.")
@@ -85,6 +96,7 @@ describe('Engagements scoring Login', () => {
     const randomNumber = Math.floor(Math.random() * 90) + 10;
     const testName = `Page View Demo ES ${randomNumber}`;
     const testName1 = `Page View Demo ES New ${randomNumber}`;
+    const testName2 = `Page View Demo ES Rename ${randomNumber}`;
 
     cy.wait(Timeout.md)
     methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -138,18 +150,27 @@ describe('Engagements scoring Login', () => {
     methods.clickElementByXPath(locators.save2)
     methods.GetText(locators.notification_popup, "Signal updated successfullySignal has been saved with changes. Updates will reflect across accounts within 24 hours.")
     cy.wait(Timeout.sm)
-    methods.clickElementByXPath(`//td[text()='${testName1}']//following::button[2]`)
+    methods.clickElementByXPath(`//td[text()='${testName1}']//following::button[1]`)
+    methods.VisibilityofElement(locators.SegmentTemplatePopup)
+    methods.VisibilityofElementXpath(locators.Rename_Signal_Popup)
+    methods.ClearAndType(locators.ES_Rename_InputField, testName2)
+    methods.ElementToBeClickableXpath(locators.Save_Changes_New)
+    methods.clickElementByXPath(locators.Save_Changes_New)
+    methods.GetText(locators.notification_popup, "Signal renamed successfullySignal name has been updated and changes will reflect within 24 hours.")
+    cy.wait(Timeout.sm)
+    methods.clickElementByXPath(`//td[text()='${testName2}']//following::button[2]`)
     cy.wait(Timeout.sm)
     methods.clickElementByXPath(locators.Yes)
     methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.")
     cy.wait(Timeout.xs)
   })
 
-  it.only('Engagements HubSpot Forms', () => {
+  it('Engagements HubSpot Forms', () => {
 
     const randomNumber = Math.floor(Math.random() * 90) + 10;
     const testName = `HubSpot Forms Demo ES ${randomNumber}`;
     const testName1 = `HubSpot Forms Demo ES New ${randomNumber}`;
+    const testName2 = `HubSpot Forms Demo ES Rename ${randomNumber}`;
 
     cy.wait(Timeout.md)
     methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -203,7 +224,15 @@ describe('Engagements scoring Login', () => {
     methods.clickElementByXPath(locators.save2)
     methods.GetText(locators.notification_popup, "Signal updated successfullySignal has been saved with changes. Updates will reflect across accounts within 24 hours.")
     cy.wait(Timeout.sm)
-    methods.clickElementByXPath(`//td[text()='${testName1}']//following::button[2]`)
+    methods.clickElementByXPath(`//td[text()='${testName1}']//following::button[1]`)
+    methods.VisibilityofElement(locators.SegmentTemplatePopup)
+    methods.VisibilityofElementXpath(locators.Rename_Signal_Popup)
+    methods.ClearAndType(locators.ES_Rename_InputField, testName2)
+    methods.ElementToBeClickableXpath(locators.Save_Changes_New)
+    methods.clickElementByXPath(locators.Save_Changes_New)
+    methods.GetText(locators.notification_popup, "Signal renamed successfullySignal name has been updated and changes will reflect within 24 hours.")
+    cy.wait(Timeout.sm)
+    methods.clickElementByXPath(`//td[text()='${testName2}']//following::button[2]`)
     cy.wait(Timeout.sm)
     methods.clickElementByXPath(locators.Yes)
     methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.")
@@ -216,6 +245,7 @@ describe('Engagements scoring Login', () => {
     const randomNumber = Math.floor(Math.random() * 90) + 10;
     const testName = `Salesforce Campaigns Demo ES ${randomNumber}`;
     const testName1 = `Salesforce Campaigns Demo ES New ${randomNumber}`;
+    const testName2 = `Salesforce Campaigns Demo ES Rename ${randomNumber}`;
 
     cy.wait(Timeout.md)
     methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -269,7 +299,15 @@ describe('Engagements scoring Login', () => {
     methods.clickElementByXPath(locators.save2)
     methods.GetText(locators.notification_popup, "Signal updated successfullySignal has been saved with changes. Updates will reflect across accounts within 24 hours.")
     cy.wait(Timeout.sm)
-    methods.clickElementByXPath(`//td[text()='${testName1}']//following::button[2]`)
+    methods.clickElementByXPath(`//td[text()='${testName1}']//following::button[1]`)
+    methods.VisibilityofElement(locators.SegmentTemplatePopup)
+    methods.VisibilityofElementXpath(locators.Rename_Signal_Popup)
+    methods.ClearAndType(locators.ES_Rename_InputField, testName2)
+    methods.ElementToBeClickableXpath(locators.Save_Changes_New)
+    methods.clickElementByXPath(locators.Save_Changes_New)
+    methods.GetText(locators.notification_popup, "Signal renamed successfullySignal name has been updated and changes will reflect within 24 hours.")
+    cy.wait(Timeout.sm)
+    methods.clickElementByXPath(`//td[text()='${testName2}']//following::button[2]`)
     cy.wait(Timeout.sm)
     methods.clickElementByXPath(locators.Yes)
     methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.")
@@ -282,6 +320,7 @@ describe('Engagements scoring Login', () => {
     const randomNumber = Math.floor(Math.random() * 90) + 10;
     const testName = `LinkedIn Ads Demo ES ${randomNumber}`;
     const testName1 = `LinkedIn Ads Demo ES New ${randomNumber}`;
+    const testName2 = `LinkedIn Ads Demo ES Rename ${randomNumber}`;
 
     cy.wait(Timeout.md)
     methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -335,7 +374,15 @@ describe('Engagements scoring Login', () => {
     methods.clickElementByXPath(locators.save2)
     methods.GetText(locators.notification_popup, "Signal updated successfullySignal has been saved with changes. Updates will reflect across accounts within 24 hours.")
     cy.wait(Timeout.sm)
-    methods.clickElementByXPath(`//td[text()='${testName1}']//following::button[2]`)
+    methods.clickElementByXPath(`//td[text()='${testName1}']//following::button[1]`)
+    methods.VisibilityofElement(locators.SegmentTemplatePopup)
+    methods.VisibilityofElementXpath(locators.Rename_Signal_Popup)
+    methods.ClearAndType(locators.ES_Rename_InputField, testName2)
+    methods.ElementToBeClickableXpath(locators.Save_Changes_New)
+    methods.clickElementByXPath(locators.Save_Changes_New)
+    methods.GetText(locators.notification_popup, "Signal renamed successfullySignal name has been updated and changes will reflect within 24 hours.")
+    cy.wait(Timeout.sm)
+    methods.clickElementByXPath(`//td[text()='${testName2}']//following::button[2]`)
     cy.wait(Timeout.sm)
     methods.clickElementByXPath(locators.Yes)
     methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.")
@@ -348,6 +395,7 @@ describe('Engagements scoring Login', () => {
     const randomNumber = Math.floor(Math.random() * 90) + 10;
     const testName = `G2 Intent Demo ES ${randomNumber}`;
     const testName1 = `G2 Intent Demo ES New ${randomNumber}`;
+    const testName2 = `G2 Intent Demo ES Rename ${randomNumber}`;
 
     cy.wait(Timeout.md)
     methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -401,7 +449,15 @@ describe('Engagements scoring Login', () => {
     methods.clickElementByXPath(locators.save2)
     methods.GetText(locators.notification_popup, "Signal updated successfullySignal has been saved with changes. Updates will reflect across accounts within 24 hours.")
     cy.wait(Timeout.sm)
-    methods.clickElementByXPath(`//td[text()='${testName1}']//following::button[2]`)
+    methods.clickElementByXPath(`//td[text()='${testName1}']//following::button[1]`)
+    methods.VisibilityofElement(locators.SegmentTemplatePopup)
+    methods.VisibilityofElementXpath(locators.Rename_Signal_Popup)
+    methods.ClearAndType(locators.ES_Rename_InputField, testName2)
+    methods.ElementToBeClickableXpath(locators.Save_Changes_New)
+    methods.clickElementByXPath(locators.Save_Changes_New)
+    methods.GetText(locators.notification_popup, "Signal renamed successfullySignal name has been updated and changes will reflect within 24 hours.")
+    cy.wait(Timeout.sm)
+    methods.clickElementByXPath(`//td[text()='${testName2}']//following::button[2]`)
     cy.wait(Timeout.sm)
     methods.clickElementByXPath(locators.Yes)
     methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.")

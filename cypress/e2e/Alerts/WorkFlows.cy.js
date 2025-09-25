@@ -63,9 +63,10 @@ describe('WorkFlow Login', () => {
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(`//h4[text()="Map properties from Factors to ${IntegrateName}"]`)
         methods.clickElementByXPath(locators.SaveandPublish)
-        methods.clickElementByXPath(locators.Alert_Confirm_CheckBox)
-        methods.ElementToBeClickableXpath(locators.WorkFlows_Confirm)
-        methods.clickElementByXPath(locators.WorkFlows_Confirm)
+        // methods.clickElementByXPath(locators.Alert_Confirm_CheckBox)
+        // methods.ElementToBeClickableXpath(locators.WorkFlows_Confirm)
+        // methods.clickElementByXPath(locators.WorkFlows_Confirm)
+        methods.clickElementByXPath(locators.Confirm_publish)
         methods.GetText(locators.notification_popup, "Workflow SavedNew workflow is created and saved successfully.")
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(`//h4[text()='${testName}']`)
@@ -95,9 +96,10 @@ describe('WorkFlow Login', () => {
         methods.clickElement(locators.City1)
         cy.wait(Timeout.xs)
         methods.ScrollAndClickxpath(locators.SaveandPublish)
-        methods.clickElementByXPath(locators.Alert_Confirm_CheckBox)
-        methods.ElementToBeClickableXpath(locators.WorkFlows_Confirm)
-        methods.clickElementByXPath(locators.WorkFlows_Confirm)
+        // methods.clickElementByXPath(locators.Alert_Confirm_CheckBox)
+        // methods.ElementToBeClickableXpath(locators.WorkFlows_Confirm)
+        // methods.clickElementByXPath(locators.WorkFlows_Confirm)
+        methods.clickElementByXPath(locators.Confirm_publish)
         methods.GetText(locators.notification_popup, "Workflow UpdatedWorkflow is updated and saved successfully.")
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(`//h4[text()='${testName1}']//following::button[2]`)
@@ -284,7 +286,7 @@ describe('WorkFlow Login', () => {
 
     })
 
-    it('WorkFlow - Activity log', () => {
+    it.only('WorkFlow - Activity log', () => {
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Account_Pagetitle)

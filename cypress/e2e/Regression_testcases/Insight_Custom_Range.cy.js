@@ -18,7 +18,7 @@ describe('Insight custom range', () => {
 
     })
 
-    it.only('Insight custom range', () => {
+    it('Insight custom range', () => {
 
         cy.wait(Timeout.md)
         methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')

@@ -320,6 +320,7 @@ class locators {
     this.Enrichment_page_validation = '//span[text()="Include"]//following::div[contains(@class,"SixSignalFactors__customSelect")]';
     this.Enrichment_Uploaded_Verify = '//div[text()="Include"]//following::div[1]';
     this.Save_Changes = '//span[text()="Save Changes "]';
+    this.Save_Changes_New = '//span[text()="Save Changes"]';
     this.Savechanges1 = '//span[text()="Save changes"]';
     this.close_new = '//div[text()="Include"]//preceding::button[1]';
     this.Delete = '//a[text()="Delete Report"]';
@@ -405,6 +406,7 @@ class locators {
     this.List = '//h4[text()="List"]';
     this.Account = '(//h4[text()="Accounts"])[2]';
     this.Touchpoints = '//h4[text()="Touchpoints Definitions"]';
+    this.Touchpoint = '//h4[text()="Touchpoint Definitions"]';
     this.Hubspot_1 = '//div[text()="Hubspot"]';
     this.Salesforce = '//div[text()="Salesforce"]';
     this.Create_a_touchpoint_using_Contact = '//h4[text()="Create a touchpoint using"]//following::button[1]';
@@ -775,6 +777,7 @@ class locators {
     this.adpilot_edit_searchbar = '//textarea[text()="Account level pacing"]';
     this.adpilot_arrow_left = '//*[local-name()="svg" and @data-icon="arrow-left"]';
     this.adpilot_publish = '//div[text()="Publish"]';
+    this.Confirm_publish = '//span[text()="Publish"]';
     this.New_Campaign = '//h4[text()="New Campaign"]';
     this.All_account_toogle = '//h1[text()="Set custom rules based on advanced account conditions"]//preceding::button[1]';
     this.campaign_add_filter = '//h1[text()="Add filter"]';
@@ -1042,7 +1045,7 @@ class locators {
     this.Uploaded_By = '//th[text()="File name"]//following::tr[1]/td[3]';
     this.Intent_Download = '//th[text()="File name"]//following::tr[1]/td[5]';
     this.Choose_Template = '//h4[text()="A new lead just submitted a form on your website"]';
-    this.Mention_member ='//h4[text()="Mentions"]//following::input[1]';
+    this.Mention_member = '//h4[text()="Mentions"]//following::input[1]';
     this.sarath = '//div[text()="Sarath"]';
     this.EnterValue = '//span[text()="Enter Value"]';
     this.EnterValueInput = '[placeholder="Enter Value"]';
@@ -1247,7 +1250,7 @@ class locators {
     this.AllAccount_ActionBtn = '//h1[text()="All Accounts"]//following::button[1]';
     this.Show_hidden_accounts = '//div[text()="Show hidden accounts"]';
     this.Hide_hidden_accounts = '//div[text()="Hide hidden accounts"]';
-    this.Event_Add_Property ='//h4[text()="More Details"]//following::span[text()="Add property"]';
+    this.Event_Add_Property = '//h4[text()="More Details"]//following::span[text()="Add property"]';
     this.Checkbox = '//tbody/tr/td[1]//input[@type="checkbox"]';
     this.Hide = '//span[text()="Hide"]';
     this.MovedSuccessfull_popup = '.ant-notification-notice-description';
@@ -1297,6 +1300,31 @@ class locators {
     this.Factors_Icon = '#fa-at-link--home';
     this.Subscribe_Digest_Segment = '[data-icon="envelope-circle-check"]';
     this.Google_Conversion_Action_Dropdown_Option = '//div[@class="rc-virtual-list-holder"]//div[@title]';
+    this.Rename_Signal_Popup = '//h4[text()="Rename Signal"]';
+    this.ES_Rename_InputField = '[placeholder="Title"]';
+    this.PricepageText = '//input[@placeholder="Eg: Known user on pricing page"]';
+    this.AlertMessage = '//textarea[@placeholder="Enter alert message"]';
+    this.Selectchanneldropdown = '//h4[contains(text(), "select the channels")]//following::div[contains(@class, "ant-select-selector")]';
+    this.alertteststaging = '//div[text()="alert-test-staging"]';
+    this.Select_Channel1 = '//h4[contains(text(), "select the channels")]//following::input[@role="combobox"][1]';
+    this.SelectClick = "//input[@type='search' and @aria-expanded='true']";
+    this.General1 = '//div[@class="mb-10"]//h4[text()="General"]';
+    this.Plans_Billing2 = '(//h4[text()="Plans & Billing"])[2]';
+    this.Login_Security = '(//h4[text()="Login and Security"])[1]';
+    this.Login_Security_1 = '(//h4[text()="Login and Security"])[2]';
+    this.Members = '(//h4[text()="Members"])[1]';
+    this.User_Settings = '(//h4[text()="User Settings"])[1]';
+    this.User_Settings_1 = '(//h4[text()="User Settings"])[2]';
+    this.User_Settings_Message = '.flex.items-baseline.flex-wrap';
+    this.My_Projects = '//h4[text()="My Projects"]';
+    this.new_AI_Workflows = '.ant-alert-content';
+    this.Try_it_now = '//a[text()="Try it now!"]';
+    this.Pre_Built_Workflows = '.ant-row p-0';
+    this.All_Templates = '//button[text()="All Templates"]';
+    this.AI_Workflows = '//button[text()="AI Workflows"]';
+    this.Get_relevant_contacts = '//h4[text()="Get relevant contacts from your accounts directly as a Slack alert."]';
+    this.View_Agent = '//span[text()="View agent"]';
+    this.Detailed_View = '.ant-drawer-header';
 
   }
 }

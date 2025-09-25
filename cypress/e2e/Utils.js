@@ -9,5 +9,6 @@ export const Timeout = {
   xmd: 6500,
   lg: 10000,
   lgr: 20000,
+  ml:30000,
   xl: 60000
 }
