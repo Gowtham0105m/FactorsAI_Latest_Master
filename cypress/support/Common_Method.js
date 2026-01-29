@@ -7,14 +7,6 @@ class methods {
         cy.get(selector, { timeout: extraTimeOut }).should('contain', text);
     }
 
-    assertElementContainsTextWithIndex(selector, text, int) {
-        cy.get(selector, { timeout: extraTimeOut }).eq(int).should('contain', text);
-    }
-
-    assertElementContainsTextWithIndexXpath(xpath, text, int) {
-        cy.xpath(xpath, { timeout: extraTimeOut }).eq(int).should('contain', text);
-    }
-
     assertElementContainsText2(selector, text) {
         cy.get(selector, { timeout: extraTimeOut }).should('be.visible').should('contain', text);
     }
@@ -31,10 +23,6 @@ class methods {
         cy.xpath(xpath, { timeout: extraTimeOut }).should('not.be.visible');
     }
 
-    NotVisibilityofElement(selector) {
-        cy.get(selector, { timeout: extraTimeOut }).should('not.be.visible');
-    }
-
     VisibleofElement(selector) {
         cy.get(selector, { timeout: extraTimeOut }).should('to.visible');
     }
@@ -47,16 +35,8 @@ class methods {
         cy.xpath(xpath, { timeout: extraTimeOut }).eq(int).click({ force: true });
     }
 
-    clickandtypeElement0(selector, int) {
-        cy.get(selector, { timeout: extraTimeOut }).eq(int).click({ force: true });
-    }
-
     clickElement(selector) {
         cy.get(selector, { timeout: extraTimeOut }).click({ force: true });
-    }
-
-    clickElementwithindex(selector, text) {
-        cy.get(selector, { timeout: extraTimeOut }, text).click();
     }
 
     scroll(selector) {
@@ -65,10 +45,6 @@ class methods {
 
     scrollWithXpath(Xpath) {
         cy.xpath(Xpath, { timeout: extraTimeOut }).scrollIntoView();
-    }
-
-    clickElement1(selector) {
-        cy.get(selector, { timeout: extraTimeOut }).click({ force: true });
     }
 
     navigateToUrlPeople() {
@@ -103,14 +79,6 @@ class methods {
         cy.url().should('contain', `${envDetails.backendApiUrl}/profiles/people`);
     }
 
-    UrlValidationevent() {
-        cy.url().should('contain', `${envDetails.backendApiUrl}/analyse/event`);
-    }
-
-    UrlValidationKPI() {
-        cy.url().should('contain', `${envDetails.backendApiUrl}/analyse/kpi`);
-    }
-
     UrlvalidationPeople() {
         cy.url().should('contain', `${envDetails.backendApiUrl}/profiles/people`);
     }
@@ -123,13 +91,8 @@ class methods {
         cy.get(selector, { timeout: extraTimeOut }).eq(int).contains(text);
     }
 
-
     Titletextcontainsxpath(xpath, text) {
         cy.xpath(xpath, { timeout: extraTimeOut }).contains(text);
-    }
-
-    Titletextcontainsxpath1(xpath, int, text) {
-        cy.xpath(xpath, { timeout: extraTimeOut }).eq(int).contains(text);
     }
 
     AssertNotEmpty(selector) {
@@ -168,10 +131,6 @@ class methods {
         cy.xpath(xpath, { timeout: extraTimeOut }).eq(int).type(text, { force: true });
     }
 
-    clickwithcontaintext(selector, text) {
-        cy.get(selector, { timeout: extraTimeOut }).contains(text).click();
-    }
-
     ClickandType(selector, text) {
         cy.get(selector, { timeout: extraTimeOut }).click({ force: true }).type(text);
     }
@@ -186,10 +145,6 @@ class methods {
 
     VisibilityofElement(selector) {
         cy.get(selector, { timeout: extraTimeOut }).should('be.visible');
-    }
-
-    VisibilityofElement01(xpath) {
-        cy.xpath(xpath, { timeout: extraTimeOut }).should('be.visible');
     }
 
     VisibilityofElementIndex(selector) {
@@ -208,6 +163,10 @@ class methods {
         cy.get(selector, { timeout: extraTimeOut }).should('have.text', text);
     }
 
+    VisibilityofElement2(xpath, text) {
+        cy.xpath(xpath, { timeout: extraTimeOut }).should('have.text', text);
+    }
+
     Mouseover(selector) {
         cy.get(selector, { timeout: extraTimeOut }).trigger('mouseover', { force: true });
     }
@@ -218,10 +177,6 @@ class methods {
 
     MouseoverWithXpathindex(xpath, int) {
         cy.xpath(xpath, { timeout: extraTimeOut }).eq(int).trigger('mouseover', { force: true });
-    }
-
-    chargebeeURL() {
-        cy.url().should('contain', 'chargebee.com');
     }
 
     MouseoverAndClick(xpath) {
@@ -240,20 +195,8 @@ class methods {
         cy.get(selector).attachFile(filePath);
     }
 
-    VisitEventreport() {
-        cy.visit(`${envDetails.backendApiUrl}/analyse/event`)
-    }
-
-    VisitKPIreport() {
-        cy.visit(`${envDetails.backendApiUrl}/analyse/kpi`)
-    }
-
     Clickwithindexandvalidation(selector, int) {
         cy.get(selector, { timeout: extraTimeOut }).eq(int).should('be.visible').click({ force: true });
-    }
-
-    clearAndTypeWithIndex(selector, text, int) {
-        cy.get(selector, { timeout: extraTimeOut }).eq(int).clear().type(text)
     }
 
     ClearAndTypeWithXpath(xpath, text) {
@@ -272,20 +215,12 @@ class methods {
         cy.get(selector, { timeout: extraTimeOut }).clear()
     }
 
-    Clearxpath(xpath) {
-        cy.xpath(xpath, { timeout: extraTimeOut }).clear()
-    }
-
     ElementToBeClickable(selector) {
         cy.get(selector, { timeout: extraTimeOut }).should('not.be.disabled')
     }
 
     ElementToBeClickableXpath(xpath) {
         cy.xpath(xpath, { timeout: extraTimeOut }).should('not.be.disabled')
-    }
-
-    ElementNotClickable(selector) {
-        cy.get(selector, { timeout: extraTimeOut }).should('be.disabled')
     }
 
     ElementNotClickableXpath(xpath) {
@@ -323,10 +258,6 @@ class methods {
         cy.get(selector, { timeout: extraTimeOut }).should('exist');
     }
 
-    Existxpath(xpath) {
-        cy.xpath(xpath, { timeout: extraTimeOut }).should('exist');
-    }
-
     NotExist(selector) {
         cy.get(selector, { timeout: extraTimeOut }).should('not.exist');
     }
@@ -341,34 +272,6 @@ class methods {
 
     ElementXpathAttrCheckNot(xpath, attrName) {
         cy.xpath(xpath, { timeout: extraTimeOut }).should('not.have.attr', attrName);
-    }
-
-    CompareScreenShot(name) {
-        let matched = true;
-        let diffPercentage = 0;
-
-        cy.on('fail', (err) => {
-            if (err.message.includes('**Image was different**')) {
-                matched = false;
-
-                const match = err.message.match(/(\d+(\.\d+)?)%/);
-                if (match) {
-                    diffPercentage = parseFloat(match[1]);
-                }
-
-                return false; // Prevent test failure
-            }
-            throw err; // Let other errors still cause test failure
-        });
-        cy.wait(Timeout.ml);
-
-        cy.matchImageSnapshot(name).then(() => {
-            if (matched) {
-                cy.log(`**Screenshot "${name}" matched.**`);
-            } else {
-                cy.log(`Screenshot "${name}" did not match. Difference: ${diffPercentage}%`);
-            }
-        });
     }
 
 }
