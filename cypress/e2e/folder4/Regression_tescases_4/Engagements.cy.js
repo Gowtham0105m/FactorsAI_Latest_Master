@@ -52,7 +52,7 @@ describe('Engagements scoring Login', () => {
 
     methods.clickElementByXPath(locators.Engagement_Scoring)
     cy.wait(Timeout.sm)
-    methods.assertElementContainsText(locators.Page_title, 'Account Configurations')
+    methods.assertElementContainsText(locators.Page_title, 'Engagement Scoring')
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Add_signal)
     cy.wait(Timeout.xs)
@@ -133,7 +133,7 @@ describe('Engagements scoring Login', () => {
 
     methods.clickElementByXPath(locators.Engagement_Scoring)
     cy.wait(Timeout.sm)
-    methods.assertElementContainsText(locators.Page_title, 'Account Configurations')
+    methods.assertElementContainsText(locators.Page_title, 'Engagement Scoring')
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Add_signal)
     methods.clickElementByXPath(locators.PageView)
@@ -225,7 +225,7 @@ describe('Engagements scoring Login', () => {
 
     methods.clickElementByXPath(locators.Engagement_Scoring)
     cy.wait(Timeout.sm)
-    methods.assertElementContainsText(locators.Page_title, 'Account Configurations')
+    methods.assertElementContainsText(locators.Page_title, 'Engagement Scoring')
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Add_signal)
     methods.clickElementByXPath(locators.HubSpotForms)
@@ -318,7 +318,7 @@ describe('Engagements scoring Login', () => {
 
     methods.clickElementByXPath(locators.Engagement_Scoring)
     cy.wait(Timeout.sm)
-    methods.assertElementContainsText(locators.Page_title, 'Account Configurations')
+    methods.assertElementContainsText(locators.Page_title, 'Engagement Scoring')
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Add_signal)
     methods.clickElementByXPath(locators.SalesforceCampaigns)
@@ -411,7 +411,7 @@ describe('Engagements scoring Login', () => {
 
     methods.clickElementByXPath(locators.Engagement_Scoring)
     cy.wait(Timeout.sm)
-    methods.assertElementContainsText(locators.Page_title, 'Account Configurations')
+    methods.assertElementContainsText(locators.Page_title, 'Engagement Scoring')
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Add_signal)
     methods.clickElementByXPath(locators.LinkedInAds)
@@ -505,7 +505,7 @@ describe('Engagements scoring Login', () => {
 
     methods.clickElementByXPath(locators.Engagement_Scoring)
     cy.wait(Timeout.sm)
-    methods.assertElementContainsText(locators.Page_title, 'Account Configurations')
+    methods.assertElementContainsText(locators.Page_title, 'Engagement Scoring')
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Add_signal)
     methods.clickElementByXPath(locators.G2Intent)
@@ -597,7 +597,7 @@ describe('Engagements scoring Login', () => {
 
     methods.clickElementByXPath(locators.Engagement_Scoring)
     cy.wait(Timeout.sm)
-    methods.assertElementContainsText(locators.Page_title, 'Account Configurations')
+    methods.assertElementContainsText(locators.Page_title, 'Engagement Scoring')
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Add_signal)
     methods.clickElementByXPath(locators.PageView)
@@ -721,7 +721,6 @@ describe('Engagements scoring Login', () => {
     methods.clickElementByXPath(locators.threedot_icon)
     methods.clickElementByXPath(locators.AccountEngagementRules)
     cy.wait(Timeout.sm)
-    // methods.assertElementContainsText(locators.Page_title, 'Account Configurations')
 
     cy.document().then((doc) => {
       const demoElement = doc.evaluate(`//td[contains(@title,"Demo ES")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
