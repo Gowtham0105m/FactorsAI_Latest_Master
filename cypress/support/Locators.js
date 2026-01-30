@@ -1253,7 +1253,6 @@ class locators {
     this.MovedSuccessfull_popup = '.ant-notification-notice-description';
     this.General_Tab = '.fa-container fa__full-bleed-fix';
     this.panel_engagementScoring = '//div[contains(@id,"panel-engagementScoring")]';
-    this.Hidden_Accounts = '//div[text()="Hidden Accounts"]';
     this.searchType = '#basic_accounts_search';
     this.search_button1 = '(//h4[text()="Hidden Accounts"]//following::button)[3]';
     this.Unhide = '//span[text()="Unhide"]';
@@ -1396,7 +1395,6 @@ class locators {
     this.Interest_Groups = '//span[text()="Interest Groups"]';
     this.Custom_KPI = `//span[text()="Custom KPI's"]`;
     this.New_Custom_KPI = '//h1[text()="New Custom KPI"]';
-    this.Hidden_accounts = '//div[text()="Hidden Accounts"]';
     this.Panel_HiddenAccounts  = '//h4[text()="Hidden Accounts"]';
     this.Hidden_Accounts1 = '//span[text()="Hidden Accounts"]';
     this.Intent_upload = '//span[text()="Intent Upload"]';
