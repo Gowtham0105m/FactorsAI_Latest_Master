@@ -1399,6 +1399,7 @@ class locators {
     this.Hidden_Accounts1 = '//span[text()="Hidden Accounts"]';
     this.Intent_upload = '//span[text()="Intent Upload"]';
     this.Integrations1 =  '//h4[text()="Integrations"]';
+    this.Session_Count = '[data-title="Session Count"]';
 
   }
 }

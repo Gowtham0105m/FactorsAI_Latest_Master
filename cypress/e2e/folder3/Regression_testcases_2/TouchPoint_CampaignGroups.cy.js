@@ -50,7 +50,7 @@ describe('TouchPoint Campaign Groups', () => {
         methods.assertElementContainsText(locators.notification_popup, "SuccessCustom Dimension rules created successfully")
         methods.clickElementByXPath(locators.Cancel)
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//span[text()='${testName}']//following::button[1]`)
+        methods.clickElementByXPath(`//div[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.Remove_Property)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.confirm_1)

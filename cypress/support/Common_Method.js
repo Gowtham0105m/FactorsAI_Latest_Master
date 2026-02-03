@@ -235,6 +235,17 @@ class methods {
         cy.xpath(xpath, { timeout: extraTimeOut }).scrollIntoView().click({ force: true })
     }
 
+    GetAttribute(selector, attributeName, expectedText) {
+        cy.get(selector, { timeout: extraTimeOut })
+            .invoke('attr', attributeName)
+            .then((actualValue) => {
+                const actualValueTrimmed = actualValue.trim();
+                cy.log(`Actual Value : ${actualValueTrimmed}`);
+
+                expect(actualValueTrimmed).to.equal(expectedText);
+            });
+    }
+
     GetText(selector, text) {
         cy.get(selector, { timeout: extraTimeOut }).invoke('text').then((ActualValue) => {
             const ActualValue1 = ActualValue.trim();

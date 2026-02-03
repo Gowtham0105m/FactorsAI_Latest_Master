@@ -21,7 +21,7 @@ describe('Interest Group Login', () => {
     it('Interest Group - Page View', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `Page_Interest_View Demo ${randomNumber}`;
+        const testName = `Page_Interest_View_Demo ${randomNumber}`;
         const testName1 = `Page_Interest_View_Demo_New_${randomNumber}`;
 
         cy.wait(Timeout.md)

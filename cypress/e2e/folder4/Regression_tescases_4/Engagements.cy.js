@@ -676,7 +676,7 @@ describe('Engagements scoring Login', () => {
     methods.clickElementByXPath(locators.BackArrow)
     methods.VisibilityofElement(locators.Templete_Popup)
     methods.clickElementByXPath(locators.DiscardandLeave)
-    methods.assertElementContainsText(locators.Page_title, "Account Configurations")
+    methods.assertElementContainsText(locators.Page_title, "Engagement Scoring")
     cy.wait(Timeout.sm)
     methods.clickElementByXPath(`//td[text()='${testName}']//following::button[2]`)
     cy.wait(Timeout.sm)
