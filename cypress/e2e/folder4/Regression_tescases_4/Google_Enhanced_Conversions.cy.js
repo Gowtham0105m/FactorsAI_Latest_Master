@@ -275,7 +275,7 @@ describe('Google Enhanced Conversions Login', () => {
 
     it('Google Enhanced Conversions - Conversion feedback for Clicks with Use the Deal amount', () => {
 
-        const nowTime = dayjs().format('H:m:s');
+        const nowTime = dayjs().format('H:m:s'); 
         const Ad_Account = "7108784795";
         const testName = `Demo Google CAPI ${nowTime}`;
         const testName1 = `Demo Google CAPI New ${nowTime}`;

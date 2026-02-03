@@ -38,15 +38,21 @@ describe('Predictive Scoring Login', () => {
         methods.VisibilityofElementXpath(locators.Newprediction)
 
         cy.document().then((doc) => {
-            const demoElement = doc.evaluate(`//h4[contains(text(),"Predictive Score Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
-            if (demoElement) {
-                methods.clickElementByXPath(`(//h4[contains(text(),"Predictive Score Demo")]//following::button[1])[1]`)
-                cy.wait(Timeout.sm);
-                methods.clickElementByXPath(locators.Journey_Delete)
-                methods.clickElementByXPath(locators.Yes);
-                methods.GetText(locators.notification_popup, "Predictive Score deleted successfully");
-                cy.wait(Timeout.xs);
+            const demoElements = doc.evaluate(`//h4[contains(text(),"Predictive Score Demo")]`, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+
+            if (demoElements.snapshotLength > 0) {
+
+                for (let i = 0; i < demoElements.snapshotLength; i++) {
+
+                    methods.clickElementByXPath(`(//h4[contains(text(),"Predictive Score Demo")]//following::button[1])[1]`);
+                    cy.wait(Timeout.sm);
+                    methods.clickElementByXPath(locators.Journey_Delete);
+                    methods.clickElementByXPath(locators.Yes);
+                    methods.GetText(locators.notification_popup, "Predictive Score deleted successfully");
+                    cy.wait(Timeout.xs);
+                }
+
             } else {
                 cy.log('No rules containing "Demo" found. Skipping deletion.');
             }
@@ -99,15 +105,21 @@ describe('Predictive Scoring Login', () => {
         methods.VisibilityofElementXpath(locators.Newprediction)
 
         cy.document().then((doc) => {
-            const demoElement = doc.evaluate(`//h4[contains(text(),"Predictive Score Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
-            if (demoElement) {
-                methods.clickElementByXPath(`(//h4[contains(text(),"Predictive Score Demo")]//following::button[1])[1]`)
-                cy.wait(Timeout.sm);
-                methods.clickElementByXPath(locators.Journey_Delete)
-                methods.clickElementByXPath(locators.Yes);
-                methods.GetText(locators.notification_popup, "Predictive Score deleted successfully");
-                cy.wait(Timeout.xs);
+            const demoElements = doc.evaluate(`//h4[contains(text(),"Predictive Score Demo")]`, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+
+            if (demoElements.snapshotLength > 0) {
+
+                for (let i = 0; i < demoElements.snapshotLength; i++) {
+
+                    methods.clickElementByXPath(`(//h4[contains(text(),"Predictive Score Demo")]//following::button[1])[1]`);
+                    cy.wait(Timeout.sm);
+                    methods.clickElementByXPath(locators.Journey_Delete);
+                    methods.clickElementByXPath(locators.Yes);
+                    methods.GetText(locators.notification_popup, "Predictive Score deleted successfully");
+                    cy.wait(Timeout.xs);
+                }
+
             } else {
                 cy.log('No rules containing "Demo" found. Skipping deletion.');
             }
@@ -120,8 +132,8 @@ describe('Predictive Scoring Login', () => {
         methods.EnterXpath(locators.workflow_name)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Add_Event)
-        methods.typeElement(locators.Select_Event, 'Engagement')
-        methods.clickElement(locators.Engagement_Email)
+        methods.typeElement(locators.Select_Event, 'Website Session')
+        methods.clickElement(locators.Website_Session)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Run_a_check)
         methods.assertElementContainsText(locators.notification_popup, 'Data check completed successfully')
@@ -137,13 +149,13 @@ describe('Predictive Scoring Login', () => {
         methods.clickElementByXPath(locators.Journey_Clone)
         methods.AssertNotEmptyWithXpath(locators.SegmentTitle, `${testName} (Copy)`)
         methods.clickElementByXPath(locators.PS_Add_Filter)
-        methods.ScrollAndClick(locators.User_identification)
-        methods.typeElement(locators.search_1, 'First Seen')
-        methods.clickElement0(locators.First_Seen, 0)
+        methods.typeElement(locators.search_1, 'session count')
+        methods.clickElement(locators.Session_Count)
         methods.clickElement(locators.equals_1)
         cy.wait(Timeout.md)
-        methods.clickElementByXPath(locators.pageview_option1)
-        methods.clickElement(locators.Apply)
+        methods.clickElementByXPath(locators.EnterValue)
+        methods.typeElement(locators.EnterValueInput, '2')
+        methods.Enter(locators.EnterValueInput)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Run_a_check)
         methods.assertElementContainsText(locators.notification_popup, 'Data check completed successfully')
