@@ -50,7 +50,7 @@ describe('TouchPoint Hubspot Login', () => {
         methods.clickElementByXPath(locators.Select_Channel_Property)
         methods.clickElementByXPath(locators.pageview_option4)
         cy.wait(Timeout.sm)
-        methods.clickElement(locators.done)
+        methods.clickElementByXPath(locators.Save_1)
         methods.clickElementByXPath(locators.Touchpoints_Metaball)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.delete)

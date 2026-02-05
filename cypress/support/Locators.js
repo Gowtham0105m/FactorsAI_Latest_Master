@@ -1254,7 +1254,7 @@ class locators {
     this.General_Tab = '.fa-container fa__full-bleed-fix';
     this.panel_engagementScoring = '//div[contains(@id,"panel-engagementScoring")]';
     this.searchType = '#basic_accounts_search';
-    this.search_button1 = '(//h4[text()="Hidden Accounts"]//following::button)[3]';
+    this.search_button1 = '(//span[text()="Hide irrelevant accounts to keep your segments focused on accounts that matter."]//following::button)[3]';
     this.Unhide = '//span[text()="Unhide"]';
     this.Unhide_1 = '(//span[text()="Unhide"])[2]';
     this.Hubspot_Deal_Opt = '[data-title="Hubspot Deal Record ID"]';
@@ -1400,6 +1400,7 @@ class locators {
     this.Intent_upload = '//span[text()="Intent Upload"]';
     this.Integrations1 =  '//h4[text()="Integrations"]';
     this.Session_Count = '[data-title="Session Count"]';
+    this.Moved_To_HiddenAccounts_Close = '.ant-notification-notice-close-x';
 
   }
 }
