@@ -26,7 +26,7 @@ describe('Draft CheckBox Login', () => {
         methods.clickElementByXPath(locators.Drafts);
         methods.VisibilityofElement(locators.Table_Body_1);
         methods.clickElement0(locators.Dropdown, 0);
-        methods.clickElement(locators.Selectalldata);
+        methods.clickElementByXPath(locators.Selectalldata);
         cy.wait(Timeout.sm);
 
         cy.get('[rel="nofollow"]').then(($pages) => {
@@ -142,7 +142,7 @@ describe('Draft CheckBox Login', () => {
         methods.clickElementByXPath(locators.Drafts);
         methods.VisibilityofElement(locators.Table_Body_1);
         methods.clickElement0(locators.Dropdown, 0);
-        methods.clickElement(locators.Selectalldata);
+        methods.clickElementByXPath(locators.Selectalldata);
         cy.wait(Timeout.sm);
 
         cy.get('[rel="nofollow"]').then(($pages) => {

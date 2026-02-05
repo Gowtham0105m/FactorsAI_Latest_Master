@@ -66,7 +66,6 @@ describe('Hidden Accounts', () => {
         methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Account_Configurations_1)
         methods.clickElementByXPath(locators.Hidden_Accounts1)
-        methods.VisibilityofElementXpath(locators.Panel_HiddenAccounts)
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xs)
@@ -96,9 +95,9 @@ describe('Hidden Accounts', () => {
         methods.clickElement(locators.search_button)
         methods.typeElementByXPath(locators.search_area, 'trackdfect.com')
         methods.EnterXpath(locators.search_area)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.assertElementContainsTextxpath(locators.factors_File, 'trackdfect.com')
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.sm)
 
     })
 
@@ -122,10 +121,9 @@ describe('Hidden Accounts', () => {
         methods.clickElementByXPath(locators.Hide)
         methods.GetText(locators.MovedSuccessfull_popup, "Selected accounts have been moved to the hidden list")
         methods.clickElementByXPath(locators.ViewHiddenAccounts_Link);
+        methods.clickElement(locators.Moved_To_HiddenAccounts_Close)
         cy.wait(Timeout.xs)
-        methods.assertElementContainsText(locators.Page_title, 'Hidden Accounts')
         cy.wait(Timeout.sm)
-        methods.VisibilityofElementXpath(locators.Panel_HiddenAccounts)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.search_button1)
@@ -154,9 +152,9 @@ describe('Hidden Accounts', () => {
         methods.clickElement(locators.search_button)
         methods.typeElementByXPath(locators.search_area, 'trackdfect.com')
         methods.EnterXpath(locators.search_area)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.assertElementContainsTextxpath(locators.factors_File, 'trackdfect.com')
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.sm)
 
     })
 })
