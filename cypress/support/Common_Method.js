@@ -269,6 +269,10 @@ class methods {
         cy.get(selector, { timeout: extraTimeOut }).should('exist');
     }
 
+    Existxpath(xpath) {
+        cy.xpath(xpath, { timeout: extraTimeOut }).should('exist');
+    }
+
     NotExist(selector) {
         cy.get(selector, { timeout: extraTimeOut }).should('not.exist');
     }
