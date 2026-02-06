@@ -754,12 +754,12 @@ class locators {
     this.Total_PageViews = '//h4[text()="TotalPageViews"]//following::span[1]'
     this.Marketing_qualified = '(//h4[text()="Marketing Engagement Analysis"]//following::span)[1]'
     this.sales_qualified = '(//h4[text()="Sales Opportunity Analysis"]//following::span)[1]';
-    this.Opportunity_Created = '(//h4[text()="Opportunity Created"]//following::span)[1]';
-    this.Pipeline_Created = '(//h4[text()="Pipeline Created"]//following::span)[1]'
-    this.Average_Deal_Size = '(//h4[text()="Average Deal Size"]//following::h2)[1]'
-    this.Revenue_Booked = '(//h4[text()="Revenue Booked"]//following::h2)[1]'
-    this.Close_Rate = '(//h4[text()="Close Rate (%)"]//following::h2)[1]'
-    this.Avg_Sales_Cycle_Length = '(//h4[text()="Avg Sales Cycle Length"]//following::h2)[1]'
+    this.Opportunity_Created = '//h4[text()="Opportunity Created"]';
+    this.Pipeline_Created = '//h4[text()="Pipeline Created"]'
+    this.Average_Deal_Size = '//h4[text()="Average Deal Size"]'
+    this.Revenue_Booked = '//h4[text()="Revenue Booked"]'
+    this.Close_Rate = '//h4[text()="Close Rate (%)"]'
+    this.Avg_Sales_Cycle_Length = '//h4[text()="Avg Sales Cycle Length"]'
     this.Last_Month = '//a[text()="Last Month"]'
     this.Last_Quarter = '//a[text()="Last Quarter"]'
     this.select_custom_range = '//a[text()="Select Custom Range"]'
@@ -1400,7 +1400,7 @@ class locators {
     this.Intent_upload = '//span[text()="Intent Upload"]';
     this.Integrations1 =  '//h4[text()="Integrations"]';
     this.Session_Count = '[data-title="Session Count"]';
-    this.Moved_To_HiddenAccounts_Close = '.ant-notification-notice-close-x';
+    this.Moved_To_HiddenAccounts_Close = '[.ant-notification-notice-close-x]';
 
   }
 }
