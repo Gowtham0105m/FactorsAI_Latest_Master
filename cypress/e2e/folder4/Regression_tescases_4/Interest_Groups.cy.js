@@ -21,8 +21,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - Page View', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `Page_Interest_View_Demo ${randomNumber}`;
-        const testName1 = `Page_Interest_View_Demo_New_${randomNumber}`;
+        const testName = `Interest_Group_Page_View ${randomNumber}`;
+        const testName1 = `Interest_Group_Page_View_Edit_${randomNumber}`;
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -39,10 +39,10 @@ describe('Interest Group Login', () => {
         methods.VisibilityofElementXpath(locators.AddNewGroup)
 
         cy.document().then((doc) => {
-            const demoElement = doc.evaluate(`//div[contains(text(),"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            const demoElement = doc.evaluate(`//div[contains(text(),"Interest_Group")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
             if (demoElement) {
-                methods.clickElementByXPath(`//div[contains(text(),"Demo")]//following::button[2]`)
+                methods.clickElementByXPath(`//div[contains(text(),"Interest_Group")]//following::button[2]`)
                 cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.Yes);
                 methods.GetText(locators.notification_popup, "Interest Group removed successfullyInterest Group removed from monitoring. Changes will reflect within 24 hours.");
@@ -101,8 +101,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - Hubspot Forms', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `Hubspot Testing_Forms_Demo ${randomNumber}`;
-        const testName1 = `Hubspot_Testing_Forms_Demo_New_${randomNumber}`;
+        const testName = `Interest_Group_Hubspot_Forms ${randomNumber}`;
+        const testName1 = `Interest_Group_Hubspot_Forms_Edit_${randomNumber}`;
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -119,10 +119,10 @@ describe('Interest Group Login', () => {
         methods.VisibilityofElementXpath(locators.AddNewGroup)
 
         cy.document().then((doc) => {
-            const demoElement = doc.evaluate(`//div[contains(text(),"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            const demoElement = doc.evaluate(`//div[contains(text(),"Interest_Group")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
             if (demoElement) {
-                methods.clickElementByXPath(`//div[contains(text(),"Demo")]//following::button[2]`)
+                methods.clickElementByXPath(`//div[contains(text(),"Interest_Group")]//following::button[2]`)
                 cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.Yes);
                 methods.GetText(locators.notification_popup, "Interest Group removed successfullyInterest Group removed from monitoring. Changes will reflect within 24 hours.");
@@ -182,8 +182,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - Salesforce Campaigns', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `Salesforce_Interest Campaigns Demo ${randomNumber}`;
-        const testName1 = `Salesforce_Interest_Campaigns_Demo_New_${randomNumber}`;
+        const testName = `Interest_Group_Salesforce_Campaigns ${randomNumber}`;
+        const testName1 = `Interest_Group_Salesforce_Campaigns_Edit_${randomNumber}`;
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -200,10 +200,10 @@ describe('Interest Group Login', () => {
         methods.VisibilityofElementXpath(locators.AddNewGroup)
 
         cy.document().then((doc) => {
-            const demoElement = doc.evaluate(`//div[contains(text(),"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            const demoElement = doc.evaluate(`//div[contains(text(),"Interest_Group")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
             if (demoElement) {
-                methods.clickElementByXPath(`//div[contains(text(),"Demo")]//following::button[2]`)
+                methods.clickElementByXPath(`//div[contains(text(),"Interest_Group")]//following::button[2]`)
                 cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.Yes);
                 methods.GetText(locators.notification_popup, "Interest Group removed successfullyInterest Group removed from monitoring. Changes will reflect within 24 hours.");
@@ -263,8 +263,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - LinkedIn Ads', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `LinkedIn_Interest Ads_Demo ${randomNumber}`;
-        const testName1 = `LinkedIn_Interest_Ads_Demo_New_${randomNumber}`;
+        const testName = `Interest_Group_LinkedIn_Ads ${randomNumber}`;
+        const testName1 = `Interest_Group_LinkedIn_Ads_Edit ${randomNumber}`;
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -281,10 +281,10 @@ describe('Interest Group Login', () => {
         methods.VisibilityofElementXpath(locators.AddNewGroup)
 
         cy.document().then((doc) => {
-            const demoElement = doc.evaluate(`//div[contains(text(),"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            const demoElement = doc.evaluate(`//div[contains(text(),"Interest_Group")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
             if (demoElement) {
-                methods.clickElementByXPath(`//div[contains(text(),"Demo")]//following::button[2]`)
+                methods.clickElementByXPath(`//div[contains(text(),"Interest_Group")]//following::button[2]`)
                 cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.Yes);
                 methods.GetText(locators.notification_popup, "Interest Group removed successfullyInterest Group removed from monitoring. Changes will reflect within 24 hours.");
@@ -344,8 +344,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - G2 Intent', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `G2_Interest_Intent Demo ${randomNumber}`;
-        const testName1 = `G2_Interest_Intent_Demo_New_${randomNumber}`;
+        const testName = `Interest_Group_G2_Intent ${randomNumber}`;
+        const testName1 = `Interest_Group_G2_Intent_Edit ${randomNumber}`;
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -362,10 +362,10 @@ describe('Interest Group Login', () => {
         methods.VisibilityofElementXpath(locators.AddNewGroup)
 
         cy.document().then((doc) => {
-            const demoElement = doc.evaluate(`//div[contains(text(),"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            const demoElement = doc.evaluate(`//div[contains(text(),"Interest_Group")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
             if (demoElement) {
-                methods.clickElementByXPath(`//div[contains(text(),"Demo")]//following::button[2]`)
+                methods.clickElementByXPath(`//div[contains(text(),"Interest_Group")]//following::button[2]`)
                 cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.Yes);
                 methods.GetText(locators.notification_popup, "Interest Group removed successfullyInterest Group removed from monitoring. Changes will reflect within 24 hours.");
@@ -425,8 +425,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - Custom Event', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `Custom_Interest Event_Demo_${randomNumber}`;
-        const testName1 = `Custom_Interest_Event_Demo_New_${randomNumber}`;
+        const testName = `Interest_Group_Custom_Event ${randomNumber}`;
+        const testName1 = `Interest_Group_Custom_Event_Edit ${randomNumber}`;
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -443,10 +443,10 @@ describe('Interest Group Login', () => {
         methods.VisibilityofElementXpath(locators.AddNewGroup)
 
         cy.document().then((doc) => {
-            const demoElement = doc.evaluate(`//div[contains(text(),"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            const demoElement = doc.evaluate(`//div[contains(text(),"Interest_Group")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
             if (demoElement) {
-                methods.clickElementByXPath(`//div[contains(text(),"Demo")]//following::button[2]`)
+                methods.clickElementByXPath(`//div[contains(text(),"Interest_Group")]//following::button[2]`)
                 cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.Yes);
                 methods.GetText(locators.notification_popup, "Interest Group removed successfullyInterest Group removed from monitoring. Changes will reflect within 24 hours.");
@@ -496,8 +496,8 @@ describe('Interest Group Login', () => {
     it('Interest group Popup verification', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `Popup_Interest_Demo_${randomNumber}`;
-        const testName1 = `Popup_Interest_Demo_New_${randomNumber}`;
+        const testName = `Interest_Group_Popup_verification ${randomNumber}`;
+        const testName1 = `Interest_Group_Popup_verification_Edit_${randomNumber}`;
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -515,10 +515,10 @@ describe('Interest Group Login', () => {
         cy.wait(Timeout.xs)
 
         cy.document().then((doc) => {
-            const demoElement = doc.evaluate(`//div[contains(text(),"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            const demoElement = doc.evaluate(`//div[contains(text(),"Interest_Group")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
             if (demoElement) {
-                methods.clickElementByXPath(`//div[contains(text(),"Demo")]//following::button[2]`)
+                methods.clickElementByXPath(`//div[contains(text(),"Interest_Group")]//following::button[2]`)
                 cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.Yes);
                 methods.GetText(locators.notification_popup, "Interest Group removed successfullyInterest Group removed from monitoring. Changes will reflect within 24 hours.");

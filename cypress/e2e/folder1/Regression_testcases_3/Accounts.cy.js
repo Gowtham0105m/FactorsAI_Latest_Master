@@ -291,6 +291,7 @@ describe('Accounts Regression', () => {
         methods.MouseoverAndClick(locators.open_account)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.BirdView)
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.View_visible)
         methods.clickElementByXPath(locators.Time_line)
         cy.wait(Timeout.sm)
