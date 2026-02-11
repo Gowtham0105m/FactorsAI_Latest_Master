@@ -189,7 +189,7 @@ class locators {
     this.Monthly = '//*[text()="Monthly"]';
     this.Daily = '//*[text()="Daily"]';
     this.Time_line = '//*[text()="Timeline"]';
-    this.Time_line_Validation = '//div[contains(@id,"panel-timeline")]//tbody';
+    this.Time_line_Validation = '//div[contains(@id,"panel-timeline")]';
     this.Over_view = '//*[text()="Overview"]';
     this.Over_view_validation = '.overview';
     this.people_firstvalue = '//th[text()="Date and Time"]//following::span[1]';
@@ -1400,7 +1400,7 @@ class locators {
     this.Intent_upload = '//span[text()="Intent Upload"]';
     this.Integrations1 =  '//h4[text()="Integrations"]';
     this.Session_Count = '[data-title="Session Count"]';
-    this.Moved_To_HiddenAccounts_Close = '[.ant-notification-notice-close-x]';
+    this.Moved_To_HiddenAccounts_Close = '.ant-notification-notice-close-x';
 
   }
 }
