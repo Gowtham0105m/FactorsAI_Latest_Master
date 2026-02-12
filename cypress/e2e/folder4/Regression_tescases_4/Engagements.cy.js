@@ -21,9 +21,9 @@ describe('Engagements scoring Login', () => {
   it('Engagements Custom Events', () => {
 
     const randomNumber = Math.floor(Math.random() * 90) + 10;
-    const testName = `Custom Events Demo ES ${randomNumber}`;
-    const testName1 = `Custom Events Demo ES New ${randomNumber}`;
-    const testName2 = `Custom Events Demo ES Rename ${randomNumber}`;
+    const testName = `Engagements Custom Events Demo ${randomNumber}`;
+    const testName1 = `Engagements Custom Events Demo New ${randomNumber}`;
+    const testName2 = `Engagements Custom Events Demo Rename ${randomNumber}`;
 
     cy.wait(Timeout.md)
     methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -36,10 +36,10 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.sm)
 
     cy.document().then((doc) => {
-      const demoElement = doc.evaluate(`//td[contains(@title,"Demo ES")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      const demoElement = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
       if (demoElement) {
-        methods.clickElementByXPath(`//td[contains(@title,"Demo ES")]//following::button[2]`)
+        methods.clickElementByXPath(`//td[contains(@title,"Demo")]//following::button[2]`)
         cy.wait(Timeout.sm);
         methods.clickElementByXPath(locators.Yes);
         cy.wait(Timeout.sm)
@@ -102,9 +102,9 @@ describe('Engagements scoring Login', () => {
   it('Engagements Page View', () => {
 
     const randomNumber = Math.floor(Math.random() * 90) + 10;
-    const testName = `Page View Demo ES ${randomNumber}`;
-    const testName1 = `Page View Demo ES New ${randomNumber}`;
-    const testName2 = `Page View Demo ES Rename ${randomNumber}`;
+    const testName = `Engagements Page View Demo ${randomNumber}`;
+    const testName1 = `Engagements Page View Demo New ${randomNumber}`;
+    const testName2 = `Engagements Page View Demo Rename ${randomNumber}`;
 
     cy.wait(Timeout.md)
     methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -117,10 +117,10 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.sm)
 
     cy.document().then((doc) => {
-      const demoElement = doc.evaluate(`//td[contains(@title,"Demo ES")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      const demoElement = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
       if (demoElement) {
-        methods.clickElementByXPath(`//td[contains(@title,"Demo ES")]//following::button[2]`)
+        methods.clickElementByXPath(`//td[contains(@title,"Demo")]//following::button[2]`)
         cy.wait(Timeout.sm);
         methods.clickElementByXPath(locators.Yes);
         cy.wait(Timeout.sm)
@@ -194,9 +194,9 @@ describe('Engagements scoring Login', () => {
   it('Engagements HubSpot Forms', () => {
 
     const randomNumber = Math.floor(Math.random() * 90) + 10;
-    const testName = `HubSpot Forms Demo ES ${randomNumber}`;
-    const testName1 = `HubSpot Forms Demo ES New ${randomNumber}`;
-    const testName2 = `HubSpot Forms Demo ES Rename ${randomNumber}`;
+    const testName = `Engagements HubSpot Forms Demo ${randomNumber}`;
+    const testName1 = `Engagements HubSpot Forms Demo New ${randomNumber}`;
+    const testName2 = `Engagements HubSpot Forms Demo Rename ${randomNumber}`;
 
     cy.wait(Timeout.md)
     methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -209,10 +209,10 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.sm)
 
     cy.document().then((doc) => {
-      const demoElement = doc.evaluate(`//td[contains(@title,"Demo ES")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      const demoElement = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
       if (demoElement) {
-        methods.clickElementByXPath(`//td[contains(@title,"Demo ES")]//following::button[2]`)
+        methods.clickElementByXPath(`//td[contains(@title,"Demo")]//following::button[2]`)
         cy.wait(Timeout.sm);
         methods.clickElementByXPath(locators.Yes);
         cy.wait(Timeout.sm)
@@ -287,9 +287,9 @@ describe('Engagements scoring Login', () => {
   it('Engagements Salesforce Campaigns', () => {
 
     const randomNumber = Math.floor(Math.random() * 90) + 10;
-    const testName = `Salesforce Campaigns Demo ES ${randomNumber}`;
-    const testName1 = `Salesforce Campaigns Demo ES New ${randomNumber}`;
-    const testName2 = `Salesforce Campaigns Demo ES Rename ${randomNumber}`;
+    const testName = `Engagements Salesforce Campaigns Demo ${randomNumber}`;
+    const testName1 = `Engagements Salesforce Campaigns Demo New ${randomNumber}`;
+    const testName2 = `Engagements Salesforce Campaigns Demo Rename ${randomNumber}`;
 
     cy.wait(Timeout.md)
     methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -302,10 +302,10 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.sm)
 
     cy.document().then((doc) => {
-      const demoElement = doc.evaluate(`//td[contains(@title,"Demo ES")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      const demoElement = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
       if (demoElement) {
-        methods.clickElementByXPath(`//td[contains(@title,"Demo ES")]//following::button[2]`)
+        methods.clickElementByXPath(`//td[contains(@title,"Demo")]//following::button[2]`)
         cy.wait(Timeout.sm);
         methods.clickElementByXPath(locators.Yes);
         cy.wait(Timeout.sm)
@@ -380,9 +380,9 @@ describe('Engagements scoring Login', () => {
   it('Engagements LinkedIn Ads', () => {
 
     const randomNumber = Math.floor(Math.random() * 90) + 10;
-    const testName = `LinkedIn Ads Demo ES ${randomNumber}`;
-    const testName1 = `LinkedIn Ads Demo ES New ${randomNumber}`;
-    const testName2 = `LinkedIn Ads Demo ES Rename ${randomNumber}`;
+    const testName = `Engagements LinkedIn Ads Demo ${randomNumber}`;
+    const testName1 = `Engagements LinkedIn Ads Demo New ${randomNumber}`;
+    const testName2 = `Engagements LinkedIn Ads Demo Rename ${randomNumber}`;
 
     cy.wait(Timeout.md)
     methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -395,10 +395,10 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.sm)
 
     cy.document().then((doc) => {
-      const demoElement = doc.evaluate(`//td[contains(@title,"Demo ES")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      const demoElement = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
       if (demoElement) {
-        methods.clickElementByXPath(`//td[contains(@title,"Demo ES")]//following::button[2]`)
+        methods.clickElementByXPath(`//td[contains(@title,"Demo")]//following::button[2]`)
         cy.wait(Timeout.sm);
         methods.clickElementByXPath(locators.Yes);
         cy.wait(Timeout.sm)
@@ -474,9 +474,9 @@ describe('Engagements scoring Login', () => {
   it('Engagements G2 Intent', () => {
 
     const randomNumber = Math.floor(Math.random() * 90) + 10;
-    const testName = `G2 Intent Demo ES ${randomNumber}`;
-    const testName1 = `G2 Intent Demo ES New ${randomNumber}`;
-    const testName2 = `G2 Intent Demo ES Rename ${randomNumber}`;
+    const testName = `Engagements G2 Intent Demo ${randomNumber}`;
+    const testName1 = `Engagements G2 Intent Demo New ${randomNumber}`;
+    const testName2 = `Engagements G2 Intent Demo Rename ${randomNumber}`;
 
     cy.wait(Timeout.md)
     methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -489,10 +489,10 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.sm)
 
     cy.document().then((doc) => {
-      const demoElement = doc.evaluate(`//td[contains(@title,"Demo ES")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      const demoElement = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
       if (demoElement) {
-        methods.clickElementByXPath(`//td[contains(@title,"Demo ES")]//following::button[2]`)
+        methods.clickElementByXPath(`//td[contains(@title,"Demo")]//following::button[2]`)
         cy.wait(Timeout.sm);
         methods.clickElementByXPath(locators.Yes);
         cy.wait(Timeout.sm)
@@ -567,8 +567,8 @@ describe('Engagements scoring Login', () => {
   it('Engagements scoring Popup verification', () => {
 
     const randomNumber = Math.floor(Math.random() * 90) + 10;
-    const testName = `Account scoring Demo ES ${randomNumber}`;
-    const testName1 = `Account scoring Demo ES New ${randomNumber}`;
+    const testName = `Engagements scoring Popup verification Demo ${randomNumber}`;
+    const testName1 = `Engagements scoring Popup verification Demo New ${randomNumber}`;
 
     cy.wait(Timeout.md)
     methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -581,10 +581,10 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.sm)
 
     cy.document().then((doc) => {
-      const demoElement = doc.evaluate(`//td[contains(@title,"Demo ES")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      const demoElement = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
       if (demoElement) {
-        methods.clickElementByXPath(`//td[contains(@title,"Demo ES")]//following::button[2]`)
+        methods.clickElementByXPath(`//td[contains(@title,"Demo")]//following::button[2]`)
         cy.wait(Timeout.sm);
         methods.clickElementByXPath(locators.Yes);
         cy.wait(Timeout.sm)
@@ -689,7 +689,7 @@ describe('Engagements scoring Login', () => {
   it('Navigate to engagement score page from All Account page', () => {
 
     const randomNumber = Math.floor(Math.random() * 90) + 10;
-    const testName = `Engagement scoring Demo ES ${randomNumber}`;
+    const testName = `Engagement scoring Demo ${randomNumber}`;
 
     cy.wait(Timeout.md)
     methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
@@ -723,10 +723,10 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.sm)
 
     cy.document().then((doc) => {
-      const demoElement = doc.evaluate(`//td[contains(@title,"Demo ES")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      const demoElement = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
       if (demoElement) {
-        methods.clickElementByXPath(`//td[contains(@title,"Demo ES")]//following::button[2]`)
+        methods.clickElementByXPath(`//td[contains(@title,"Demo")]//following::button[2]`)
         cy.wait(Timeout.sm);
         methods.clickElementByXPath(locators.Yes);
         cy.wait(Timeout.sm)

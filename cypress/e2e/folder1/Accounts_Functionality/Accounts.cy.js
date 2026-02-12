@@ -58,7 +58,6 @@ describe('Accounts Login', () => {
         methods.clickElementByXPath(locators.Filter)
         methods.VisibilityofElement(locators.Open_Filter)
         methods.assertElementContainsText1(locators.QuickSearchTitle, "Select from quick suggestions")
-        // methods.clickElement0(locators.HighEngagement, 0)
         methods.clickElement0(locators.Not_Customers, 0)
         methods.clickElementByXPath(locators.Show_More)
         methods.clickElement0(locators.SQLsandOpps, 0)
@@ -157,7 +156,8 @@ describe('Accounts Login', () => {
 
         // open the saved segment
 
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.typeElement(locators.Search_segment, testName)
         methods.clickElementByXPath(locators.Select_segment)
 
@@ -199,7 +199,8 @@ describe('Accounts Login', () => {
         methods.clickElementByXPath(locators.Yes)
         methods.NotExist(locators.Loading)
         methods.assertElementContainsText(locators.Popup_Message, "Folder Deleted")
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.lg)
+        methods.VisibilityofElementXpath(locators.account_pageloaded)
 
     })
 
@@ -282,7 +283,8 @@ describe('Accounts Login', () => {
         methods.clickElementByXPath(locators.Yes)
         methods.NotExist(locators.Loading)
         methods.assertElementContainsText(locators.notification_popup, "Segment deleted successfully")
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.lg)
+        methods.VisibilityofElementXpath(locators.account_pageloaded)
 
     })
 
@@ -380,7 +382,8 @@ describe('Accounts Login', () => {
         methods.clickElementByXPath(locators.Yes)
         methods.NotExist(locators.Loading)
         methods.assertElementContainsText(locators.notification_popup, "Segment deleted successfully")
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.lg)
+        methods.VisibilityofElementXpath(locators.account_pageloaded)
 
     })
 })
