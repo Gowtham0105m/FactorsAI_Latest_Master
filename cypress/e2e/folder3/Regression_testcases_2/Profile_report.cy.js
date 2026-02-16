@@ -470,7 +470,7 @@ describe('Profile Report Regression', () => {
         cy.wait(Timeout.sm)
         methods.typeElement(locators.Search_dashboard, 'Auto')
         methods.clickElementByXPath(locators.Automate)
-        methods.clickElementByXPath(`//h4[text()='${testName}']//following::button[1]`)
+        methods.clickElementByXPath(`//h4[text()='${testName}']//following::button[2]`)
         methods.clickElementByXPath(locators.Removefromthisboard)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Yes)

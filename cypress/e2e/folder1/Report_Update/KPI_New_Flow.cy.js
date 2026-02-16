@@ -144,7 +144,7 @@ describe('KPI Report Login', () => {
         methods.clickElementByXPath(locators.Automation_dashboard_Folder)
         methods.clickElementByXPath(locators.Automate)
         methods.assertElementContainsTextxpath(locators.SegmentTitle, "Automation Dashboard")
-        methods.clickElementByXPath(`//h4[text()='${testName}']//following::button[1]`)
+        methods.clickElementByXPath(`//h4[text()='${testName}']//following::button[2]`)
         methods.clickElementByXPath(locators.Removefromthisboard)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Yes)
