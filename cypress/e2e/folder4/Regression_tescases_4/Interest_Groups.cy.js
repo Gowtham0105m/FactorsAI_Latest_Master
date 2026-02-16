@@ -22,7 +22,7 @@ describe('Interest Group Login', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const testName = `Interest_Group_Page_View ${randomNumber}`;
-        const testName1 = `Interest_Group_Page_View_Edit_${randomNumber}`;
+        const testName1 = `Interest_Group_Page_View_Edit ${randomNumber}`;
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -102,7 +102,7 @@ describe('Interest Group Login', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const testName = `Interest_Group_Hubspot_Forms ${randomNumber}`;
-        const testName1 = `Interest_Group_Hubspot_Forms_Edit_${randomNumber}`;
+        const testName1 = `Interest_Group_Hubspot_Forms_Edit ${randomNumber}`;
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -182,8 +182,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - Salesforce Campaigns', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `Interest_Group_Salesforce_Campaigns ${randomNumber}`;
-        const testName1 = `Interest_Group_Salesforce_Campaigns_Edit_${randomNumber}`;
+        const testName = `Interest_Group_Salesforce ${randomNumber}`;
+        const testName1 = `Interest_Group_Salesforce_Edit ${randomNumber}`;
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Account_Pagetitle)
@@ -496,8 +496,8 @@ describe('Interest Group Login', () => {
     it('Interest group Popup verification', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `Interest_Group_Popup_verification ${randomNumber}`;
-        const testName1 = `Interest_Group_Popup_verification_Edit_${randomNumber}`;
+        const testName = `Interest_Group_verification ${randomNumber}`;
+        const testName1 = `Interest_Group_verification_Edit ${randomNumber}`;
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Account_Pagetitle)

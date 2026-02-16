@@ -301,7 +301,7 @@ describe('Event Report Login', () => {
     methods.typeElement(locators.Search_dashboard, 'Auto')
     methods.clickElementByXPath(locators.Automate)
     cy.wait(Timeout.xs)
-    methods.clickElementByXPath(`//h4[text()='${testName}']//following::button[1]`)
+    methods.clickElementByXPath(`//h4[text()='${testName}']//following::button[2]`)
     methods.clickElementByXPath(locators.Removefromthisboard)
     methods.clickElementByXPath(locators.Yes)
     cy.wait(Timeout.xs)

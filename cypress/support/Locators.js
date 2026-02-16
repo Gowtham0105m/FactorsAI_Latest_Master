@@ -1393,7 +1393,7 @@ class locators {
     this.Property_Mapping = '//span[text()="Property Mapping"]';
     this.Engagement_Scoring = '//span[text()="Engagement Scoring"]';
     this.Interest_Groups = '//span[text()="Interest Groups"]';
-    this.Custom_KPI = `//span[text()="Custom KPI's"]`;
+    this.Custom_KPI = `//span[text()="Custom KPIs"]`;
     this.New_Custom_KPI = '//h1[text()="New Custom KPI"]';
     this.Panel_HiddenAccounts  = '//h4[text()="Hidden Accounts"]';
     this.Hidden_Accounts1 = '//span[text()="Hidden Accounts"]';
