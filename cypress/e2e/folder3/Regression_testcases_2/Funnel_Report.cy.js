@@ -574,7 +574,7 @@ describe('Funnel Report Rregression', () => {
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Closed)
         cy.wait(Timeout.xs)
-        methods.clickElementByXPath(`//h4[text()='${testName}']//following::button[1]`)
+        methods.clickElementByXPath(`//h4[text()='${testName}']//following::button[2]`)
         methods.clickElementByXPath(locators.Removefromthisboard)
         methods.clickElementByXPath(locators.Yes)
         cy.wait(Timeout.xs)
