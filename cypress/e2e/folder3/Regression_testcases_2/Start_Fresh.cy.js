@@ -66,7 +66,8 @@ describe('Start_Fresh_Icon', () => {
         methods.VisibilityofElement(locators.notification_popup)
 
         // search saved segment
-        cy.wait(Timeout.lg)
+        cy.wait(Timeout.ml)
+        cy.wait(Timeout.ml)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xs)
         methods.ClearAndType(locators.Search_segment, testName)
