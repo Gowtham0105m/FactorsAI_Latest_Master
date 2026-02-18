@@ -39,8 +39,8 @@ describe('Funnel compare Login', () => {
         methods.clickElement0(locators.Website_Session, 0)
         methods.clickElementByXPath(locators.Add_another_event)
         methods.clickElement0(locators.Linkedin_Company_Engagements, 0)
-        methods.clickElement(locators.Linkedin_Ad_Clicked)
-
+        methods.typeElement(locators.search_1, "linkedin paid views")
+        methods.clickElement(locators.Linkedin_Paid_Views)
         methods.clickElementByXPath(locators.Add_New_Breakdown)
         methods.clickElement0(locators.All_Account, 0)
         methods.typeElement(locators.select_property, 'Top Engage')

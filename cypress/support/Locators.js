@@ -439,7 +439,7 @@ class locators {
     this.Page_URL_Button = '//h4[text()="Page URL"]//following::button[1]';
     this.Channel_Button = '//h4[text()="Channel"]//following::button[1]';
     this.Page_Domain = '//div[@class="flex flex-col"]//div[2]';
-    this.Details = '(//span[text()="Linkedin Ad Viewed"])[1]'
+    this.Details = '(//span[contains(text(),"Linkedin")])[1]'
     this.Page_Properties = '[data-title="Page Properties"]';
     this.Page_domain_option = '[data-title="Page Domain"]';
     this.page_URL = '[data-title="Page URL"]';
@@ -1401,6 +1401,7 @@ class locators {
     this.Integrations1 =  '//h4[text()="Integrations"]';
     this.Session_Count = '[data-title="Session Count"]';
     this.Moved_To_HiddenAccounts_Close = '.ant-notification-notice-close-x';
+    this.Linkedin_Paid_Views = '[data-title="Linkedin Paid Views"]';
 
   }
 }
