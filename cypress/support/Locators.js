@@ -1395,13 +1395,16 @@ class locators {
     this.Interest_Groups = '//span[text()="Interest Groups"]';
     this.Custom_KPI = `//span[text()="Custom KPIs"]`;
     this.New_Custom_KPI = '//h1[text()="New Custom KPI"]';
-    this.Panel_HiddenAccounts  = '//h4[text()="Hidden Accounts"]';
+    this.Panel_HiddenAccounts = '//h4[text()="Hidden Accounts"]';
     this.Hidden_Accounts1 = '//span[text()="Hidden Accounts"]';
     this.Intent_upload = '//span[text()="Intent Upload"]';
-    this.Integrations1 =  '//h4[text()="Integrations"]';
+    this.Integrations1 = '//h4[text()="Integrations"]';
     this.Session_Count = '[data-title="Session Count"]';
     this.Moved_To_HiddenAccounts_Close = '.ant-notification-notice-close-x';
     this.Linkedin_Paid_Views = '[data-title="Linkedin Paid Views"]';
+    this.Hubspot_Deal_Sales_Owner = '[data-title="Hubspot Deal Sales Owner"]';
+    this.Hubspot_Contact_Pipeline = '[data-title="Hubspot Contact Pipeline"]';
+    this.Hubspot_Company_URL = '[data-title="Hubspot Company URL"]'
 
   }
 }
