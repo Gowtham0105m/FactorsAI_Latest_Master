@@ -27,7 +27,7 @@ describe('KPI Report Login', () => {
         const testName = `Demo_${nowTime}`;
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
         cy.wait(Timeout.sm)
@@ -119,7 +119,7 @@ describe('KPI Report Login', () => {
 
         methods.assertElementContainsTextxpath(locators.alias_Name_Verify, 'testing_New')
         methods.clickElementByXPath(locators.Compare)
-        methods.clickElementByXPath(locators.previous_Day)
+        methods.clickElementByXPath(locators.previous_Day)  
         methods.clickElementByXPath(locators.datepicker1)
         methods.clickElementByXPath(locators.cal_Selector)
         methods.clickElementByXPath(locators.datepicker2)
@@ -144,13 +144,13 @@ describe('KPI Report Login', () => {
         methods.clickElementByXPath(locators.Automation_dashboard_Folder)
         methods.clickElementByXPath(locators.Automate)
         methods.assertElementContainsTextxpath(locators.SegmentTitle, "Automation Dashboard")
-        methods.clickElementByXPath(`//h4[text()='${testName}']//following::button[2]`)
+        methods.clickElementByXPath(`//*[text()='${testName}']//following::button[2]`)
         methods.clickElementByXPath(locators.Removefromthisboard)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Yes)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Drafts)
-        methods.MouseoverWithXpath(`//h4[text()='${testName}']//following::button[1]`)
+        methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.Delete_Report)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.confirm)

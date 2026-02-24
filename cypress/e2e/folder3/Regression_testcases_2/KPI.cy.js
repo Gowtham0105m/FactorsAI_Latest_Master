@@ -25,7 +25,7 @@ describe('KPI Login', () => {
     const testName = `Demo_${randomNumber}`;
 
     cy.wait(Timeout.md)
-    methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+    methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     methods.VisibilityofElementXpath(locators.account_pageloaded)
     cy.wait(Timeout.sm)
     methods.Mouseover(locators.report_dropdown)
@@ -91,7 +91,7 @@ describe('KPI Login', () => {
     const testName = `Demo_${randomNumber}`;
 
     cy.wait(Timeout.md)
-    methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+    methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     methods.VisibilityofElementXpath(locators.account_pageloaded)
     cy.wait(Timeout.sm)
     methods.Mouseover(locators.report_dropdown)

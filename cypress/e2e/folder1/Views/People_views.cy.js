@@ -21,10 +21,10 @@ describe('People view Login', () => {
     it('People view', () => {
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.navigateToUrlPeople()
         methods.UrlValidationPeople()
-        methods.assertElementContainsTextxpath(locators.all_People_Title, 'All People')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
 
         // select account & birdview

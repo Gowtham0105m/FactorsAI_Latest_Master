@@ -24,7 +24,7 @@ describe('Move Dashboard Report Login', () => {
         let reportNames = [];
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
         cy.wait(Timeout.sm)
@@ -36,7 +36,7 @@ describe('Move Dashboard Report Login', () => {
         methods.clickElementByXPath(locators.WebsiteVisitorIdentification)
         methods.clickElementByXPath(locators.Showmore)
 
-        cy.xpath('//h4[text()="Included Reports"]//following-sibling::h4')
+        cy.xpath('//*[text()="Included Reports"]//following-sibling::h6')
             .then(($headers) => {
                 $headers.each((index, el) => {
                     if (index > 0) {
@@ -79,7 +79,7 @@ describe('Move Dashboard Report Login', () => {
 
         cy.then(() => {
             reportNames.forEach((name) => {
-                methods.clickElementByXPath(`(//h4[text()="${name}"]//preceding::input[@type="checkbox"][1])[1]`)
+                methods.clickElementByXPath(`(//*[text()="${name}"]//preceding::input[@type="checkbox"][1])[1]`)
             });
         });
 

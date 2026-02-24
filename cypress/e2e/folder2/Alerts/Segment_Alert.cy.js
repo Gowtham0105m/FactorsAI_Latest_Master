@@ -25,7 +25,7 @@ describe('Segment Alert Login', () => {
         const testName = `Demo Segment Alert ${nowTime}`;
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         cy.document().then((doc) => {
@@ -55,7 +55,7 @@ describe('Segment Alert Login', () => {
         methods.scrollWithXpath(locators.Create_new_alert_title)
         methods.VisibilityofElementXpath(locators.Create_new_alert_title)
 
-        cy.xpath(`(//h4[text()="Segment name"]//following::span[2]//div)[2]`).invoke('text').then((SegmentName) => {
+        cy.xpath(`(//*[text()="Segment name"]//following::span[2]//div)[2]`).invoke('text').then((SegmentName) => {
             if (SegmentName === "In Hubspot") {
                 cy.log(`**Excepted segment name : ${SegmentName} matches with Actual segment name : In Hubspot**`);
             } else {
@@ -83,7 +83,7 @@ describe('Segment Alert Login', () => {
         methods.clickElementByXPath(locators.Confirm_publish)
         methods.GetText(locators.notification_popup, "Alerts SavedNew Alerts is created and saved successfully.")
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()='${testName}']//following::button[2]`)
+        methods.clickElementByXPath(`//*[text()='${testName}']//following::button[2]`)
         methods.clickElementByXPath(locators.remove_alert)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
@@ -98,7 +98,7 @@ describe('Segment Alert Login', () => {
         const testName = `Demo Segment Alert ${nowTime}`;
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         cy.document().then((doc) => {
@@ -128,7 +128,7 @@ describe('Segment Alert Login', () => {
         methods.scrollWithXpath(locators.Create_new_alert_title)
         methods.VisibilityofElementXpath(locators.Create_new_alert_title)
 
-        cy.xpath(`(//h4[text()="Segment name"]//following::span[2]//div)[2]`).invoke('text').then((SegmentName) => {
+        cy.xpath(`(//*[text()="Segment name"]//following::span[2]//div)[2]`).invoke('text').then((SegmentName) => {
             if (SegmentName === "In Hubspot") {
                 cy.log(`**Excepted segment name : ${SegmentName} matches with Actual segment name : In Hubspot**`);
             } else {
@@ -158,7 +158,7 @@ describe('Segment Alert Login', () => {
         methods.clickElementByXPath(locators.Confirm_publish)
         methods.GetText(locators.notification_popup, "Alerts SavedNew Alerts is created and saved successfully.")
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()='${testName}']//following::button[2]`)
+        methods.clickElementByXPath(`//*[text()='${testName}']//following::button[2]`)
         methods.clickElementByXPath(locators.remove_alert)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
@@ -173,7 +173,7 @@ describe('Segment Alert Login', () => {
         const testName = `Demo People Segment Alert ${nowTime}`;
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         cy.document().then((doc) => {

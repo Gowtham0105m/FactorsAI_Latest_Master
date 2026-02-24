@@ -27,7 +27,7 @@ describe('KPI new flow Login', () => {
         const testName = `Demo_${nowTime}`;
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
         cy.wait(Timeout.sm)
@@ -128,7 +128,7 @@ describe('KPI new flow Login', () => {
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Closed)
         methods.clickElementByXPath(locators.Drafts)
-        methods.MouseoverWithXpath(`//h4[text()='${testName}']//following::button[1]`)
+        methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.Delete)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.confirmbtn)

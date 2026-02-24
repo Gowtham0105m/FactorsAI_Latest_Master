@@ -23,13 +23,13 @@ describe('Peoples Regression', () => {
     it('TC_RE_01 - Peoples_Page Load', () => {
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         cy.wait(Timeout.xs)
         methods.UrlvalidationPeople()
-        methods.assertElementContainsTextxpath(locators.all_People_Title, 'All People')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
 
     })
@@ -39,13 +39,13 @@ describe('Peoples Regression', () => {
         const testName = `Demo_${nowTime}`;
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         cy.wait(Timeout.xs)
         methods.UrlvalidationPeople()
-        methods.assertElementContainsTextxpath(locators.all_People_Title, 'All People')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElementByXPath(locators.Filter)
         methods.VisibilityofElement(locators.Open_Filter)
@@ -84,12 +84,12 @@ describe('Peoples Regression', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
         cy.wait(Timeout.xl)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         cy.wait(Timeout.lg)
         methods.UrlvalidationPeople()
-        methods.assertElementContainsTextxpath(locators.all_People_Title, 'All People')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
         methods.clickElement(locators.filter)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Add_filter1)
@@ -116,12 +116,12 @@ describe('Peoples Regression', () => {
     it.skip('TC_RE_05 - Peoples_discard changes', () => {
 
         cy.wait(Timeout.xl)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         cy.wait(Timeout.lg)
         methods.UrlvalidationPeople()
-        methods.assertElementContainsTextxpath(locators.all_People_Title, 'All People')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
         methods.clickElement(locators.filter)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Add_filter1)
@@ -139,16 +139,16 @@ describe('Peoples Regression', () => {
     it('TC_RE_06, TC_RE_07 - People_Search field ', () => {
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         methods.UrlvalidationPeople()
-        methods.assertElementContainsTextxpath(locators.all_People_Title, 'All People')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
 
         // Search username
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        methods.clickElement(locators.search_button)
+        methods.clickElementByXPath(locators.People_download_button)
         methods.typeElementByXPath(locators.Search1, 'sarath_tdfect@')
         methods.EnterXpath(locators.Search1)
         cy.wait(Timeout.xs)
@@ -164,12 +164,12 @@ describe('Peoples Regression', () => {
         const combination = testName + randomNumber;
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         methods.UrlvalidationPeople()
-        methods.assertElementContainsTextxpath(locators.all_People_Title, 'All People')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
         methods.clickElementByXPath(locators.New_Segment);
 
         methods.clickElementIndexXpath(locators.Add_new2, 0)
@@ -221,18 +221,18 @@ describe('Peoples Regression', () => {
     it('TC_RE_12, TC_RE_13 - People_Brid views ', () => {
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         cy.wait(Timeout.lg)
         methods.UrlvalidationPeople()
-        methods.assertElementContainsTextxpath(locators.all_People_Title, 'All People')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
 
         // select account & birdview
 
-        methods.clickElement(locators.search_button)
+        methods.clickElementByXPath(locators.People_download_button)
         methods.typeElementByXPath(locators.Search1, 'sarath_tdfect@factors.ai')
         methods.EnterXpath(locators.Search1)
         cy.wait(Timeout.md)
@@ -244,16 +244,16 @@ describe('Peoples Regression', () => {
     it('TC_RE_14 - People_Birdviews expand ', () => {
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         cy.wait(Timeout.lg)
         methods.UrlvalidationPeople()
-        methods.assertElementContainsTextxpath(locators.all_People_Title, 'All People')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
 
-        methods.clickElement(locators.search_button)
+        methods.clickElementByXPath(locators.People_download_button)
         methods.typeElementByXPath(locators.Search1, 'sarath_tdfect@factors.ai')
         methods.EnterXpath(locators.Search1)
         methods.clickElementByXPath(locators.rowname)
@@ -265,16 +265,16 @@ describe('Peoples Regression', () => {
     it('TC_RE_15 - People_Birdviews account activity ', () => {
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         cy.wait(Timeout.lg)
         methods.UrlvalidationPeople()
-        methods.assertElementContainsTextxpath(locators.all_People_Title, 'All People')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
 
-        methods.clickElement(locators.search_button)
+        methods.clickElementByXPath(locators.People_download_button)
         methods.typeElementByXPath(locators.Search1, 'sarath_tdfect@factors.ai')
         methods.EnterXpath(locators.Search1)
         methods.clickElementByXPath(locators.rowname)

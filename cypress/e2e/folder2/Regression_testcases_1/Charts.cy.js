@@ -21,7 +21,7 @@ describe('Charts Login', () => {
     it('TC_RE_01_Charts - companies have been visited', () => {
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -51,7 +51,7 @@ describe('Charts Login', () => {
     it('TC_RE_02_Charts - Local filters, Local break down', () => {
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)

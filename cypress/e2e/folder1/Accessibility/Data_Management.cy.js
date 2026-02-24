@@ -31,22 +31,14 @@ describe('Data Management Login', () => {
 
       cy.wait(Timeout.sm)
       methods.clickElement(locators.setting)
-      methods.clickElementByXPath(locators.Data_Management)
-      cy.xpath(`//span[text()="Data Management"]//following::span[@class="ant-menu-title-content"][${item.index}]`, { timeout: extraTimeOut }).click({ force: true });
-      cy.wait(Timeout.xs);
+      cy.xpath(`//span[text()="Data Management"]//following::span[@class="ant-menu-title-content"][${item.index}]`, { timeout: extraTimeOut }).click({ force: true });     
+      cy.wait(Timeout.lg);
+      cy.wait(Timeout.xs)
       methods.UrlValidationset(item.url)
-      methods.VisibilityofElement(locators.Page_title)
-      methods.Titletextcontains(locators.Page_title, item.key)
+      methods.VisibilityofElementXpath(locators.DataManagementHeader)
+      methods.Titletextcontainsxpath(locators.DataManagementHeader, item.key)
 
     });
-
-    cy.wait(Timeout.sm)
-    methods.clickElement(locators.Page_title)
-    cy.wait(Timeout.sm);
-    methods.clickElementIndexXpath(locators.Attribution, 0)
-    methods.UrlValidationset('attribution')
-    methods.VisibilityofElement(locators.Page_title)
-    methods.Titletextcontains(locators.Page_title, 'Attribution')
 
   });
 

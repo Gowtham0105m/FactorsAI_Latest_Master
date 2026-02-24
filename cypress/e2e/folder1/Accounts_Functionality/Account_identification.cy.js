@@ -22,9 +22,9 @@ describe('Account Identification Login', () => {
     it('Account Identification', () => {
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.all_Accounts_Opt, 'All Accounts')
         methods.Mouseover(locators.account_dropdown)
-        methods.clickElementByXPath(locators.Account_identification)
+        methods.clickElementByXPath(locators.Account_identification1)
         methods.UrlValidationAccide()
         methods.Titletextcontains(locators.Page_title1, 'Top accounts that visited your website')
         methods.VisibilityofElement(locators.Identification_Table)

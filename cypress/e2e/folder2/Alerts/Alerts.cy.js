@@ -26,7 +26,7 @@ describe('Alert Login', () => {
         const testName1 = `Demo Editted Alert ${nowTime}_1`;
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.clickElementByXPath(locators.Automation)
 
         // New alert
@@ -49,7 +49,7 @@ describe('Alert Login', () => {
 
         // Add filters
 
-        methods.clickElement(locators.search_button)
+        methods.clickElementByXPath(locators.Add_a_Filter)
         methods.clickElement0(locators.others, 0)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.pageview_option1)
@@ -104,7 +104,7 @@ describe('Alert Login', () => {
         methods.clickElementByXPath(locators.Confirm_publish)
         methods.GetText(locators.notification_popup, "Alerts SavedNew Alerts is created and saved successfully.")
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()="${testName}"]`)
+        methods.clickElementByXPath(`//h6[text()="${testName}"]`)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.Alert_name)
         methods.ClearAndType(locators.Alert_name, testName1)
@@ -135,20 +135,20 @@ describe('Alert Login', () => {
         methods.clickElementByXPath(locators.Alert_Update_Btn)
         methods.clickElementByXPath(locators.Confirm_publish)
         methods.GetText(locators.notification_popup, "Alerts SavedAlerts is edited and saved successfully.")
-        methods.assertElementContainsTextxpath(`//h4[text()="${testName1}"]//following::td[2]`, "Active")
-        methods.clickElementByXPath(`//h4[text()="${testName1}"]`)
+        methods.assertElementContainsTextxpath(`//h6[text()="${testName1}"]//following::td[2]`, "Active")
+        methods.clickElementByXPath(`//h6[text()="${testName1}"]`)
         cy.wait(Timeout.sm)
         methods.clickElement0(locators.Alert_Toogle, 0)
         methods.clickElementByXPath(locators.pause)
         cy.wait(Timeout.xs)
         methods.assertElementContainsText(locators.Popup_Message, "Successfully paused alerts.")
         cy.wait(Timeout.sm)
-        methods.assertElementContainsTextxpath(`//h4[text()="${testName1}"]//following::td[2]`, "Paused")
+        methods.assertElementContainsTextxpath(`//h6[text()="${testName1}"]//following::td[2]`, "Paused")
 
         // Deleting the alert
 
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()='${testName1}']//following::button[2]`)
+        methods.clickElementByXPath(`//h6[text()='${testName1}']//following::button[2]`)
         methods.clickElementByXPath(locators.remove_alert)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
@@ -163,7 +163,7 @@ describe('Alert Login', () => {
         const testName = `Demo Copy Alert ${nowTime}`;
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.clickElementByXPath(locators.Automation)
 
 
@@ -187,7 +187,7 @@ describe('Alert Login', () => {
 
         // Add filters
 
-        methods.clickElement(locators.search_button)
+        methods.clickElementByXPath(locators.Add_a_Filter)
         methods.clickElement0(locators.others, 0)
         cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.pageview_option1)
@@ -240,19 +240,20 @@ describe('Alert Login', () => {
 
         // Deleting the alert
 
-        methods.clickElementByXPath(`//h4[text()='${testName}']//following::button[2]`)
+        methods.clickElementByXPath(`//h6[text()='${testName}']//following::button[2]`)
         methods.clickElementByXPath(locators.CreateCopy)
         methods.assertElementContainsText(locators.notification_popup, "Alert CreatedCopy of alert is created and saved successfully.")
         cy.wait(Timeout.xs)
         methods.assertElementContainsTextxpath(locators.AlertName, `Copy of ${testName}`)
         cy.wait(Timeout.xs)
-        methods.clickElementByXPath(`//h4[text()='Copy of ${testName}']//following::button[2]`)
+        methods.clickElementByXPath(`//*[text()='${testName}']//following::button[2]`)
         methods.clickElementByXPath(locators.remove_alert)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
         methods.assertElementContainsText(locators.notification_popup, "SuccessDeleted Alert successfully")
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()='${testName}']//following::button[2]`)
+        methods.clickElementByXPath(`//*[text()='Copy of ${testName}']//following::button[2]`)
+        // methods.clickElementByXPath(`//*[text()='${testName}']//following::button[2]`)
         methods.clickElementByXPath(locators.remove_alert)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
@@ -266,7 +267,7 @@ describe('Alert Login', () => {
         const testName = `Demo Alert Template ${nowTime}`;
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.clickElementByXPath(locators.Automation)
 
         // New alert
@@ -305,7 +306,7 @@ describe('Alert Login', () => {
         methods.clickElementByXPath(locators.Confirm_publish)
         methods.GetText(locators.notification_popup, "Alerts SavedNew Alerts is created and saved successfully.")
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()='${testName}']//following::button[2]`)
+        methods.clickElementByXPath(`//*[text()='${testName}']//following::button[2]`)
         methods.clickElementByXPath(locators.remove_alert)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)

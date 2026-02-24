@@ -29,7 +29,7 @@ describe('WorkFlow - HeyReach Login', () => {
 
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.visit(`${envDetails.backendApiUrl}/automations/workflows`)
         cy.wait(Timeout.sm)
         methods.assertElementContainsTextxpath(locators.workflows_Title, 'Workflows')
@@ -109,7 +109,7 @@ describe('WorkFlow - HeyReach Login', () => {
         const IntegrateName = "Configuration for HeyReach";
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.visit(`${envDetails.backendApiUrl}/automations/workflows`)
         cy.wait(Timeout.sm)
         methods.assertElementContainsTextxpath(locators.workflows_Title, 'Workflows')

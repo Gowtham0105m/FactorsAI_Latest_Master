@@ -27,7 +27,7 @@ describe('Accounts Page Login', () => {
         ].map((item) => {
             cy.wait(Timeout.sm)
             methods.clickElement(locators.account_dropdown)
-            cy.xpath(`(//li//h4)[${item.index}]`).click({ force: true });
+            cy.xpath(`(//li//h6)[${item.index}]`).click({ force: true });
             cy.wait(Timeout.xs)
             methods.navigateToUrl(item.url)
             cy.wait(Timeout.md)
@@ -38,7 +38,7 @@ describe('Accounts Page Login', () => {
 
         cy.wait(Timeout.sm)
         methods.clickElement(locators.account_dropdown)
-        cy.xpath(`(//li//h4)[3]`).click({ force: true });
+        cy.xpath(`(//li//h6)[3]`).click({ force: true });
         cy.wait(Timeout.xs)
         methods.navigateToUrl('/reports/visitor_report')
         cy.wait(Timeout.md)
@@ -48,12 +48,12 @@ describe('Accounts Page Login', () => {
 
         cy.wait(Timeout.sm)
         methods.clickElement(locators.account_dropdown)
-        cy.xpath(`(//li//h4)[1]`).click({ force: true });
+        cy.xpath(`(//li//h6)[1]`).click({ force: true });
         cy.wait(Timeout.xs)
         methods.navigateToUrl("/")
-        methods.scrollWithXpath(locators.SegmentTitle)
-        methods.VisibilityofElementXpath(locators.SegmentTitle)
-        methods.assertElementContainsTextxpath(locators.SegmentTitle, "All Accounts")
+        methods.scrollWithXpath(locators.Title_page)
+        methods.VisibilityofElementXpath(locators.Title_page)
+        methods.assertElementContainsTextxpath(locators.Title_page, "All Accounts")
 
     });
 })
