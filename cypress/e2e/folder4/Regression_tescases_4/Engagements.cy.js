@@ -26,8 +26,8 @@ describe('Engagements scoring Login', () => {
     const testName2 = `Engagements Custom Events Demo Rename ${randomNumber}`;
 
     cy.wait(Timeout.md)
-    methods.scrollWithXpath(locators.Account_Pagetitle)
-    methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+    methods.scrollWithXpath(locators.Title_page)
+    methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     cy.wait(Timeout.md)
     methods.VisibilityofElementXpath(locators.account_pageloaded)
     methods.clickElement(locators.setting)
@@ -107,8 +107,8 @@ describe('Engagements scoring Login', () => {
     const testName2 = `Engagements Page View Demo Rename ${randomNumber}`;
 
     cy.wait(Timeout.md)
-    methods.scrollWithXpath(locators.Account_Pagetitle)
-    methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+    methods.scrollWithXpath(locators.Title_page)
+    methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     cy.wait(Timeout.md)
     methods.VisibilityofElementXpath(locators.account_pageloaded)
     methods.clickElement(locators.setting)
@@ -199,8 +199,8 @@ describe('Engagements scoring Login', () => {
     const testName2 = `Engagements HubSpot Forms Demo Rename ${randomNumber}`;
 
     cy.wait(Timeout.md)
-    methods.scrollWithXpath(locators.Account_Pagetitle)
-    methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+    methods.scrollWithXpath(locators.Title_page)
+    methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     cy.wait(Timeout.md)
     methods.VisibilityofElementXpath(locators.account_pageloaded)
     methods.clickElement(locators.setting)
@@ -292,8 +292,8 @@ describe('Engagements scoring Login', () => {
     const testName2 = `Engagements Salesforce Campaigns Demo Rename ${randomNumber}`;
 
     cy.wait(Timeout.md)
-    methods.scrollWithXpath(locators.Account_Pagetitle)
-    methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+    methods.scrollWithXpath(locators.Title_page)
+    methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     cy.wait(Timeout.md)
     methods.VisibilityofElementXpath(locators.account_pageloaded)
     methods.clickElement(locators.setting)
@@ -385,8 +385,8 @@ describe('Engagements scoring Login', () => {
     const testName2 = `Engagements LinkedIn Ads Demo Rename ${randomNumber}`;
 
     cy.wait(Timeout.md)
-    methods.scrollWithXpath(locators.Account_Pagetitle)
-    methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+    methods.scrollWithXpath(locators.Title_page)
+    methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     cy.wait(Timeout.md)
     methods.VisibilityofElementXpath(locators.account_pageloaded)
     methods.clickElement(locators.setting)
@@ -479,8 +479,8 @@ describe('Engagements scoring Login', () => {
     const testName2 = `Engagements G2 Intent Demo Rename ${randomNumber}`;
 
     cy.wait(Timeout.md)
-    methods.scrollWithXpath(locators.Account_Pagetitle)
-    methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+    methods.scrollWithXpath(locators.Title_page)
+    methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     cy.wait(Timeout.md)
     methods.VisibilityofElementXpath(locators.account_pageloaded)
     methods.clickElement(locators.setting)
@@ -571,8 +571,8 @@ describe('Engagements scoring Login', () => {
     const testName1 = `Engagements scoring Popup verification Demo New ${randomNumber}`;
 
     cy.wait(Timeout.md)
-    methods.scrollWithXpath(locators.Account_Pagetitle)
-    methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+    methods.scrollWithXpath(locators.Title_page)
+    methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     cy.wait(Timeout.md)
     methods.VisibilityofElementXpath(locators.account_pageloaded)
     methods.clickElement(locators.setting)
@@ -692,7 +692,7 @@ describe('Engagements scoring Login', () => {
     const testName = `Engagement scoring Demo ${randomNumber}`;
 
     cy.wait(Timeout.md)
-    methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+    methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     cy.wait(Timeout.md)
     methods.VisibilityofElementXpath(locators.account_pageloaded)
     cy.wait(Timeout.sm)

@@ -28,7 +28,7 @@ describe('WorkFlow - SmartLead Login', () => {
         const IntegrateName = "Configuration for SmartLead";
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.visit(`${envDetails.backendApiUrl}/automations/workflows`)
         cy.wait(Timeout.sm)
         methods.assertElementContainsTextxpath(locators.workflows_Title, 'Workflows')

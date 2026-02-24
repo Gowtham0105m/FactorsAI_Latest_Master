@@ -29,8 +29,8 @@ describe('Login Page Login', () => {
         methods.VisibilityofElement1(locators.usermail, userDetails1.email)
         
         //landing in default screen - All account
-        methods.scrollWithXpath(locators.Account_Pagetitle)
-        methods.VisibilityofElementXpath(locators.Account_Pagetitle)
-        methods.VisibilityofElementXpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.scrollWithXpath(locators.Title_page)
+        methods.VisibilityofElementXpath(locators.Title_page)
+        methods.VisibilityofElementXpath(locators.Title_page, 'All Accounts')
     });
 })

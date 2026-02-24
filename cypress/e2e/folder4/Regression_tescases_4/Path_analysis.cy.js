@@ -22,8 +22,8 @@ describe('Path analaysis', () => {
     it('TC_RE_01 - Path analysis ', () => {
 
         cy.wait(Timeout.md)
-        methods.scrollWithXpath(locators.Account_Pagetitle)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.scrollWithXpath(locators.Title_page)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -35,8 +35,8 @@ describe('Path analaysis', () => {
     it('TC_RE_02, TC_RE_03 - Path analysis create event ', () => {
 
         cy.wait(Timeout.md)
-        methods.scrollWithXpath(locators.Account_Pagetitle)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.scrollWithXpath(locators.Title_page)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
@@ -65,8 +65,8 @@ describe('Path analaysis', () => {
         const testName = `Demo_${nowTime}`;
 
         cy.wait(Timeout.md)
-        methods.scrollWithXpath(locators.Account_Pagetitle)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.scrollWithXpath(locators.Title_page)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -117,8 +117,8 @@ describe('Path analaysis', () => {
     it('TC_RE_06, TC_RE_07 - Path analysis create event ', () => {
 
         cy.wait(Timeout.md)
-        methods.scrollWithXpath(locators.Account_Pagetitle)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.scrollWithXpath(locators.Title_page)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -153,8 +153,8 @@ describe('Path analaysis', () => {
         const testName = `Demo_${nowTime}`;
 
         cy.wait(Timeout.md)
-        methods.scrollWithXpath(locators.Account_Pagetitle)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.scrollWithXpath(locators.Title_page)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)

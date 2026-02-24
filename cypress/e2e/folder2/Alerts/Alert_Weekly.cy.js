@@ -27,7 +27,7 @@ describe('Alert Weekly Login', () => {
         const testName1 = `Demo Editted Alert Weekly ${nowTime}_1`;
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.clickElementByXPath(locators.Automation)
         methods.clickElementByXPath(locators.Weekly_updates)
         cy.wait(Timeout.sm)
@@ -89,7 +89,7 @@ describe('Alert Weekly Login', () => {
         const testName = `Demo Weekly Alert Copy ${nowTime}`;
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.clickElementByXPath(locators.Automation)
         methods.clickElementByXPath(locators.Weekly_updates)
         cy.wait(Timeout.sm)

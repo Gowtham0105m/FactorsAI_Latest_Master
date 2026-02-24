@@ -29,14 +29,14 @@ describe('Accounts Login', () => {
         const combination = testName + randomNumber;
 
         cy.wait(Timeout.md)
-        methods.scrollWithXpath(locators.Account_Pagetitle)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.scrollWithXpath(locators.Title_page)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
 
         cy.document().then((doc) => {
-            const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
             if (!demoElement || demoElement.offsetParent === null) {
                 cy.log("**All Segment not loaded**");
@@ -78,17 +78,17 @@ describe('Accounts Login', () => {
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
         methods.GetTextXpath(locators.SegmentTitle, testName1)
         cy.wait(Timeout.xs)
-        methods.clickElementByXPath(`//h1[text()="${testName1}"]//following::button[3]`)
+        methods.clickElementByXPath(`//span[text()="${testName1}"]//following::span[1]`)
         methods.clickElementByXPath(locators.delete_segment)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Yes)
         methods.NotExist(locators.Loading)
-        methods.assertElementContainsText(locators.Popup_Message, "Segment deleted successfully")
+        methods.assertElementContainsText(locators.notification_popup1, "Segment deleted successfully")
 
         // Search Account
 
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        methods.clickElement(locators.search_button)
+        methods.clickElementByXPath(locators.People_download_button)
         methods.typeElementByXPath(locators.search_area, 'factors.ai')
         methods.EnterXpath(locators.search_area)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
@@ -210,13 +210,13 @@ describe('Accounts Login', () => {
         const testName = `Demo_${nowTime}`;
 
         cy.wait(Timeout.md)
-        methods.scrollWithXpath(locators.Account_Pagetitle)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.scrollWithXpath(locators.Title_page)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
 
         cy.document().then((doc) => {
-            const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
             if (!demoElement || demoElement.offsetParent === null) {
                 cy.log("**All Segment not loaded**");
@@ -295,14 +295,14 @@ describe('Accounts Login', () => {
         const testName1 = `Demo Segment_${nowTime}`;
 
         cy.wait(Timeout.md)
-        methods.scrollWithXpath(locators.Account_Pagetitle)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.scrollWithXpath(locators.Title_page)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
 
         cy.document().then((doc) => {
-            const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
             if (!demoElement || demoElement.offsetParent === null) {
                 cy.log("**All Segment not loaded**");

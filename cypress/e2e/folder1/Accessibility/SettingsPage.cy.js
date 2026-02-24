@@ -24,7 +24,7 @@ describe('Settings Page Login', () => {
 
         [
             { key: 'General', index: 1, url: 'project/general' },
-            { key: 'Members', index: 2, url: 'project/members' },
+            { key: 'Members', index: 2, url: 'project/members?activeTab=users' },
             { key: 'Plans & Billing', index: 4, url: 'project/plans/billing' },
             { key: 'Login and Security', index: 6, url: 'project/login-security' },
 
@@ -36,16 +36,10 @@ describe('Settings Page Login', () => {
             cy.xpath(`//span[text()="Project Settings"]//following::span[@class="ant-menu-title-content"][${item.index}]`).click({ force: true });
             cy.wait(Timeout.xs)
             methods.UrlValidationset(item.url)
-            methods.Titletextcontains1(locators.Page_title, 0, item.key)
+            methods.Titletextcontainsxpath(locators.DataManagementHeader, item.key)
             cy.wait(Timeout.md)
 
         });
-
-        cy.wait(Timeout.sm)
-        methods.VisibilityofElement(locators.Page_title)
-        methods.clickElementByXPath(locators.Plans_Billing)
-        cy.wait(Timeout.xs)
-        methods.clickElementByXPath(locators.Plans_Billing)
 
     });
 })

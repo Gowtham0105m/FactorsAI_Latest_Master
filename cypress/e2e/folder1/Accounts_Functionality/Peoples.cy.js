@@ -29,11 +29,11 @@ describe('People Login', () => {
         const combination = testName + randomNumber;
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         methods.UrlvalidationPeople()
-        methods.assertElementContainsTextxpath(locators.all_People_Title, 'All People')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
 
         // Search username
 
@@ -131,11 +131,11 @@ describe('People Login', () => {
         const testName = `Demo_${nowTime}`;
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         methods.UrlvalidationPeople()
-        methods.assertElementContainsTextxpath(locators.all_People_Title, 'All People')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElementByXPath(locators.Filter)
@@ -190,11 +190,11 @@ describe('People Login', () => {
         const testName1 = `Demo Segment_${nowTime}`;
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         methods.UrlvalidationPeople()
-        methods.assertElementContainsTextxpath(locators.all_People_Title, 'All People')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElementByXPath(locators.Filter)

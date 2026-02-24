@@ -21,7 +21,7 @@ describe('Accounts view Login', () => {
     it('Accounts view', () => {
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
 
         // select account & birdview

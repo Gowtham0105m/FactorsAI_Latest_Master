@@ -25,8 +25,8 @@ describe('Accounts Segment Digest Login', () => {
         const testName = `Demo_${nowTime}`;
 
         cy.wait(Timeout.md)
-        methods.scrollWithXpath(locators.Account_Pagetitle)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.scrollWithXpath(locators.Title_page)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
@@ -140,8 +140,8 @@ describe('Accounts Segment Digest Login', () => {
         const testName = `Demo_${nowTime}`;
 
         cy.wait(Timeout.md)
-        methods.scrollWithXpath(locators.Account_Pagetitle)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.scrollWithXpath(locators.Title_page)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
 
@@ -190,7 +190,7 @@ describe('Accounts Segment Digest Login', () => {
         cy.wait(Timeout.ml)
         cy.wait(Timeout.xl)
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
-        cy.xpath('(//div[contains(@class,"PlanLimitInfo__planInfoCard")]/div)[1]/div')
+        cy.xpath('(//div[contains(@class,"PlanLimitInfo__planInfoCard")]/div)[1]')
             .invoke('text')
             .then(text => {
                 const segment = Number(text.match(/^\d+/)[0]);
@@ -273,7 +273,7 @@ describe('Accounts Segment Digest Login', () => {
         methods.assertElementContainsText(locators.Page_title, 'Sharing')
         methods.clickElement(locators.Factors_Icon)
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElementByXPath(locators.All_segments)
         methods.ScrollAndClickxpath(`//span[text()='${testName}']`)
@@ -290,7 +290,7 @@ describe('Accounts Segment Digest Login', () => {
         cy.wait(Timeout.sm)
         methods.clickElement(locators.Factors_Icon)
         cy.wait(Timeout.xmd)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.ScrollAndClickxpath(`//span[text()='${testName}']//following::span[1]`)
         methods.clickElementByXPath(locators.delete_segment)
@@ -299,7 +299,7 @@ describe('Accounts Segment Digest Login', () => {
         methods.NotExist(locators.Loading)
         methods.assertElementContainsText(locators.notification_popup, "Segment deleted successfully")
         cy.wait(Timeout.xmd)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
 
     })
 

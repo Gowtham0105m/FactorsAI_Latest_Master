@@ -62,7 +62,7 @@ describe.skip('Login', () => {
         // back to staging url
 
         methods.PricingURL()
-        methods.VisibilityofElement(locators.Account_Pagetitle)
+        methods.VisibilityofElement(locators.Title_page)
 
         // downgrading
 
@@ -83,7 +83,7 @@ describe.skip('Login', () => {
         })
 
         methods.PricingURL()
-        methods.VisibilityofElement(locators.Account_Pagetitle)
+        methods.VisibilityofElement(locators.Title_page)
 
     })
 })

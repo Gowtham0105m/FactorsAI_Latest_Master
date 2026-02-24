@@ -28,7 +28,7 @@ describe('Funnel Report Login', () => {
         let selectedDateAfterSave1 = "";
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
         cy.wait(Timeout.sm)
@@ -156,7 +156,7 @@ describe('Funnel Report Login', () => {
         let selectedDateAfterSave1 = "";
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
         cy.wait(Timeout.sm)
@@ -242,7 +242,7 @@ describe('Funnel Report Login', () => {
         let selectedDateAfterSave1 = "";
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
         cy.wait(Timeout.sm)

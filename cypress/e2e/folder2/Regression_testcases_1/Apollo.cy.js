@@ -29,7 +29,7 @@ describe('Apollo Login', () => {
         const IntegrateName = "HubSpot";
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.visit(`${envDetails.backendApiUrl}/automations/workflows`)
         cy.wait(Timeout.sm)
         methods.assertElementContainsTextxpath(locators.workflows_Title, 'Workflows')
@@ -129,7 +129,7 @@ describe('Apollo Login', () => {
         const IntegrateName = "Salesforce";
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.visit(`${envDetails.backendApiUrl}/automations/workflows`)
         cy.wait(Timeout.sm)
         methods.assertElementContainsTextxpath(locators.workflows_Title, 'Workflows')
@@ -224,7 +224,7 @@ describe('Apollo Login', () => {
         const IntegrateName = "Integrate Zoho CRM";
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.visit(`${envDetails.backendApiUrl}/automations/workflows`)
         cy.wait(Timeout.sm)
         methods.assertElementContainsTextxpath(locators.workflows_Title, 'Workflows')

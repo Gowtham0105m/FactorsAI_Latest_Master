@@ -22,8 +22,8 @@ describe('Global search event', () => {
     it('Global search event without saving', () => {
 
         cy.wait(Timeout.md);
-        methods.scrollWithXpath(locators.Account_Pagetitle);
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts');
+        methods.scrollWithXpath(locators.Title_page);
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts');
         cy.wait(Timeout.md);
         methods.VisibilityofElementXpath(locators.account_pageloaded);
         methods.clickElementByXPath(locators.global_Search);
@@ -53,8 +53,8 @@ describe('Global search event', () => {
         const testName = `Demo_${nowTime}`;
 
         cy.wait(Timeout.md);
-        methods.scrollWithXpath(locators.Account_Pagetitle);
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts');
+        methods.scrollWithXpath(locators.Title_page);
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts');
         cy.wait(Timeout.md);
         methods.VisibilityofElementXpath(locators.account_pageloaded);
         methods.clickElementByXPath(locators.global_Search);
@@ -88,7 +88,7 @@ describe('Global search event', () => {
         methods.clickElementByXPath(locators.Drafts)
         methods.VisibilityofElement(locators.Table_Body_1)
         cy.wait(Timeout.sm);
-        methods.MouseoverWithXpath(`//h4[text()='${testName}']//following::button[1]`)
+        methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.View_Report)
         methods.VisibilityofElement(locators.Profile_report_gen)
         methods.clickElementByXPath(locators.Expand_1)
@@ -102,7 +102,7 @@ describe('Global search event', () => {
         methods.VisibilityofElement(locators.Upgrade_validation);
         methods.clickElementByXPath(locators.Close_without_saving);
         methods.VisibilityofElement(locators.Table_Body_1)
-        methods.MouseoverWithXpath(`//h4[text()='${testName}']//following::button[1]`)
+        methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
         cy.wait(Timeout.xs);
         methods.clickElementByXPath(locators.View_Report)
         methods.VisibilityofElement(locators.Profile_report_gen)
@@ -117,7 +117,7 @@ describe('Global search event', () => {
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Closed)
         methods.VisibilityofElement(locators.Table_Body_1)
-        methods.MouseoverWithXpath(`//h4[text()='${testName}']//following::button[1]`)
+        methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.Delete_Report_1)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.confirm)

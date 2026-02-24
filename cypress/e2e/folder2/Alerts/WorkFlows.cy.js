@@ -29,7 +29,7 @@ describe('WorkFlow Login', () => {
         const IntegrateName = "HubSpot";
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.visit(`${envDetails.backendApiUrl}/automations/workflows`)
         cy.wait(Timeout.sm)
         methods.assertElementContainsTextxpath(locators.workflows_Title, 'Workflows')
@@ -112,7 +112,7 @@ describe('WorkFlow Login', () => {
         const IntegrateName = "Salesforce";
 
         cy.wait(Timeout.md)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.visit(`${envDetails.backendApiUrl}/automations/workflows`)
         cy.wait(Timeout.sm)
         methods.assertElementContainsTextxpath(locators.workflows_Title, 'Workflows')
@@ -191,8 +191,8 @@ describe('WorkFlow Login', () => {
         const IntegrateName = "Integrate Zoho CRM";
 
         cy.wait(Timeout.md)
-        methods.scrollWithXpath(locators.Account_Pagetitle)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.scrollWithXpath(locators.Title_page)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.clickElementByXPath(locators.Automation)
         methods.clickElementIndexXpath(locators.WorkFlows, 0)
         cy.wait(Timeout.sm)
@@ -285,8 +285,8 @@ describe('WorkFlow Login', () => {
     it('WorkFlow - Activity log', () => {
 
         cy.wait(Timeout.md)
-        methods.scrollWithXpath(locators.Account_Pagetitle)
-        methods.assertElementContainsTextxpath(locators.Account_Pagetitle, 'All Accounts')
+        methods.scrollWithXpath(locators.Title_page)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.clickElementByXPath(locators.Automation)
         methods.clickElementIndexXpath(locators.WorkFlows, 0)
         cy.wait(Timeout.sm)
