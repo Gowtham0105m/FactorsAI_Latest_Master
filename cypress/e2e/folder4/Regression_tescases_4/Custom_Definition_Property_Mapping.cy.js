@@ -37,7 +37,7 @@ describe('Custom Definition - Property Mapping Login', () => {
         methods.clickElementByXPath(locators.Property_Mapping)
         methods.VisibilityofElementXpath(locators.Add_New)
         methods.clickElementByXPath(locators.Add_New)
-        methods.assertElementContainsText(locators.Event_Title, 'Add new mapping')
+        methods.assertElementContainsText1(locators.DataManagementHeader, 'Add new mapping')
         methods.typeElement(locators.PropertyMappingDisplayName, testName)
         methods.GetText(locators.AlertMsg, "Please input Display name (Only letters, numbers, and underscores are allowed)")
         methods.ClearAndType(locators.PropertyMappingDisplayName, testName1)

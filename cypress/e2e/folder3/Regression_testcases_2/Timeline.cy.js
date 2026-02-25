@@ -23,7 +23,8 @@ describe('Timeline Login', () => {
     cy.wait(Timeout.md)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     methods.VisibilityofElementXpath(locators.account_pageloaded)
-    methods.clickElement(locators.search_button)
+    cy.wait(Timeout.sm)
+    methods.clickElementByXPath(locators.search_button)
     cy.wait(Timeout.xs)
     methods.typeElementByXPath(locators.search_area, 'accenture.com')
     cy.wait(Timeout.xs)
@@ -60,7 +61,7 @@ describe('Timeline Login', () => {
 
     methods.clickElementByXPath(locators.Event_Properties)
 
-    cy.xpath(`(//span[text()="Event Properties"]//following::div/h4[1])[last()]`)
+    cy.xpath(`(//span[text()="Event Properties"]//following::div/*[1])[last()]`)
       .invoke('text')
       .then((Property) => {
         let Event_property = Property.trim();
@@ -73,7 +74,7 @@ describe('Timeline Login', () => {
         methods.assertElementContainsText(locators.Popup_Message, "Property Already Exists")
         methods.clickElementByXPath(locators.Event_Add_Property)
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()="${Event_property}"]//following::button[1]`)
+        methods.clickElementByXPath(`//*[text()="${Event_property}"]//following::button[1]`)
         methods.assertElementContainsText(locators.Popup_Message, "Updated Event Properties Configuration")
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Event_Add_Property)

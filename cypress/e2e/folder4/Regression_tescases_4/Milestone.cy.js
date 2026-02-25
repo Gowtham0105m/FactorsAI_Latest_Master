@@ -21,7 +21,7 @@ describe('Milestone Login', () => {
     it('Milestone - Save, Edit and Delete', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `Demo Milestone ${randomNumber}`;
+        const testName = `Demo Milestone ${randomNumber}`; 
         const testName1 = `Demo Milestone New ${randomNumber}`;
         const MileStone_Name1 = "Testing 1";
         const MileStone_Name2 = "Testing 2";
@@ -37,14 +37,14 @@ describe('Milestone Login', () => {
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Milestones_peopleView)
         cy.wait(Timeout.sm)
-        methods.assertElementContainsText(locators.Page_title, 'Milestones')
+        methods.assertElementContainsText1(locators.DataManagementHeader, 'Milestones')
         cy.wait(Timeout.sm)
 
         cy.document().then((doc) => {
-            const demoElement = doc.evaluate(`//h4[contains(text(),"Demo Milestone")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            const demoElement = doc.evaluate(`//*[contains(text(),"Demo Milestone")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
             if (demoElement) {
-                methods.clickElementByXPath(`//h4[contains(text(),"Demo Milestone")]//following::button`)
+                methods.clickElementByXPath(`//*[contains(text(),"Demo Milestone")]//following::button`)
                 cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.Journey_Delete);
                 methods.clickElementByXPath(locators.Yes);
@@ -57,13 +57,13 @@ describe('Milestone Login', () => {
 
         methods.ElementVisibleandClickXpath(locators.New_Milestone_Btn)
         methods.VisibilityofElementXpath(locators.Milestone_Header)
-        methods.clickElement0(locators.custom_event_name, 0)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, testName)
+        methods.clickElementIndexXpath(locators.custom_event_name, 0)
+        methods.ClearAndType(locators.Milestone_Title_Name, testName)
         methods.clickElementByXPath(locators.select_event_1)
         methods.clickElement0(locators.Hubspot_Contacts, 0)
         methods.typeElement(locators.Select_Event, "Updated")
         methods.clickElement0(locators.Contact_Updated, 0)
-        methods.clickElement0(locators.custom_event_name, 1)
+        methods.clickElementIndexXpath(locators.custom_event_name, 1)
         methods.ClearAndTypeWithXpath(locators.Milestones_Textarea1, MileStone_Name1)
         methods.EnterXpath(locators.Milestones_Textarea1)
         methods.clickElementByXPath(locators.Journey_Filterthisevent)
@@ -84,7 +84,7 @@ describe('Milestone Login', () => {
         methods.clickElement0(locators.Hubspot_Contacts, 0)
         methods.typeElement(locators.Select_Event, "Updated")
         methods.clickElement0(locators.Contact_Updated, 0)
-        methods.clickElement0(locators.custom_event_name, 2)
+        methods.clickElementIndexXpath(locators.custom_event_name, 2)
         methods.ClearAndTypeWithXpath(locators.Milestones_Textarea1, MileStone_Name2)
         methods.EnterXpath(locators.Milestones_Textarea1)
         methods.clickElementIndexXpath(locators.Journey_Filterthisevent, 1)
@@ -102,26 +102,26 @@ describe('Milestone Login', () => {
         methods.ElementToBeClickableXpath(locators.Add_Account_stage)
         methods.ElementToBeClickableXpath(locators.CopyMilestone_Btn)
         methods.clickElementByXPath(locators.CopyMilestone_Btn)
-        methods.VisibilityofElementXpath(`//h1[text()="Copy of ${MileStone_Name1}"]`)
+        methods.VisibilityofElementXpath(`//*[text()="Copy of ${MileStone_Name1}"]`)
         cy.wait(Timeout.sm)
         methods.VisibilityofElementXpath(locators.Milestone_Limit)
         methods.clickElementByXPath(locators.Save_1)
         methods.GetText(locators.notification_popup, "Milestone created successfullyData collection may take up to 24 hours. Once complete, this milestone will be visible in segments.")
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()="${testName}"]`)
+        methods.clickElementByXPath(`//*[text()="${testName}"]`)
         cy.wait(Timeout.sm)
-        methods.clickElement0(locators.custom_event_name, 0)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, testName1)
-        methods.EnterXpath(locators.workflow_name)
+        methods.clickElementIndexXpath(locators.custom_event_name, 0)
+        methods.ClearAndType(`[value="${testName}"]`, testName1)
+        methods.Enter(`[value="${testName1}"]`)
         cy.wait(Timeout.sm)
-        methods.clickElement0(locators.custom_event_name, 2)
+        methods.clickElementIndexXpath(locators.custom_event_name, 2)
         methods.ClearAndTypeWithXpath(locators.Milestones_Textarea1, MileStone_Name2)
         methods.EnterXpath(locators.Milestones_Textarea1)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Save_1)
         methods.GetText(locators.notification_popup, "Milestone updated successfully")
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()="${testName1}"]//following::button`)
+        methods.clickElementByXPath(`//*[text()="${testName1}"]//following::button`)
         cy.wait(Timeout.sm);
         methods.clickElementByXPath(locators.Journey_Delete);
         methods.clickElementByXPath(locators.Yes);
@@ -148,14 +148,14 @@ describe('Milestone Login', () => {
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Milestones_peopleView)
         cy.wait(Timeout.sm)
-        methods.assertElementContainsText(locators.Page_title, 'Milestones')
+        methods.assertElementContainsText1(locators.DataManagementHeader, 'Milestones')
         cy.wait(Timeout.sm)
 
         cy.document().then((doc) => {
-            const demoElement = doc.evaluate(`//h4[contains(text(),"Demo Milestone")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            const demoElement = doc.evaluate(`//*[contains(text(),"Demo Milestone")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
             if (demoElement) {
-                methods.clickElementByXPath(`//h4[contains(text(),"Demo Milestone")]//following::button`)
+                methods.clickElementByXPath(`//*[contains(text(),"Demo Milestone")]//following::button`)
                 cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.Journey_Delete);
                 methods.clickElementByXPath(locators.Yes);
@@ -168,13 +168,13 @@ describe('Milestone Login', () => {
 
         methods.ElementVisibleandClickXpath(locators.New_Milestone_Btn)
         methods.VisibilityofElementXpath(locators.Milestone_Header)
-        methods.clickElement0(locators.custom_event_name, 0)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, testName)
+        methods.clickElementIndexXpath(locators.custom_event_name, 0)
+        methods.ClearAndType(locators.Milestone_Title_Name, testName)
         methods.clickElementByXPath(locators.select_event_1)
         methods.clickElement0(locators.Hubspot_Contacts, 0)
         methods.typeElement(locators.Select_Event, "Updated")
-        methods.clickElement0(locators.Contact_Updated, 0)
-        methods.clickElement0(locators.custom_event_name, 1)
+        methods.clickElement(locators.Contact_Updated, 0)
+        methods.clickElementIndexXpath(locators.custom_event_name, 1)
         methods.ClearAndTypeWithXpath(locators.Milestones_Textarea1, MileStone_Name1)
         methods.EnterXpath(locators.Milestones_Textarea1)
         methods.clickElementByXPath(locators.Journey_Filterthisevent)
@@ -195,7 +195,7 @@ describe('Milestone Login', () => {
         methods.clickElement0(locators.Hubspot_Contacts, 0)
         methods.typeElement(locators.Select_Event, "Updated")
         methods.clickElement0(locators.Contact_Updated, 0)
-        methods.clickElement0(locators.custom_event_name, 2)
+        methods.clickElementIndexXpath(locators.custom_event_name, 2)
         methods.ClearAndTypeWithXpath(locators.Milestones_Textarea1, MileStone_Name2)
         methods.EnterXpath(locators.Milestones_Textarea1)
         methods.clickElementIndexXpath(locators.Journey_Filterthisevent, 1)
@@ -211,29 +211,29 @@ describe('Milestone Login', () => {
         methods.clickElementByXPath(locators.Save_1)
         methods.GetText(locators.notification_popup, "Milestone created successfullyData collection may take up to 24 hours. Once complete, this milestone will be visible in segments.")
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()="${testName}"]//following::button`)
+        methods.clickElementByXPath(`//*[text()="${testName}"]//following::button`)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Journey_Clone)
         cy.wait(Timeout.sm)
-        methods.VisibilityofElementXpath(`//h1[text()="${testName} (Copy)"]`)
+        methods.VisibilityofElementXpath(`//*[text()="${testName} (Copy)"]`)
         methods.clickElementByXPath(locators.DeleteMilestone_Btn)
         methods.ElementToBeClickableXpath(locators.Add_Account_stage)
         methods.ElementToBeClickableXpath(locators.CopyMilestone_Btn)
         methods.clickElementByXPath(locators.CopyMilestone_Btn)
-        methods.VisibilityofElementXpath(`//h1[text()="Copy of ${MileStone_Name1}"]`)
+        methods.VisibilityofElementXpath(`//*[text()="Copy of ${MileStone_Name1}"]`)
         cy.wait(Timeout.sm)
         methods.VisibilityofElementXpath(locators.Milestone_Limit)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Save_1)
         methods.GetText(locators.notification_popup, "Milestone created successfullyData collection may take up to 24 hours. Once complete, this milestone will be visible in segments.")
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()="${testName} (Copy)"]//following::button`)
+        methods.clickElementByXPath(`//*[text()="${testName} (Copy)"]//following::button`)
         cy.wait(Timeout.sm);
         methods.clickElementByXPath(locators.Journey_Delete);
         methods.clickElementByXPath(locators.Yes);
         methods.GetText(locators.notification_popup, "Milestone deleted successfully");
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()="${testName}"]//following::button`)
+        methods.clickElementByXPath(`//*[text()="${testName}"]//following::button`)
         cy.wait(Timeout.sm);
         methods.clickElementByXPath(locators.Journey_Delete);
         methods.clickElementByXPath(locators.Yes);

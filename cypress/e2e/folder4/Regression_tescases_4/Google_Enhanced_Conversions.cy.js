@@ -32,7 +32,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
-        methods.VisibilityofElementXpath(locators.SmartReach)
+        methods.VisibilityofElementXpath(locators.campaign_title)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.GoogleEnhancedConversions)
         cy.wait(Timeout.xs)
@@ -40,10 +40,10 @@ describe('Google Enhanced Conversions Login', () => {
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
 
         cy.document().then((doc) => {
-            const demoElement = doc.evaluate(`//h4[contains(text(),"Demo Google CAPI")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            const demoElement = doc.evaluate(`//*[contains(text(),"Demo Google CAPI")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
             if (demoElement) {
-                methods.clickElementByXPath(`(//h4[contains(text(),"Demo Google CAPI")]//following::button/span[@aria-label="more"])[1]`)
+                methods.clickElementByXPath(`(//*[contains(text(),"Demo Google CAPI")]//following::button/span[@aria-label="more"])[1]`)
                 cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.remove_workflows)
                 cy.wait(Timeout.xs)
@@ -56,11 +56,9 @@ describe('Google Enhanced Conversions Login', () => {
         });
 
         methods.ElementToBeClickableXpath(locators.SyncNewConversion_Btn)
-        cy.xpath('(//td[@class="ant-table-cell"])[1]')
-            .invoke('text')
-            .then((text) => {
-                cy.wrap(text.trim()).as('Text1');
-            });
+        cy.xpath('(//td[@class="ant-table-cell"])[1]').invoke('text').then((text) => {
+            cy.wrap(text.trim()).as('Text1');
+        });
         methods.clickElementByXPath(locators.SyncNewConversion_Btn)
         cy.wait(Timeout.lg)
         methods.clickElement0(locators.Search, 0)
@@ -95,17 +93,15 @@ describe('Google Enhanced Conversions Login', () => {
         methods.typeElementwithIndex(locators.Search, "user phone", 5)
         methods.clickElement(locators.UserPhone)
         cy.wait(Timeout.xs)
-        methods.clickElement(locators.workflow_edit_icon)
-        cy.get('@Text1').then((Text1) => {
-            methods.ClearAndTypeWithXpath(locators.workflow_name, Text1);
-        });
-        methods.EnterXpath(locators.workflow_name)
+        methods.clickElement(locators.Google_Enhanced_Edit_Button)
+        cy.get('@Text1').then((Text1) => { methods.ClearAndType(`[value="${testName}"]`, Text1); });
+        methods.Enter(`[value="${testName}"]`)
         cy.wait(Timeout.sm)
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         cy.wait(Timeout.sm)
         methods.assertElementContainsText(locators.notification_popup1, "Failed!")
         cy.wait(Timeout.sm)
-        methods.clickElement(locators.workflow_edit_icon)
+        methods.clickElement(locators.Google_Enhanced_Edit_Button)
         methods.ClearAndTypeWithXpath(locators.workflow_name, testName)
         methods.EnterXpath(locators.workflow_name)
         methods.ScrollAndClickxpath(locators.adpilot_publish)
@@ -113,16 +109,16 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.sm)
         methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
-        methods.clickElementByXPath(`(//h4[text()="${testName}"]//following::button/span[@aria-label="more"])[1]`)
+        methods.clickElementByXPath(`(//*[text()="${testName}"]//following::button/span[@aria-label="more"])[1]`)
         methods.clickElementByXPath(locators.Edit_workflow)
         cy.wait(Timeout.sm)
-        methods.VisibilityofElementXpath(`//h4[text()="${testName}"]`)
+        methods.VisibilityofElementXpath(`//*[text()="${testName}"]`)
         cy.wait(Timeout.ml)
         methods.clickElementByXPath(locators.GEC_Refresh_Btn)
         methods.GetText(locators.notification_popup, "SuccessRefreshed conversion actions!")
         cy.wait(Timeout.sm)
         methods.clickElement(locators.custom_event_name)
-        methods.ClearAndTypeWithXpath(`//textarea[contains(text(),"${testName}")]`, testName1)
+        methods.ClearAndType(`[value="${testName}"]`, testName1)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Add_a_Filter)
         methods.typeElement(locators.search_1, "Visited Website")
@@ -137,7 +133,7 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.xs)
         methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
-        methods.clickElementByXPath(`(//h4[text()="${testName1}"]//following::button/span[@aria-label="more"])[1]`)
+        methods.clickElementByXPath(`(//*[text()="${testName1}"]//following::button/span[@aria-label="more"])[1]`)
         methods.clickElementByXPath(locators.remove_workflows)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
@@ -159,7 +155,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
-        methods.VisibilityofElementXpath(locators.SmartReach)
+        methods.VisibilityofElementXpath(locators.campaign_title)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.GoogleEnhancedConversions)
         cy.wait(Timeout.xs)
@@ -167,10 +163,10 @@ describe('Google Enhanced Conversions Login', () => {
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
 
         cy.document().then((doc) => {
-            const demoElement = doc.evaluate(`//h4[contains(text(),"Demo Google CAPI")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            const demoElement = doc.evaluate(`//*[contains(text(),"Demo Google CAPI")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
             if (demoElement) {
-                methods.clickElementByXPath(`(//h4[contains(text(),"Demo Google CAPI")]//following::button/span[@aria-label="more"])[1]`)
+                methods.clickElementByXPath(`(//*[contains(text(),"Demo Google CAPI")]//following::button/span[@aria-label="more"])[1]`)
                 cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.remove_workflows)
                 cy.wait(Timeout.xs)
@@ -251,10 +247,10 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.sm)
         methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
-        methods.clickElementByXPath(`(//h4[text()="${testName}"]//following::button/span[@aria-label="more"])[1]`)
+        methods.clickElementByXPath(`(//*[text()="${testName}"]//following::button/span[@aria-label="more"])[1]`)
         methods.clickElementByXPath(locators.Edit_workflow)
         cy.wait(Timeout.sm)
-        methods.VisibilityofElementXpath(`//h4[text()="${testName}"]`)
+        methods.VisibilityofElementXpath(`//*[text()="${testName}"]`)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.GEC_Refresh_Btn)
         methods.GetText(locators.notification_popup, "SuccessRefreshed conversion actions!")
@@ -275,7 +271,7 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.xs)
         methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
-        methods.clickElementByXPath(`(//h4[text()="${testName1}"]//following::button/span[@aria-label="more"])[1]`)
+        methods.clickElementByXPath(`(//*[text()="${testName1}"]//following::button/span[@aria-label="more"])[1]`)
         methods.clickElementByXPath(locators.remove_workflows)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
@@ -297,7 +293,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
-        methods.VisibilityofElementXpath(locators.SmartReach)
+        methods.VisibilityofElementXpath(locators.campaign_title)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.GoogleEnhancedConversions)
         cy.wait(Timeout.xs)
@@ -305,10 +301,10 @@ describe('Google Enhanced Conversions Login', () => {
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
 
         cy.document().then((doc) => {
-            const demoElement = doc.evaluate(`//h4[contains(text(),"Demo Google CAPI")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            const demoElement = doc.evaluate(`//*[contains(text(),"Demo Google CAPI")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
             if (demoElement) {
-                methods.clickElementByXPath(`(//h4[contains(text(),"Demo Google CAPI")]//following::button/span[@aria-label="more"])[1]`)
+                methods.clickElementByXPath(`(//*[contains(text(),"Demo Google CAPI")]//following::button/span[@aria-label="more"])[1]`)
                 cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.remove_workflows)
                 cy.wait(Timeout.xs)
@@ -388,10 +384,10 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.sm)
         methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
-        methods.clickElementByXPath(`(//h4[text()="${testName}"]//following::button/span[@aria-label="more"])[1]`)
+        methods.clickElementByXPath(`(//*[text()="${testName}"]//following::button/span[@aria-label="more"])[1]`)
         methods.clickElementByXPath(locators.Edit_workflow)
         cy.wait(Timeout.sm)
-        methods.VisibilityofElementXpath(`//h4[text()="${testName}"]`)
+        methods.VisibilityofElementXpath(`//*[text()="${testName}"]`)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.GEC_Refresh_Btn)
         methods.GetText(locators.notification_popup, "SuccessRefreshed conversion actions!")
@@ -412,7 +408,7 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.xs)
         methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
-        methods.clickElementByXPath(`(//h4[text()="${testName1}"]//following::button/span[@aria-label="more"])[1]`)
+        methods.clickElementByXPath(`(//*[text()="${testName1}"]//following::button/span[@aria-label="more"])[1]`)
         methods.clickElementByXPath(locators.remove_workflows)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
@@ -434,7 +430,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
-        methods.VisibilityofElementXpath(locators.SmartReach)
+        methods.VisibilityofElementXpath(locators.campaign_title)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.GoogleEnhancedConversions)
         cy.wait(Timeout.xs)
@@ -442,10 +438,10 @@ describe('Google Enhanced Conversions Login', () => {
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
 
         cy.document().then((doc) => {
-            const demoElement = doc.evaluate(`//h4[contains(text(),"Demo Google CAPI")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            const demoElement = doc.evaluate(`//*[contains(text(),"Demo Google CAPI")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
             if (demoElement) {
-                methods.clickElementByXPath(`(//h4[contains(text(),"Demo Google CAPI")]//following::button/span[@aria-label="more"])[1]`)
+                methods.clickElementByXPath(`(//*[contains(text(),"Demo Google CAPI")]//following::button/span[@aria-label="more"])[1]`)
                 cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.remove_workflows)
                 cy.wait(Timeout.xs)
@@ -507,10 +503,10 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.sm)
         methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
-        methods.clickElementByXPath(`(//h4[text()="${testName}"]//following::button/span[@aria-label="more"])[1]`)
+        methods.clickElementByXPath(`(//*[text()="${testName}"]//following::button/span[@aria-label="more"])[1]`)
         methods.clickElementByXPath(locators.Edit_workflow)
         cy.wait(Timeout.sm)
-        methods.VisibilityofElementXpath(`//h4[text()="${testName}"]`)
+        methods.VisibilityofElementXpath(`//*[text()="${testName}"]`)
         cy.wait(Timeout.ml)
         methods.clickElementByXPath(locators.GEC_Refresh_Btn)
         methods.GetText(locators.notification_popup, "SuccessRefreshed conversion actions!")
@@ -531,7 +527,7 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.xs)
         methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
-        methods.clickElementByXPath(`(//h4[text()="${testName1}"]//following::button/span[@aria-label="more"])[1]`)
+        methods.clickElementByXPath(`(//*[text()="${testName1}"]//following::button/span[@aria-label="more"])[1]`)
         methods.clickElementByXPath(locators.remove_workflows)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
@@ -552,7 +548,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
-        methods.VisibilityofElementXpath(locators.SmartReach)
+        methods.VisibilityofElementXpath(locators.campaign_title)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.GoogleEnhancedConversions)
         cy.wait(Timeout.xs)
@@ -560,10 +556,10 @@ describe('Google Enhanced Conversions Login', () => {
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
 
         cy.document().then((doc) => {
-            const demoElement = doc.evaluate(`//h4[contains(text(),"Demo Google CAPI")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            const demoElement = doc.evaluate(`//*[contains(text(),"Demo Google CAPI")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
             if (demoElement) {
-                methods.clickElementByXPath(`(//h4[contains(text(),"Demo Google CAPI")]//following::button/span[@aria-label="more"])[1]`)
+                methods.clickElementByXPath(`(//*[contains(text(),"Demo Google CAPI")]//following::button/span[@aria-label="more"])[1]`)
                 cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.remove_workflows)
                 cy.wait(Timeout.xs)
@@ -646,7 +642,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.NotExistxpath(locators.Google_Capi_TableRow_2)
         methods.assertElementContainsTextxpath(locators.Google_Capi_FirstData, testName)
         methods.clickElementByXPath(locators.Google_Capi_Search_Btn)
-        methods.clickElementByXPath(`(//h4[text()="${testName}"]//following::button/span[@aria-label="more"])[1]`)
+        methods.clickElementByXPath(`(//*[text()="${testName}"]//following::button/span[@aria-label="more"])[1]`)
         methods.clickElementByXPath(locators.remove_workflows)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)

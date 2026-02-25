@@ -92,7 +92,7 @@ describe('Global search funnel', () => {
         cy.wait(Timeout.md);
         methods.VisibilityofElement(locators.Table_Body_1)
         cy.wait(Timeout.md);
-        methods.MouseoverWithXpath(`//[text()='${testName}']//following::button[1]`)
+        methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
         cy.wait(Timeout.xs);
         methods.MouseoverAndClick(locators.View_Report)
         methods.VisibilityofElement(locators.Profile_report_gen)

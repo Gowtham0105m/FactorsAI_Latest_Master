@@ -32,7 +32,7 @@ describe('TouchPoint Campaign Groups', () => {
         methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Touchpoints)
         methods.clickElementByXPath(locators.Campaign_Groups)
-        methods.Titletextcontains(locators.Page_title, "Campaign Groups")
+        methods.Titletextcontainsxpath(locators.DataManagementHeader, "Campaign Groups")
         methods.clickElementByXPath(locators.Add_New)
         methods.typeElement(locators.Name, testName)
         methods.typeElement(locators.description, 'Testing Purpose')

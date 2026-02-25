@@ -29,7 +29,7 @@ describe('People view Login', () => {
 
         // select account & birdview
 
-        methods.clickElement(locators.search_button)
+        methods.clickElementByXPath(locators.search_button)
         methods.typeElementByXPath(locators.Search1, 'sarath_tdfect@factors.ai')
         methods.EnterXpath(locators.Search1)
         methods.clickElementByXPath(locators.rowname)
