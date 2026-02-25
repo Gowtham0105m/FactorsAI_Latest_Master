@@ -32,20 +32,20 @@ describe('Predictive Scoring Login', () => {
         methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Account_Configurations_1)
         methods.clickElementByXPath(locators.PredictiveScoring)
-        methods.VisibilityofElement(locators.Page_title, 'Predictive Scoring')
+        methods.VisibilityofElement2(locators.DataManagementHeader, 'Predictive Scoring')
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.PredictiveScoring)
         methods.VisibilityofElementXpath(locators.Newprediction)
 
         cy.document().then((doc) => {
 
-            const demoElements = doc.evaluate(`//h4[contains(text(),"Predictive Score Demo")]`, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+            const demoElements = doc.evaluate(`//*[contains(text(),"Predictive Score Demo")]`, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
 
             if (demoElements.snapshotLength > 0) {
 
                 for (let i = 0; i < demoElements.snapshotLength; i++) {
 
-                    methods.clickElementByXPath(`(//h4[contains(text(),"Predictive Score Demo")]//following::button[1])[1]`);
+                    methods.clickElementByXPath(`(//*[contains(text(),"Predictive Score Demo")]//following::button[1])[1]`);
                     cy.wait(Timeout.sm);
                     methods.clickElementByXPath(locators.Journey_Delete);
                     methods.clickElementByXPath(locators.Yes);
@@ -60,9 +60,9 @@ describe('Predictive Scoring Login', () => {
 
         methods.clickElementByXPath(locators.Newprediction)
         methods.VisibilityofElementXpath(locators.Predictionrule_Title)
-        methods.clickElement(locators.custom_event_name)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, testName)
-        methods.EnterXpath(locators.workflow_name)
+        methods.clickElementByXPath(locators.custom_event_name)
+        methods.ClearAndType(`[value="Untitled Prediction"]`, testName)
+        methods.Enter(`[value="${testName}"]`)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Add_Event)
         methods.typeElement(locators.Select_Event, 'Engagement')
@@ -74,11 +74,11 @@ describe('Predictive Scoring Login', () => {
         methods.clickElementByXPath(locators.Buildmodel)
         methods.assertElementContainsText(locators.notification_popup, 'Rule Saved. Building Model.Prediction rule has been saved. Model is being built, come back in 3-4 hours to view results from test data and publish the model.')
         cy.wait(Timeout.sm)
-        methods.assertElementContainsText(locators.Page_title, 'Predictive Scoring')
+        methods.assertElementContainsText1(locators.DataManagementHeader, 'Predictive Scoring')
         methods.VisibilityofElementXpath(locators.Newprediction)
-        methods.assertElementContainsTextxpath(`//h4[text()="${testName}"]//following::td[3]`, 'Building')
+        methods.assertElementContainsTextxpath(`//*[text()="${testName}"]//following::td[3]`, 'Building')
         cy.wait(Timeout.xs)
-        methods.clickElementByXPath(`//h4[text()="${testName}"]//following::button[1]`)
+        methods.clickElementByXPath(`//*[text()="${testName}"]//following::button[1]`)
         methods.clickElementByXPath(locators.Journey_Delete)
         methods.clickElementByXPath(locators.Yes);
         methods.GetText(locators.notification_popup, "Predictive Score deleted successfully");
@@ -99,20 +99,20 @@ describe('Predictive Scoring Login', () => {
         methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Account_Configurations_1)
         methods.clickElementByXPath(locators.PredictiveScoring)
-        methods.VisibilityofElement(locators.Page_title, 'Predictive Scoring')
+        methods.VisibilityofElement2(locators.DataManagementHeader, 'Predictive Scoring')
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.PredictiveScoring)
         methods.VisibilityofElementXpath(locators.Newprediction)
 
         cy.document().then((doc) => {
 
-            const demoElements = doc.evaluate(`//h4[contains(text(),"Predictive Score Demo")]`, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+            const demoElements = doc.evaluate(`//*[contains(text(),"Predictive Score Demo")]`, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
 
             if (demoElements.snapshotLength > 0) {
 
                 for (let i = 0; i < demoElements.snapshotLength; i++) {
 
-                    methods.clickElementByXPath(`(//h4[contains(text(),"Predictive Score Demo")]//following::button[1])[1]`);
+                    methods.clickElementByXPath(`(//*[contains(text(),"Predictive Score Demo")]//following::button[1])[1]`);
                     cy.wait(Timeout.sm);
                     methods.clickElementByXPath(locators.Journey_Delete);
                     methods.clickElementByXPath(locators.Yes);
@@ -127,9 +127,9 @@ describe('Predictive Scoring Login', () => {
 
         methods.clickElementByXPath(locators.Newprediction)
         methods.VisibilityofElementXpath(locators.Predictionrule_Title)
-        methods.clickElement(locators.custom_event_name)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, testName)
-        methods.EnterXpath(locators.workflow_name)
+        methods.clickElementByXPath(locators.custom_event_name)
+        methods.ClearAndType(`[value="Untitled Prediction"]`, testName)
+        methods.Enter(`[value="${testName}"]`)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Add_Event)
         methods.typeElement(locators.Select_Event, 'Website Session')
@@ -141,11 +141,11 @@ describe('Predictive Scoring Login', () => {
         methods.clickElementByXPath(locators.Buildmodel)
         methods.assertElementContainsText(locators.notification_popup, 'Rule Saved. Building Model.Prediction rule has been saved. Model is being built, come back in 3-4 hours to view results from test data and publish the model.')
         cy.wait(Timeout.sm)
-        methods.assertElementContainsText(locators.Page_title, 'Predictive Scoring')
+        methods.assertElementContainsText1(locators.DataManagementHeader, 'Predictive Scoring')
         methods.VisibilityofElementXpath(locators.Newprediction)
-        methods.assertElementContainsTextxpath(`//h4[text()="${testName}"]//following::td[3]`, 'Building')
+        methods.assertElementContainsTextxpath(`//*[text()="${testName}"]//following::td[3]`, 'Building')
         cy.wait(Timeout.xs)
-        methods.clickElementByXPath(`//h4[text()="${testName}"]//following::button[1]`)
+        methods.clickElementByXPath(`//*[text()="${testName}"]//following::button[1]`)
         methods.clickElementByXPath(locators.Journey_Clone)
         methods.AssertNotEmptyWithXpath(locators.SegmentTitle, `${testName} (Copy)`)
         methods.clickElementByXPath(locators.PS_Add_Filter)
@@ -163,16 +163,16 @@ describe('Predictive Scoring Login', () => {
         methods.clickElementByXPath(locators.Buildmodel)
         methods.assertElementContainsText(locators.notification_popup, 'Rule Saved. Building Model.Prediction rule has been saved. Model is being built, come back in 3-4 hours to view results from test data and publish the model.')
         cy.wait(Timeout.sm)
-        methods.assertElementContainsText(locators.Page_title, 'Predictive Scoring')
+        methods.assertElementContainsText1(locators.DataManagementHeader, 'Predictive Scoring')
         methods.VisibilityofElementXpath(locators.Newprediction)
-        methods.assertElementContainsTextxpath(`//h4[text()="${testName} (Copy)"]//following::td[3]`, 'Building')
+        methods.assertElementContainsTextxpath(`//*[text()="${testName} (Copy)"]//following::td[3]`, 'Building')
         cy.wait(Timeout.xs)
-        methods.clickElementByXPath(`//h4[text()="${testName} (Copy)"]//following::button[1]`)
+        methods.clickElementByXPath(`//*[text()="${testName} (Copy)"]//following::button[1]`)
         methods.clickElementByXPath(locators.Journey_Delete)
         methods.clickElementByXPath(locators.Yes);
         methods.GetText(locators.notification_popup, "Predictive Score deleted successfully");
         cy.wait(Timeout.xs)
-        methods.clickElementByXPath(`//h4[text()="${testName}"]//following::button[1]`)
+        methods.clickElementByXPath(`//*[text()="${testName}"]//following::button[1]`)
         methods.clickElementByXPath(locators.Journey_Delete)
         methods.clickElementByXPath(locators.Yes);
         methods.GetText(locators.notification_popup, "Predictive Score deleted successfully");

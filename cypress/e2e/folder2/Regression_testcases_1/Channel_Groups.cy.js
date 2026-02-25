@@ -33,7 +33,7 @@ describe('Channel Groups Login', () => {
         methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Touchpoints)
         methods.clickElementByXPath(locators.channelGroup)
-        methods.Titletextcontains(locators.Page_title, "Channel Groups")
+        methods.Titletextcontainsxpath(locators.DataManagementHeader, "Channel Groups")
         methods.VisibilityofElement(locators.identi_table)
         methods.clickElementByXPath(locators.Add_New)
         methods.VisibilityofElement(locators.Templete_Popup)

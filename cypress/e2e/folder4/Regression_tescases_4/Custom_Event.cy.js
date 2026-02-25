@@ -34,8 +34,29 @@ describe('Custom Event Login', () => {
         methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Custom_Definitions_1)
         methods.clickElementByXPath(locators.CustomEvents)
+
+        cy.document().then((doc) => {
+
+            const demoElements = doc.evaluate(`//span[contains(text(),"Demo Custom Event")]`, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+
+            if (demoElements.snapshotLength > 0) {
+
+                for (let i = 0; i < demoElements.snapshotLength; i++) {
+
+                    methods.clickElementByXPath(`//span[text()="${testName}"]//following::button[1]`)
+                    methods.clickElementByXPath(locators.Remove_Event)
+                    methods.assertElementContainsText(locators.Popup_Message, "Custom Event removed!")
+                    cy.wait(Timeout.xs)
+                }
+
+            } else {
+                cy.log('No Custom Event containing "Demo" found. Skipping deletion.');
+            }
+        });
+
+
         methods.clickElementByXPath(locators.New_Event)
-        methods.assertElementContainsText(locators.Event_Title, 'New Custom Event')
+        methods.assertElementContainsText1(locators.DataManagementHeader, 'New Custom Event')
         methods.typeElement(locators.Name, testName)
         methods.typeElement(locators.description, "Automation Testing")
         methods.clickElement(locators.Source)
@@ -52,7 +73,7 @@ describe('Custom Event Login', () => {
         methods.clickElementByXPath(`//span[text()="${testName}"]//following::button[1]`)
         methods.clickElementByXPath(locators.View_Event)
         cy.wait(Timeout.xs)
-        methods.assertElementContainsTextxpath(locators.Event_DisplayName, testName)
+        methods.VisibilityofElementXpath(`//h6[text()="${testName}"]`, testName)
         methods.clickElementByXPath(locators.Cancel)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(`//span[text()="${testName}"]//following::button[1]`)
@@ -78,8 +99,28 @@ describe('Custom Event Login', () => {
         methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Custom_Definitions_1)
         methods.clickElementByXPath(locators.CustomEvents)
+
+        cy.document().then((doc) => {
+
+            const demoElements = doc.evaluate(`//span[contains(text(),"Demo Custom Event")]`, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+
+            if (demoElements.snapshotLength > 0) {
+
+                for (let i = 0; i < demoElements.snapshotLength; i++) {
+
+                    methods.clickElementByXPath(`//span[text()="${testName}"]//following::button[1]`)
+                    methods.clickElementByXPath(locators.Remove_Event)
+                    methods.assertElementContainsText(locators.Popup_Message, "Custom Event removed!")
+                    cy.wait(Timeout.xs)
+                }
+
+            } else {
+                cy.log('No Custom Event containing "Demo" found. Skipping deletion.');
+            }
+        });
+
         methods.clickElementByXPath(locators.New_Event)
-        methods.assertElementContainsText(locators.Event_Title, 'New Custom Event')
+        methods.assertElementContainsText1(locators.DataManagementHeader, 'New Custom Event')
         methods.typeElement(locators.Name, testName)
         methods.typeElement(locators.description, "Automation Testing")
         methods.clickElement(locators.Source)
@@ -99,7 +140,7 @@ describe('Custom Event Login', () => {
         methods.clickElementByXPath(`//span[text()="${testName}"]//following::button[1]`)
         methods.clickElementByXPath(locators.View_Event)
         cy.wait(Timeout.xs)
-        methods.assertElementContainsTextxpath(locators.Event_DisplayName, testName)
+        methods.VisibilityofElementXpath(`//h6[text()="${testName}"]`, testName)
         methods.clickElementByXPath(locators.Cancel)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(`//span[text()="${testName}"]//following::button[1]`)
@@ -125,8 +166,28 @@ describe('Custom Event Login', () => {
         methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Custom_Definitions_1)
         methods.clickElementByXPath(locators.CustomEvents)
+
+        cy.document().then((doc) => {
+
+            const demoElements = doc.evaluate(`//span[contains(text(),"Demo Custom Event")]`, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+
+            if (demoElements.snapshotLength > 0) {
+
+                for (let i = 0; i < demoElements.snapshotLength; i++) {
+
+                    methods.clickElementByXPath(`//span[text()="${testName}"]//following::button[1]`)
+                    methods.clickElementByXPath(locators.Remove_Event)
+                    methods.assertElementContainsText(locators.Popup_Message, "Custom Event removed!")
+                    cy.wait(Timeout.xs)
+                }
+
+            } else {
+                cy.log('No Custom Event containing "Demo" found. Skipping deletion.');
+            }
+        });
+
         methods.clickElementByXPath(locators.New_Event)
-        methods.assertElementContainsText(locators.Event_Title, 'New Custom Event')
+        methods.assertElementContainsText1(locators.DataManagementHeader, 'New Custom Event')
         methods.typeElement(locators.Name, testName)
         methods.typeElement(locators.description, "Automation Testing")
         methods.clickElement(locators.Source)
@@ -144,7 +205,7 @@ describe('Custom Event Login', () => {
         methods.clickElementByXPath(`//span[text()="${testName}"]//following::button[1]`)
         methods.clickElementByXPath(locators.View_Event)
         cy.wait(Timeout.xs)
-        methods.assertElementContainsTextxpath(locators.Event_DisplayName, testName)
+        methods.VisibilityofElementXpath(`//h6[text()="${testName}"]`, testName)
         methods.clickElementByXPath(locators.Cancel)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(`//span[text()="${testName}"]//following::button[1]`)
@@ -169,8 +230,28 @@ describe('Custom Event Login', () => {
         methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Custom_Definitions_1)
         methods.clickElementByXPath(locators.CustomEvents)
+
+        cy.document().then((doc) => {
+
+            const demoElements = doc.evaluate(`//span[contains(text(),"Demo Custom Event")]`, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+
+            if (demoElements.snapshotLength > 0) {
+
+                for (let i = 0; i < demoElements.snapshotLength; i++) {
+
+                    methods.clickElementByXPath(`//span[text()="${testName}"]//following::button[1]`)
+                    methods.clickElementByXPath(locators.Remove_Event)
+                    methods.assertElementContainsText(locators.Popup_Message, "Custom Event removed!")
+                    cy.wait(Timeout.xs)
+                }
+
+            } else {
+                cy.log('No Custom Event containing "Demo" found. Skipping deletion.');
+            }
+        });
+
         methods.clickElementByXPath(locators.New_Event)
-        methods.assertElementContainsText(locators.Event_Title, 'New Custom Event')
+        methods.assertElementContainsText1(locators.DataManagementHeader, 'New Custom Event')
         methods.typeElement(locators.Name, testName)
         methods.typeElement(locators.description, "Automation Testing")
         methods.clickElement(locators.Source)
@@ -190,7 +271,7 @@ describe('Custom Event Login', () => {
         methods.clickElementByXPath(`//span[text()="${testName}"]//following::button[1]`)
         methods.clickElementByXPath(locators.View_Event)
         cy.wait(Timeout.xs)
-        methods.assertElementContainsTextxpath(locators.Event_DisplayName, testName)
+        methods.VisibilityofElementXpath(`//h6[text()="${testName}"]`, testName)
         methods.clickElementByXPath(locators.Cancel)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(`//span[text()="${testName}"]//following::button[1]`)

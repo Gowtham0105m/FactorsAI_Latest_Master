@@ -196,7 +196,7 @@ describe('Peoples Regression', () => {
 
         methods.typeElement(locators.Search_segment, testName)
         methods.clickElementByXPath(locators.Saved_segment)
-        methods.Titletextcontainsxpath(`//h1[text()='${testName}']`, testName)
+        methods.Titletextcontainsxpath(`//*[text()='${testName}']`, testName)
         // renaming segment
 
         methods.clickElementByXPath(`//span[text()="${testName}"]//following::span[1]`)
@@ -204,7 +204,7 @@ describe('Peoples Regression', () => {
         methods.clickElementByXPath(locators.RenameSegment)
         methods.typeElementByXPath(locators.seg_rename, randomNumber)
         methods.clickElementByXPath(locators.save1)
-        methods.Titletextcontainsxpath(`//h1[text()='${combination}']`, combination)
+        methods.Titletextcontainsxpath(`//*[text()='${combination}']`, combination)
         methods.VisibilityofElement(locators.notification_popup)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
 

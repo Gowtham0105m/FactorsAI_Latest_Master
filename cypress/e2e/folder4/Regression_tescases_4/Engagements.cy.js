@@ -36,15 +36,19 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.sm)
 
     cy.document().then((doc) => {
-      const demoElement = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      const demoElements = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+      if (demoElements.snapshotLength > 0) {
 
-      if (demoElement) {
-        methods.clickElementByXPath(`//td[contains(@title,"Demo")]//following::button[2]`)
-        cy.wait(Timeout.sm);
-        methods.clickElementByXPath(locators.Yes);
-        cy.wait(Timeout.sm)
-        methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.");
-        cy.wait(Timeout.xs);
+        for (let i = 0; i < demoElements.snapshotLength; i++) {
+
+          methods.clickElementByXPath(`(//td[contains(@title,"Demo")]//following::button[2])[${i + 1}]`);
+          cy.wait(Timeout.sm);
+          methods.clickElementByXPath(locators.Yes);
+          cy.wait(Timeout.sm);
+          methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.");
+          cy.wait(Timeout.xs);
+        }
+
       } else {
         cy.log('No rules containing "Demo" found. Skipping deletion.');
       }
@@ -52,7 +56,7 @@ describe('Engagements scoring Login', () => {
 
     methods.clickElementByXPath(locators.Engagement_Scoring)
     cy.wait(Timeout.sm)
-    methods.assertElementContainsText(locators.Page_title, 'Engagement Scoring')
+    methods.assertElementContainsText1(locators.DataManagementHeader, 'Engagement Scoring')
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Add_signal)
     cy.wait(Timeout.xs)
@@ -60,9 +64,9 @@ describe('Engagements scoring Login', () => {
     methods.clickElementByXPath(locators.select_event)
     methods.clickElementByXPath(locators.hubspot_Cmpny_Opt)
     methods.clickElementByXPath(locators.Company_Created)
-    methods.clickElement(locators.custom_event_name)
-    methods.ClearAndTypeWithXpath(locators.Pricing_page_visit_Search, testName)
-    methods.EnterXpath(locators.workflow_name)
+    methods.clickElementByXPath(locators.custom_event_name)
+    methods.ClearAndType(locators.Pricing_page_visit_Search, testName)
+    methods.Enter(`[value="${testName}"]`)
     methods.clickElementByXPath(locators.Assign_weight)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.save2)
@@ -72,9 +76,9 @@ describe('Engagements scoring Login', () => {
     methods.clickElementByXPath(`//td[text()='${testName}']`)
     methods.assertElementContainsText1(locators.SegmentTitle, testName)
     cy.wait(Timeout.md)
-    methods.clickElement(locators.custom_event_name)
-    methods.ClearAndTypeWithXpath(`//textarea[contains(text(),"${testName}")]`, testName1)
-    methods.EnterXpath(`//textarea[contains(text(),"${testName1}")]`)
+    methods.clickElementByXPath(locators.custom_event_name)
+    methods.ClearAndType(`[value="${testName}"]`, testName1)
+    methods.Enter(`[value="${testName1}"]`)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Assign_weight1)
     cy.wait(Timeout.sm)
@@ -117,15 +121,19 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.sm)
 
     cy.document().then((doc) => {
-      const demoElement = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      const demoElements = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+      if (demoElements.snapshotLength > 0) {
 
-      if (demoElement) {
-        methods.clickElementByXPath(`//td[contains(@title,"Demo")]//following::button[2]`)
-        cy.wait(Timeout.sm);
-        methods.clickElementByXPath(locators.Yes);
-        cy.wait(Timeout.sm)
-        methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.");
-        cy.wait(Timeout.xs);
+        for (let i = 0; i < demoElements.snapshotLength; i++) {
+
+          methods.clickElementByXPath(`(//td[contains(@title,"Demo")]//following::button[2])[${i + 1}]`);
+          cy.wait(Timeout.sm);
+          methods.clickElementByXPath(locators.Yes);
+          cy.wait(Timeout.sm);
+          methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.");
+          cy.wait(Timeout.xs);
+        }
+
       } else {
         cy.log('No rules containing "Demo" found. Skipping deletion.');
       }
@@ -133,7 +141,7 @@ describe('Engagements scoring Login', () => {
 
     methods.clickElementByXPath(locators.Engagement_Scoring)
     cy.wait(Timeout.sm)
-    methods.assertElementContainsText(locators.Page_title, 'Engagement Scoring')
+    methods.assertElementContainsText1(locators.DataManagementHeader, 'Engagement Scoring')
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Add_signal)
     methods.clickElementByXPath(locators.PageView)
@@ -152,9 +160,9 @@ describe('Engagements scoring Login', () => {
     methods.typeElementwithIndex(locators.Search, "https://staging-app.factors.ai/explain", 3)
     cy.wait(Timeout.sm)
     methods.clickElement(locators.Staging_app_factors)
-    methods.clickElement(locators.custom_event_name)
-    methods.ClearAndTypeWithXpath(locators.Pricing_page_visit_Search, testName)
-    methods.EnterXpath(locators.workflow_name)
+    methods.clickElementByXPath(locators.custom_event_name)
+    methods.ClearAndType(locators.Pricing_page_visit_Search, testName)
+    methods.Enter(`[value="${testName}"]`)
     methods.clickElementIndexXpath(locators.Assign_weight, 0)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.save2)
@@ -164,9 +172,9 @@ describe('Engagements scoring Login', () => {
     methods.clickElementByXPath(`//td[text()='${testName}']`)
     methods.assertElementContainsText1(locators.SegmentTitle, testName)
     cy.wait(Timeout.md)
-    methods.clickElement(locators.custom_event_name)
-    methods.ClearAndTypeWithXpath(`//textarea[contains(text(),"${testName}")]`, testName1)
-    methods.EnterXpath(`//textarea[contains(text(),"${testName1}")]`)
+    methods.clickElementByXPath(locators.custom_event_name)
+    methods.ClearAndType(`[value="${testName}"]`, testName1)
+    methods.Enter(`[value="${testName1}"]`)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Assign_weight1)
     cy.wait(Timeout.xs)
@@ -209,15 +217,19 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.sm)
 
     cy.document().then((doc) => {
-      const demoElement = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      const demoElements = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+      if (demoElements.snapshotLength > 0) {
 
-      if (demoElement) {
-        methods.clickElementByXPath(`//td[contains(@title,"Demo")]//following::button[2]`)
-        cy.wait(Timeout.sm);
-        methods.clickElementByXPath(locators.Yes);
-        cy.wait(Timeout.sm)
-        methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.");
-        cy.wait(Timeout.xs);
+        for (let i = 0; i < demoElements.snapshotLength; i++) {
+
+          methods.clickElementByXPath(`(//td[contains(@title,"Demo")]//following::button[2])[${i + 1}]`);
+          cy.wait(Timeout.sm);
+          methods.clickElementByXPath(locators.Yes);
+          cy.wait(Timeout.sm);
+          methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.");
+          cy.wait(Timeout.xs);
+        }
+
       } else {
         cy.log('No rules containing "Demo" found. Skipping deletion.');
       }
@@ -225,7 +237,7 @@ describe('Engagements scoring Login', () => {
 
     methods.clickElementByXPath(locators.Engagement_Scoring)
     cy.wait(Timeout.sm)
-    methods.assertElementContainsText(locators.Page_title, 'Engagement Scoring')
+    methods.assertElementContainsText1(locators.DataManagementHeader, 'Engagement Scoring')
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Add_signal)
     methods.clickElementByXPath(locators.HubSpotForms)
@@ -244,9 +256,9 @@ describe('Engagements scoring Login', () => {
     methods.typeElementwithIndex(locators.Search, "https://staging-app.factors.ai/explain", 3)
     cy.wait(Timeout.sm)
     methods.clickElement(locators.Staging_app_factors)
-    methods.clickElement(locators.custom_event_name)
-    methods.ClearAndTypeWithXpath(locators.Pricing_page_visit_Search, testName)
-    methods.EnterXpath(locators.workflow_name)
+    methods.clickElementByXPath(locators.custom_event_name)
+    methods.ClearAndType(locators.Pricing_page_visit_Search, testName)
+    methods.Enter(`[value="${testName}"]`)
     methods.clickElementIndexXpath(locators.Assign_weight, 0)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.save2)
@@ -256,9 +268,9 @@ describe('Engagements scoring Login', () => {
     methods.clickElementByXPath(`//td[text()='${testName}']`)
     methods.assertElementContainsText1(locators.SegmentTitle, testName)
     cy.wait(Timeout.md)
-    methods.clickElement(locators.custom_event_name)
-    methods.ClearAndTypeWithXpath(`//textarea[contains(text(),"${testName}")]`, testName1)
-    methods.EnterXpath(`//textarea[contains(text(),"${testName1}")]`)
+    methods.clickElementByXPath(locators.custom_event_name)
+    methods.ClearAndType(`[value="${testName}"]`, testName1)
+    methods.Enter(`[value="${testName1}"]`)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Assign_weight1)
     cy.wait(Timeout.xs)
@@ -302,15 +314,19 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.sm)
 
     cy.document().then((doc) => {
-      const demoElement = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      const demoElements = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+      if (demoElements.snapshotLength > 0) {
 
-      if (demoElement) {
-        methods.clickElementByXPath(`//td[contains(@title,"Demo")]//following::button[2]`)
-        cy.wait(Timeout.sm);
-        methods.clickElementByXPath(locators.Yes);
-        cy.wait(Timeout.sm)
-        methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.");
-        cy.wait(Timeout.xs);
+        for (let i = 0; i < demoElements.snapshotLength; i++) {
+
+          methods.clickElementByXPath(`(//td[contains(@title,"Demo")]//following::button[2])[${i + 1}]`);
+          cy.wait(Timeout.sm);
+          methods.clickElementByXPath(locators.Yes);
+          cy.wait(Timeout.sm);
+          methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.");
+          cy.wait(Timeout.xs);
+        }
+
       } else {
         cy.log('No rules containing "Demo" found. Skipping deletion.');
       }
@@ -318,7 +334,7 @@ describe('Engagements scoring Login', () => {
 
     methods.clickElementByXPath(locators.Engagement_Scoring)
     cy.wait(Timeout.sm)
-    methods.assertElementContainsText(locators.Page_title, 'Engagement Scoring')
+    methods.assertElementContainsText1(locators.DataManagementHeader, 'Engagement Scoring')
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Add_signal)
     methods.clickElementByXPath(locators.SalesforceCampaigns)
@@ -337,9 +353,9 @@ describe('Engagements scoring Login', () => {
     methods.typeElementwithIndex(locators.Search, "https://staging-app.factors.ai/explain", 3)
     cy.wait(Timeout.sm)
     methods.clickElement(locators.Staging_app_factors)
-    methods.clickElement(locators.custom_event_name)
-    methods.ClearAndTypeWithXpath(locators.Pricing_page_visit_Search, testName)
-    methods.EnterXpath(locators.workflow_name)
+    methods.clickElementByXPath(locators.custom_event_name)
+    methods.ClearAndType(locators.Pricing_page_visit_Search, testName)
+    methods.Enter(`[value="${testName}"]`)
     methods.clickElementIndexXpath(locators.Assign_weight, 0)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.save2)
@@ -349,9 +365,9 @@ describe('Engagements scoring Login', () => {
     methods.clickElementByXPath(`//td[text()='${testName}']`)
     methods.assertElementContainsText1(locators.SegmentTitle, testName)
     cy.wait(Timeout.md)
-    methods.clickElement(locators.custom_event_name)
-    methods.ClearAndTypeWithXpath(`//textarea[contains(text(),"${testName}")]`, testName1)
-    methods.EnterXpath(`//textarea[contains(text(),"${testName1}")]`)
+    methods.clickElementByXPath(locators.custom_event_name)
+    methods.ClearAndType(`[value="${testName}"]`, testName1)
+    methods.Enter(`[value="${testName1}"]`)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Assign_weight1)
     cy.wait(Timeout.xs)
@@ -395,15 +411,19 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.sm)
 
     cy.document().then((doc) => {
-      const demoElement = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      const demoElements = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+      if (demoElements.snapshotLength > 0) {
 
-      if (demoElement) {
-        methods.clickElementByXPath(`//td[contains(@title,"Demo")]//following::button[2]`)
-        cy.wait(Timeout.sm);
-        methods.clickElementByXPath(locators.Yes);
-        cy.wait(Timeout.sm)
-        methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.");
-        cy.wait(Timeout.xs);
+        for (let i = 0; i < demoElements.snapshotLength; i++) {
+
+          methods.clickElementByXPath(`(//td[contains(@title,"Demo")]//following::button[2])[${i + 1}]`);
+          cy.wait(Timeout.sm);
+          methods.clickElementByXPath(locators.Yes);
+          cy.wait(Timeout.sm);
+          methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.");
+          cy.wait(Timeout.xs);
+        }
+
       } else {
         cy.log('No rules containing "Demo" found. Skipping deletion.');
       }
@@ -411,7 +431,7 @@ describe('Engagements scoring Login', () => {
 
     methods.clickElementByXPath(locators.Engagement_Scoring)
     cy.wait(Timeout.sm)
-    methods.assertElementContainsText(locators.Page_title, 'Engagement Scoring')
+    methods.assertElementContainsText1(locators.DataManagementHeader, 'Engagement Scoring')
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Add_signal)
     methods.clickElementByXPath(locators.LinkedInAds)
@@ -430,9 +450,9 @@ describe('Engagements scoring Login', () => {
     methods.typeElementwithIndex(locators.Search, "https://staging-app.factors.ai/explain", 3)
     cy.wait(Timeout.sm)
     methods.clickElement(locators.Staging_app_factors)
-    methods.clickElement(locators.custom_event_name)
-    methods.ClearAndTypeWithXpath(locators.Pricing_page_visit_Search, testName)
-    methods.EnterXpath(locators.workflow_name)
+    methods.clickElementByXPath(locators.custom_event_name)
+    methods.ClearAndType(locators.Pricing_page_visit_Search, testName)
+    methods.Enter(`[value="${testName}"]`)
     methods.clickElementIndexXpath(locators.Assign_weight, 0)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.save2)
@@ -442,10 +462,10 @@ describe('Engagements scoring Login', () => {
     methods.clickElementByXPath(`//td[text()='${testName}']`)
     methods.assertElementContainsText1(locators.SegmentTitle, testName)
     cy.wait(Timeout.md)
-    methods.clickElement(locators.custom_event_name)
-    methods.ClearAndTypeWithXpath(`//textarea[contains(text(),"${testName}")]`, testName1)
+    methods.clickElementByXPath(locators.custom_event_name)
+    methods.ClearAndType(`[value="${testName}"]`, testName1)
     cy.wait(Timeout.xs)
-    methods.EnterXpath(`//textarea[contains(text(),"${testName1}")]`)
+    methods.Enter(`[value="${testName1}"]`)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Assign_weight1)
     cy.wait(Timeout.xs)
@@ -489,15 +509,19 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.sm)
 
     cy.document().then((doc) => {
-      const demoElement = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      const demoElements = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+      if (demoElements.snapshotLength > 0) {
 
-      if (demoElement) {
-        methods.clickElementByXPath(`//td[contains(@title,"Demo")]//following::button[2]`)
-        cy.wait(Timeout.sm);
-        methods.clickElementByXPath(locators.Yes);
-        cy.wait(Timeout.sm)
-        methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.");
-        cy.wait(Timeout.xs);
+        for (let i = 0; i < demoElements.snapshotLength; i++) {
+
+          methods.clickElementByXPath(`(//td[contains(@title,"Demo")]//following::button[2])[${i + 1}]`);
+          cy.wait(Timeout.sm);
+          methods.clickElementByXPath(locators.Yes);
+          cy.wait(Timeout.sm);
+          methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.");
+          cy.wait(Timeout.xs);
+        }
+
       } else {
         cy.log('No rules containing "Demo" found. Skipping deletion.');
       }
@@ -505,7 +529,7 @@ describe('Engagements scoring Login', () => {
 
     methods.clickElementByXPath(locators.Engagement_Scoring)
     cy.wait(Timeout.sm)
-    methods.assertElementContainsText(locators.Page_title, 'Engagement Scoring')
+    methods.assertElementContainsText1(locators.DataManagementHeader, 'Engagement Scoring')
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Add_signal)
     methods.clickElementByXPath(locators.G2Intent)
@@ -524,9 +548,9 @@ describe('Engagements scoring Login', () => {
     methods.typeElementwithIndex(locators.Search, "https://staging-app.factors.ai/explain", 3)
     cy.wait(Timeout.sm)
     methods.clickElement(locators.Staging_app_factors)
-    methods.clickElement(locators.custom_event_name)
-    methods.ClearAndTypeWithXpath(locators.Pricing_page_visit_Search, testName)
-    methods.EnterXpath(locators.workflow_name)
+    methods.clickElementByXPath(locators.custom_event_name)
+    methods.ClearAndType(locators.Pricing_page_visit_Search, testName)
+    methods.Enter(`[value="${testName}"]`)
     methods.clickElementIndexXpath(locators.Assign_weight, 0)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.save2)
@@ -536,9 +560,9 @@ describe('Engagements scoring Login', () => {
     methods.clickElementByXPath(`//td[text()='${testName}']`)
     methods.assertElementContainsText1(locators.SegmentTitle, testName)
     cy.wait(Timeout.md)
-    methods.clickElement(locators.custom_event_name)
-    methods.ClearAndTypeWithXpath(`//textarea[contains(text(),"${testName}")]`, testName1)
-    methods.EnterXpath(`//textarea[contains(text(),"${testName1}")]`)
+    methods.clickElementByXPath(locators.custom_event_name)
+    methods.ClearAndType(`[value="${testName}"]`, testName1)
+    methods.Enter(`[value="${testName1}"]`)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Assign_weight1)
     cy.wait(Timeout.xs)
@@ -581,15 +605,19 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.sm)
 
     cy.document().then((doc) => {
-      const demoElement = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      const demoElements = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+      if (demoElements.snapshotLength > 0) {
 
-      if (demoElement) {
-        methods.clickElementByXPath(`//td[contains(@title,"Demo")]//following::button[2]`)
-        cy.wait(Timeout.sm);
-        methods.clickElementByXPath(locators.Yes);
-        cy.wait(Timeout.sm)
-        methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.");
-        cy.wait(Timeout.xs);
+        for (let i = 0; i < demoElements.snapshotLength; i++) {
+
+          methods.clickElementByXPath(`(//td[contains(@title,"Demo")]//following::button[2])[${i + 1}]`);
+          cy.wait(Timeout.sm);
+          methods.clickElementByXPath(locators.Yes);
+          cy.wait(Timeout.sm);
+          methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.");
+          cy.wait(Timeout.xs);
+        }
+
       } else {
         cy.log('No rules containing "Demo" found. Skipping deletion.');
       }
@@ -597,7 +625,7 @@ describe('Engagements scoring Login', () => {
 
     methods.clickElementByXPath(locators.Engagement_Scoring)
     cy.wait(Timeout.sm)
-    methods.assertElementContainsText(locators.Page_title, 'Engagement Scoring')
+    methods.assertElementContainsText1(locators.DataManagementHeader, 'Engagement Scoring')
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Add_signal)
     methods.clickElementByXPath(locators.PageView)
@@ -610,9 +638,9 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.sm)
     methods.clickElement(locators.Staging_app_factors)
     cy.wait(Timeout.sm)
-    methods.clickElement(locators.custom_event_name)
-    methods.ClearAndTypeWithXpath(locators.Pricing_page_visit_Search, testName)
-    methods.EnterXpath(locators.workflow_name)
+    methods.clickElementByXPath(locators.custom_event_name)
+    methods.ClearAndType(locators.Pricing_page_visit_Search, testName)
+    methods.Enter(`[value="${testName}"]`)
     methods.clickElementIndexXpath(locators.Assign_weight, 0)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.save2)
@@ -635,16 +663,16 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.save2)
     methods.GetText(locators.notification_popup, "ErrorPlease add a valid name for this rule.")
-    methods.clickElement(locators.custom_event_name)
-    methods.ClearAndTypeWithXpath(locators.Pricing_page_visit_Search, testName)
-    methods.EnterXpath(locators.workflow_name)
+    methods.clickElementByXPath(locators.custom_event_name)
+    methods.ClearAndType(locators.Pricing_page_visit_Search, testName)
+    methods.Enter(`[value="${testName}"]`)
     cy.wait(Timeout.sm)
     methods.clickElementByXPath(locators.save2)
     methods.GetText(locators.notification_popup, "ErrorA rule with this name already exists. Please provide a different name.")
     cy.wait(Timeout.sm)
-    methods.clickElement(locators.custom_event_name)
-    methods.ClearAndTypeWithXpath(`//textarea[contains(text(),"${testName}")]`, testName1)
-    methods.EnterXpath(`//textarea[contains(text(),"${testName1}")]`)
+    methods.clickElementByXPath(locators.custom_event_name)
+    methods.ClearAndType(`[value="${testName}"]`, testName1)
+    methods.Enter(`[value="${testName1}"]`)
     cy.wait(Timeout.sm)
     methods.clickElementByXPath(locators.save2)
     methods.GetText(locators.notification_popup, `Duplicate RuleA similar rule with name - ${testName} already exists.`)
@@ -676,7 +704,7 @@ describe('Engagements scoring Login', () => {
     methods.clickElementByXPath(locators.BackArrow)
     methods.VisibilityofElement(locators.Templete_Popup)
     methods.clickElementByXPath(locators.DiscardandLeave)
-    methods.assertElementContainsText(locators.Page_title, "Engagement Scoring")
+    methods.assertElementContainsText1(locators.DataManagementHeader, "Engagement Scoring")
     cy.wait(Timeout.sm)
     methods.clickElementByXPath(`//td[text()='${testName}']//following::button[2]`)
     cy.wait(Timeout.sm)
@@ -698,18 +726,21 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.sm)
 
     cy.document().then((doc) => {
-      const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      const demoElements = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+      if (demoElements.snapshotLength > 0) {
 
-      if (!demoElement || demoElement.offsetParent === null) {
-        cy.log("**All Segment not loaded**");
-        methods.Mouseover(locators.account_dropdown);
-        methods.clickElementByXPath(locators.People);
-        cy.wait(Timeout.xs);
-        methods.Mouseover(locators.account_dropdown);
-        methods.clickElementByXPath(locators.Account);
-        cy.wait(Timeout.xs);
+        for (let i = 0; i < demoElements.snapshotLength; i++) {
+
+          methods.clickElementByXPath(`(//td[contains(@title,"Demo")]//following::button[2])[${i + 1}]`);
+          cy.wait(Timeout.sm);
+          methods.clickElementByXPath(locators.Yes);
+          cy.wait(Timeout.sm);
+          methods.GetText(locators.notification_popup, "Signal removed successfullySignal removed from monitoring. Changes will reflect across accounts within 24 hours.");
+          cy.wait(Timeout.xs);
+        }
+
       } else {
-        cy.log("**All Segment has been loaded**");
+        cy.log('No rules containing "Demo" found. Skipping deletion.');
       }
     });
 
@@ -754,9 +785,9 @@ describe('Engagements scoring Login', () => {
     methods.typeElementwithIndex(locators.Search, "https://staging-app.factors.ai/explain", 3)
     cy.wait(Timeout.sm)
     methods.clickElement(locators.Staging_app_factors)
-    methods.clickElement(locators.custom_event_name)
-    methods.ClearAndTypeWithXpath(locators.Pricing_page_visit_Search, testName)
-    methods.EnterXpath(locators.workflow_name)
+    methods.clickElementByXPath(locators.custom_event_name)
+    methods.ClearAndType(locators.Pricing_page_visit_Search, testName)
+    methods.Enter(`[value="${testName}"]`)
     methods.clickElementIndexXpath(locators.Assign_weight, 0)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.save2)

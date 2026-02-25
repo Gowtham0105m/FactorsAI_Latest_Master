@@ -33,7 +33,7 @@ describe('Campaign Groups Login', () => {
         methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Touchpoints)
         methods.clickElementByXPath(locators.Campaign_Groups)
-        methods.Titletextcontains(locators.Page_title, "Campaign Groups")
+        methods.Titletextcontainsxpath(locators.DataManagementHeader, "Campaign Groups")
         methods.VisibilityofElementXpath(locators.Add_New)
         methods.clickElementByXPath(locators.Add_New)
         methods.VisibilityofElementXpath(locators.CampaignTitle)

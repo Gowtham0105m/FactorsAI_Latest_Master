@@ -39,7 +39,7 @@ describe('People Login', () => {
 
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        methods.clickElement(locators.search_button)
+        methods.clickElementByXPath(locators.search_button)
         methods.typeElementByXPath(locators.Search1, 'sarath_tdfect@factors.ai')
         methods.EnterXpath(locators.Search1)
         cy.wait(Timeout.xs)

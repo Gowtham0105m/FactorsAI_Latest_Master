@@ -88,7 +88,7 @@ describe('Accounts Login', () => {
         // Search Account
 
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        methods.clickElementByXPath(locators.People_download_button)
+        methods.clickElementByXPath(locators.search_button)
         methods.typeElementByXPath(locators.search_area, 'factors.ai')
         methods.EnterXpath(locators.search_area)
         methods.VisibilityofElementXpath(locators.account_pageloaded)

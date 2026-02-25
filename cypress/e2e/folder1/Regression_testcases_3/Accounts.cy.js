@@ -118,7 +118,7 @@ describe('Accounts Regression', () => {
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
-        methods.clickElement(locators.search_button)
+        methods.clickElementByXPath(locators.search_button)
         methods.typeElementByXPath(locators.search_area, 'factors.ai')
         methods.EnterXpath(locators.search_area)
         cy.wait(Timeout.xs)
@@ -201,7 +201,7 @@ describe('Accounts Regression', () => {
                 methods.clickElementByXPath(locators.People);
                 cy.wait(Timeout.xs);
                 methods.Mouseover(locators.account_dropdown);
-                methods.clickElementByXPath(locators.Account);
+                methods.clickElementIndexXpath(locators.Account, 1);
                 cy.wait(Timeout.xs);
             } else {
                 cy.log("**All Segment has been loaded**");
@@ -267,9 +267,9 @@ describe('Accounts Regression', () => {
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.md)
-        methods.clickElement(locators.search_button)
+        methods.clickElementByXPath(locators.search_button)
         methods.typeElementByXPath(locators.search_area, 'infosys.com')
-        methods.EnterXpath(locators.search_area)
+        methods.EnterXpath(locators.search_area)    
         cy.wait(Timeout.xs)
         methods.MouseoverAndClick(locators.open_account)
         cy.wait(Timeout.sm)
@@ -284,7 +284,7 @@ describe('Accounts Regression', () => {
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
-        methods.clickElement(locators.search_button)
+        methods.clickElementByXPath(locators.search_button)
         methods.typeElementByXPath(locators.search_area, 'infosys.com')
         methods.EnterXpath(locators.search_area)
         cy.wait(Timeout.xs)
@@ -305,7 +305,7 @@ describe('Accounts Regression', () => {
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
-        methods.clickElement(locators.search_button)
+        methods.clickElementByXPath(locators.search_button)
         methods.typeElementByXPath(locators.search_area, 'infosys.com')
         methods.EnterXpath(locators.search_area)
         cy.wait(Timeout.xs)
@@ -323,7 +323,7 @@ describe('Accounts Regression', () => {
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
-        methods.clickElement(locators.search_button)
+        methods.clickElementByXPath(locators.search_button)
         cy.wait(Timeout.sm)
         methods.typeElementByXPath(locators.search_area, 'infosys.com')
         cy.wait(Timeout.sm)
@@ -357,7 +357,7 @@ describe('Accounts Regression', () => {
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
-        methods.clickElement(locators.search_button)
+        methods.clickElementByXPath(locators.search_button)
         cy.wait(Timeout.sm)
         methods.typeElementByXPath(locators.search_area, 'infosys.com')
         cy.wait(Timeout.sm)
