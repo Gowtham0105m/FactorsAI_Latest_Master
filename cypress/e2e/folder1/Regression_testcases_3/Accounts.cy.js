@@ -172,7 +172,7 @@ describe('Accounts Regression', () => {
         cy.wait(Timeout.xs);
         methods.typeElement(locators.Search_Properties, 'company region');
         cy.wait(Timeout.xs);
-        methods.clickElementByXPath(locators.Company_Region);
+        methods.clickElement(locators.Company_Region);
         cy.wait(Timeout.xs);
         methods.clickElementByXPath(locators.Apply1);
         cy.wait(Timeout.md)

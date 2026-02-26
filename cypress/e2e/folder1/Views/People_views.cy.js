@@ -29,6 +29,7 @@ describe('People view Login', () => {
 
         // select account & birdview
 
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.search_button)
         methods.typeElementByXPath(locators.Search1, 'sarath_tdfect@factors.ai')
         methods.EnterXpath(locators.Search1)

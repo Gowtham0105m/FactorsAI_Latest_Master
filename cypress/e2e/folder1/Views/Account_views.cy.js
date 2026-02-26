@@ -49,12 +49,12 @@ describe('Accounts view Login', () => {
 
         methods.clickElementByXPath(locators.Birdview_option)
         methods.typeElement(locators.Select_Events_to_show , 'Company Created')
-        methods.clickElementByXPath(locators.Company_Created)
+        methods.clickElementByXPath(locators.Company_Created1)
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.Views_tab)
         cy.wait(Timeout.sm)
         methods.AssertNotEmpty(locators.Event_validation)
-        methods.clickElementByXPath(locators.Company_Created)
+        methods.clickElementByXPath(locators.Company_Created1)
 
         // user property
 
@@ -66,7 +66,7 @@ describe('Accounts view Login', () => {
 
         // left side filter
 
-        cy.xpath(`(//h4[text()="infosys.com"]//following::div[contains(@class,"leftpane-prop")]//h4[1])[last()]`)
+        cy.xpath(`(//*[text()="infosys.com"]//following::div[contains(@class,"leftpane-prop")]//h4[1])[last()]`)
             .invoke('text')
             .then((element) => {
                 const property = element.replace(/\.\.\.$/, '').trim();

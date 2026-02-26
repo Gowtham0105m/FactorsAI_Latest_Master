@@ -28,6 +28,7 @@ describe('Intent Upload Login', () => {
     methods.VisibilityofElementXpath(locators.account_pageloaded)
     methods.clickElement(locators.setting)
     methods.clickElementByXPath(locators.Data_Management)
+    methods.clickElementByXPath(locators.Account_Configurations_1)
     methods.clickElementByXPath(locators.Intent_upload)
     cy.wait(Timeout.sm)
     methods.VisibilityofElement2(locators.DataManagementHeader, 'Intent Upload')

@@ -48,8 +48,8 @@ describe('Funnel Report Login', () => {
         methods.clickElementByXPath(locators.Filter_option1)
         methods.clickElementByXPath(locators.Add_another_event)
         methods.clickElement0(locators.Linkedin_Company_Engagements, 0)
-        methods.typeElement(locators.search_1, "linkedin paid views")
-        methods.clickElement(locators.Linkedin_Paid_Views)
+        methods.typeElement(locators.search_1, "linkedin paid leads")
+        methods.clickElement(locators.Linkedin_Paid_Leads)
         methods.clickElementByXPath(locators.Add_New_FilterBy1)
         methods.clickElement0(locators.All_Account, 0)
         methods.typeElementByXPath(locators.Search_Input, "In h")
@@ -171,8 +171,8 @@ describe('Funnel Report Login', () => {
         methods.clickElement0(locators.Website_Session, 0)
         methods.clickElementByXPath(locators.Add_another_event)
         methods.clickElement0(locators.Linkedin_Company_Engagements, 0)
-        methods.typeElement(locators.search_1, "linkedin paid views")
-        methods.clickElement(locators.Linkedin_Paid_Views)
+        methods.typeElement(locators.search_1, "linkedin paid leads")
+        methods.clickElement(locators.Linkedin_Paid_Leads)
         methods.clickElementByXPath(locators.Add_New_FilterBy)
         methods.clickElement0(locators.All_Account, 0)
         methods.typeElementByXPath(locators.Search_Input, "In h")
@@ -186,9 +186,8 @@ describe('Funnel Report Login', () => {
         methods.clickElementByXPath(locators.calender_MenuList)
         methods.clickElementByXPath(locators.Select_Month)
         methods.clickElementByXPath(locators.date_choosen)
-        cy.xpath('(//*[text()="FUNNEL CRITERIA"])//following::button[1]')
-            .invoke('text')
-            .then((dateText) => {
+        cy.wait(Timeout.sm)
+        cy.xpath('(//*[text()="FUNNEL CRITERIA"])//following::button[1]').invoke('text').then((dateText) => {
                 selectedDateBeforeSave1 = dateText.trim();
                 cy.log(`**Selected Date Before Save: ${selectedDateBeforeSave1}**`);
             });
@@ -204,11 +203,10 @@ describe('Funnel Report Login', () => {
         methods.VisibilityofElement(locators.Table_Body_1)
         methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.View_Report)
-        cy.xpath('(//div[@class="calendar"]//div[@class="fa-custom-datepicker"])[1]')
-            .invoke('text')
-            .then((dateText) => {
-                selectedDateAfterSave1 = dateText.trim();
-                cy.log(`**Selected Date After Save: ${selectedDateAfterSave1}**`);
+        cy.wait(Timeout.sm)
+        cy.xpath('(//div[@class="calendar"]//div[@class="fa-custom-datepicker"])[1]').invoke('text').then((dateText) => {
+            selectedDateAfterSave1 = dateText.trim();
+            cy.log(`**Selected Date After Save: ${selectedDateAfterSave1}**`);
             });
         if (selectedDateBeforeSave1 === selectedDateAfterSave1) {
             cy.log("**Both the date are same**");
@@ -258,8 +256,8 @@ describe('Funnel Report Login', () => {
         methods.clickElement0(locators.Website_Session, 0)
         methods.clickElementByXPath(locators.Add_another_event)
         methods.clickElement0(locators.Linkedin_Company_Engagements, 0)
-        methods.typeElement(locators.search_1, "linkedin paid views")
-        methods.clickElement(locators.Linkedin_Paid_Views)
+        methods.typeElement(locators.search_1, "linkedin paid leads")
+        methods.clickElement(locators.Linkedin_Paid_Leads)
         methods.clickElementByXPath(locators.Add_New_FilterBy)
         methods.clickElement0(locators.All_Account, 0)
         methods.clickElementByXPath(locators.pageview_option1)

@@ -23,7 +23,7 @@ describe('Timeline Login', () => {
     cy.wait(Timeout.md)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     methods.VisibilityofElementXpath(locators.account_pageloaded)
-    cy.wait(Timeout.sm)
+    cy.wait(Timeout.md)
     methods.clickElementByXPath(locators.search_button)
     cy.wait(Timeout.xs)
     methods.typeElementByXPath(locators.search_area, 'accenture.com')
@@ -61,9 +61,7 @@ describe('Timeline Login', () => {
 
     methods.clickElementByXPath(locators.Event_Properties)
 
-    cy.xpath(`(//span[text()="Event Properties"]//following::div/*[1])[last()]`)
-      .invoke('text')
-      .then((Property) => {
+    cy.xpath(`(//span[text()="Event Properties"]//following::div[contains(@id,"panel-event")]//h6[1])[last()]`).invoke('text').then((Property) => {
         let Event_property = Property.trim();
         cy.log(`**Property name: ${Event_property}**`);
 

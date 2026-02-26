@@ -430,7 +430,7 @@ describe('Profile Report Regression', () => {
         methods.typeElementByXPath(locators.Please_Select, 'aut')
         cy.wait(Timeout.sm)
         methods.clickElement(locators.Automation_1)
-        methods.clickElementByXPath(locators.Add_to_Dashboard_title)
+        methods.clickElementIndexXpath(locators.Add_to_Dashboard_title, 1)
         methods.clickElementByXPath(locators.save1)
         methods.VisibilityofElement(locators.notification_popup)
         methods.VisibilityofElement(locators.Attri_pageloaded)
