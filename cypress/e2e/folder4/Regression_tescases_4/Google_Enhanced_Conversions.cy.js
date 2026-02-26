@@ -93,17 +93,21 @@ describe('Google Enhanced Conversions Login', () => {
         methods.typeElementwithIndex(locators.Search, "user phone", 5)
         methods.clickElement(locators.UserPhone)
         cy.wait(Timeout.xs)
-        methods.clickElement(locators.Google_Enhanced_Edit_Button)
-        cy.get('@Text1').then((Text1) => { methods.ClearAndType(`[value="${testName}"]`, Text1); });
-        methods.Enter(`[value="${testName}"]`)
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((title) => {
+            methods.ClearAndType(`[value="Untitled Google Enhanced Conversions"]`, title);
+            methods.Enter(`[value="${title}"]`);
+        });
         cy.wait(Timeout.sm)
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         cy.wait(Timeout.sm)
         methods.assertElementContainsText(locators.notification_popup1, "Failed!")
         cy.wait(Timeout.sm)
-        methods.clickElement(locators.Google_Enhanced_Edit_Button)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, testName)
-        methods.EnterXpath(locators.workflow_name)
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((title) => {
+            methods.ClearAndType(`[value="${title}"]`, testName);
+            methods.Enter(`[value="${testName}"]`);
+        });
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         methods.GetText(locators.notification_popup, "SuccessRule Successfully Created!")
         cy.wait(Timeout.sm)
@@ -117,8 +121,8 @@ describe('Google Enhanced Conversions Login', () => {
         methods.clickElementByXPath(locators.GEC_Refresh_Btn)
         methods.GetText(locators.notification_popup, "SuccessRefreshed conversion actions!")
         cy.wait(Timeout.sm)
-        methods.clickElement(locators.custom_event_name)
-        methods.ClearAndType(`[value="${testName}"]`, testName1)
+        methods.clickElement(locators.Edit_Button)
+        methods.ClearAndType(`[value="${testName}"]`, testName1);
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Add_a_Filter)
         methods.typeElement(locators.search_1, "Visited Website")
@@ -179,11 +183,9 @@ describe('Google Enhanced Conversions Login', () => {
         });
 
         methods.ElementToBeClickableXpath(locators.SyncNewConversion_Btn)
-        cy.xpath('(//td[@class="ant-table-cell"])[1]')
-            .invoke('text')
-            .then((text) => {
-                cy.wrap(text.trim()).as('Text1');
-            });
+        cy.xpath('(//td[@class="ant-table-cell"])[1]').invoke('text').then((text) => {
+            cy.wrap(text.trim()).as('Text1');
+        });
         methods.clickElementByXPath(locators.SyncNewConversion_Btn)
         cy.wait(Timeout.xmd)
         methods.clickElement0(locators.Search, 0)
@@ -211,11 +213,13 @@ describe('Google Enhanced Conversions Login', () => {
         methods.clickElementByXPath(locators.pageview_option1)
         methods.clickElementByXPath(locators.Apply1)
         methods.clickElementByXPath(locators.Add_a_Filter)
-        methods.typeElement(locators.search_1, "Visited Website")
-        methods.clickElement(locators.Visited_Website)
-        methods.clickElement(locators.equals_1)
+        methods.typeElementByXPath(locators.Search_Input, "hubspot deal record id")
         cy.wait(Timeout.xs)
+        methods.clickElement(locators.Hubspot_Deal_Opt)
+        methods.clickElement(locators.equals_1)
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.pageview_option1)
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Apply1)
         methods.clickElement(locators.Usethecustomvalue_Option)
         methods.ClearAndType(locators.Defaultconversionvalue_Input, 10)
@@ -228,19 +232,21 @@ describe('Google Enhanced Conversions Login', () => {
         methods.typeElementwithIndex(locators.Search, "user phone", 5)
         methods.clickElement(locators.UserPhone)
         cy.wait(Timeout.xs)
-        methods.clickElement(locators.workflow_edit_icon)
-        cy.get('@Text1').then((Text1) => {
-            methods.ClearAndTypeWithXpath(locators.workflow_name, Text1);
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((title) => {
+            methods.ClearAndType(`[value="Untitled Google Enhanced Conversions"]`, title);
+            methods.Enter(`[value="${title}"]`);
         });
-        methods.EnterXpath(locators.workflow_name)
         cy.wait(Timeout.sm)
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         cy.wait(Timeout.sm)
         methods.assertElementContainsText(locators.notification_popup1, "Failed!")
         cy.wait(Timeout.sm)
-        methods.clickElement(locators.workflow_edit_icon)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, testName)
-        methods.EnterXpath(locators.workflow_name)
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((title) => {
+            methods.ClearAndType(`[value="${title}"]`, testName);
+            methods.Enter(`[value="${testName}"]`);
+        });
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         cy.wait(Timeout.xs)
         methods.GetText(locators.notification_popup, "SuccessRule Successfully Created!")
@@ -255,8 +261,8 @@ describe('Google Enhanced Conversions Login', () => {
         methods.clickElementByXPath(locators.GEC_Refresh_Btn)
         methods.GetText(locators.notification_popup, "SuccessRefreshed conversion actions!")
         cy.wait(Timeout.sm)
-        methods.clickElement(locators.custom_event_name)
-        methods.ClearAndTypeWithXpath(`//textarea[contains(text(),"${testName}")]`, testName1)
+        methods.clickElement(locators.Edit_Button)
+        methods.ClearAndType(`[value="${testName}"]`, testName1);
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Add_a_Filter)
         methods.clickElement0(locators.others, 0)
@@ -317,11 +323,9 @@ describe('Google Enhanced Conversions Login', () => {
         });
 
         methods.ElementToBeClickableXpath(locators.SyncNewConversion_Btn)
-        cy.xpath('(//td[@class="ant-table-cell"])[1]')
-            .invoke('text')
-            .then((text) => {
-                cy.wrap(text.trim()).as('Text1');
-            });
+        cy.xpath('(//td[@class="ant-table-cell"])[1]').invoke('text').then((text) => {
+            cy.wrap(text.trim()).as('Text1');
+        });
         methods.clickElementByXPath(locators.SyncNewConversion_Btn)
         cy.wait(Timeout.xmd)
         methods.clickElement0(locators.Search, 0)
@@ -366,19 +370,21 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.xs)
         methods.ClearAndType(locators.Defaultconversionvalue_Input, 10)
         cy.wait(Timeout.xs)
-        methods.clickElement(locators.workflow_edit_icon)
-        cy.get('@Text1').then((Text1) => {
-            methods.ClearAndTypeWithXpath(locators.workflow_name, Text1);
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((title) => {
+            methods.ClearAndType(`[value="Untitled Google Enhanced Conversions"]`, title);
+            methods.Enter(`[value="${title}"]`);
         });
-        methods.EnterXpath(locators.workflow_name)
         cy.wait(Timeout.sm)
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         cy.wait(Timeout.sm)
         methods.assertElementContainsText(locators.notification_popup1, "Failed!")
         cy.wait(Timeout.sm)
-        methods.clickElement(locators.workflow_edit_icon)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, testName)
-        methods.EnterXpath(locators.workflow_name)
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((title) => {
+            methods.ClearAndType(`[value="${title}"]`, testName);
+            methods.Enter(`[value="${testName}"]`);
+        });
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         methods.GetText(locators.notification_popup, "SuccessRule Successfully Created!")
         cy.wait(Timeout.sm)
@@ -392,8 +398,8 @@ describe('Google Enhanced Conversions Login', () => {
         methods.clickElementByXPath(locators.GEC_Refresh_Btn)
         methods.GetText(locators.notification_popup, "SuccessRefreshed conversion actions!")
         cy.wait(Timeout.sm)
-        methods.clickElement(locators.custom_event_name)
-        methods.ClearAndTypeWithXpath(`//textarea[contains(text(),"${testName}")]`, testName1)
+        methods.clickElement(locators.Edit_Button)
+        methods.ClearAndType(`[value="${testName}"]`, testName1);
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Add_a_Filter)
         methods.clickElement0(locators.others, 0)
@@ -454,17 +460,12 @@ describe('Google Enhanced Conversions Login', () => {
         });
 
         methods.ElementToBeClickableXpath(locators.SyncNewConversion_Btn)
-        cy.xpath('(//td[@class="ant-table-cell"])[1]')
-            .invoke('text')
-            .then((text) => {
-                cy.wrap(text.trim()).as('Text1');
-            });
+        cy.xpath('(//td[@class="ant-table-cell"])[1]').invoke('text').then((text) => {
+            cy.wrap(text.trim()).as('Text1');
+        });
 
         methods.clickElementByXPath(locators.SyncNewConversion_Btn)
         cy.wait(Timeout.xmd)
-        methods.clickElement(locators.custom_event_name)
-        methods.ClearAndTypeWithXpath(locators.Pricing_page_visit_Search, testName)
-        cy.wait(Timeout.xs)
         methods.clickElement0(locators.Search, 0)
         methods.clickElement(`div[title="${Ad_Account}"]`)
         methods.clickElement(locators.ConversionfeedbackforLeads_Option)
@@ -484,19 +485,21 @@ describe('Google Enhanced Conversions Login', () => {
         methods.clickElement(locators.Usethecustomvalue_Option)
         methods.ClearAndType(locators.Defaultconversionvalue_Input, 10)
         cy.wait(Timeout.xs)
-        methods.clickElement(locators.workflow_edit_icon)
-        cy.get('@Text1').then((Text1) => {
-            methods.ClearAndTypeWithXpath(locators.workflow_name, Text1);
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((title) => {
+            methods.ClearAndType(`[value="Untitled Google Enhanced Conversions"]`, title);
+            methods.Enter(`[value="${title}"]`);
         });
-        methods.EnterXpath(locators.workflow_name)
         cy.wait(Timeout.sm)
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         cy.wait(Timeout.sm)
         methods.assertElementContainsText(locators.notification_popup1, "Failed!")
         cy.wait(Timeout.sm)
-        methods.clickElement(locators.workflow_edit_icon)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, testName)
-        methods.EnterXpath(locators.workflow_name)
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((title) => {
+            methods.ClearAndType(`[value="${title}"]`, testName);
+            methods.Enter(`[value="${testName}"]`);
+        });
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         cy.wait(Timeout.sm)
         methods.GetText(locators.notification_popup, "SuccessRule Successfully Created!")
@@ -511,9 +514,9 @@ describe('Google Enhanced Conversions Login', () => {
         methods.clickElementByXPath(locators.GEC_Refresh_Btn)
         methods.GetText(locators.notification_popup, "SuccessRefreshed conversion actions!")
         cy.wait(Timeout.sm)
-        methods.clickElement(locators.custom_event_name)
-        methods.ClearAndTypeWithXpath(`//textarea[contains(text(),"${testName}")]`, testName1)
-        cy.wait(Timeout.xs)
+        methods.clickElement(locators.Edit_Button)
+        methods.ClearAndType(`[value="${testName}"]`, testName1);
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Add_a_Filter)
         methods.typeElement(locators.search_1, "Hubspot Contact Pipeline")
         methods.clickElement(locators.Hubspot_Contact_Pipeline)
@@ -572,12 +575,9 @@ describe('Google Enhanced Conversions Login', () => {
         });
 
         methods.ElementToBeClickableXpath(locators.SyncNewConversion_Btn)
-        cy.xpath('(//td[@class="ant-table-cell"])[1]')
-            .invoke('text')
-            .then((text) => {
-                cy.wrap(text.trim()).as('Text1');
-            });
-
+        cy.xpath('(//td[@class="ant-table-cell"])[1]').invoke('text').then((text) => {
+            cy.wrap(text.trim()).as('Text1');
+        });
         methods.clickElementByXPath(locators.SyncNewConversion_Btn)
         cy.wait(Timeout.xmd)
         methods.clickElement0(locators.Search, 0)
@@ -616,20 +616,21 @@ describe('Google Enhanced Conversions Login', () => {
         methods.typeElementwithIndex(locators.Search, "user phone", 5)
         methods.clickElement(locators.UserPhone)
         cy.wait(Timeout.xs)
-        methods.clickElement(locators.workflow_edit_icon)
-        cy.get('@Text1').then((Text1) => {
-            methods.ClearAndTypeWithXpath(locators.workflow_name, Text1);
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((title) => {
+            methods.ClearAndType(`[value="Untitled Google Enhanced Conversions"]`, title);
+            methods.Enter(`[value="${title}"]`);
         });
-        methods.EnterXpath(locators.workflow_name)
         cy.wait(Timeout.sm)
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         cy.wait(Timeout.sm)
         methods.assertElementContainsText(locators.notification_popup1, "Failed!")
         cy.wait(Timeout.sm)
-        methods.clickElement(locators.workflow_edit_icon)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, testName)
-        methods.EnterXpath(locators.workflow_name)
-        cy.wait(Timeout.xs)
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((title) => {
+            methods.ClearAndType(`[value="${title}"]`, testName);
+            methods.Enter(`[value="${testName}"]`);
+        });
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         methods.GetText(locators.notification_popup, "SuccessRule Successfully Created!")
         cy.wait(Timeout.sm)

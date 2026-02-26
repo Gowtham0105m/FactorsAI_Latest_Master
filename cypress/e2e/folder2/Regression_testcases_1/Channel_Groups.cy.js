@@ -33,6 +33,7 @@ describe('Channel Groups Login', () => {
         methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Touchpoints)
         methods.clickElementByXPath(locators.channelGroup)
+        cy.wait(Timeout.md)
         methods.Titletextcontainsxpath(locators.DataManagementHeader, "Channel Groups")
         methods.VisibilityofElement(locators.identi_table)
         methods.clickElementByXPath(locators.Add_New)

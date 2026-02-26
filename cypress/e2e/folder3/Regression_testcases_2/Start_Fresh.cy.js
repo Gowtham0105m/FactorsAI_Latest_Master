@@ -38,7 +38,7 @@ describe('Start_Fresh_Icon', () => {
                 methods.clickElementByXPath(locators.People);
                 cy.wait(Timeout.xs);
                 methods.Mouseover(locators.account_dropdown);
-                methods.clickElementByXPath(locators.Account);
+                methods.clickElement0(locators.Account, 1);
                 cy.wait(Timeout.xs);
             } else {
                 cy.log("**All Segment has been loaded**");

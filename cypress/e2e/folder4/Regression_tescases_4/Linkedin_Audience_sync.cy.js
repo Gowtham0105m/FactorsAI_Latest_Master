@@ -34,11 +34,9 @@ describe('Linkedin Audience sync login', () => {
         methods.VisibilityofElementXpath(locators.SmartReach)
         methods.clickElementByXPath(locators.LinkedIn_Audience_Sync1)
         methods.VisibilityofElementXpath(locators.LinkedInaudiencesync)
-        cy.xpath('(//tbody/tr/td)[1]')
-            .invoke('text')
-            .then((text) => {
-                cy.wrap(text.trim()).as('Text1');
-            });
+        cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
+            cy.wrap(text.trim()).as('Text1');
+        });
         methods.clickElementByXPath(locators.SyncNewAudience)
         cy.wait(Timeout.md);
         methods.clickElementByXPath(locators.LinkedInAdAccountField)
@@ -48,21 +46,24 @@ describe('Linkedin Audience sync login', () => {
         methods.clickElementByXPath(locators.select_audiences_linkedin)
         methods.typeElementByXPath(locators.select_audiences_linkedin, "Test audience | Third-party: Factors AI")
         methods.clickElementByXPath(locators.Testing_audience)
-        methods.clickElementByXPath(locators.adpilot_editicon)
+        methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((Text1) => {
-            methods.ClearAndTypeWithXpath(locators.workflow_name, Text1);
+            methods.ClearAndType(`[value="Untitled audience sync"]`, Text1);
+            methods.Enter(`[value="${Text1}"]`)
         });
-        methods.EnterXpath(locators.workflow_name)
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup2, "Failed!Title already in use. Please provide a different title.")
-        methods.clickElementByXPath(locators.adpilot_editicon)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, testName)
-        methods.EnterXpath(locators.workflow_name)
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((Text1) => {
+            methods.ClearAndType(`[value="${Text1}"]`, testName);
+            methods.Enter(`[value="${testName}"]`);
+        });
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup, "SuccessRule Successfully Created!")
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()="${testName}"]//following::button[1]`)
+        methods.clickElementByXPath(`//*[text()="${testName}"]//following::button[1]`)
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Edit_workflow)
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.linkedin_sync_status)
@@ -70,7 +71,7 @@ describe('Linkedin Audience sync login', () => {
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup, "SuccessRule Successfully Updated!")
         cy.wait(Timeout.xs)
-        methods.clickElementByXPath(`//h4[text()="${testName}"]//following::button[1]`)
+        methods.clickElementByXPath(`//*[text()="${testName}"]//following::button[1]`)
         methods.clickElementByXPath(locators.remove_workflows)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)

@@ -35,11 +35,9 @@ describe('Adpilot Smart reach', () => {
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
         methods.VisibilityofElementXpath(locators.SmartReach)
-        cy.xpath('(//tbody/tr/td)[1]')
-            .invoke('text')
-            .then((text) => {
-                cy.wrap(text.trim()).as('Text1');
-            });
+        cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
+            cy.wrap(text.trim()).as('Text1');
+        });
         methods.clickElementByXPath(locators.Add_new_rule)
         cy.wait(Timeout.xs)
         methods.VisibilityofElementIndexInput(locators.Select_capping_level, 0)
@@ -49,27 +47,30 @@ describe('Adpilot Smart reach', () => {
         methods.clickElementByXPath(locators.select_Campaign_value)
         methods.clickElementByXPath(locators.select_Campaign_value1)
         methods.clickElementByXPath(locators.select_Campaign_value2)
-        methods.clickElementByXPath(locators.adpilot_editicon)
+        methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((Text1) => {
-            methods.ClearAndTypeWithXpath(locators.workflow_name, Text1);
+            methods.ClearAndType(`[value="Account level pacing"]`, Text1);
+            methods.Enter(`[value="${Text1}"]`)
         });
         methods.clickElementByXPath(locators.Campaign)
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup2, "Failed!duplicate name")
-        methods.clickElementByXPath(locators.adpilot_editicon)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, new_campaign)
-        methods.EnterXpath(locators.workflow_name)
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((Text1) => {
+            methods.ClearAndType(`[value="${Text1}"]`, new_campaign);
+            methods.Enter(`[value="${new_campaign}"]`);
+        });
         methods.clickElementByXPath(locators.Campaign)
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup, "SuccessRule Successfully Created!")
         methods.clickElementByXPath(locators.adpilot_arrow_left)
         cy.wait(Timeout.sm)
-        methods.assertElementContainsTextxpath(`//h4[text()="${new_campaign}"]//following::td[1]`, "Active")
-        methods.clickElementByXPath(`//h4[text()="${new_campaign}"]`)
+        methods.assertElementContainsTextxpath(`//*[text()="${new_campaign}"]//following::td[1]`, "Active")
+        methods.clickElementByXPath(`//*[text()="${new_campaign}"]`)
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(locators.adpilot_editicon)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, new_campaign1)
-        methods.EnterXpath(locators.workflow_name)
+        methods.clickElement(locators.Edit_Button)
+        methods.ClearAndType(`[value="${new_campaign}"]`, new_campaign1);
+        methods.Enter(`[value="${new_campaign1}"]`);
         methods.clickElementByXPath(locators.All_account_toogle)
         methods.clickElementByXPath(locators.campaign_add_filter)
         methods.clickElementByXPath(locators.Add_Filters_value)
@@ -106,9 +107,9 @@ describe('Adpilot Smart reach', () => {
         methods.assertElementContainsText(locators.notification_popup, "SuccessRule Successfully Updated!")
         methods.clickElementByXPath(locators.adpilot_arrow_left)
         cy.wait(Timeout.sm)
-        methods.assertElementContainsTextxpath(`//h4[text()="${new_campaign1}"]//following::td[1]`, "Active")
+        methods.assertElementContainsTextxpath(`//*[text()="${new_campaign1}"]//following::td[1]`, "Active")
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()="${new_campaign1}"]//following::button[1]`)
+        methods.clickElementByXPath(`//*[text()="${new_campaign1}"]//following::button[1]`)
         methods.clickElementByXPath(locators.Remove_rule)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
@@ -127,6 +128,9 @@ describe('Adpilot Smart reach', () => {
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
         methods.VisibilityofElementXpath(locators.SmartReach)
+        cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
+            cy.wrap(text.trim()).as('Text1');
+        });
         methods.clickElementByXPath(locators.Add_new_rule)
         cy.wait(Timeout.xs)
         methods.VisibilityofElementIndexInput(locators.Select_capping_level, 0)
@@ -136,20 +140,31 @@ describe('Adpilot Smart reach', () => {
         methods.clickElementByXPath(locators.select_Campaign_value)
         methods.clickElementByXPath(locators.select_Campaign_value1)
         methods.clickElementByXPath(locators.select_Campaign_value2)
-        methods.clickElementByXPath(locators.adpilot_editicon)
-        methods.ClearAndTypeWithXpath(locators.adpilot_edit_searchbar, new_campaign)
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((Text1) => {
+            methods.ClearAndType(`[value="Account level pacing"]`, Text1);
+            methods.Enter(`[value="${Text1}"]`)
+        });
+        methods.clickElementByXPath(locators.Campaign)
+        methods.clickElementByXPath(locators.adpilot_publish)
+        methods.assertElementContainsText(locators.notification_popup2, "Failed!duplicate name")
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((Text1) => {
+            methods.ClearAndType(`[value="${Text1}"]`, new_campaign);
+            methods.Enter(`[value="${new_campaign}"]`);
+        });
         methods.clickElementByXPath(locators.Campaign)
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup, "SuccessRule Successfully Created!")
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.adpilot_arrow_left)
         cy.wait(Timeout.sm)
-        methods.assertElementContainsTextxpath(`//h4[text()="${new_campaign}"]//following::td[1]`, "Active")
-        methods.clickElementByXPath(`//h4[text()="${new_campaign}"]`)
+        methods.assertElementContainsTextxpath(`//*[text()="${new_campaign}"]//following::td[1]`, "Active")
+        methods.clickElementByXPath(`//*[text()="${new_campaign}"]`)
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(locators.adpilot_editicon)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, new_campaign1)
-        methods.EnterXpath(locators.workflow_name)
+        methods.clickElement(locators.Edit_Button)
+        methods.ClearAndType(`[value="${new_campaign}"]`, new_campaign1);
+        methods.Enter(`[value="${new_campaign1}"]`);
         methods.clickElementByXPath(locators.All_account_toogle)
         methods.clickElementByXPath(locators.campaign_add_filter)
         methods.clickElementByXPath(locators.Add_Filters_value)
@@ -182,11 +197,9 @@ describe('Adpilot Smart reach', () => {
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
         methods.VisibilityofElementXpath(locators.SmartReach)
-        cy.xpath('(//tbody/tr/td)[1]')
-            .invoke('text')
-            .then((text) => {
-                cy.wrap(text.trim()).as('Text1');
-            });
+        cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
+            cy.wrap(text.trim()).as('Text1');
+        });
         methods.clickElementByXPath(locators.Add_new_rule)
         cy.wait(Timeout.xs)
         methods.VisibilityofElementIndexInput(locators.Select_capping_level, 0)
@@ -196,27 +209,30 @@ describe('Adpilot Smart reach', () => {
         methods.clickElementByXPath(locators.select_Campaigngroup_value)
         methods.clickElementByXPath(locators.select_Campaigngroup_value1)
         methods.clickElementByXPath(locators.select_Campaigngroup_value2)
-        methods.clickElementByXPath(locators.adpilot_editicon)
+        methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((Text1) => {
-            methods.ClearAndTypeWithXpath(locators.workflow_name, Text1);
+            methods.ClearAndType(`[value="Account level pacing"]`, Text1);
+            methods.Enter(`[value="${Text1}"]`)
         });
         methods.clickElementByXPath(locators.campaign_group)
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup2, "Failed!duplicate name")
-        methods.clickElementByXPath(locators.adpilot_editicon)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, new_campaign)
-        methods.EnterXpath(locators.workflow_name)
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((Text1) => {
+            methods.ClearAndType(`[value="${Text1}"]`, new_campaign);
+            methods.Enter(`[value="${new_campaign}"]`);
+        });
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup, "SuccessRule Successfully Created!")
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.adpilot_arrow_left)
         cy.wait(Timeout.sm)
-        methods.assertElementContainsTextxpath(`//h4[text()="${new_campaign}"]//following::td[1]`, "Active")
-        methods.clickElementByXPath(`//h4[text()="${new_campaign}"]`)
+        methods.assertElementContainsTextxpath(`//*[text()="${new_campaign}"]//following::td[1]`, "Active")
+        methods.clickElementByXPath(`//*[text()="${new_campaign}"]`)
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(locators.adpilot_editicon)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, new_campaign1)
-        methods.EnterXpath(locators.workflow_name)
+        methods.clickElement(locators.Edit_Button)
+        methods.ClearAndType(`[value="${new_campaign}"]`, new_campaign1);
+        methods.Enter(`[value="${new_campaign1}"]`);
         methods.clickElementByXPath(locators.All_account_toogle)
         methods.clickElementByXPath(locators.campaign_add_filter)
         methods.clickElementByXPath(locators.Add_Filters_value)
@@ -253,8 +269,8 @@ describe('Adpilot Smart reach', () => {
         methods.assertElementContainsText(locators.notification_popup, "SuccessRule Successfully Updated!")
         methods.clickElementByXPath(locators.adpilot_arrow_left)
         cy.wait(Timeout.sm)
-        methods.assertElementContainsTextxpath(`//h4[text()="${new_campaign1}"]//following::td[1]`, "Active")
-        methods.clickElementByXPath(`//h4[text()="${new_campaign1}"]//following::button[1]`)
+        methods.assertElementContainsTextxpath(`//*[text()="${new_campaign1}"]//following::td[1]`, "Active")
+        methods.clickElementByXPath(`//*[text()="${new_campaign1}"]//following::button[1]`)
         methods.clickElementByXPath(locators.Remove_rule)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
@@ -273,6 +289,9 @@ describe('Adpilot Smart reach', () => {
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
         methods.VisibilityofElementXpath(locators.SmartReach)
+        cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
+            cy.wrap(text.trim()).as('Text1');
+        });
         methods.clickElementByXPath(locators.Add_new_rule)
         cy.wait(Timeout.xs)
         methods.VisibilityofElementIndexInput(locators.Select_capping_level, 0)
@@ -282,19 +301,29 @@ describe('Adpilot Smart reach', () => {
         methods.clickElementByXPath(locators.select_Campaigngroup_value)
         methods.clickElementByXPath(locators.select_Campaigngroup_value1)
         methods.clickElementByXPath(locators.select_Campaigngroup_value2)
-        methods.clickElementByXPath(locators.adpilot_editicon)
-        methods.ClearAndTypeWithXpath(locators.adpilot_edit_searchbar, new_campaign)
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((Text1) => {
+            methods.ClearAndType(`[value="Account level pacing"]`, Text1);
+            methods.Enter(`[value="${Text1}"]`)
+        });
         methods.clickElementByXPath(locators.campaign_group)
+        methods.clickElementByXPath(locators.adpilot_publish)
+        methods.assertElementContainsText(locators.notification_popup2, "Failed!duplicate name")
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((Text1) => {
+            methods.ClearAndType(`[value="${Text1}"]`, new_campaign);
+            methods.Enter(`[value="${new_campaign}"]`);
+        });
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup, "SuccessRule Successfully Created!")
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.adpilot_arrow_left)
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()="${new_campaign}"]`)
+        methods.clickElementByXPath(`//*[text()="${new_campaign}"]`)
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(locators.adpilot_editicon)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, new_campaign1)
-        methods.EnterXpath(locators.workflow_name)
+        methods.clickElement(locators.Edit_Button)
+        methods.ClearAndType(`[value="${new_campaign}"]`, new_campaign1);
+        methods.Enter(`[value="${new_campaign1}"]`);
         methods.clickElementByXPath(locators.All_account_toogle)
         methods.clickElementByXPath(locators.campaign_add_filter)
         methods.clickElementByXPath(locators.Add_Filters_value)
@@ -327,32 +356,34 @@ describe('Adpilot Smart reach', () => {
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
         methods.VisibilityofElementXpath(locators.SmartReach)
-        cy.xpath('(//tbody/tr/td)[1]')
-            .invoke('text')
-            .then((text) => {
-                cy.wrap(text.trim()).as('Text1');
-            });
+        cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
+            cy.wrap(text.trim()).as('Text1');
+        });
         methods.clickElementByXPath(locators.Add_new_rule)
         cy.wait(Timeout.xs)
         methods.VisibilityofElementIndexInput(locators.Select_capping_level, 0)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.All_Ad_Account)
-        methods.clickElementByXPath(locators.adpilot_editicon)
+        methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((Text1) => {
-            methods.ClearAndTypeWithXpath(locators.workflow_name, Text1);
+            methods.ClearAndType(`[value="Account level pacing"]`, Text1);
+            methods.Enter(`[value="${Text1}"]`)
         });
         methods.clickElementByXPath(locators.All_Ad_Account)
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup2, "Failed!duplicate name")
-        methods.clickElementByXPath(locators.adpilot_editicon)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, Add_campaign)
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((Text1) => {
+            methods.ClearAndType(`[value="${Text1}"]`, new_campaign);
+            methods.Enter(`[value="${new_campaign}"]`);
+        });
         methods.clickElementByXPath(locators.All_Ad_Account)
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup, "SuccessRule Successfully Created!")
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.adpilot_arrow_left)
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()="${Add_campaign}"]`)
+        methods.clickElementByXPath(`[text()="${Add_campaign}"]`)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.adpilot_editicon)
         methods.ClearAndTypeWithXpath(locators.workflow_name, Add_campaign1)
@@ -393,8 +424,8 @@ describe('Adpilot Smart reach', () => {
         methods.assertElementContainsText(locators.notification_popup, "SuccessRule Successfully Updated!")
         methods.clickElementByXPath(locators.adpilot_arrow_left)
         cy.wait(Timeout.sm)
-        methods.assertElementContainsTextxpath(`//h4[text()="${Add_campaign1}"]//following::td[1]`, "Active")
-        methods.clickElementByXPath(`//h4[text()="${Add_campaign1}"]//following::button[1]`)
+        methods.assertElementContainsTextxpath(`[text()="${Add_campaign1}"]//following::td[1]`, "Active")
+        methods.clickElementByXPath(`[text()="${Add_campaign1}"]//following::button[1]`)
         methods.clickElementByXPath(locators.Remove_rule)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
@@ -413,36 +444,38 @@ describe('Adpilot Smart reach', () => {
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
         methods.VisibilityofElementXpath(locators.SmartReach)
-        cy.xpath('(//tbody/tr/td)[1]')
-            .invoke('text')
-            .then((text) => {
-                cy.wrap(text.trim()).as('Text1');
-            });
+        cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
+            cy.wrap(text.trim()).as('Text1');
+        });
         methods.clickElementByXPath(locators.Add_new_rule)
         cy.wait(Timeout.xs)
         methods.VisibilityofElementIndexInput(locators.Select_capping_level, 0)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.All_Ad_Account)
-        methods.clickElementByXPath(locators.adpilot_editicon)
+        methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((Text1) => {
-            methods.ClearAndTypeWithXpath(locators.workflow_name, Text1);
+            methods.ClearAndType(`[value="Account level pacing"]`, Text1);
+            methods.Enter(`[value="${Text1}"]`)
         });
         methods.clickElementByXPath(locators.All_Ad_Account)
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup2, "Failed!duplicate name")
-        methods.clickElementByXPath(locators.adpilot_editicon)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, Add_campaign)
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((Text1) => {
+            methods.ClearAndType(`[value="${Text1}"]`, Add_campaign);
+            methods.Enter(`[value="${Add_campaign}"]`);
+        });
         methods.clickElementByXPath(locators.All_Ad_Account)
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup, "SuccessRule Successfully Created!")
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.adpilot_arrow_left)
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()="${Add_campaign}"]`)
+        methods.clickElementByXPath(`//*[text()="${Add_campaign}"]`)
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(locators.adpilot_editicon)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, Add_campaign1)
-        methods.EnterXpath(locators.workflow_name)
+        methods.clickElement(locators.Edit_Button)
+        methods.ClearAndType(`[value="${Add_campaign}"]`, Add_campaign1);
+        methods.Enter(`[value="${Add_campaign1}"]`);
         methods.clickElementByXPath(locators.All_account_toogle)
         methods.clickElementByXPath(locators.campaign_add_filter)
         methods.clickElementByXPath(locators.Add_Filters_value)
@@ -472,6 +505,9 @@ describe('Adpilot Smart reach', () => {
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
         methods.VisibilityofElementXpath(locators.SmartReach)
+        cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
+            cy.wrap(text.trim()).as('Text1');
+        });
         methods.clickElementByXPath(locators.Add_new_rule)
         cy.wait(Timeout.xs)
         methods.VisibilityofElementIndexInput(locators.Select_capping_level, 0)
@@ -481,23 +517,33 @@ describe('Adpilot Smart reach', () => {
         methods.clickElementByXPath(locators.select_Campaign_value)
         methods.clickElementByXPath(locators.select_Campaign_value1)
         methods.clickElementByXPath(locators.select_Campaign_value2)
-        methods.clickElementByXPath(locators.adpilot_editicon)
-        methods.ClearAndTypeWithXpath(locators.adpilot_edit_searchbar, new_campaign)
-        methods.EnterXpath(locators.workflow_name)
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((Text1) => {
+            methods.ClearAndType(`[value="Account level pacing"]`, Text1);
+            methods.Enter(`[value="${Text1}"]`)
+        });
+        methods.clickElementByXPath(locators.All_Ad_Account)
+        methods.clickElementByXPath(locators.adpilot_publish)
+        methods.assertElementContainsText(locators.notification_popup2, "Failed!duplicate name")
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((Text1) => {
+            methods.ClearAndType(`[value="${Text1}"]`, new_campaign);
+            methods.Enter(`[value="${new_campaign}"]`);
+        });
         methods.clickElementByXPath(locators.Campaign)
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup, "SuccessRule Successfully Created!")
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.adpilot_arrow_left)
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()="${new_campaign}"]`)
+        methods.clickElementByXPath(`//*[text()="${new_campaign}"]`)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.active_Toggle1)
         methods.clickElementByXPath(locators.pause)
         methods.assertElementContainsText(locators.notification_popup, "SuccessRule Successfully Updated!")
         methods.clickElementByXPath(locators.adpilot_arrow_left)
         cy.wait(Timeout.xs)
-        methods.assertElementContainsText1(`//h4[text()="${new_campaign}"]//following::span[1]`, "Paused")
+        methods.assertElementContainsText1(`//*[text()="${new_campaign}"]//following::span[1]`, "Paused")
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.SmartReach)
         methods.assertElementContainsTextxpath(locators.SmartReach, 'Smart Reach')
@@ -513,9 +559,9 @@ describe('Adpilot Smart reach', () => {
         methods.clickElementByXPath(locators.confirm_publish)
         methods.assertElementContainsText(locators.notification_popup, "SuccessRule Successfully Updated!")
         methods.clickElementByXPath(locators.adpilot_arrow_left)
-        methods.assertElementContainsText1(`//h4[text()="${new_campaign}"]//following::span[1]`, "Active")
+        methods.assertElementContainsText1(`//*[text()="${new_campaign}"]//following::span[1]`, "Active")
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()="${new_campaign}"]`)
+        methods.clickElementByXPath(`//*[text()="${new_campaign}"]`)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Campaign_MoreOption)
         methods.clickElementByXPath(locators.delete)
@@ -535,6 +581,9 @@ describe('Adpilot Smart reach', () => {
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
         methods.VisibilityofElementXpath(locators.SmartReach)
+        cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
+            cy.wrap(text.trim()).as('Text1');
+        });
         methods.clickElementByXPath(locators.Add_new_rule)
         cy.wait(Timeout.xs)
         methods.VisibilityofElementIndexInput(locators.Select_capping_level, 0)
@@ -544,10 +593,19 @@ describe('Adpilot Smart reach', () => {
         methods.clickElementByXPath(locators.select_Campaign_value)
         methods.clickElementByXPath(locators.select_Campaign_value1)
         methods.clickElementByXPath(locators.select_Campaign_value2)
-        methods.clickElementByXPath(locators.adpilot_editicon)
-        methods.ClearAndTypeWithXpath(locators.adpilot_edit_searchbar, new_campaign)
-        methods.EnterXpath(locators.workflow_name)
-        methods.clickElementByXPath(locators.Campaign)
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((Text1) => {
+            methods.ClearAndType(`[value="Account level pacing"]`, Text1);
+            methods.Enter(`[value="${Text1}"]`)
+        });
+        methods.clickElementByXPath(locators.campaign_group)
+        methods.clickElementByXPath(locators.adpilot_publish)
+        methods.assertElementContainsText(locators.notification_popup2, "Failed!duplicate name")
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((Text1) => {
+            methods.ClearAndType(`[value="${Text1}"]`, new_campaign);
+            methods.Enter(`[value="${new_campaign}"]`);
+        });
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup, "SuccessRule Successfully Created!")
         cy.wait(Timeout.sm)
@@ -562,8 +620,8 @@ describe('Adpilot Smart reach', () => {
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.adpilot_arrow_left)
         cy.wait(Timeout.sm)
-        methods.assertElementContainsTextxpath(`//h4[text()="${new_campaign}"]//following::td[1]`, "Active")
-        methods.clickElementByXPath(`//h4[text()="${new_campaign}"]//following::button[1]`)
+        methods.assertElementContainsTextxpath(`//*[text()="${new_campaign}"]//following::td[1]`, "Active")
+        methods.clickElementByXPath(`//*[text()="${new_campaign}"]//following::button[1]`)
         methods.clickElementByXPath(locators.SmartReach_Dashboard_log)
         methods.VisibilityofElementXpath(locators.SmartReach_logTitle)
         methods.VisibilityofElementXpath(locators.SmartReach_logTable)
@@ -572,7 +630,7 @@ describe('Adpilot Smart reach', () => {
         methods.VisibilityofElementXpath(locators.SmartReach_logTitle)
         methods.clickElementByXPath(locators.SmartReach_logClose)
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()="${new_campaign}"]//following::button[1]`)
+        methods.clickElementByXPath(`//*[text()="${new_campaign}"]//following::button[1]`)
         methods.clickElementByXPath(locators.Remove_rule)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)

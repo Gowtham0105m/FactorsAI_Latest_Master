@@ -35,11 +35,9 @@ describe('Linkedin_Conversion(CAPI) Login', () => {
         methods.clickElementByXPath(locators.LinkedInCAPI)
         methods.VisibilityofElementXpath(locators.LinkedInCAPITitle)
         cy.wait(Timeout.md);
-        cy.xpath('(//tbody/tr/td)[1]')
-            .invoke('text')
-            .then((text) => {
-                cy.wrap(text.trim()).as('Text1');
-            });
+        cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
+            cy.wrap(text.trim()).as('Text1');
+        });
         methods.clickElementByXPath(locators.SyncNewConversion_Btn)
         cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.select_event_1)
@@ -62,25 +60,28 @@ describe('Linkedin_Conversion(CAPI) Login', () => {
         methods.clickElement(locators.project_name_opt)
         methods.ClickandTypeXpath(locators.Country_Code, "Iso")
         methods.clickElement(locators.IsoCode1)
-        methods.clickElementByXPath(locators.edit_Icon)
+        methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((Text1) => {
-            methods.ClearAndTypeWithXpath(locators.workflow_name, Text1);
+            methods.ClearAndType(`[value="Untitled LinkedIn CAPI"]`, Text1);
+            methods.Enter(`[value="${Text1}"]`)
         });
-        methods.EnterXpath(locators.workflow_name)
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup2, "Failed!")
-        methods.clickElementByXPath(locators.edit_Icon)
-        methods.ClearAndTypeWithXpath(locators.workflow_name, testName)
-        methods.EnterXpath(locators.workflow_name)
+        methods.clickElement(locators.Edit_Button)
+        cy.get('@Text1').then((Text1) => {
+            methods.ClearAndType(`[value="${Text1}"]`, testName);
+            methods.Enter(`[value="${testName}"]`);
+        });
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup, "SuccessRule Successfully Created!")
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`(//h4[text()='${testName}'])[1]`)
+        methods.clickElementByXPath(`(//*[text()='${testName}'])[1]`)
         cy.wait(Timeout.sm)
-        methods.VisibilityofElementXpath(`//h4[text()="${testName}"]`)
+        methods.VisibilityofElementXpath(`//*[text()="${testName}"]`)
         cy.wait(Timeout.xs)
-        methods.clickElement(locators.custom_event_name)
-        methods.ClearAndTypeWithXpath(`//textarea[contains(text(),"${testName}")]`, testName1)
+        methods.clickElement(locators.Edit_Button)
+        methods.ClearAndType(`[value="${testName}"]`, testName1);
+        methods.Enter(`[value="${testName1}"]`);
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Add_a_Filter)
         methods.clickElement(locators.others)
@@ -94,7 +95,7 @@ describe('Linkedin_Conversion(CAPI) Login', () => {
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup, "SuccessRule Successfully Updated!")
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`(//h4[text()='${testName1}']//following::button[1])[1]`)
+        methods.clickElementByXPath(`(//*[text()='${testName1}']//following::button[1])[1]`)
         methods.clickElementByXPath(locators.remove_workflows)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)

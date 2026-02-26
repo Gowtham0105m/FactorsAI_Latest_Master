@@ -745,6 +745,7 @@ describe('Engagements scoring Login', () => {
     });
 
     methods.assertElementContainsTextxpath(locators.AllsegmentMenu, "All segments")
+    cy.wait(Timeout.md)
     methods.clickElementByXPath(locators.All_segments)
     methods.clickElementByXPath(locators.InHubspot)
     cy.wait(Timeout.lg)
@@ -784,7 +785,7 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.sm)
     methods.typeElementwithIndex(locators.Search, "https://staging-app.factors.ai/explain", 3)
     cy.wait(Timeout.sm)
-    methods.clickElement(locators.Staging_app_factors)
+    methods.clickElement0(locators.Staging_app_factors, 0)
     methods.clickElementByXPath(locators.custom_event_name)
     methods.ClearAndType(locators.Pricing_page_visit_Search, testName)
     methods.Enter(`[value="${testName}"]`)

@@ -44,7 +44,7 @@ describe('Accounts Login', () => {
                 methods.clickElementByXPath(locators.People);
                 cy.wait(Timeout.xs);
                 methods.Mouseover(locators.account_dropdown);
-                methods.clickElementByXPath(locators.Account);
+                methods.clickElement0(locators.Account, 1);
                 cy.wait(Timeout.xs);
             } else {
                 cy.log("**All Segment has been loaded**");
@@ -190,7 +190,7 @@ describe('Accounts Login', () => {
         methods.VisibilityofElement(locators.Table_properties)
         methods.typeElement(locators.Search_Properties, 'company region');
         cy.wait(Timeout.xs);
-        methods.clickElementByXPath(locators.Company_Region);
+        methods.clickElement(locators.Company_Region);
         methods.clickElementByXPath(locators.Apply1)
         methods.Clear(locators.Search_segment)
         methods.clickElementByXPath(`//div[text()='${Folder}']//following::button[1]`)
@@ -224,7 +224,7 @@ describe('Accounts Login', () => {
                 methods.clickElementByXPath(locators.People);
                 cy.wait(Timeout.xs);
                 methods.Mouseover(locators.account_dropdown);
-                methods.clickElementByXPath(locators.Account);
+                methods.clickElement0(locators.Account, 1);
                 cy.wait(Timeout.xs);
             } else {
                 cy.log("**All Segment has been loaded**");
@@ -310,7 +310,7 @@ describe('Accounts Login', () => {
                 methods.clickElementByXPath(locators.People);
                 cy.wait(Timeout.xs);
                 methods.Mouseover(locators.account_dropdown);
-                methods.clickElementByXPath(locators.Account);
+                methods.clickElement0(locators.Account, 1);
                 cy.wait(Timeout.xs);
             } else {
                 cy.log("**All Segment has been loaded**");

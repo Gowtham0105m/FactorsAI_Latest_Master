@@ -39,7 +39,7 @@ describe('Global search Login', () => {
                 methods.clickElementByXPath(locators.People);
                 cy.wait(Timeout.xs);
                 methods.Mouseover(locators.account_dropdown);
-                methods.clickElementByXPath(locators.Account);
+                methods.clickElementIndexXpath(locators.Account, 1);
                 cy.wait(Timeout.xs);
             } else {
                 cy.log("**All Segment has been loaded**");
@@ -82,7 +82,7 @@ describe('Global search Login', () => {
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         methods.clickElementByXPath(locators.Drafts)
         methods.VisibilityofElement(locators.Table_Body_1)
-        methods.MouseoverWithXpath(`//h4[text()='${testName}']//following::button[1]`)
+        methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.Delete_Report_1)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.confirm)

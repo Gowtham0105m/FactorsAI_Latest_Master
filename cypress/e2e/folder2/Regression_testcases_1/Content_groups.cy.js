@@ -34,6 +34,7 @@ describe('Content_groups Login', () => {
         methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Touchpoints)
         methods.clickElementByXPath(locators.Content_Groups)
+        cy.wait(Timeout.md)
         methods.Titletextcontainsxpath(locators.DataManagementHeader, "Content Groups")
         methods.navigateToUrl(url)
         cy.wait(Timeout.xs)

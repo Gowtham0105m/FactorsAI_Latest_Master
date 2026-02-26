@@ -12,7 +12,7 @@ class locators {
     this.workflows_Title = '//*[text()="Workflows"]';
     this.WorkFlows = '//h6[text()="Workflows"]';
     this.all_People_Title = '//h4[text()="All People"]';
-    this.attribution_Pagetitle = '//h4[text()="Attribution Reports"]';
+    this.attribution_Pagetitle = '//*[text()="Attribution Reports"]';
     this.account_identification_Title = '//h4[text()="Top accounts that visited your website"]';
     this.Page_title = '.text-xl';
     this.Attribute_title = '//h4[text()="Project Settings"]//following::h4[13]';
@@ -70,6 +70,7 @@ class locators {
     this.account_pageloaded = '//tbody';
     this.factors_File = '//tbody/tr[2]/td[2]';
     this.search_button = '(//*[local-name()="svg" and @data-icon="magnifying-glass"])[2]';
+    this.search_button1 = '//*[local-name()="svg" and @data-icon="magnifying-glass"]';
     this.search_area = '//*[@placeholder="Search Account"]';
     this.download_button = '//span[text()="Filter"]//following::button[2]';
     this.People_download_button = '//span[text()="Filter"]//following::button[6]';
@@ -107,7 +108,7 @@ class locators {
     this.Add_column = '//span[text()="Filter"]//following::button[3]';
     this.table_property = '.ant-tabs';
     this.company_name1 = '//*[text()="Company Country"]';
-    this.CompanyCountryISOCode = '(//h4[text()="Company Country ISO Code"])[1]';
+    this.CompanyCountryISOCode = '(//*[text()="Company Country ISO Code"])[1]';
     this.Add_filter1 = '//*[text()="Add filter"]';
     this.others = '[data-title="OTHERS"]';
     this.others1 = '[data-title="Others"]';
@@ -223,7 +224,7 @@ class locators {
     this.Add_Report_1 = '//Div[text()="Add Report"]';
     this.Add_KPI1 = '//span[text()="Add KPI"]';
     this.Users = '[data-title="Users"]';
-    this.Filter_this_Attribute = '//h4[text()="CONVERSION GOALS"]//following::button[2]';
+    this.Filter_this_Attribute = '//*[text()="CONVERSION GOALS"]//following::button[2]';
     this.Filter_By = '//*[text()="Filter By"]';
     this.Tactic = '[value="Tactic"]';
     this.Offer = '[value="Offer"]';
@@ -232,7 +233,7 @@ class locators {
     this.Campaign1 = '[title="Campaign"]';
     this.Add_Model = '//span[text()="Add Model"]';
     this.First_Touch = '[title="First Touch"]';
-    this.Add_Compare_Model = '//h4[text()="Attribution Model"]//following::button[2]';
+    this.Add_Compare_Model = '//*[text()="Attribution Model"]//following::button[2]';
     this.Last_Touch = '[title="Last Touch"]';
     this.Last_7_days = '//a[text()="Last 7 days"]';
     this.Run_Analysis1 = '//span[text()="Run Analysis"]';
@@ -349,24 +350,24 @@ class locators {
     this.Linkedin_Company_Engagements = '[data-title="Linkedin Company Engagements"]';
     this.Linkedin_Ad_Clicked = '[data-title="Linkedin Ad Clicked"]';
     this.Filter_By_CSS = '.query_card_open-add > :nth-child(1) > :nth-child(4)';
-    this.Filter_this_funnel = '//h4[text()="Analyse"]//following::button[3]';
-    this.Delete_this_funnel = '//h4[text()="Analyse"]//following::button[8]';
+    this.Filter_this_funnel = '//*[text()="Analyse"]//following::button[3]';
+    this.Delete_this_funnel = '//*[text()="Analyse"]//following::button[8]';
     this.Add_New_FilterBy = '(//*[text()="FILTER BY"])//following::span[text()="Add new"][1]';
     this.Add_New_FilterBy1 = '//*[text()="FILTER BY"]//following::span[text()="Add new"][1]';
-    this.Plus_Button = '//h4[text()="FILTER BY"]//following::button[@index="0"]';
+    this.Plus_Button = '//*[text()="FILTER BY"]//following::button[@index="0"]';
     this.Visited_G2 = '[data-title="Visited G2"]';
-    this.Or = '//h4[text()="FILTER BY"]//following::h4[2]';
-    this.or_1 = '//h4[text()="PROFILES TO ANALYSE"]//following::h4[3]';
+    this.Or = '//*[text()="FILTER BY"]//following::h6[2]';
+    this.or_1 = '//*[text()="PROFILES TO ANALYSE"]//following::h6[3]';
     this.Add_New_Breakdown = '(//div[@class="flex relative"]//button)';
     this.Add_New_Breakdown_new = '.m-0 > .flex > .ant-btn > span';
     this.Engagement_Level = '[data-title="Engagement Level"]';
-    this.Conversion_Window = '//h4[text()="Conversion within"]//following::div[1]';
+    this.Conversion_Window = '//*[text()="Conversion within"]//following::div[1]';
     this.Tooltip = '[role="tooltip"]';
     this.Date_select = '(//div[@role="tooltip"]//following::span)[2]';
     this.Hours = '[title="Hours"]';
     this.Minutes = '[title="Minutes"]';
     this.Days = '[title="Days"]';
-    this.calender_MenuList = '(//h4[text()="FUNNEL CRITERIA"])//following::button[1]';
+    this.calender_MenuList = '(//*[text()="FUNNEL CRITERIA"])//following::button[1]';
     this.Menu_Item = '[role="menuitem"]';
     this.Run_Anal = '(//span[text()="Run Analysis"])[1]';
     this.CSVlink = '//div[text()="Break-up"]//following::button[2]';
@@ -447,8 +448,8 @@ class locators {
     this.This_is_correct = '//span[text()="This is correct"]';
     this.Performs_an_event = '[title="Performs an event"]';
     this.Enter_the_segment = '[title="Enter the segment"]';
-    this.segment_name_1 = '//h4[text()="Segment name"]//following::div[3]';
-    this.segment_name_2 = '//h4[text()="Segment name"]//following::span[2]';
+    this.segment_name_1 = '//*[text()="Segment name"]//following::div[3]';
+    this.segment_name_2 = '//*[text()="Segment name"]//following::span[2]';
     this.In_Hubspot_text = '//div[text()="In Hubspot"]';
     this.Add_property_title = '[id=":r0:"]';
     this.Value = '#value';
@@ -521,7 +522,7 @@ class locators {
     this.Country1 = '[data-title="country"]';
     this.Country_Search_result = '(//div[text()="Company Country"]//following::tr)[2]/td[2]';
     this.Profile_Report_option = '//*[contains(text(),"Reports")]//following::button[1]';
-    this.Add_to_Dashboard_title = '//h4[text()="Add to Dashboard"]';
+    this.Add_to_Dashboard_title = '//*[text()="Add to Dashboard"]';
     this.Save_3 = '(//span[text()="Save"])[3]';
     this.Account_text = '//span[text()="Accounts"]';
     this.cart_submit = '[data-cb-id="cart_submit"]';
@@ -637,7 +638,7 @@ class locators {
     this.ask_Factors = '//span[text()="Ask Factors"]';
     this.ai_Textfield = '//input[@placeholder="Ask AI anything..."]';
     this.kpi_Heading = '//*[contains(text(),"Reports / KPI /")]';
-    this.filter_By_Option = '//h4[text()="FILTER BY"]';
+    this.filter_By_Option = '//*[text()="FILTER BY"]';
     this.collapse_All = '//span[text()="Collapse all"]';
     this.graph_View = '//div[@class="SparkLineChart_sparkChart__39Umc flex justify-center"]';
     this.Graph_Details = '//div[@class="mt-12"]';
@@ -720,7 +721,7 @@ class locators {
     this.Missing_Integration_appears_popup = '//div[@class="ant-popover-inner-content"]/div'
     this.Create_segement = '//h4[text()="Trials and Customers engaging with feature content"]//following::span[1]'
     this.Add_Filters = '(//h1[text()="Add filter"])[1]'
-    this.Add_Filters_value = '//h4[text()="Company Identification"]'
+    this.Add_Filters_value = '//*[text()="Company Identification"]'
     this.Add_Filters_value_searchbar = '(//span[text()="Select Property"]//following::input)[1]'
     this.Add_Filters_value1 = '//b[text()="Company Country ISO Code"]'
     this.Add_live = '//h4[text()="100ms.live"]'
@@ -743,22 +744,22 @@ class locators {
     this.delete_segment = '//div[text()="Delete segment"]'
     this.confirmbtn1 = '(//span[text()="Confirm"])[2]'
     this.In_Hubspot = '//span[text()="In Hubspot"]'
-    this.Insight_customdate = '//h4[text()="In Hubspot"]//preceding::button[1]'
+    this.Insight_customdate = '//*[text()="In Hubspot"]//preceding::button[1]'
     this.Last_Week = '//a[text()="Last Week"]'
-    this.Account_currently = '//h4[text()="Accounts currently in segment"]//following::span[1]'
-    this.Account_high_engagement = '//h4[text()="Accounts with High engagement"]//following::span[1]'
-    this.Website_sessions = '//h4[text()="Website sessions"]//following::span[1]';
-    this.Total_Website_sessions = '//h4[text()="% of total website sessions"]//following::span[1]'
-    this.Total_visitor_segment = '//h4[text()="Total visitors from segment"]//following::span[1]'
-    this.Total_PageViews = '//h4[text()="TotalPageViews"]//following::span[1]'
-    this.Marketing_qualified = '(//h4[text()="Marketing Engagement Analysis"]//following::span)[1]'
-    this.sales_qualified = '(//h4[text()="Sales Opportunity Analysis"]//following::span)[1]';
-    this.Opportunity_Created = '//h4[text()="Opportunity Created"]';
-    this.Pipeline_Created = '//h4[text()="Pipeline Created"]'
-    this.Average_Deal_Size = '//h4[text()="Average Deal Size"]'
-    this.Revenue_Booked = '//h4[text()="Revenue Booked"]'
-    this.Close_Rate = '//h4[text()="Close Rate (%)"]'
-    this.Avg_Sales_Cycle_Length = '//h4[text()="Avg Sales Cycle Length"]'
+    this.Account_currently = '//*[text()="Accounts currently in segment"]//following::span[1]'
+    this.Account_high_engagement = '//*[text()="Accounts with High engagement"]//following::span[1]'
+    this.Website_sessions = '//*[text()="Website sessions"]//following::span[1]';
+    this.Total_Website_sessions = '//*[text()="% of total website sessions"]//following::span[1]'
+    this.Total_visitor_segment = '//*[text()="Total visitors from segment"]//following::span[1]'
+    this.Total_PageViews = '//*[text()="TotalPageViews"]//following::span[1]'
+    this.Marketing_qualified = '(//*[text()="Marketing Engagement Analysis"]//following::span)[1]'
+    this.sales_qualified = '(//*[text()="Sales Opportunity Analysis"]//following::span)[1]';
+    this.Opportunity_Created = '//*[text()="Opportunity Created"]';
+    this.Pipeline_Created = '//*[text()="Pipeline Created"]'
+    this.Average_Deal_Size = '//*[text()="Average Deal Size"]'
+    this.Revenue_Booked = '//*[text()="Revenue Booked"]'
+    this.Close_Rate = '//*[text()="Close Rate (%)"]'
+    this.Avg_Sales_Cycle_Length = '//*[text()="Avg Sales Cycle Length"]'
     this.Last_Month = '//a[text()="Last Month"]'
     this.Last_Quarter = '//a[text()="Last Quarter"]'
     this.select_custom_range = '//a[text()="Select Custom Range"]'
@@ -767,7 +768,7 @@ class locators {
     this.Adpilot = '//*[text()="AdPilot"]';
     this.Add_new_rule = '//div[text()="Add New Rule"]';
     this.SyncNewAudience = '//div[text()="Sync New Audience"]';
-    this.Campaign = '//h4[text()="Campaign"]';
+    this.Campaign = '//*[text()="Campaign"]';
     this.select_Campaign = '//span[text()="Select Campaigns"]';
     this.select_Campaign_value = '//div[text()="TD-MessageAd-Conversions-MatchedAudience-US-0309"]';
     this.select_Campaign_value1 = '//div[text()="TD-Spotlight-WebsiteVisits-Gromo-0609"]';
@@ -778,8 +779,8 @@ class locators {
     this.adpilot_publish = '//div[text()="Publish"]';
     this.Confirm_publish = '//span[text()="Publish"]';
     this.New_Campaign = '//h4[text()="New Campaign"]';
-    this.All_account_toogle = '//h1[text()="Set custom rules based on advanced account conditions"]//preceding::button[1]';
-    this.campaign_add_filter = '//h1[text()="Add filter"]';
+    this.All_account_toogle = '//*[text()="Set custom rules based on advanced account conditions"]//preceding::button[1]';
+    this.campaign_add_filter = '//*[text()="Add filter"]';
     this.hubspot_company_pipeline = '//b[text()="Hubspot Company Pipeline"]';
     this.companies_lifecycle = '//h4[text()="companies-lifecycle-pipeline"]';
     this.total_clicks_cap = '(//th[text()="Total Clicks Cap"])[2]//following::input[1]';
@@ -795,14 +796,14 @@ class locators {
     this.delete = '//span[text()="Delete"]';
     this.active_status = '//h4[text()="Active"]//following::button[1]';
     this.discard_changes = '//div[text()="Discard Changes"]';
-    this.advanced_custome_rule = '//h4[text()="Set advanced custom rules"]//following::div[3]';
-    this.campaign_group = '//h4[text()="Campaign Group"]';
+    this.advanced_custome_rule = '//*[text()="Set advanced custom rules"]//following::div[3]';
+    this.campaign_group = '//*[text()="Campaign Group"]';
     this.select_campaign_group = '//span[text()="Select Campaign Groups"]';
     this.select_Campaigngroup_value = '//div[text()="BOFU - Matched Audience"]';
     this.select_Campaigngroup_value1 = '//div[text()="BOFU Prospecting"]';
     this.select_Campaigngroup_value2 = '//div[text()="TD-Prospecting-Gromo+Agencies"]';
     this.New_Group_Campaign = '//h4[text()="New Group Campaign"]';
-    this.All_Ad_Account = '//h4[text()="All Ad Accounts"]';
+    this.All_Ad_Account = '//*[text()="All Ad Accounts"]';
     this.AllAd_meatball_icon = '//h4[text()="All Ad Accounts"]//following::button[2]';
     this.pause = '//span[text()="Pause"]';
     this.Paused = '(//span[text()="Paused"])[1]';
@@ -849,7 +850,7 @@ class locators {
     this.edit_audience_sync = '//textarea[text()="Untitled audience sync"]';
     this.audience_sync_meta_icon = '(//h4[text()="New audience sync"])[1]//following::button[1]';
     this.Edit_workflow = '//a[text()="Edit"]';
-    this.linkedin_sync_status = '//h2[text()="LinkedIn Sync Status"]';
+    this.linkedin_sync_status = '//*[text()="LinkedIn Sync Status"]';
     this.remove_workflows = '//span[text()="Remove workflow"]';
     this.linkedin_refresh_icon = ".mr-1 > .ant-btn"
     this.linkedin_search_icon = ".justify-end > .justify-between > .ant-btn"
@@ -911,9 +912,9 @@ class locators {
     this.AccountSite = '[title="Account Site"]';
     this.Save_Report = '(//*[text()="Save"])[3]';
     this.Edit_workflow1 = '//a[text()="Edit workflow"]';
-    this.Campaign_MoreOption = '//h4[text()="Active"]//following::button[2]';
+    this.Campaign_MoreOption = '//*[text()="Active"]//following::button[2]';
     this.CreateNewSegment = '//span[text()="Create New Segment"]';
-    this.active_Toggle1 = '//h4[text()="Active"]//following::button[1]/div';
+    this.active_Toggle1 = '//*[text()="Active"]//following::button[1]/div';
     this.FolderNameField = '[placeholder="Eg- Folder 1"]';
     this.PageView = '//span[text()="Page View"]';
     this.AddRule = '(//span[text()="Add rule"])[1]';
@@ -955,7 +956,7 @@ class locators {
     this.PROFILESTOANALYSE = '//*[text()="PROFILES TO ANALYSE"]';
     this.AllsegmentMenu = '(//*[text()="All segments"])[1]';
     this.EditsegmentDetails = '//div[text()="Edit segment Details"]';
-    this.Hubspot_InsightLoad = '//h4[text()="In Hubspot"]//following::div[3]';
+    this.Hubspot_InsightLoad = '//*[text()="In Hubspot"]//following::div[3]';
     this.NewAlert = '//span[text()="New Alert"]';
     this.StartfromScratch = '//span[text()="Start from Scratch"]';
     this.Hubspot_template_Option = '//button[text()="Hubspot"]';
@@ -973,8 +974,8 @@ class locators {
     this.QuickSearchTitle = '(//div[@data-state="open"]/div/div/div/div)[1]';
     this.PreviewInfo = '.preview-info';
     this.DownloadCSV_Popup = '.ant-modal-content';
-    this.SmartReach = '(//h4[text()="Smart Reach"])[2]';
-    this.LinkedInaudiencesync = '//h4[text()="LinkedIn audience sync"]';
+    this.SmartReach = '//h4[text()="Smart Reach"]';
+    this.LinkedInaudiencesync = '//*[text()="LinkedIn audience sync"]';
     this.CustomEvents = '//span[text()="Custom Events"]';
     this.Filter = '//span[text()="Filter"]';
     this.channelGroup = '//span[text()="Channel Groups"]';
@@ -983,7 +984,7 @@ class locators {
     this.panelemailTracking = '//*[text()="Email tracking"]';
     this.EmailClicks_container = '//div[contains(@class,"EmailClicks__container")]';
     this.Createatouchpointusing = '//*[text()="Create a touchpoint using"]';
-    this.CampaignTitle = '//h1[text()="New Custom Dimension"]';
+    this.CampaignTitle = '//*[text()="New Custom Dimension"]';
     this.ValueName = '[placeholder="Value"]';
     this.NewSelectProperty = '//span[text()=" Select Property"]';
     this.NameOption = '[title="name"]';
@@ -999,7 +1000,7 @@ class locators {
     this.Deals = '[data-title="Deals"]';
     this.chartName = '(//*[local-name()="svg" and @id="funnel-grouped-svg-chart"])//following::div[1]';
     this.Removefromthisboard = '//div[text()="Remove from this board"]';
-    this.LinkedInAdAccountField = '//h4[text()="Select LinkedIn Ad Account"]//following::span[2]';
+    this.LinkedInAdAccountField = '//*[text()="Select LinkedIn Ad Account"]//following::span[2]';
     this.LinkedInAdAccount = '[title="508934217"]';
     this.RenameSegment = '//div[text()="Rename segment"]';
     this.NewDashboard = '//span[text()="New Dashboard"]';
@@ -1014,17 +1015,17 @@ class locators {
     this.LinkedinCompanyEngagements = '(//div[@data-title="Linkedin Company Engagements"])[1]';
     this.HubspotCompany = '[data-title="Hubspot Company"]';
     this.HubspotDeal = '[data-title="Hubspot Deal"]';
-    this.WebsiteSessionEvent = '//h4[text()="Website Session"]';
-    this.InsightMsg1 = '//img[@alt="loader-man"]//following::h4[1]';
-    this.InsightMsg2 = '//img[@alt="loader-man"]//following::h4[2]';
+    this.WebsiteSessionEvent = '//*[text()="Website Session"]';
+    this.InsightMsg1 = '//img[@alt="loader-man"]//following::*[1]';
+    this.InsightMsg2 = '//img[@alt="loader-man"]//following::*[2]';
     this.DeleteErrorPopup = '.ant-modal-title';
     this.Got_It = '//span[text()="Got it"]';
     this.ReportNameVerification = '//span[text()="Got it"]//preceding::div[1]';
     this.IntentPageLoaded = '//*[text()="Intent Upload"]';
     this.UploadIntentdata = '//*[text()="Upload third-party intent data"]';
-    this.Date_Option = '//span[@title="Date of intent"]//following::div[5]';
-    this.Source_Option = '//span[@title="Intent Source"]//following::div[5]';
-    this.Domain_Option = '//span[@title="Company Domain"]//following::div[5]';
+    this.Date_Option = '//span[@title="Date of intent"]//following::input[1]';
+    this.Source_Option = '//span[@title="Intent Source"]//following::input[1]';
+    this.Domain_Option = '//span[@title="Company Domain"]//following::input[1]';
     this.Selectadditionalproperties = '//span[text()="Select additional properties"]';
     this.IntentDate = '[title="Intent Date"]';
     this.IntentCategory = '[title="Intent Category"]';
@@ -1032,11 +1033,11 @@ class locators {
     this.Website = '[data-title="Website"]';
     this.Website1 = '[title="Website"]';
     this.Import = '//span[text()="Import"]';
-    this.Error_Msg = '(//div[text()="This field needs to be mapped"])[1]';
+    this.Error_Msg = '(//*[text()="This field needs to be mapped"])[1]';
     this.Import_Confirmation = '.ant-modal-confirm-title';
-    this.OperationLog = '//h4[text()="Operation Log"]';
+    this.OperationLog = '//*[text()="Operation Log"]';
     this.Logs = '//span[text()="Logs"]';
-    this.OperationLog_Popup = '//h4[text()="Operation Logs"]';
+    this.OperationLog_Popup = '//*[text()="Operation Logs"]';
     this.Status_Verify = '//th[text()="File name"]//following::tr[1]/td[2]';
     this.Uploaded_By = '//th[text()="File name"]//following::tr[1]/td[3]';
     this.Intent_Download = '//th[text()="File name"]//following::tr[1]/td[5]';
@@ -1121,8 +1122,8 @@ class locators {
     this.G2pagedetails = '//*[text()="G2 page details"]';
     this.Eventdetails = '//*[text()="Event details"]';
     this.LinkedInCAPI = '//*[text()="LinkedIn CAPI"]';
-    this.LinkedInCAPITitle = '(//h4[text()="LinkedIn CAPI"])[2]';
-    this.SelectConversionEvent = '//h4[text()="Map user properties"]//preceding::input[1]'
+    this.LinkedInCAPITitle = '//h4[text()="LinkedIn CAPI"]';
+    this.SelectConversionEvent = '//*[text()="Map user properties"]//preceding::input[1]'
     this.Selectproperty = '//span[text()="Select property"]';
     this.CapiSearchProperty = '//span[text()="Select property"]//preceding::input[1]';
     this.EngagedonLinkedIn = '[data-title="Engaged on LinkedIn"]';
@@ -1153,12 +1154,12 @@ class locators {
     this.Loader = '.accounts-loader-div';
     this.Loading = '[data-icon="loading"]';
     this.HighEngagement = '[aria-label="High Engagement"]';
-    this.GlobalSearch_Loading = '//h4[text()="loading..."]';
+    this.GlobalSearch_Loading = '//*[text()="loading..."]';
     this.UniqueUsers = '[data-title="Unique Users"]';
     this.SessionExitPageRawURL = '[data-title="Session Exit Page Raw URL"]';
     this.AddProperty = '//span[text()="Add Property"]';
     this.SessionReferrerDomain = '[data-title="Session Referrer Domain"]';
-    this.SalesOpportunityAnalysis = '//h4[text()="Sales Opportunity Analysis"]';
+    this.SalesOpportunityAnalysis = '//*[text()="Sales Opportunity Analysis"]';
     this.FilterDataLoading = '//h4[text()="Loading data..."]';
     this.SegmentTemplatePopup = '[role="dialog"]';
     this.Pipeline = '[data-title="Pipeline"]';
@@ -1189,10 +1190,10 @@ class locators {
     this.Alert_Toogle = '[role="switch"]';
     this.LinkedinDomain = '[data-title="Linkedin Domain"]';
     this.SmartReach_ViewActivitylog = '//div[text()="View Activity log"]';
-    this.SmartReach_logTitle = '//h4[text()="Account Change Log"]';
+    this.SmartReach_logTitle = '//*[text()="Account Change Log"]';
     this.SmartReach_logTable = '(//table)[2]';
-    this.SmartReach_logClose = '//h4[text()="Account Change Log"]//following::button[1]';
-    this.SmartReach_logCalender = '//h4[text()="Account Change Log"]//following::button[2]';
+    this.SmartReach_logClose = '//*[text()="Account Change Log"]//following::button[1]';
+    this.SmartReach_logCalender = '//*[text()="Account Change Log"]//following::button[2]';
     this.SmartReach_Dashboard_log = '//span[text()="View Logs"]';
     this.Milestones = '//div[text()="Milestones"]';
     this.New_Milestone_Btn = '//span[text()="Add Milestone"]';
@@ -1242,7 +1243,7 @@ class locators {
     this.Buildmodel = '//span[text()="Build model"]';
     this.PS_Add_Filter = '//div[@id="additional_actions_events_block"]/button[1]';
     this.Select_capping_level = '#fa-at-text--draft-title';
-    this.AllAccount_ActionBtn = '//h1[text()="All Accounts"]//following::button[1]';
+    this.AllAccount_ActionBtn = '//*[text()="All Accounts"]//following::button[1]';
     this.Show_hidden_accounts = '//div[text()="Show hidden accounts"]';
     this.Hide_hidden_accounts = '//div[text()="Hide hidden accounts"]';
     this.Event_Add_Property = '//*[text()="More Details"]//following::span[text()="Add property"]';
@@ -1252,7 +1253,6 @@ class locators {
     this.General_Tab = '.fa-container fa__full-bleed-fix';
     this.panel_engagementScoring = '//div[contains(@id,"panel-engagementScoring")]';
     this.searchType = '#basic_accounts_search';
-    this.search_button1 = '(//span[text()="Hide irrelevant accounts to keep your segments focused on accounts that matter."]//following::button)[3]';
     this.Unhide = '//span[text()="Unhide"]';
     this.Unhide_1 = '(//span[text()="Unhide"])[2]';
     this.Hubspot_Deal_Opt = '[data-title="Hubspot Deal Record ID"]';
@@ -1334,7 +1334,7 @@ class locators {
     this.table_columns = '[data-icon="table-columns"]';
     this.Not_Customers = '[aria-label="Not Customers"]';
     this.Bolt = '(//span[text()="Edit Segment"]//following::button)[1]';
-    this.LinkedIn_Audience_Sync1 = '//h4[text()="LinkedIn Audience Sync"]';
+    this.LinkedIn_Audience_Sync1 = '//*[text()="LinkedIn Audience Sync"]';
     this.Welcome_To_Support_Close = '[data-testid="header-close"]';
     this.Search_properties = '[placeholder="Search properties"]';
     this.Company_Name1 = '//h1[text()="Company Name"]';
@@ -1342,7 +1342,7 @@ class locators {
     this.Search_Properties = '[placeholder="Search Properties"]';
     this.Edit_Segment = '//span[text()="Edit Segment"]';
     this.Insight_Icon = '[data-icon="lightbulb-on"]';
-    this.In_Hubspot3 = '//h1[text()="In Hubspot"]';
+    this.In_Hubspot3 = '//h4[text()="In Hubspot"]';
     this.High = '[data-title="High"]';
     this.Highly_Engaged = '//h4[text()="Highly engaged Leads"]//following::span[1]';
     this.Enter_text_values = '//input[@type="search"]//following::span[text()="Enter text values"]';
@@ -1365,7 +1365,7 @@ class locators {
     this.Yes_proceed = '//span[text()="Yes, proceed"]';
     this.Open_Filter = '[data-state="open"]';
     this.Title_page = '//*[contains(@class,"editable-title")]';
-    this.Company_Region = '//*[text()="Company Region"]';
+    this.Company_Region = '[data-id="Company Region"]';
     this.segment_scroll = '[.rc-virtual-list-scrollbar-thumb]';
     this.Views_tab = '//button[contains(@class,"ant-popover-open")]';
     this.Hubspot_Deals1 = '[title="Hubspot Deals"]';
@@ -1408,6 +1408,8 @@ class locators {
     this.Account_identification1 = '//h6[text()="Account identification"]';
     this.Milestone_Title_Name = '[value="Untitled Milestone"]';
     this.Edit_Button = '[data-icon="pen"]';
+    this.Linkedin_Paid_Leads = '[data-title="Linkedin Paid Leads"]';
+    this.Company_Created1 = '//h6[text()="Company Created"]';
 
   }
 }
