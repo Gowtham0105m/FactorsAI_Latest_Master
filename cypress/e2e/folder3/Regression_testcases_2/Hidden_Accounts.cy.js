@@ -25,7 +25,7 @@ describe('Hidden Accounts', () => {
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.lg)
 
         // select Hidden account
 
@@ -88,12 +88,14 @@ describe('Hidden Accounts', () => {
         methods.clickElementByXPath(locators.clear_search)
         cy.wait(Timeout.xs)
         methods.Mouseover(locators.account_dropdown);
-        methods.clickElementByXPath(locators.Account)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.sm)
+        methods.clickElementIndexXpath(locators.Account, 1)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.reload();
+        cy.wait(Timeout.xmd)
+        methods.clickElementByXPath(locators.search_button)
         cy.wait(Timeout.xs)
-        methods.clickElementByXPath(locators.search_button1)
         methods.typeElementByXPath(locators.search_area, 'trackdfect.com')
         methods.EnterXpath(locators.search_area)
         cy.wait(Timeout.md)
@@ -108,7 +110,7 @@ describe('Hidden Accounts', () => {
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.lg)
 
         // select Hidden account
 
@@ -147,12 +149,14 @@ describe('Hidden Accounts', () => {
         methods.clickElementByXPath(locators.clear_search)
         cy.wait(Timeout.xs)
         methods.Mouseover(locators.account_dropdown);
-        methods.clickElementByXPath(locators.Account)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.sm)
+        methods.clickElementIndexXpath(locators.Account, 1)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.reload();
+        cy.wait(Timeout.xmd)
+        methods.clickElementByXPath(locators.search_button)
         cy.wait(Timeout.xs)
-        methods.clickElementByXPath(locators.search_button1)
         methods.typeElementByXPath(locators.search_area, 'trackdfect.com')
         methods.EnterXpath(locators.search_area)
         cy.wait(Timeout.md)

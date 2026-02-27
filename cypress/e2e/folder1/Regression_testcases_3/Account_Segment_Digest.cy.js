@@ -151,10 +151,12 @@ describe('Accounts Segment Digest Login', () => {
             if (!demoElement || demoElement.offsetParent === null) {
                 cy.log("**All Segment not loaded**");
                 methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.People);
                 cy.wait(Timeout.xs);
                 methods.Mouseover(locators.account_dropdown);
-                methods.clickElementByXPath(locators.Account);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
                 cy.wait(Timeout.xs);
             } else {
                 cy.log("**All Segment has been loaded**");
@@ -190,9 +192,7 @@ describe('Accounts Segment Digest Login', () => {
         cy.wait(Timeout.ml)
         cy.wait(Timeout.xl)
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
-        cy.xpath('(//div[contains(@class,"PlanLimitInfo__planInfoCard")]/div)[1]')
-            .invoke('text')
-            .then(text => {
+        cy.xpath('(//div[contains(@class,"PlanLimitInfo__planInfoCard")]/div)[1]').invoke('text').then(text => {
                 const segment = Number(text.match(/^\d+/)[0]);
                 cy.log(`Segment used count: ${segment}`);
                 cy.wrap(segment).as('segmentCount');
@@ -258,8 +258,8 @@ describe('Accounts Segment Digest Login', () => {
         methods.assertElementContainsText(locators.notification_popup1, `You’re subscribed to the Segment Digest!`)
         cy.wait(Timeout.sm)
         methods.assertElementContainsText1(locators.DataManagementHeader, 'Sharing')
-        methods.VisibilityofElementXpath(`//tbody/tr/td/div[text()="${testName}"]`)
-        methods.clickElementByXPath(`(//div[text()="${testName}"]//following::button)[1]`)
+        methods.VisibilityofElementXpath(`//tbody/tr/td/*[text()="${testName}"]`)
+        methods.clickElementByXPath(`(//*[text()="${testName}"]//following::button)[1]`)
         methods.clickElementByXPath(locators.Segment_Digest_Edit_Btn)
         methods.VisibilityofElementXpath(locators.Manage_Segment_Digest_Header)
         methods.clickElementByXPath(locators.AddEmail)
@@ -281,8 +281,8 @@ describe('Accounts Segment Digest Login', () => {
         methods.clickElement(locators.setting)
         methods.clickElementByXPath(locators.Sharing)
         methods.clickElementByXPath(locators.Segment_Digest)
-        methods.VisibilityofElementXpath(`//tbody/tr/td/div[text()="${testName}"]`)
-        methods.clickElementByXPath(`(//div[text()="${testName}"]//following::button)[1]`)
+        methods.VisibilityofElementXpath(`//tbody/tr/td/*[text()="${testName}"]`)
+        methods.clickElementByXPath(`(//*[text()="${testName}"]//following::button)[1]`)
         methods.clickElementByXPath(locators.Delete_Digest)
         methods.VisibilityofElement(locators.Templete_Popup)
         methods.clickElementByXPath(locators.Yes_Delete)
@@ -296,6 +296,7 @@ describe('Accounts Segment Digest Login', () => {
         methods.clickElementByXPath(locators.delete_segment)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Yes)
+        cy.wait(Timeout.sm)
         methods.NotExist(locators.Loading)
         methods.assertElementContainsText(locators.notification_popup, "Segment deleted successfully")
         cy.wait(Timeout.xmd)

@@ -24,7 +24,7 @@ describe('Segment Alert Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo Segment Alert ${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
@@ -34,10 +34,12 @@ describe('Segment Alert Login', () => {
             if (!demoElement || demoElement.offsetParent === null) {
                 cy.log("**All Segment not loaded**");
                 methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.People);
                 cy.wait(Timeout.xs);
                 methods.Mouseover(locators.account_dropdown);
-                methods.clickElementByXPath(locators.Account);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
                 cy.wait(Timeout.xs);
             } else {
                 cy.log("**All Segment has been loaded**");
@@ -46,9 +48,9 @@ describe('Segment Alert Login', () => {
         methods.assertElementContainsTextxpath(locators.AllsegmentMenu, "All segments")
         methods.clickElementByXPath(locators.All_segments)
         methods.clickElementByXPath(locators.In_Hubspot)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.SegmentTitle)
         methods.clickElementByXPath(locators.Bolt)
         methods.clickElementByXPath(locators.SetAlert)
@@ -107,10 +109,12 @@ describe('Segment Alert Login', () => {
             if (!demoElement || demoElement.offsetParent === null) {
                 cy.log("**All Segment not loaded**");
                 methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.People);
                 cy.wait(Timeout.xs);
                 methods.Mouseover(locators.account_dropdown);
-                methods.clickElementByXPath(locators.Account);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
                 cy.wait(Timeout.xs);
             } else {
                 cy.log("**All Segment has been loaded**");
@@ -119,9 +123,9 @@ describe('Segment Alert Login', () => {
         methods.assertElementContainsTextxpath(locators.AllsegmentMenu, "All segments")
         methods.clickElementByXPath(locators.All_segments)
         methods.clickElementByXPath(locators.In_Hubspot)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.SegmentTitle)
         methods.clickElementByXPath(locators.Bolt)
         methods.clickElementByXPath(locators.SetAlert)
@@ -182,10 +186,12 @@ describe('Segment Alert Login', () => {
             if (!demoElement || demoElement.offsetParent === null) {
                 cy.log("**All Segment not loaded**");
                 methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.People);
                 cy.wait(Timeout.xs);
                 methods.Mouseover(locators.account_dropdown);
-                methods.clickElementByXPath(locators.Account);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
                 cy.wait(Timeout.xs);
             } else {
                 cy.log("**All Segment has been loaded**");
@@ -194,9 +200,9 @@ describe('Segment Alert Login', () => {
         methods.assertElementContainsTextxpath(locators.AllsegmentMenu, "All segments")
         methods.clickElementByXPath(locators.All_segments)
         methods.clickElementByXPath(locators.In_Hubspot)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.SegmentTitle)
         methods.clickElementByXPath(locators.Bolt)
         methods.clickElementByXPath(locators.SetAlert)

@@ -311,18 +311,14 @@ describe('Attribution Regression', () => {
         methods.clickElement0(locators.Attri_pageloaded, 0)
         methods.scrollWithXpath(locators.chartName)
 
-        cy.xpath('(//*[local-name()="svg" and @id="funnel-grouped-svg-chart"])//following::div[4]', { timeout: extraTimeOut })
-            .invoke('text')
-            .then((firstText) => {
-                text1 = firstText.trim();
-                cy.log(`text1 : ${text1}`)
-                cy.xpath('(//*[local-name()="svg" and @id="funnel-grouped-svg-chart"])//following::div[7]', { timeout: extraTimeOut })
-                    .invoke('text')
-                    .then((secondText) => {
-                        text2 = secondText.trim();
-                        cy.log(`text2 : ${text2}`)
-                    });
+        cy.xpath('(//*[local-name()="svg" and @id="funnel-grouped-svg-chart"])//following::div[2]', { timeout: extraTimeOut }).invoke('text').then((firstText) => {
+            text1 = firstText.trim();
+            cy.log(`text1 : ${text1}`)
+            cy.xpath('(//*[local-name()="svg" and @id="funnel-grouped-svg-chart"])//following::div[4]', { timeout: extraTimeOut }).invoke('text').then((secondText) => {
+                text2 = secondText.trim();
+                cy.log(`text2 : ${text2}`)
             });
+        });
 
         methods.clickElementByXPath(locators.Save)
         methods.clickElementByXPath(locators.Save_as_New)
@@ -336,20 +332,16 @@ describe('Attribution Regression', () => {
         methods.assertElementContainsTextxpath(locators.attribution_Pagetitle, 'Attribution Reports')
         methods.VisibilityofElementXpath(locators.Add_Report)
         cy.wait(Timeout.sm)
-        methods.scrollWithXpath(`//h4[text()="${testName}"]`)
+        methods.scrollWithXpath(`//*[text()="${testName}"]`)
 
-        cy.xpath(`//h4[text()='${testName}']//following::div[8]`, { timeout: extraTimeOut })
-            .invoke('text')
-            .then((firstText) => {
-                text3 = firstText.trim();
-                cy.log(`text3 : ${text3}`)
-                cy.xpath(`//h4[text()='${testName}']//following::div[11]`, { timeout: extraTimeOut })
-                    .invoke('text')
-                    .then((secondText) => {
-                        text4 = secondText.trim();
-                        cy.log(`text4 : ${text4}`)
-                    });
+        cy.xpath(`//*[text()='${testName}']//following::div[6]`, { timeout: extraTimeOut }).invoke('text').then((firstText) => {
+            text3 = firstText.trim();
+            cy.log(`text3 : ${text3}`)
+            cy.xpath(`//*[text()='${testName}']//following::div[8]`, { timeout: extraTimeOut }).invoke('text').then((secondText) => {
+                text4 = secondText.trim();
+                cy.log(`text4 : ${text4}`)
             });
+        });
         cy.then(() => {
             expect(text1).to.equal(text3);
             cy.log(`Text1: '${text1}' and Text3: '${text3}' are equal`);
@@ -358,7 +350,7 @@ describe('Attribution Regression', () => {
             cy.log(`Text2: '${text2}' and Text4: '${text4}' are equal`);
         });
 
-        methods.clickElementByXPath(`//h4[text()='${testName}']//following::button[1]`)
+        methods.clickElementByXPath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.Delete_Widget)
         methods.clickElementByXPath(locators.confirmbtn)
         cy.wait(Timeout.xs)

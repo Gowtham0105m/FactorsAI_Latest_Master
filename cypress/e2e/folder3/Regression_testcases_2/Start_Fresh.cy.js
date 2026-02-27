@@ -35,10 +35,12 @@ describe('Start_Fresh_Icon', () => {
             if (!demoElement || demoElement.offsetParent === null) {
                 cy.log("**All Segment not loaded**");
                 methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.xs);
                 methods.clickElementByXPath(locators.People);
                 cy.wait(Timeout.xs);
                 methods.Mouseover(locators.account_dropdown);
-                methods.clickElement0(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.clickElementIndexXpath(locators.Account, 1);
                 cy.wait(Timeout.xs);
             } else {
                 cy.log("**All Segment has been loaded**");
@@ -67,7 +69,7 @@ describe('Start_Fresh_Icon', () => {
 
         // search saved segment
         cy.wait(Timeout.ml)
-        cy.wait(Timeout.ml)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xs)
         methods.ClearAndType(locators.Search_segment, testName)
