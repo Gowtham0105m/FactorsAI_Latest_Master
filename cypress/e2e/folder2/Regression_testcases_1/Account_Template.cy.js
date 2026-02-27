@@ -38,10 +38,12 @@ describe('Account Template Login', () => {
             if (!demoElement || demoElement.offsetParent === null) {
                 cy.log("**All Segment not loaded**");
                 methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.People);
                 cy.wait(Timeout.xs);
                 methods.Mouseover(locators.account_dropdown);
-                methods.clickElementByXPath(locators.Account);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
                 cy.wait(Timeout.xs);
             } else {
                 cy.log("**All Segment has been loaded**");
@@ -90,15 +92,13 @@ describe('Account Template Login', () => {
         methods.assertElementContainsText(locators.Popup_Message, "Folder Renamed")
         cy.wait(Timeout.sm)
         methods.ScrollAndClickxpath(locators.All_segments)
-        cy.xpath(`(//div[text()="${folder_name1}"])[1]`, { timeout: extraTimeOut })
-            .invoke('text')
-            .then((firstText) => {
-                const text1 = firstText.trim();
+        cy.xpath(`(//div[text()="${folder_name1}"])[1]`, { timeout: extraTimeOut }).invoke('text').then((firstText) => {
+            const text1 = firstText.trim();
 
-                expect(text1).to.equal(folder_name1);
-                console.log(text1)
-                console.log(folder_name1)
-            })
+            expect(text1).to.equal(folder_name1);
+            console.log(text1)
+            console.log(folder_name1)
+        })
 
         cy.wait(Timeout.sm)
         methods.MouseoverAndClick(`//div[text()="${folder_name1}"]//following::span[2]`)
@@ -118,6 +118,7 @@ describe('Account Template Login', () => {
         methods.clickElementByXPath(locators.Yes)
         methods.NotExist(locators.Loading)
         methods.assertElementContainsText(locators.notification_popup, "Segment deleted successfully")
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
+        methods.VisibilityofElementXpath(locators.account_pageloaded)
     })
 })

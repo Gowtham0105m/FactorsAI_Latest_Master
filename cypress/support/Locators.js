@@ -457,7 +457,7 @@ class locators {
     this.New_Filter = '//span[text()="New Filter"]';
     this.Select_Property_text = '//span[contains(text(),"Select Property")]';
     this.Name_text = '//span[text()="name"]';
-    this.Create_new_alert_title = '//h4[text()="Create new alert"]';
+    this.Create_new_alert_title = '//*[text()="Create new alert"]';
     this.Cancel = '(//span[text()="Cancel"])[1]';
     this.Remove_Property = '//span[text()="Remove Property"]';
     this.KPI_Report = '//span[text()="New KPI Report"]';

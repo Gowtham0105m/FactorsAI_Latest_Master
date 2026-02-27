@@ -20,10 +20,10 @@ describe('Timeline Login', () => {
 
   it('Account Timeline -- User Properties and Event Properties', () => {
 
-    cy.wait(Timeout.md)
+    cy.wait(Timeout.xmd)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     methods.VisibilityofElementXpath(locators.account_pageloaded)
-    cy.wait(Timeout.md)
+    cy.wait(Timeout.xmd)
     methods.clickElementByXPath(locators.search_button)
     cy.wait(Timeout.xs)
     methods.typeElementByXPath(locators.search_area, 'accenture.com')

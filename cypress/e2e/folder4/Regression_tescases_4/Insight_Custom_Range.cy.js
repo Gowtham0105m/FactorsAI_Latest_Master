@@ -31,10 +31,12 @@ describe('Insight custom range', () => {
             if (!demoElement || demoElement.offsetParent === null) {
                 cy.log("**All Segment not loaded**");
                 methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.People);
                 cy.wait(Timeout.xs);
                 methods.Mouseover(locators.account_dropdown);
-                methods.clickElementByXPath(locators.Account);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
                 cy.wait(Timeout.xs);
             } else {
                 cy.log("**All Segment has been loaded**");
@@ -47,9 +49,10 @@ describe('Insight custom range', () => {
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.scrollWithXpath(locators.In_Hubspot3)
         methods.clickElement(locators.Insight_Icon)
-        methods.VisibilityofElementXpath(locators.Hubspot_InsightLoad)
+        cy.wait(Timeout.xmd)
+        methods.VisibilityofElementXpathIndexInput(locators.Hubspot_InsightLoad, 3)
         cy.wait(Timeout.md)
-        methods.clickElementByXPath(locators.Insight_customdate)
+        methods.clickElement(locators.Select_Analysis_Window)
         methods.clickElementByXPath(locators.Last_Week)
         cy.wait(Timeout.lgr)
         methods.scrollWithXpath(locators.Account_currently)
@@ -73,7 +76,7 @@ describe('Insight custom range', () => {
         methods.Existxpath(locators.Revenue_Booked)
         methods.Existxpath(locators.Close_Rate)
         methods.Existxpath(locators.Avg_Sales_Cycle_Length)
-        methods.clickElementByXPath(locators.Insight_customdate)
+        methods.clickElement(locators.Select_Analysis_Window)
         methods.clickElementByXPath(locators.Last_Month)
         cy.wait(Timeout.lgr)
         methods.scrollWithXpath(locators.Account_currently)
@@ -97,7 +100,7 @@ describe('Insight custom range', () => {
         methods.Existxpath(locators.Revenue_Booked)
         methods.Existxpath(locators.Close_Rate)
         methods.Existxpath(locators.Avg_Sales_Cycle_Length)
-        methods.clickElementByXPath(locators.Insight_customdate)
+        methods.clickElement(locators.Select_Analysis_Window)
         methods.clickElementByXPath(locators.Last_Quarter)
         cy.wait(Timeout.lgr)
         methods.scrollWithXpath(locators.Account_currently)
@@ -121,7 +124,7 @@ describe('Insight custom range', () => {
         methods.Existxpath(locators.Revenue_Booked)
         methods.Existxpath(locators.Close_Rate)
         methods.Existxpath(locators.Avg_Sales_Cycle_Length)
-        methods.clickElementByXPath(locators.Insight_customdate)
+        methods.clickElement(locators.Select_Analysis_Window)
         methods.clickElementByXPath(locators.select_custom_range)
         methods.clickElementByXPath(locators.Preview_Month1)
         methods.clickElementByXPath(locators.Start_Date)
@@ -163,10 +166,12 @@ describe('Insight custom range', () => {
             if (!demoElement || demoElement.offsetParent === null) {
                 cy.log("**All Segment not loaded**");
                 methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.People);
                 cy.wait(Timeout.xs);
                 methods.Mouseover(locators.account_dropdown);
-                methods.clickElementByXPath(locators.Account);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
                 cy.wait(Timeout.xs);
             } else {
                 cy.log("**All Segment has been loaded**");

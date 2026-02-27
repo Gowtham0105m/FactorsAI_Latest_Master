@@ -64,7 +64,7 @@ describe('Segment Alert Login', () => {
         methods.clickElementByXPath(locators.Confirm_publish)
         methods.GetText(locators.notification_popup, "Alerts SavedNew Alerts is created and saved successfully.")
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h4[text()='${testName}']//following::button[2]`)
+        methods.clickElementByXPath(`//*[text()='${testName}']//following::button[2]`)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.remove_alert)
         methods.clickElementByXPath(locators.Ok)
