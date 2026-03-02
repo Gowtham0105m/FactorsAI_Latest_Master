@@ -43,6 +43,9 @@ describe('KPI Report Login', () => {
         methods.Clickwithindexandvalidation(locators.Website_Session, 0)
         methods.typeElement(locators.search_1, 'tot')
         methods.clickElement0(locators.Total_Session, 0)
+        methods.clickElementByXPath(locators.Add_another_KPI)
+        methods.typeElement(locators.search_1, 'Engaged Sessions')
+        methods.Clickwithindexandvalidation(locators.Engaged_Sessions, 0)
 
         // add filter
 
@@ -53,13 +56,20 @@ describe('KPI Report Login', () => {
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.pageview_option1)
         methods.clickElementByXPath(locators.Apply1)
+        methods.clickElement(locators.Add_New_Breakdown_new)
+        methods.typeElement(locators.select_property, 'company name')
+        methods.clickElement(locators.CompanyName)
+
 
         // select date
 
         methods.clickElementByXPath(locators.KPI_Cal)
-        methods.clickElement0(locators.choose_date, 7)
+        methods.clickElementByXPath(locators.LastWeek)
         methods.clickElementByXPath(locators.Run_Analysis1)
+        cy.wait(Timeout.md)
+        methods.scroll(locators.table_validation1)
         methods.VisibilityofElement(locators.table_validation1)
+        methods.scroll(locators.table_validation2)
         methods.VisibilityofElement(locators.table_validation2)
 
         // save
@@ -68,8 +78,10 @@ describe('KPI Report Login', () => {
         methods.typeElement(locators.Report_Name, testName)
         methods.typeElement(locators.Description_OP, 'Testing Purpose')
         methods.clickElementByXPath(locators.save1)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
+        methods.scroll(locators.table_validation1)
         methods.VisibilityofElement(locators.table_validation1)
+        methods.scroll(locators.table_validation2)
         methods.VisibilityofElement(locators.table_validation2)
         methods.clickElementByXPath(locators.Closed)
         methods.VisibilityofElement(locators.Table_Body_1)
@@ -78,7 +90,7 @@ describe('KPI Report Login', () => {
         methods.clickElementByXPath(locators.Expand_1)
         methods.clickElementByXPath(locators.Add_another_KPI_1)
         methods.clickElement0(locators.Website_Session, 0)
-        methods.clickElementByXPath(locators.pageview_option2)
+        methods.clickElementByXPath(locators.pageview_option1)
         methods.clickElementByXPath(locators.Run_Anal)
         methods.VisibilityofElement(locators.Profile_report_gen)
         cy.wait(Timeout.xmd)

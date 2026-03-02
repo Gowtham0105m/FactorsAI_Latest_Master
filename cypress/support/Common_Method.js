@@ -87,10 +87,6 @@ class methods {
         cy.get(selector, { timeout: extraTimeOut }).contains(text);
     }
 
-    Titletextcontains1(selector, int, text) {
-        cy.get(selector, { timeout: extraTimeOut }).eq(int).contains(text);
-    }
-
     Titletextcontainsxpath(xpath, text) {
         cy.xpath(xpath, { timeout: extraTimeOut }).contains(text);
     }
@@ -173,10 +169,6 @@ class methods {
 
     MouseoverWithXpath(xpath) {
         cy.xpath(xpath, { timeout: extraTimeOut }).trigger('mouseover', { force: true });
-    }
-
-    MouseoverWithXpathindex(xpath, int) {
-        cy.xpath(xpath, { timeout: extraTimeOut }).eq(int).trigger('mouseover', { force: true });
     }
 
     MouseoverAndClick(xpath) {
