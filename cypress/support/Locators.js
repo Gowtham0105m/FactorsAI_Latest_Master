@@ -193,7 +193,7 @@ class locators {
     this.Run_Analysis1 = '//span[text()="Run Analysis"]';
     this.Attri_pageloaded = '.mt-12';
     this.Dashboards = '//*[text()="Dashboards"]';
-    this.Event_Report = '//span[text()="New Event Report"]';
+    this.Event_Report = '//*[text()="New Event Report"]';
     this.Sparkline = '//span[text()="Sparkline"]';
     this.Line_Chart = '//h1[text()="Line Chart"]';
     this.Filter_this_event = '//*[text()="EVENTS"]//following::button[3]';
@@ -274,7 +274,7 @@ class locators {
     this.View_Event = '//a[text()="View Event"]';
     this.Remove_Event = '//a[text()="Remove Event"]';
     this.New_Report_CSS = '#fa-at-btn--new-report';
-    this.Funnel_Report = '//span[text()="New Funnel Report"]';
+    this.Funnel_Report = '//*[text()="New Funnel Report"]';
     this.Add_another_event = '//span[text()="Add another event"]';
     this.Linkedin_Company_Engagements = '[data-title="Linkedin Company Engagements"]';
     this.Filter_By_CSS = '.query_card_open-add > :nth-child(1) > :nth-child(4)';
@@ -360,7 +360,7 @@ class locators {
     this.Create_new_alert_title = '//*[text()="Create new alert"]';
     this.Cancel = '(//span[text()="Cancel"])[1]';
     this.Remove_Property = '//span[text()="Remove Property"]';
-    this.KPI_Report = '//span[text()="New KPI Report"]';
+    this.KPI_Report = '//*[text()="New KPI Report"]';
     this.KPI_Cal = '//span[text()="Run Analysis"]//preceding::button[1]';
     this.close_kpi = '#app-header > .justify-between > :nth-child(2) > .ant-btn-default > span';
     this.Share_to_slack = '//a[text()="Share to Slack"]';
@@ -406,7 +406,7 @@ class locators {
     this.Hubspot_Contacts = '[data-title="Hubspot Contacts"]';
     this.Hubspot_Contacts1 = '[title="Hubspot Contacts"]';
     this.Contact_List_1 = '[data-title="Contact List"]';
-    this.Profile_Report = '//span[text()="New Profile Report"]';
+    this.Profile_Report = '//*[text()="New Profile Report"]';
     this.Website_Visitors1 = '[title="Website Visitors"]';
     this.Filte_this_Profile = '//*[text()="PROFILES TO ANALYSE"]//following::button[3]';
     this.Delete_this_Profile = '//*[text()="PROFILES TO ANALYSE"]//following::button[4]';
@@ -1038,6 +1038,7 @@ class locators {
     this.Linkedin_Paid_Leads = '[data-title="Linkedin Paid Leads"]';
     this.Company_Created1 = '//h6[text()="Company Created"]';
     this.Engaged_Sessions = '[data-title="Engaged Sessions"]';
+    this.Company_Type = '[data-id="Company Type"]';
 
   }
 }
