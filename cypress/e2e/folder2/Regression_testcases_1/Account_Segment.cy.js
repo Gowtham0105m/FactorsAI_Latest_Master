@@ -38,10 +38,12 @@ describe('Accounts Segment Login', () => {
             if (!demoElement || demoElement.offsetParent === null) {
                 cy.log("**All Segment not loaded**");
                 methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
                 methods.clickElementByXPath(locators.People);
                 cy.wait(Timeout.xs);
                 methods.Mouseover(locators.account_dropdown);
-                methods.clickElementByXPath(locators.Account);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
                 cy.wait(Timeout.xs);
             } else {
                 cy.log("**All Segment has been loaded**");

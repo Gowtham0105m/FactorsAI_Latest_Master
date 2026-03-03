@@ -117,7 +117,7 @@ describe('Accounts Regression', () => {
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.clickElementByXPath(locators.search_button)
         methods.typeElementByXPath(locators.search_area, 'factors.ai')
         methods.EnterXpath(locators.search_area)
@@ -170,9 +170,9 @@ describe('Accounts Regression', () => {
         methods.clickElement(locators.table_columns);
         methods.VisibilityofElement(locators.Table_properties);
         cy.wait(Timeout.xs);
-        methods.typeElement(locators.Search_Properties, 'company region');
+        methods.typeElement(locators.Search_Properties, 'company type');
         cy.wait(Timeout.xs);
-        methods.clickElement(locators.Company_Region);
+        methods.clickElement(locators.Company_Type);
         cy.wait(Timeout.xs);
         methods.clickElementByXPath(locators.Apply1);
         cy.wait(Timeout.md)
@@ -324,7 +324,7 @@ describe('Accounts Regression', () => {
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.clickElementByXPath(locators.search_button)
         cy.wait(Timeout.sm)
         methods.typeElementByXPath(locators.search_area, 'infosys.com')
@@ -358,7 +358,7 @@ describe('Accounts Regression', () => {
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.clickElementByXPath(locators.search_button)
         cy.wait(Timeout.sm)
         methods.typeElementByXPath(locators.search_area, 'infosys.com')
