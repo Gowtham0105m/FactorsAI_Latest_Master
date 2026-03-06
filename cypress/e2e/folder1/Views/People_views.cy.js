@@ -29,7 +29,24 @@ describe('People view Login', () => {
 
         // select account & birdview
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
+        cy.document().then((doc) => {
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!demoElement || demoElement.offsetParent === null) {
+                cy.log("**All Segment not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+            } else {
+                cy.log("**All Segment has been loaded**");
+            }
+        });
         methods.clickElementByXPath(locators.search_button)
         methods.typeElementByXPath(locators.Search1, 'sarath_tdfect@factors.ai')
         methods.EnterXpath(locators.Search1)

@@ -24,6 +24,23 @@ describe('Timeline Login', () => {
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     methods.VisibilityofElementXpath(locators.account_pageloaded)
     cy.wait(Timeout.xmd)
+    cy.document().then((doc) => {
+      const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+      if (!demoElement || demoElement.offsetParent === null) {
+        cy.log("**All Segment not loaded**");
+        methods.Mouseover(locators.account_dropdown);
+        cy.wait(Timeout.sm);
+        methods.clickElementByXPath(locators.People);
+        cy.wait(Timeout.xs);
+        methods.Mouseover(locators.account_dropdown);
+        cy.wait(Timeout.sm);
+        methods.clickElementIndexXpath(locators.Account, 1);
+        cy.wait(Timeout.xs);
+      } else {
+        cy.log("**All Segment has been loaded**");
+      }
+    });
     methods.clickElementByXPath(locators.search_button)
     cy.wait(Timeout.xs)
     methods.typeElementByXPath(locators.search_area, 'accenture.com')
@@ -54,7 +71,7 @@ describe('Timeline Login', () => {
         }
       });
     }
-    
+
     methods.VisibilityofElement(locators.Page_view_validation)
 
     // Select Event properties[one filter]
@@ -62,25 +79,25 @@ describe('Timeline Login', () => {
     methods.clickElementByXPath(locators.Event_Properties)
 
     cy.xpath(`(//span[text()="Event Properties"]//following::div[contains(@id,"panel-event")]//h6[1])[last()]`).invoke('text').then((Property) => {
-        let Event_property = Property.trim();
-        cy.log(`**Property name: ${Event_property}**`);
+      let Event_property = Property.trim();
+      cy.log(`**Property name: ${Event_property}**`);
 
-        methods.clickElementByXPath(locators.Event_Add_Property)
-        methods.typeElement(locators.select_property, Event_property)
-        cy.wait(Timeout.sm)
-        methods.clickElementByXPath(locators.Filter_option1)
-        methods.assertElementContainsText(locators.Popup_Message, "Property Already Exists")
-        methods.clickElementByXPath(locators.Event_Add_Property)
-        cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//*[text()="${Event_property}"]//following::button[1]`)
-        methods.assertElementContainsText(locators.Popup_Message, "Updated Event Properties Configuration")
-        cy.wait(Timeout.sm)
-        methods.clickElementByXPath(locators.Event_Add_Property)
-        methods.ClearAndType(locators.select_property, Event_property)
-        cy.wait(Timeout.sm)
-        methods.clickElementByXPath(locators.Filter_option1)
-        methods.assertElementContainsText(locators.Popup_Message, "Updated Event Properties Configuration")
-        cy.wait(Timeout.sm)
-      })
+      methods.clickElementByXPath(locators.Event_Add_Property)
+      methods.typeElement(locators.select_property, Event_property)
+      cy.wait(Timeout.sm)
+      methods.clickElementByXPath(locators.Filter_option1)
+      methods.assertElementContainsText(locators.Popup_Message, "Property Already Exists")
+      methods.clickElementByXPath(locators.Event_Add_Property)
+      cy.wait(Timeout.sm)
+      methods.clickElementByXPath(`//*[text()="${Event_property}"]//following::button[1]`)
+      methods.assertElementContainsText(locators.Popup_Message, "Updated Event Properties Configuration")
+      cy.wait(Timeout.sm)
+      methods.clickElementByXPath(locators.Event_Add_Property)
+      methods.ClearAndType(locators.select_property, Event_property)
+      cy.wait(Timeout.sm)
+      methods.clickElementByXPath(locators.Filter_option1)
+      methods.assertElementContainsText(locators.Popup_Message, "Updated Event Properties Configuration")
+      cy.wait(Timeout.sm)
+    })
   })
 })
