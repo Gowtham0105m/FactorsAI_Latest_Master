@@ -24,7 +24,7 @@ describe('Settings Page Login', () => {
 
         [
             { key: 'General', index: 1, url: 'project/general' },
-            { key: 'Members', index: 2, url: 'project/members?activeTab=users' },
+            { key: 'AI Features', index: 3, url: 'project/ai-features' },
             { key: 'Plans & Billing', index: 4, url: 'project/plans/billing' },
             { key: 'Login and Security', index: 6, url: 'project/login-security' },
 
@@ -63,4 +63,25 @@ describe('Settings Page Login', () => {
 
     });
 
-})
+    it('Members & Roles', () => {
+
+        [
+            { key: 'Members', index: 1, url: 'project/members/users' },
+            { key: 'Roles & Permissions', index: 2, url: 'project/members/roles-and-permission' }
+
+        ].map((item) => {
+
+            cy.wait(Timeout.sm)
+            methods.clickElement(locators.setting)
+            methods.clickElementByXPath(locators.Members_Roles)
+            cy.xpath(`(//*[text()="Members & Roles"]//following::ul/li)[${item.index}]`, { timeout: extraTimeOut }).click({ force: true });
+            cy.wait(Timeout.xs);
+            methods.UrlValidationset(item.url)
+            methods.VisibilityofElementXpath(locators.DataManagementHeader)
+            methods.Titletextcontainsxpath(locators.DataManagementHeader, item.key)
+
+        });
+
+    });
+
+});

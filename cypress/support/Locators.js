@@ -195,7 +195,7 @@ class locators {
     this.Dashboards = '//*[text()="Dashboards"]';
     this.Event_Report = '//*[text()="New Event Report"]';
     this.Sparkline = '//span[text()="Sparkline"]';
-    this.Line_Chart = '//h1[text()="Line Chart"]';
+    this.Line_Chart = '//*[text()="Line Chart"]';
     this.Filter_this_event = '//*[text()="EVENTS"]//following::button[3]';
     this.session_properties = '[data-title="Session Properties"]';
     this.breakdown_option = '//*[text()="EVENTS"]//following::button[2]';
@@ -255,11 +255,11 @@ class locators {
     this.File_Upload = 'input[type="file"]';
     this.UploadandContinue = '//span[text()="Upload and Continue"]';
     this.Enrichment_page_validation = '//span[text()="Include"]//following::div[contains(@class,"SixSignalFactors__customSelect")]';
-    this.Enrichment_Uploaded_Verify = '//div[text()="Include"]//following::div[1]';
+    this.Enrichment_Uploaded_Verify = '//*[text()="Include"]//following::div[1]';
     this.Save_Changes = '//span[text()="Save Changes "]';
     this.Save_Changes_New = '//span[text()="Save Changes"]';
     this.Savechanges1 = '//span[text()="Save changes"]';
-    this.close_new = '//div[text()="Include"]//preceding::button[1]';
+    this.close_new = '//*[text()="Include"]//preceding::button[1]';
     this.Delete = '//a[text()="Delete Report"]';
     this.New_Event = '//span[text()="New Event"]';
     this.Source = '#source';
@@ -480,7 +480,7 @@ class locators {
     this.KPI3Selected = '(//*[text()="C"])[1]//following::span[2]';
     this.CalenderCheck = '(//div[text()="from"])//following::button[1]';
     this.ChartCheck = '(//div[text()="from"])//following::span[2]';
-    this.Metric = '//h1[text()="Metric"]';
+    this.Metric = '//*[text()="Metric"]';
     this.EngagedUsers = '[data-title="Engaged Users"]';
     this.UserPostalCode = '[data-title="User Postal Code"]';
     this.FilterByName5 = '(//*[text()="and"])//following::span[1]';
@@ -490,7 +490,7 @@ class locators {
     this.KPIDashboard = '(//div[text()="All Boards"])[1]//following::span[2]';
     this.FirstKPIReport = '(//div[@id="card-1"]//h6)[1]';
     this.threedot_icon = '//div[@class="cursor-pointer"]//button';
-    this.session_Medium_Option = '//div[@title="Session Medium" and @class="flex flex-row items-center"]';
+    this.session_Medium_Option = '[data-title="Session Medium"]';
     this.filter_Funnel = '//div[@class="relative"]//button[@type="button"]';
     this.three_dot_create_Alias = '//*[text()="KPI TO ANALYSE"]//following::button[2]';
     this.create_Alias = '//span[text()="Create Alias"]';
@@ -501,7 +501,7 @@ class locators {
     this.alias_Name_Verify = '//*[text()="KPI TO ANALYSE"]//following::h6[2]';
     this.previous_Day = '//*[text()="Previous Day"]';
     this.previous_30_Days = '//*[text()="Previous 30 Days"]';
-    this.column = '//h1[text()="Column"]';
+    this.column = '//*[text()="Column"]';
     this.chart_Arrow = '(//div[@class="flex items-center gap-x-2"]//button[@type="button"]//*[local-name()="svg"])[4]';
     this.three_dot_Edit_Alias = '//*[text()="KPI TO ANALYSE"]//following::button[3]';
     this.not_Set_Option = '//b[text()="Not Set"]/..';
@@ -833,7 +833,7 @@ class locators {
     this.UniqueUsers = '[data-title="Unique Users"]';
     this.AddProperty = '//span[text()="Add Property"]';
     this.SalesOpportunityAnalysis = '//*[text()="Sales Opportunity Analysis"]';
-    this.FilterDataLoading = '//h4[text()="Loading data..."]';
+    this.FilterDataLoading = '//*[text()="Loading data..."]';
     this.SegmentTemplatePopup = '[role="dialog"]';
     this.Pipeline = '[data-title="Pipeline"]';
     this.HubspotDealDate = '[data-title="Hubspot Deal Owner Assigned Date"]';
@@ -989,7 +989,7 @@ class locators {
     this.Prevoius_Month = '.ant-picker-header-prev-btn';
     this.Month_Date = '//div[@class="ant-picker-body"]//following::div[text()="17"]';
     this.Funnel_Breakdown = '//*[text()="EVENTS PERFORMED IN"]//following::button[3]';
-    this.Channel_PlusIcon = '(//h4[text()="where"]//following::button)[4]';
+    this.Channel_PlusIcon = '(//*[text()="where"]//following::button)[4]';
     this.between = '[data-title="between"]';
     this.Search_or_jump = '[placeholder="Search or jump to"]';
     this.Create_New_Event_Report = '//span[text()="Create New Event Report"]';
@@ -1039,6 +1039,10 @@ class locators {
     this.Company_Created1 = '//h6[text()="Company Created"]';
     this.Engaged_Sessions = '[data-title="Engaged Sessions"]';
     this.Company_Type = '[data-id="Company Type"]';
+    this.Members_Roles = '//span[text()="Members & Roles"]';
+    this.SEGMENT_SUMMARY_UPDATE = '[data-title="SEGMENT_SUMMARY_UPDATE"]';
+    this.Hubspot_Contact_IP_Country_Code = '[data-title="Hubspot Contact IP Country Code"]';
+    this.Hubspot_Deal_Trumpet_Total_Views = '[data-title="Hubspot Deal Trumpet Total Views"]';
 
   }
 }
