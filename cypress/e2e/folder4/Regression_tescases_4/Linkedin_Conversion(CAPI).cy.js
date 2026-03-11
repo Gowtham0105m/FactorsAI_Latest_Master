@@ -62,15 +62,15 @@ describe('Linkedin_Conversion(CAPI) Login', () => {
         methods.clickElement(locators.IsoCode1)
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((Text1) => {
-            methods.ClearAndTypeWithXpath(`//textarea[text()="Untitled LinkedIn CAPI"]`, Text1);
-            methods.EnterXpath(`//textarea[text()="${Text1}"]`)
+            methods.ClearAndType(`[value="Untitled LinkedIn CAPI"]`, Text1);
+            methods.Enter(`[value="${Text1}"]`)
         });
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup2, "Failed!")
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((Text1) => {
-            methods.ClearAndTypeWithXpath(`//textarea[text()="${Text1}"]`, testName);
-            methods.EnterXpath(`//textarea[text()="${testName}"]`);
+            methods.ClearAndType(`[value="${Text1}"]`, testName);
+            methods.Enter(`[value="${testName}"]`);
         });
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup, "SuccessRule Successfully Created!")
@@ -80,8 +80,8 @@ describe('Linkedin_Conversion(CAPI) Login', () => {
         methods.VisibilityofElementXpath(`//*[text()="${testName}"]`)
         cy.wait(Timeout.xs)
         methods.clickElement(locators.Edit_Button)
-        methods.ClearAndTypeWithXpath(`//textarea[text()="${testName}"]`, testName1);
-        methods.EnterXpath(`//textarea[text()="${testName1}"]`);
+        methods.ClearAndType(`[value="${testName}"]`, testName1);
+        methods.Enter(`[value="${testName1}"]`);
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Add_a_Filter)
         methods.clickElement(locators.others)
