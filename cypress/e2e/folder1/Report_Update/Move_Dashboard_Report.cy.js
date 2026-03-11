@@ -39,7 +39,7 @@ describe('Move Dashboard Report Login', () => {
         cy.xpath('//*[text()="Included Reports"]//following-sibling::h6')
             .then(($headers) => {
                 $headers.each((index, el) => {
-                    if (index > 0) {
+                    if (index > 0) {    
                         cy.wrap(el)
                             .invoke('text')
                             .then((classList) => {
