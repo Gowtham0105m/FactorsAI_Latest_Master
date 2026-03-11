@@ -234,7 +234,7 @@ class locators {
     this.Apply_Changes1 = '//span[text()="Apply Changes"]';
     this.Reset_to_Default = '//span[text()="Reset to Default"]';
     this.Add_signal = '//span[text()="Add signal"]';
-    this.Pricing_page_visit_Search = '[value="Untitled"]';
+    this.Pricing_page_visit_Search = '//textarea[text()="Untitled"]';
     this.Assign_weight = '//span[text()="70"]';
     this.Assign_weight1 = '//span[text()="60"]';
     this.Yes = '//span[text()="Yes"]';
@@ -869,7 +869,7 @@ class locators {
     this.SmartReach_Dashboard_log = '//span[text()="View Logs"]';
     this.New_Milestone_Btn = '//span[text()="Add Milestone"]';
     this.Milestone_Header = '//*[text()="Untitled Milestone"]';
-    this.Milestones_Textarea1 = '//input[@value and not(@placeholder)]';
+    this.Milestones_Textarea1 = '//textarea[contains(@class,"ant-input")]';
     this.Journey_Filterthisevent = '//div[@id="additional_actions_events_block"]/button[1]';
     this.Add_Account_stage = '//span[text()="Add Account stage"]';
     this.Milestone_Limit = '//*[text()="Reached max number of account stages in a milestone"]';
@@ -1033,7 +1033,7 @@ class locators {
     this.Hubspot_Company_URL = '[data-title="Hubspot Company URL"]';
     this.DataManagementHeader = '//h4[contains(@class,"text-base font-normal")]';
     this.Account_identification1 = '//h6[text()="Account identification"]';
-    this.Milestone_Title_Name = '[value="Untitled Milestone"]';
+    this.Milestone_Title_Name = '//textarea[text()="Untitled Milestone"]';
     this.Edit_Button = '[data-icon="pen"]';
     this.Linkedin_Paid_Leads = '[data-title="Linkedin Paid Leads"]';
     this.Company_Created1 = '//h6[text()="Company Created"]';

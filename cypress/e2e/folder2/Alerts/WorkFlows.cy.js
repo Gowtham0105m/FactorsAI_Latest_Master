@@ -54,8 +54,8 @@ describe('WorkFlow Login', () => {
         methods.clickElementByXPath(locators.Hubspot_template)
         methods.clickElementByXPath(locators.Use_this_template)
         methods.clickElement(locators.Edit_Button)
-        methods.ClearAndType(`[value="Add or update HubSpot companies"]`, testName)
-        methods.Enter(`[value="${testName}"]`)
+        methods.ClearAndTypeWithXpath(`//textarea[text()="Add or update HubSpot companies"]`, testName);
+        methods.EnterXpath(`//textarea[text()="${testName}"]`)
         methods.clickElementByXPath(locators.select_event)
         methods.clickElement0(locators.others1, 0)
         methods.clickElementByXPath(locators.pageview_option1)
@@ -69,8 +69,8 @@ describe('WorkFlow Login', () => {
         methods.clickElementByXPath(`//*[text()='${testName}']`)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.Edit_Button)
-        methods.ClearAndType(`[value="${testName}"]`, testName1)
-        methods.Enter(`[value="${testName1}"]`)
+        methods.ClearAndTypeWithXpath(`//textarea[text()="${testName}"]`, testName1);
+        methods.EnterXpath(`//textarea[text()="${testName1}"]`);
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Add_a_Filter)
         methods.clickElement0(locators.Hubspot_Contacts, 0)
@@ -139,8 +139,8 @@ describe('WorkFlow Login', () => {
         methods.clickElementByXPath(locators.Use_this_template)
         cy.wait(Timeout.md)
         methods.clickElement(locators.Edit_Button)
-        methods.ClearAndType(`[value="Add or update Salesforce accounts"]`, testName)
-        methods.Enter(`[value="${testName}"]`)
+        methods.ClearAndTypeWithXpath(`//textarea[text()="Add or update Salesforce accounts"]`, testName);
+        methods.EnterXpath(`//textarea[text()="${testName}"]`)
         methods.clickElementByXPath(locators.select_event)
         methods.clickElementByXPath(locators.pageview_option1)
         cy.wait(Timeout.xs)
@@ -206,8 +206,8 @@ describe('WorkFlow Login', () => {
         methods.VisibilityofElement(locators.Templete_Popup)
         methods.clickElementByXPath(locators.Use_this_template)
         methods.clickElement(locators.Edit_Button)
-        methods.ClearAndType(`[value="Add or update Zoho companies"]`, testName)
-        methods.Enter(`[value="${testName}"]`)
+        methods.ClearAndTypeWithXpath(`//textarea[text()="Add or update Zoho companies"]`, testName);
+        methods.EnterXpath(`//textarea[text()="${testName}"]`)
         methods.assertElementContainsText1(locators.PerformedEvent, "Performs an event")
         methods.clickElementByXPath(locators.select_event)
         methods.clickElementByXPath(locators.pageview_option2)

@@ -48,15 +48,15 @@ describe('Linkedin Audience sync login', () => {
         methods.clickElementByXPath(locators.Testing_audience)
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((Text1) => {
-            methods.ClearAndType(`[value="Untitled audience sync"]`, Text1);
-            methods.Enter(`[value="${Text1}"]`)
+            methods.ClearAndTypeWithXpath(`//textarea[text()="Untitled audience sync"]`, Text1);
+            methods.EnterXpath(`//textarea[text()="${Text1}"]`)
         });
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup2, "Failed!Title already in use. Please provide a different title.")
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((Text1) => {
-            methods.ClearAndType(`[value="${Text1}"]`, testName);
-            methods.Enter(`[value="${testName}"]`);
+            methods.ClearAndTypeWithXpath(`//textarea[text()="${Text1}"]`, testName);
+            methods.EnterXpath(`//textarea[text()="${testName}"]`);
         });
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.adpilot_publish)
