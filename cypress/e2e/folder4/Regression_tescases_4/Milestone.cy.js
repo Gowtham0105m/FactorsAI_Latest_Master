@@ -21,7 +21,7 @@ describe('Milestone Login', () => {
     it('Milestone - Save, Edit and Delete', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `Demo Milestone ${randomNumber}`; 
+        const testName = `Demo Milestone ${randomNumber}`;
         const testName1 = `Demo Milestone New ${randomNumber}`;
         const MileStone_Name1 = "Testing 1";
         const MileStone_Name2 = "Testing 2";
@@ -58,7 +58,7 @@ describe('Milestone Login', () => {
         methods.ElementVisibleandClickXpath(locators.New_Milestone_Btn)
         methods.VisibilityofElementXpath(locators.Milestone_Header)
         methods.clickElementIndexXpath(locators.custom_event_name, 0)
-        methods.ClearAndType(locators.Milestone_Title_Name, testName)
+        methods.ClearAndTypeWithXpath(locators.Milestone_Title_Name, testName)
         methods.clickElementByXPath(locators.select_event_1)
         methods.clickElement0(locators.Hubspot_Contacts, 0)
         methods.typeElement(locators.Select_Event, "Updated")
@@ -111,8 +111,8 @@ describe('Milestone Login', () => {
         methods.clickElementByXPath(`//*[text()="${testName}"]`)
         cy.wait(Timeout.sm)
         methods.clickElementIndexXpath(locators.custom_event_name, 0)
-        methods.ClearAndType(`[value="${testName}"]`, testName1)
-        methods.Enter(`[value="${testName1}"]`)
+        methods.ClearAndTypeWithXpath(`//textarea[text()="${testName}"]`, testName1);
+        methods.EnterXpath(`//textarea[text()="${testName1}"]`);
         cy.wait(Timeout.sm)
         methods.clickElementIndexXpath(locators.custom_event_name, 2)
         methods.ClearAndTypeWithXpath(locators.Milestones_Textarea1, MileStone_Name2)
@@ -169,7 +169,7 @@ describe('Milestone Login', () => {
         methods.ElementVisibleandClickXpath(locators.New_Milestone_Btn)
         methods.VisibilityofElementXpath(locators.Milestone_Header)
         methods.clickElementIndexXpath(locators.custom_event_name, 0)
-        methods.ClearAndType(locators.Milestone_Title_Name, testName)
+        methods.ClearAndTypeWithXpath(locators.Milestone_Title_Name, testName)
         methods.clickElementByXPath(locators.select_event_1)
         methods.clickElement0(locators.Hubspot_Contacts, 0)
         methods.typeElement(locators.Select_Event, "Updated")
