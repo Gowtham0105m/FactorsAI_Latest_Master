@@ -57,8 +57,8 @@ describe('Adpilot Smart reach', () => {
         methods.assertElementContainsText(locators.notification_popup2, "Failed!duplicate name")
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((Text1) => {
-            methods.ClearAndTypeWithXpath(`//textarea[text()="${Text1}"]`, testName);
-            methods.EnterXpath(`//textarea[text()="${testName}"]`);
+            methods.ClearAndTypeWithXpath(`//textarea[text()="${Text1}"]`, new_campaign);
+            methods.EnterXpath(`//textarea[text()="${new_campaign}"]`);
         });
         methods.clickElementByXPath(locators.Campaign)
         methods.clickElementByXPath(locators.adpilot_publish)

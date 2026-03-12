@@ -95,8 +95,8 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.xs)
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((title) => {
-            methods.ClearAndType(`[value="Untitled Google Enhanced Conversions"]`, title);
-            methods.Enter(`[value="${title}"]`);
+            methods.ClearAndTypeWithXpath(`//textarea[text()="Untitled Google Enhanced Conversions"]`, title);
+            methods.EnterXpath(`//textarea[text()="${title}"]`)
         });
         cy.wait(Timeout.sm)
         methods.ScrollAndClickxpath(locators.adpilot_publish)
@@ -105,8 +105,8 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.sm)
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((title) => {
-            methods.ClearAndType(`[value="${title}"]`, testName);
-            methods.Enter(`[value="${testName}"]`);
+            methods.ClearAndTypeWithXpath(`//textarea[text()="${title}"]`, testName);
+            methods.EnterXpath(`//textarea[text()="${testName}"]`);
         });
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         methods.GetText(locators.notification_popup, "SuccessRule Successfully Created!")
@@ -122,7 +122,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.GetText(locators.notification_popup, "SuccessRefreshed conversion actions!")
         cy.wait(Timeout.sm)
         methods.clickElement(locators.Edit_Button)
-        methods.ClearAndType(`[value="${testName}"]`, testName1);
+        methods.ClearAndTypeWithXpath(`//textarea[text()="${testName}"]`, testName1);
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Add_a_Filter)
         methods.typeElement(locators.search_1, "hubspot deal trumpet total views")
@@ -235,8 +235,8 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.xs)
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((title) => {
-            methods.ClearAndType(`[value="Untitled Google Enhanced Conversions"]`, title);
-            methods.Enter(`[value="${title}"]`);
+            methods.ClearAndTypeWithXpath(`//textarea[text()="Untitled Google Enhanced Conversions"]`, title);
+            methods.EnterXpath(`//textarea[text()="${title}"]`)
         });
         cy.wait(Timeout.sm)
         methods.ScrollAndClickxpath(locators.adpilot_publish)
@@ -245,8 +245,8 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.sm)
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((title) => {
-            methods.ClearAndType(`[value="${title}"]`, testName);
-            methods.Enter(`[value="${testName}"]`);
+            methods.ClearAndTypeWithXpath(`//textarea[text()="${title}"]`, testName);
+            methods.EnterXpath(`//textarea[text()="${testName}"]`);
         });
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         cy.wait(Timeout.xs)
@@ -263,7 +263,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.GetText(locators.notification_popup, "SuccessRefreshed conversion actions!")
         cy.wait(Timeout.sm)
         methods.clickElement(locators.Edit_Button)
-        methods.ClearAndType(`[value="${testName}"]`, testName1);
+        methods.ClearAndTypeWithXpath(`//textarea[text()="${testName}"]`, testName1);
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Add_a_Filter)
         methods.clickElement0(locators.others, 0)
@@ -292,7 +292,7 @@ describe('Google Enhanced Conversions Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const Ad_Account = "7108784795";
         const testName = `Demo Google CAPI ${nowTime}`;
-        const testName1 = ` Demo Google CAPI New ${nowTime}`;
+        const testName1 = `Demo Google CAPI New ${nowTime}`;
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Title_page)
@@ -373,8 +373,8 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.xs)
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((title) => {
-            methods.ClearAndType(`[value="Untitled Google Enhanced Conversions"]`, title);
-            methods.Enter(`[value="${title}"]`);
+            methods.ClearAndTypeWithXpath(`//textarea[text()="Untitled Google Enhanced Conversions"]`, title);
+            methods.EnterXpath(`//textarea[text()="${title}"]`)
         });
         cy.wait(Timeout.sm)
         methods.ScrollAndClickxpath(locators.adpilot_publish)
@@ -383,8 +383,8 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.sm)
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((title) => {
-            methods.ClearAndType(`[value="${title}"]`, testName);
-            methods.Enter(`[value="${testName}"]`);
+            methods.ClearAndTypeWithXpath(`//textarea[text()="${title}"]`, testName);
+            methods.EnterXpath(`//textarea[text()="${testName}"]`);
         });
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         methods.GetText(locators.notification_popup, "SuccessRule Successfully Created!")
@@ -400,7 +400,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.GetText(locators.notification_popup, "SuccessRefreshed conversion actions!")
         cy.wait(Timeout.sm)
         methods.clickElement(locators.Edit_Button)
-        methods.ClearAndType(`[value="${testName}"]`, testName1);
+        methods.ClearAndTypeWithXpath(`//textarea[text()="${testName}"]`, testName1);
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Add_a_Filter)
         methods.clickElement0(locators.others, 0)
@@ -488,8 +488,8 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.xs)
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((title) => {
-            methods.ClearAndType(`[value="Untitled Google Enhanced Conversions"]`, title);
-            methods.Enter(`[value="${title}"]`);
+            methods.ClearAndTypeWithXpath(`//textarea[text()="Untitled Google Enhanced Conversions"]`, title);
+            methods.EnterXpath(`//textarea[text()="${title}"]`)
         });
         cy.wait(Timeout.sm)
         methods.ScrollAndClickxpath(locators.adpilot_publish)
@@ -498,8 +498,8 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.sm)
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((title) => {
-            methods.ClearAndType(`[value="${title}"]`, testName);
-            methods.Enter(`[value="${testName}"]`);
+            methods.ClearAndTypeWithXpath(`//textarea[text()="${title}"]`, testName);
+            methods.EnterXpath(`//textarea[text()="${testName}"]`);
         });
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         cy.wait(Timeout.sm)
@@ -516,7 +516,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.GetText(locators.notification_popup, "SuccessRefreshed conversion actions!")
         cy.wait(Timeout.sm)
         methods.clickElement(locators.Edit_Button)
-        methods.ClearAndType(`[value="${testName}"]`, testName1);
+        methods.ClearAndTypeWithXpath(`//textarea[text()="${testName}"]`, testName1);
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Add_a_Filter)
         methods.typeElement(locators.search_1, "Hubspot Contact Pipeline")
@@ -619,8 +619,8 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.xs)
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((title) => {
-            methods.ClearAndType(`[value="Untitled Google Enhanced Conversions"]`, title);
-            methods.Enter(`[value="${title}"]`);
+            methods.ClearAndTypeWithXpath(`//textarea[text()="Untitled Google Enhanced Conversions"]`, title);
+            methods.EnterXpath(`//textarea[text()="${title}"]`)
         });
         cy.wait(Timeout.sm)
         methods.ScrollAndClickxpath(locators.adpilot_publish)
@@ -629,8 +629,8 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.sm)
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((title) => {
-            methods.ClearAndType(`[value="${title}"]`, testName);
-            methods.Enter(`[value="${testName}"]`);
+            methods.ClearAndTypeWithXpath(`//textarea[text()="${title}"]`, testName);
+            methods.EnterXpath(`//textarea[text()="${testName}"]`);
         });
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         methods.GetText(locators.notification_popup, "SuccessRule Successfully Created!")

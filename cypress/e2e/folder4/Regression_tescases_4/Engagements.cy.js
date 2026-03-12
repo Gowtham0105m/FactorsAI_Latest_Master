@@ -726,6 +726,24 @@ describe('Engagements scoring Login', () => {
     cy.wait(Timeout.sm)
 
     cy.document().then((doc) => {
+      const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+      if (!demoElement || demoElement.offsetParent === null) {
+        cy.log("**All Segment not loaded**");
+        methods.Mouseover(locators.account_dropdown);
+        cy.wait(Timeout.sm);
+        methods.clickElementByXPath(locators.People);
+        cy.wait(Timeout.xs);
+        methods.Mouseover(locators.account_dropdown);
+        cy.wait(Timeout.sm);
+        methods.clickElementIndexXpath(locators.Account, 1);
+        cy.wait(Timeout.xs);
+      } else {
+        cy.log("**All Segment has been loaded**");
+      }
+    });
+
+    cy.document().then((doc) => {
       const demoElements = doc.evaluate(`//td[contains(@title,"Demo")]`, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
       if (demoElements.snapshotLength > 0) {
 
