@@ -20,9 +20,9 @@ describe('Insight custom range', () => {
 
     it('Insight custom range', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         cy.document().then((doc) => {
@@ -45,13 +45,13 @@ describe('Insight custom range', () => {
         methods.assertElementContainsTextxpath(locators.AllsegmentMenu, "All segments")
         methods.clickElementByXPath(locators.All_segments)
         methods.clickElementByXPath(locators.In_Hubspot)
-        cy.wait(Timeout.lg)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.scrollWithXpath(locators.In_Hubspot3)
         methods.clickElement(locators.Insight_Icon)
-        cy.wait(Timeout.xmd)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpathIndexInput(locators.Hubspot_InsightLoad, 3)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.clickElement(locators.Select_Analysis_Window)
         methods.clickElementByXPath(locators.Last_Week)
         cy.wait(Timeout.lgr)
@@ -155,9 +155,9 @@ describe('Insight custom range', () => {
 
     it('Compare another insight segment', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         cy.document().then((doc) => {
@@ -180,12 +180,12 @@ describe('Insight custom range', () => {
         methods.assertElementContainsTextxpath(locators.AllsegmentMenu, "All segments")
         methods.clickElementByXPath(locators.All_segments)
         methods.clickElementByXPath(locators.In_Hubspot)
-        cy.wait(Timeout.lg)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.scrollWithXpath(locators.In_Hubspot3)
         methods.clickElement(locators.Insight_Icon)
         methods.VisibilityofElementXpath(locators.Hubspot_InsightLoad)
-        cy.wait(Timeout.xmd)
+        cy.wait(Timeout.xl)
         methods.ScrollAndClick(locators.Search)
         methods.clickElement(locators.Visited_Website1)
         cy.wait(Timeout.lgr)

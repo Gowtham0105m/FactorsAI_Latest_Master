@@ -24,7 +24,7 @@ describe('Interest Group Login', () => {
         const testName = `Interest_Group_Page_View ${randomNumber}`;
         const testName1 = `Interest_Group_Page_View_Edit ${randomNumber}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -104,7 +104,7 @@ describe('Interest Group Login', () => {
         const testName = `Interest_Group_Hubspot_Forms ${randomNumber}`;
         const testName1 = `Interest_Group_Hubspot_Forms_Edit ${randomNumber}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -185,7 +185,7 @@ describe('Interest Group Login', () => {
         const testName = `Interest_Group_Salesforce ${randomNumber}`;
         const testName1 = `Interest_Group_Salesforce_Edit ${randomNumber}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -266,7 +266,7 @@ describe('Interest Group Login', () => {
         const testName = `Interest_Group_LinkedIn_Ads ${randomNumber}`;
         const testName1 = `Interest_Group_LinkedIn_Ads_Edit ${randomNumber}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -347,7 +347,7 @@ describe('Interest Group Login', () => {
         const testName = `Interest_Group_G2_Intent ${randomNumber}`;
         const testName1 = `Interest_Group_G2_Intent_Edit ${randomNumber}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -428,7 +428,7 @@ describe('Interest Group Login', () => {
         const testName = `Interest_Group_Custom_Event ${randomNumber}`;
         const testName1 = `Interest_Group_Custom_Event_Edit ${randomNumber}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -499,7 +499,7 @@ describe('Interest Group Login', () => {
         const testName = `Interest_Group_verification ${randomNumber}`;
         const testName1 = `Interest_Group_verification_Edit ${randomNumber}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)

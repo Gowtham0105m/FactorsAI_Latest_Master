@@ -22,9 +22,10 @@ describe('Enrichment Rules Login', () => {
 
         const filePath = 'Sample_file_for_page_URL_rules.csv';
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElement(locators.setting)
         methods.clickElementByXPath(locators.Data_Management)

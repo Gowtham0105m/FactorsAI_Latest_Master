@@ -24,7 +24,7 @@ describe('Custom Kpi Login', () => {
         const testName = `Custom Kpi Default ${randomNumber}`;
 
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -78,7 +78,7 @@ describe('Custom Kpi Login', () => {
         const testName = `Custom Kpi Derived ${randomNumber}`;
 
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -122,7 +122,7 @@ describe('Custom Kpi Login', () => {
         const testName = `Custom Kpi Event${randomNumber}`;
 
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -169,7 +169,7 @@ describe('Custom Kpi Login', () => {
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const testName = `Custom Kpi Time${randomNumber}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)

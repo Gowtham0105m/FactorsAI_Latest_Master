@@ -21,7 +21,7 @@ describe('Attribution Regression', () => {
 
     it('TC_RE_01 - Attribution - page load ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -37,7 +37,7 @@ describe('Attribution Regression', () => {
 
     it('TC_RE_02 - Attribution - Add filter ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -72,7 +72,7 @@ describe('Attribution Regression', () => {
 
     it('TC_RE_03 - Attribution - attribution Type ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -108,7 +108,7 @@ describe('Attribution Regression', () => {
 
     it('TC_RE_04 - Attribution - property ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -145,7 +145,7 @@ describe('Attribution Regression', () => {
 
     it('TC_RE_05 - Attribution - Attribution model ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -186,7 +186,7 @@ describe('Attribution Regression', () => {
 
     it('TC_RE_06 - Attribution - date range ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -231,7 +231,7 @@ describe('Attribution Regression', () => {
 
     it('TC_RE_07 - Attribution - New Attribution created', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -282,7 +282,7 @@ describe('Attribution Regression', () => {
 
         let text1, text2, text3, text4;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)

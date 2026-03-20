@@ -1038,11 +1038,13 @@ class locators {
     this.Linkedin_Paid_Leads = '[data-title="Linkedin Paid Leads"]';
     this.Company_Created1 = '//h6[text()="Company Created"]';
     this.Engaged_Sessions = '[data-title="Engaged Sessions"]';
-    this.Company_Type = '//*[text()="Company Type"]';
+    this.Company_Type = '//h6[text()="Company Type"]';
     this.Members_Roles = '//span[text()="Members & Roles"]';
     this.SEGMENT_SUMMARY_UPDATE = '[data-title="SEGMENT_SUMMARY_UPDATE"]';
     this.Hubspot_Contact_IP_Country_Code = '[data-title="Hubspot Contact IP Country Code"]';
     this.Hubspot_Deal_Trumpet_Total_Views = '[data-title="Hubspot Deal Trumpet Total Views"]';
+    this.Hubspot_Deal_Pipeline = '[data-title="Hubspot Deal Pipeline"]';
+    this.Company_Tech = '[data-title="Company Tech"]';
 
   }
 }

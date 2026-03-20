@@ -27,11 +27,12 @@ describe('Funnel Report Login', () => {
         let selectedDateBeforeSave1 = "";
         let selectedDateAfterSave1 = "";
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         methods.clickElementByXPath(locators.Drafts)
         methods.VisibilityofElement(locators.Table_Body_1)
@@ -44,7 +45,7 @@ describe('Funnel Report Login', () => {
         methods.clickElementByXPath(locators.Funnel_Breakdown)
         methods.clickElementByXPath(locators.BreakDown)
         methods.clickElement0(locators.others, 0)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.Filter_option1)
         methods.clickElementByXPath(locators.Add_another_event)
         methods.clickElement0(locators.Linkedin_Company_Engagements, 0)
@@ -63,32 +64,33 @@ describe('Funnel Report Login', () => {
         methods.clickElementByXPath(locators.calender_MenuList)
         methods.clickElementByXPath(locators.Select_Month)
         methods.clickElementByXPath(locators.date_choosen)
+        cy.wait(Timeout.md)
         cy.xpath('(//*[text()="FUNNEL CRITERIA"])//following::button[1]').invoke('text').then((dateText) => {
-                selectedDateBeforeSave1 = dateText.trim();
-                cy.log(`**Selected Date Before Save: ${selectedDateBeforeSave1}**`);
-            });
+            selectedDateBeforeSave1 = dateText.trim();
+            cy.log(`**Selected Date Before Save: ${selectedDateBeforeSave1}**`);
+        });
         methods.clickElementByXPath(locators.Run_Anal)
         methods.VisibilityofElement(locators.Attri_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.Save_1)
         methods.typeElement(locators.Report_Name, testName)
         methods.typeElement(locators.Description_OP, 'Testing Purpose')
         methods.clickElementByXPath(locators.save1)
         methods.VisibilityofElement(locators.notification_popup)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.VisibilityofElement(locators.Attri_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.Closed)
         methods.VisibilityofElement(locators.Table_Body_1)
         methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.View_Report)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.VisibilityofElement(locators.Profile_report_gen)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         cy.xpath('(//div[@class="calendar"]//div[@class="fa-custom-datepicker"])[1]').invoke('text').then((dateText) => {
-                selectedDateAfterSave1 = dateText.trim();
-                cy.log(`**Selected Date After Save: ${selectedDateAfterSave1}**`);
-            });
+            selectedDateAfterSave1 = dateText.trim();
+            cy.log(`**Selected Date After Save: ${selectedDateAfterSave1}**`);
+        });
         if (selectedDateBeforeSave1 === selectedDateAfterSave1) {
             cy.log("**Both the date are same**");
         } else {
@@ -102,19 +104,19 @@ describe('Funnel Report Login', () => {
         methods.clickElement(locators.Add_New_Breakdown_new)
         methods.clickElement0(locators.HubspotDeals, 0)
         methods.clickElementByXPath(locators.Filter_option2)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.Run_Analysis1)
         cy.wait(Timeout.xmd)
         methods.VisibilityofElement(locators.Attri_pageloaded)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
         methods.ElementToBeClickableXpath(locators.Save_1)
         cy.wait(Timeout.md)
         methods.MouseoverWithXpath(locators.Save_dropdown)
         cy.wait(Timeout.md)
         methods.ElementToBeClickableXpath(locators.Save_as_New)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.Save_as_New)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
         methods.typeElement(locators.Report_Name, testName1)
         methods.typeElement(locators.Description_OP, 'Testing Purpose')
         methods.clickElementByXPath(locators.Save_Report)
@@ -129,25 +131,25 @@ describe('Funnel Report Login', () => {
         methods.clickElementByXPath(locators.Remove_FilterBy)
         methods.clickElementByXPath(locators.Remove_Breakdown)
         methods.clickElementByXPath(locators.Run_Analysis1)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.VisibilityofElement(locators.Profile_report_gen)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.Save_1)
         methods.VisibilityofElement(locators.notification_popup)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.close_2)
         methods.VisibilityofElement(locators.Table_Body_1)
         methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.Delete_Report_1)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.confirm)
         methods.VisibilityofElement(locators.Table_Body_1)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.MouseoverWithXpath(`//*[text()='${testName1}']//following::button[1]`)
         methods.clickElementByXPath(locators.Delete_Report_1)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.confirm)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
     })
 
     it('Funnel Report New Flow', () => {
@@ -157,11 +159,12 @@ describe('Funnel Report Login', () => {
         let selectedDateBeforeSave1 = "";
         let selectedDateAfterSave1 = "";
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         methods.clickElementByXPath(locators.Drafts)
         methods.VisibilityofElement(locators.Table_Body_1)
@@ -188,11 +191,11 @@ describe('Funnel Report Login', () => {
         methods.clickElementByXPath(locators.calender_MenuList)
         methods.clickElementByXPath(locators.Select_Month)
         methods.clickElementByXPath(locators.date_choosen)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         cy.xpath('(//*[text()="FUNNEL CRITERIA"])//following::button[1]').invoke('text').then((dateText) => {
-                selectedDateBeforeSave1 = dateText.trim();
-                cy.log(`**Selected Date Before Save: ${selectedDateBeforeSave1}**`);
-            });
+            selectedDateBeforeSave1 = dateText.trim();
+            cy.log(`**Selected Date Before Save: ${selectedDateBeforeSave1}**`);
+        });
         methods.clickElementByXPath(locators.Run_Anal)
         methods.VisibilityofElement(locators.Attri_pageloaded)
         methods.clickElementByXPath(locators.Save_1)
@@ -200,37 +203,37 @@ describe('Funnel Report Login', () => {
         methods.typeElement(locators.Description_OP, 'Testing Purpose')
         methods.clickElementByXPath(locators.save1)
         methods.VisibilityofElement(locators.notification_popup)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.Closed)
         methods.VisibilityofElement(locators.Table_Body_1)
         methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.View_Report)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         cy.xpath('(//div[@class="calendar"]//div[@class="fa-custom-datepicker"])[1]').invoke('text').then((dateText) => {
             selectedDateAfterSave1 = dateText.trim();
             cy.log(`**Selected Date After Save: ${selectedDateAfterSave1}**`);
-            });
+        });
         if (selectedDateBeforeSave1 === selectedDateAfterSave1) {
             cy.log("**Both the date are same**");
         } else {
             throw new Error("**The date are not same**");
         }
         methods.clickElementByXPath(locators.Expand_1)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.Remove_FilterBy)
         methods.clickElementByXPath(locators.Remove_Breakdown)
         methods.clickElementByXPath(locators.Run_Analysis1)
         methods.VisibilityofElement(locators.Profile_report_gen)
         methods.clickElementByXPath(locators.Save_1)
         methods.VisibilityofElement(locators.notification_popup)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.close_2)
         methods.VisibilityofElement(locators.Table_Body_1)
         methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.Delete_Report_1)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.confirm)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
     })
 
     it('Funnel Report - Edit Details', () => {
@@ -241,11 +244,12 @@ describe('Funnel Report Login', () => {
         let selectedDateBeforeSave1 = "";
         let selectedDateAfterSave1 = "";
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         methods.clickElementByXPath(locators.Drafts)
         methods.VisibilityofElement(locators.Table_Body_1)
@@ -254,7 +258,7 @@ describe('Funnel Report Login', () => {
         methods.VisibilityofElementXpath(locators.FUNNEL)
         methods.clickElementByXPath(locators.Add_First_Event)
         methods.typeElement(locators.search_1, 'Webs')
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.clickElement0(locators.Website_Session, 0)
         methods.clickElementByXPath(locators.Add_another_event)
         methods.clickElement0(locators.Linkedin_Company_Engagements, 0)
@@ -263,11 +267,11 @@ describe('Funnel Report Login', () => {
         methods.clickElementByXPath(locators.Add_New_FilterBy)
         methods.clickElement0(locators.All_Account, 0)
         methods.clickElementByXPath(locators.pageview_option1)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.clickElement(locators.equals_1)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.pageview_option1)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.Apply1)
         cy.xpath('(//*[text()="FUNNEL CRITERIA"])//following::button[1]')
             .invoke('text')
@@ -282,11 +286,13 @@ describe('Funnel Report Login', () => {
         methods.typeElement(locators.Description_OP, 'Testing Purpose')
         methods.clickElementByXPath(locators.save1)
         methods.assertElementContainsText(locators.notification_popup, "Report Saved Successfully")
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
+        methods.VisibilityofElement(locators.Attri_pageloaded)
         methods.clickElementByXPath(locators.Closed)
         methods.VisibilityofElement(locators.Table_Body_1)
         methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.View_Report)
+        cy.wait(Timeout.md)
         cy.xpath('(//div[@class="calendar"]//div[@class="fa-custom-datepicker"])[1]')
             .invoke('text')
             .then((dateText) => {
@@ -299,23 +305,23 @@ describe('Funnel Report Login', () => {
             throw new Error("**The date are not same**");
         }
         methods.clickElementByXPath(locators.Expand_1)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.MouseoverWithXpath(locators.ReportOptions)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.EditDetails)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.VisibilityofElement(locators.SegmentTemplatePopup)
         methods.ClearAndType(locators.Report_Name, testName1)
         methods.clickElementByXPath(locators.save1)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
         methods.assertElementContainsText(locators.notification_popup, "Report Saved Successfully")
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.Closed)
         methods.VisibilityofElement(locators.Table_Body_1)
         methods.MouseoverWithXpath(`//*[text()='${testName1}']//following::button[1]`)
         methods.clickElementByXPath(locators.Delete_Report_1)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.confirm)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
     })
 })

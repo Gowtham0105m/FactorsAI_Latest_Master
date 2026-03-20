@@ -28,10 +28,10 @@ describe('WorkFlow Login', () => {
         const testName1 = `Demo Hubspot New_${nowTime}_1`;
         const IntegrateName = "HubSpot";
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.visit(`${envDetails.backendApiUrl}/automations/workflows`)
-        cy.wait(Timeout.xmd)
+        cy.wait(Timeout.lg)
         methods.VisibilityofElementXpathIndexInput(locators.workflows_Title, 1)
         cy.wait(Timeout.xs)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
@@ -111,10 +111,10 @@ describe('WorkFlow Login', () => {
         const testName = `Demo Salesforce_${nowTime}`;
         const IntegrateName = "Salesforce";
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.visit(`${envDetails.backendApiUrl}/automations/workflows`)
-        cy.wait(Timeout.xmd)
+        cy.wait(Timeout.lg)
         methods.VisibilityofElementXpathIndexInput(locators.workflows_Title, 1)
         cy.wait(Timeout.xs)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
@@ -189,12 +189,12 @@ describe('WorkFlow Login', () => {
         const testName = `Zoho_Demo_${nowTime}`;
         const IntegrateName = "Integrate Zoho CRM";
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.clickElementByXPath(locators.Automation)
         methods.clickElementIndexXpath(locators.WorkFlows, 0)
-        cy.wait(Timeout.xmd)
+        cy.wait(Timeout.lg)
         methods.VisibilityofElementXpathIndexInput(locators.workflows_Title, 1)
         cy.wait(Timeout.xs)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
@@ -283,12 +283,12 @@ describe('WorkFlow Login', () => {
 
     it('WorkFlow - Activity log', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.clickElementByXPath(locators.Automation)
         methods.clickElementIndexXpath(locators.WorkFlows, 0)
-        cy.wait(Timeout.xmd)
+        cy.wait(Timeout.lg)
         methods.VisibilityofElementXpathIndexInput(locators.workflows_Title, 1)
         methods.VisibilityofElement(locators.identi_table)
         cy.wait(Timeout.xs)

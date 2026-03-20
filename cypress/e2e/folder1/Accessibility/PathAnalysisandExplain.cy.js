@@ -27,8 +27,8 @@ describe('Journeys Page Login', () => {
     ].map((item) => {
       cy.wait(Timeout.sm)
       methods.Mouseover(locators.report_dropdown)
-      cy.wait(Timeout.xs)
-      cy.xpath(`(//ul)[2]/li[${item.index}]/span/a`, { timeout: extraTimeOut }).click({ force: true });
+      cy.wait(Timeout.lg)
+      cy.xpath(`//ul/li[${item.index}]/span/a/h6`, { timeout: extraTimeOut }).click({ force: true });
       cy.wait(Timeout.xs);
       methods.navigateToUrljour(item.url)
       methods.VisibilityofElement(locators.Page_title1)

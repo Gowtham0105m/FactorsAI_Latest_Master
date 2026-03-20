@@ -33,15 +33,14 @@ describe('Global search kpi', () => {
         methods.VisibilityofElementXpath(locators.KPITOANALYSE);
         cy.wait(Timeout.md);
         methods.clickElementByXPath(locators.Add_a_KPI);
-        methods.clickElement(locators.Hubspot_Contacts);
-        cy.wait(Timeout.sm);
-        methods.clickElementByXPath(locators.pageview_option1);
-        cy.wait(Timeout.sm);
+        methods.Clickwithindexandvalidation(locators.Website_Session, 0)
+        methods.typeElement(locators.search_1, 'tot')
+        methods.clickElement(locators.Total_Session)
         methods.clickElementByXPath(locators.Run_Analysis1);
         cy.wait(Timeout.md);
         methods.VisibilityofElement(locators.Profile_report_gen);
         methods.clickElementByXPath(locators.Closed); -
-            methods.VisibilityofElement(locators.Upgrade_validation);
+        methods.VisibilityofElement(locators.Upgrade_validation);
         methods.clickElementByXPath(locators.Close_without_saving);
         cy.wait(Timeout.md);
         methods.VisibilityofElementXpath(locators.SegmentTitle)

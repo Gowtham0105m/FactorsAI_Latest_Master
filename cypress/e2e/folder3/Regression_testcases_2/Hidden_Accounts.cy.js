@@ -21,11 +21,11 @@ describe('Hidden Accounts', () => {
 
     it('Hidden Accounts', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.lg)
+        cy.wait(Timeout.md)
 
         // select Hidden account
 
@@ -108,10 +108,10 @@ describe('Hidden Accounts', () => {
         methods.Mouseover(locators.account_dropdown);
         cy.wait(Timeout.sm)
         methods.clickElementIndexXpath(locators.Account, 1)
-        cy.wait(Timeout.xmd)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.reload();
-        cy.wait(Timeout.xmd)
+        cy.wait(Timeout.xl)
         methods.clickElementByXPath(locators.search_button)
         cy.wait(Timeout.xs)
         methods.typeElementByXPath(locators.search_area, 'trackdfect.com')
@@ -124,11 +124,11 @@ describe('Hidden Accounts', () => {
 
     it('Hidden Accounts - Popup link', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.lg)
+        cy.wait(Timeout.md)
 
         // select Hidden account
 
@@ -186,10 +186,10 @@ describe('Hidden Accounts', () => {
         methods.Mouseover(locators.account_dropdown);
         cy.wait(Timeout.sm)
         methods.clickElementIndexXpath(locators.Account, 1)
-        cy.wait(Timeout.xmd)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.reload();
-        cy.wait(Timeout.xmd)
+        cy.wait(Timeout.xl)
         methods.clickElementByXPath(locators.search_button)
         cy.wait(Timeout.xs)
         methods.typeElementByXPath(locators.search_area, 'trackdfect.com')
