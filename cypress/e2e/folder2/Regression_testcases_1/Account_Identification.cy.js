@@ -21,7 +21,7 @@ describe('Account Identification Regression', () => {
 
     it('TC_RE_01, TC_RE_02 - Account Identification ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
@@ -40,7 +40,7 @@ describe('Account Identification Regression', () => {
 
     it('TC_RE_03 - Account Identification - Add filters ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
@@ -73,7 +73,7 @@ describe('Account Identification Regression', () => {
 
     it('TC_RE_04 - Account Identification - Add campaign', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
@@ -99,7 +99,7 @@ describe('Account Identification Regression', () => {
 
     it('TC_RE_05 - Account Identification - Page viewed', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
@@ -123,7 +123,7 @@ describe('Account Identification Regression', () => {
 
     it('TC_RE_06 - Account Identification - Search field', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
@@ -143,7 +143,7 @@ describe('Account Identification Regression', () => {
 
     it('TC_RE_07 - Account Identification - Download CSV', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
@@ -159,7 +159,7 @@ describe('Account Identification Regression', () => {
 
     it('TC_RE_08 - Account Identification - Date range', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
@@ -178,7 +178,7 @@ describe('Account Identification Regression', () => {
 
     it('TC_RE_09 - Account Identification - Share_Send Once', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
@@ -197,7 +197,7 @@ describe('Account Identification Regression', () => {
 
     it('TC_RE_10 - Account Identification - Share_Subscribe copy link', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)

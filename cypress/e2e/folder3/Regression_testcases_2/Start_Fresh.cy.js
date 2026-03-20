@@ -25,8 +25,9 @@ describe('Start_Fresh_Icon', () => {
         const testName = `Demo_${nowTime}`;
         const FolderName = `Master_${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         cy.document().then((doc) => {

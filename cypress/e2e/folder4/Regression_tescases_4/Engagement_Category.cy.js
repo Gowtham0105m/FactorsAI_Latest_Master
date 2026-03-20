@@ -20,9 +20,11 @@ describe('Engagement Category Login', () => {
 
     it('Engagement Category', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.md)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.setting)

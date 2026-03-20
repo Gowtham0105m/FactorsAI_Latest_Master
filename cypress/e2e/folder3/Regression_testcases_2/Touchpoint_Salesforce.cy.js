@@ -20,8 +20,9 @@ describe('TouchPoint Salesforce Login', () => {
 
     it('TouchPoint Salesforce', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElement(locators.setting)
         methods.clickElementByXPath(locators.Data_Management)

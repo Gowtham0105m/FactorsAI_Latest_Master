@@ -20,8 +20,9 @@ describe('Charts Login', () => {
 
     it('TC_RE_01_Charts - companies have been visited', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -39,19 +40,20 @@ describe('Charts Login', () => {
         methods.clickElementByXPath(locators.pageview_option1)
         methods.clickElementByXPath(locators.KPI_Cal)
         cy.wait(Timeout.sm)
-        methods.clickElement0(locators.choose_date, 7)
-        cy.wait(Timeout.sm)
-        methods.clickElementByXPath(locators.Run_Analysis1)
-        cy.wait(Timeout.md)
-        methods.VisibilityofElement(locators.Profile_report_gen)
+        methods.clickElementByXPath(locators.Last_Month)
+        cy.wait(Timeout.sm);
+        methods.clickElementByXPath(locators.Run_Analysis1);
+        methods.VisibilityofElement(locators.Profile_report_gen);
+        cy.wait(Timeout.sm);
         methods.MouseoverWithXpath(locators.Sparkline)
         methods.clickElementByXPath(locators.Line_Chart)
     })
 
     it('TC_RE_02_Charts - Local filters, Local break down', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)

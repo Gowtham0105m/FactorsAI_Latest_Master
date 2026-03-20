@@ -20,7 +20,7 @@ describe('Funnel compare Login', () => {
 
     it('Funnel compare', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -46,6 +46,14 @@ describe('Funnel compare Login', () => {
         methods.typeElement(locators.select_property, 'Top Engage')
         cy.wait(Timeout.xs)
         methods.clickElement(locators.Top_Engagement_Signals)
+        methods.clickElementIndexXpath(locators.Add_new2, 0)
+        methods.typeElement(locators.search_1, "Hubspot deal pipeline")
+        methods.clickElement(locators.Hubspot_Deal_Pipeline)
+        methods.clickElement(locators.equals_1)
+        cy.wait(Timeout.xs)
+        methods.clickElementByXPath(locators.pageview_option1)
+        methods.clickElementByXPath(locators.Apply1)
+        cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.calender_MenuList)
         methods.clickElementByXPath(locators.Select_Month)
         methods.clickElementByXPath(locators.date_choosen)

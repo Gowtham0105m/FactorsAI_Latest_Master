@@ -21,7 +21,7 @@ describe('TouchPoint Email tracking Login', () => {
 
     it('TouchPoint_Email tracking', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)

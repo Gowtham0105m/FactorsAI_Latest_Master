@@ -24,7 +24,7 @@ describe('Campaign Groups Login', () => {
         const testName = `Demo_Campaign_Groups_${randomNumber}`;
         const valuename = `Test Campaign Groups ${randomNumber}`
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)

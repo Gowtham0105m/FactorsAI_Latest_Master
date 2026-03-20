@@ -25,9 +25,10 @@ describe('Linkedin Audience sync login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `New audience sync ${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)

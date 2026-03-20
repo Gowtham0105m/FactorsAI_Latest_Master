@@ -26,8 +26,9 @@ describe('Event Report Login', () => {
     let selectedDateBeforeSave1 = "";
     let selectedDateAfterSave1 = "";
 
-    cy.wait(Timeout.md)
+    cy.wait(Timeout.xl)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+    cy.wait(Timeout.sm)
     methods.Mouseover(locators.report_dropdown)
     methods.clickElementByXPath(locators.Dashboards)
     cy.wait(Timeout.sm)
@@ -80,7 +81,7 @@ describe('Event Report Login', () => {
     methods.typeElement(locators.Report_Name, testName)
     methods.typeElement(locators.Description_OP, 'Testing Purpose')
     methods.clickElementByXPath(locators.save1);
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.md)
     methods.VisibilityofElement(locators.Profile_report_gen)
     methods.clickElementByXPath(locators.close_2)
     methods.VisibilityofElement(locators.Table_Body_1)
@@ -116,6 +117,7 @@ describe('Event Report Login', () => {
     cy.wait(Timeout.xs)
     methods.VisibilityofElement(locators.Profile_report_gen)
     methods.clickElementByXPath(locators.Closed)
+    cy.wait(Timeout.md)
     methods.VisibilityofElementXpath(locators.SegmentTitle)
     methods.clickElementByXPath(locators.Drafts)
     methods.VisibilityofElement(locators.Table_Body_1)
@@ -141,6 +143,7 @@ describe('Event Report Login', () => {
     methods.clickElementByXPath(locators.save1)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Closed)
+    cy.wait(Timeout.md)
     methods.VisibilityofElement(locators.Table_Body_1)
     methods.MouseoverWithXpath(`//*[text()='${testName1}']//following::button[1]`)
     methods.clickElementByXPath(locators.Delete_Report_1)
@@ -157,8 +160,9 @@ describe('Event Report Login', () => {
     let selectedDateBeforeSave1 = "";
     let selectedDateAfterSave1 = "";
 
-    cy.wait(Timeout.md)
+    cy.wait(Timeout.xl)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+    cy.wait(Timeout.sm)
     methods.Mouseover(locators.report_dropdown)
     methods.clickElementByXPath(locators.Dashboards)
     cy.wait(Timeout.sm)
@@ -211,13 +215,14 @@ describe('Event Report Login', () => {
     methods.typeElement(locators.Report_Name, testName)
     methods.typeElement(locators.Description_OP, 'Testing Purpose')
     methods.clickElementByXPath(locators.save1)
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.md)
     methods.VisibilityofElement(locators.Profile_report_gen)
     methods.clickElementByXPath(locators.close_2)
     methods.VisibilityofElement(locators.Table_Body_1)
     methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
     methods.clickElementByXPath(locators.View_Report)
     methods.VisibilityofElement(locators.Profile_report_gen)
+    cy.wait(Timeout.md)
     cy.xpath('(//div[@class="calendar"]//div[@class="fa-custom-datepicker"])[1]')
       .invoke('text')
       .then((dateText) => {
@@ -236,7 +241,7 @@ describe('Event Report Login', () => {
     methods.VisibilityofElement(locators.Profile_report_gen)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Save_1)
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.md)
     methods.clickElementByXPath(locators.Closed)
     methods.VisibilityofElement(locators.Table_Body_1)
     methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
@@ -252,8 +257,9 @@ describe('Event Report Login', () => {
     const nowTime = dayjs().format('H:m:s');
     const testName = `Demo_${nowTime}`;
 
-    cy.wait(Timeout.md)
+    cy.wait(Timeout.xl)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+    cy.wait(Timeout.sm)
     methods.Mouseover(locators.report_dropdown)
     methods.clickElementByXPath(locators.Dashboards)
     cy.wait(Timeout.sm)
@@ -282,34 +288,36 @@ describe('Event Report Login', () => {
     methods.typeElement(locators.Report_Name, testName)
     methods.typeElement(locators.Description_OP, 'Testing Purpose')
     methods.clickElementByXPath(locators.save1)
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.md)
     methods.VisibilityofElement(locators.Profile_report_gen)
-    methods.clickElementByXPath(locators.close_2)
+    cy.wait(Timeout.md)
+    methods.clickElementIndexXpath(locators.close_2, 0)
+    cy.wait(Timeout.md)
     methods.VisibilityofElementXpath(locators.SegmentTitle)
     methods.clickElementByXPath(locators.Drafts)
     methods.VisibilityofElement(locators.Table_Body_1)
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.sm)
     methods.clickElementByXPath(`//*[text()='${testName}']//preceding::input[@type='checkbox'][1]`)
     methods.clickElementByXPath(locators.delete)
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.sm)
     methods.clickElementByXPath(locators.Yes)
     methods.assertElementContainsText(locators.DeleteErrorPopup, 'Some reports are not deleted')
     methods.assertElementContainsTextxpath(locators.ReportNameVerification, testName)
     methods.clickElementByXPath(locators.Got_It)
     methods.assertElementContainsText(locators.Popup_Message, "None of the reports were deleted.")
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.sm)
     methods.typeElement(locators.Search_dashboard, 'Auto')
     methods.clickElementByXPath(locators.Automate)
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.sm)
     methods.clickElementByXPath(`//*[text()='${testName}']//following::button[2]`)
     methods.clickElementByXPath(locators.Removefromthisboard)
     methods.clickElementByXPath(locators.Yes)
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.sm)
     methods.clickElementByXPath(locators.Drafts)
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.sm)
     methods.clickElementByXPath(`//*[text()='${testName}']//preceding::input[@type='checkbox'][1]`)
     methods.clickElementByXPath(locators.delete)
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.sm)
     methods.clickElementByXPath(locators.Yes)
     methods.assertElementContainsText(locators.Popup_Message, "Selected reports were deleted successfully.")
 
@@ -323,8 +331,9 @@ describe('Event Report Login', () => {
     let selectedDateBeforeSave1 = "";
     let selectedDateAfterSave1 = "";
 
-    cy.wait(Timeout.md)
+    cy.wait(Timeout.xl)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+    cy.wait(Timeout.sm)
     methods.Mouseover(locators.report_dropdown)
     methods.clickElementByXPath(locators.Dashboards)
     cy.wait(Timeout.sm)
@@ -347,6 +356,7 @@ describe('Event Report Login', () => {
     methods.clickElement(locators.equals_1)
     methods.clickElementByXPath(locators.pageview_option1)
     methods.clickElementByXPath(locators.Apply1)
+    cy.wait(Timeout.md)
     cy.xpath('//span[text()="Run Analysis"]//preceding::button[1]')
       .invoke('text')
       .then((dateText) => {
@@ -364,13 +374,14 @@ describe('Event Report Login', () => {
     methods.typeElement(locators.Description_OP, 'Testing Purpose')
     methods.clickElementByXPath(locators.save1)
     methods.assertElementContainsText(locators.notification_popup, "Report Saved Successfully")
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.md)
     methods.VisibilityofElement(locators.Profile_report_gen)
     methods.clickElementByXPath(locators.Closed)
     methods.VisibilityofElement(locators.Table_Body_1)
     methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
     methods.clickElementByXPath(locators.View_Report)
     methods.VisibilityofElement(locators.Profile_report_gen)
+    cy.wait(Timeout.md)
     cy.xpath('(//div[@class="calendar"]//div[@class="fa-custom-datepicker"])[1]')
       .invoke('text')
       .then((dateText) => {
@@ -388,16 +399,16 @@ describe('Event Report Login', () => {
     methods.clickElementByXPath(locators.EditDetails)
     methods.ClearAndType(locators.Report_Name, testName1)
     methods.clickElementByXPath(locators.save1)
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.md)
     methods.assertElementContainsText(locators.notification_popup, "Report Saved Successfully")
     methods.VisibilityofElement(locators.Profile_report_gen)
     methods.clickElementByXPath(locators.Closed)
     methods.VisibilityofElement(locators.Table_Body_1)
     methods.MouseoverWithXpath(`//*[text()='${testName1}']//following::button[1]`)
     methods.clickElementByXPath(locators.Delete_Report_1)
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.sm)
     methods.clickElementByXPath(locators.confirm)
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.sm)
   })
 
   it('Event Report - Share to Slack', () => {
@@ -407,8 +418,9 @@ describe('Event Report Login', () => {
     let selectedDateBeforeSave1 = "";
     let selectedDateAfterSave1 = "";
 
-    cy.wait(Timeout.md)
+    cy.wait(Timeout.xl)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+    cy.wait(Timeout.sm)
     methods.Mouseover(locators.report_dropdown)
     methods.clickElementByXPath(locators.Dashboards)
     cy.wait(Timeout.sm)
@@ -431,6 +443,7 @@ describe('Event Report Login', () => {
     methods.clickElement(locators.equals_1)
     methods.clickElementByXPath(locators.pageview_option1)
     methods.clickElementByXPath(locators.Apply1)
+    cy.wait(Timeout.md)
     cy.xpath('//span[text()="Run Analysis"]//preceding::button[1]')
       .invoke('text')
       .then((dateText) => {
@@ -446,14 +459,16 @@ describe('Event Report Login', () => {
     methods.typeElement(locators.Report_Name, testName)
     methods.typeElement(locators.Description_OP, 'Testing Purpose')
     methods.clickElementByXPath(locators.save1)
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.md)
     methods.assertElementContainsText(locators.notification_popup, "Report Saved Successfully")
     methods.VisibilityofElement(locators.Profile_report_gen)
-    methods.clickElementByXPath(locators.close_2)
+    cy.wait(Timeout.md)
+    methods.clickElementIndexXpath(locators.close_2, 0)
     methods.VisibilityofElement(locators.Table_Body_1)
     methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
     methods.clickElementByXPath(locators.View_Report)
     methods.VisibilityofElement(locators.Profile_report_gen)
+    cy.wait(Timeout.md)
     cy.xpath('(//div[@class="calendar"]//div[@class="fa-custom-datepicker"])[1]')
       .invoke('text')
       .then((dateText) => {
@@ -466,12 +481,12 @@ describe('Event Report Login', () => {
       throw new Error("**The date are not same**");
     }
     methods.clickElementByXPath(locators.Expand_1)
-    cy.wait(Timeout.sm)
+    cy.wait(Timeout.md)
     methods.MouseoverWithXpath(locators.ReportOptions)
     methods.clickElementByXPath(locators.Share_to_slack_1)
-    cy.wait(Timeout.sm)
+    cy.wait(Timeout.md)
     methods.typeElement(locators.slackShare_channel, 'staging')
-    cy.wait(Timeout.sm)
+    cy.wait(Timeout.md)
     methods.clickElement(locators.alert_test_staging)
     methods.typeElement(locators.Yourmessage, "Testing Event Report")
     methods.clickElement(locators.done)
@@ -481,9 +496,9 @@ describe('Event Report Login', () => {
     methods.VisibilityofElement(locators.Table_Body_1)
     methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
     methods.clickElementByXPath(locators.Delete_Report_1)
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.sm)
     methods.clickElementByXPath(locators.confirm)
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.sm)
   })
 
   it('Event Report - Email this Report', () => {
@@ -493,8 +508,9 @@ describe('Event Report Login', () => {
     let selectedDateBeforeSave1 = "";
     let selectedDateAfterSave1 = "";
 
-    cy.wait(Timeout.md)
+    cy.wait(Timeout.xl)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+    cy.wait(Timeout.sm)
     methods.Mouseover(locators.report_dropdown)
     methods.clickElementByXPath(locators.Dashboards)
     cy.wait(Timeout.sm)
@@ -517,6 +533,7 @@ describe('Event Report Login', () => {
     methods.clickElement(locators.equals_1)
     methods.clickElementByXPath(locators.pageview_option1)
     methods.clickElementByXPath(locators.Apply1)
+    cy.wait(Timeout.md)
     cy.xpath('//span[text()="Run Analysis"]//preceding::button[1]')
       .invoke('text')
       .then((dateText) => {
@@ -532,7 +549,7 @@ describe('Event Report Login', () => {
     methods.typeElement(locators.Report_Name, testName)
     methods.typeElement(locators.Description_OP, 'Testing Purpose')
     methods.clickElementByXPath(locators.save1)
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.md)
     methods.assertElementContainsText(locators.notification_popup, "Report Saved Successfully")
     methods.VisibilityofElement(locators.Profile_report_gen)
     methods.clickElementByXPath(locators.close_2)
@@ -540,6 +557,7 @@ describe('Event Report Login', () => {
     methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
     methods.clickElementByXPath(locators.View_Report)
     methods.VisibilityofElement(locators.Profile_report_gen)
+    cy.wait(Timeout.md)
     cy.xpath('(//div[@class="calendar"]//div[@class="fa-custom-datepicker"])[1]')
       .invoke('text')
       .then((dateText) => {
@@ -552,7 +570,7 @@ describe('Event Report Login', () => {
       throw new Error("**The date are not same**");
     }
     methods.clickElementByXPath(locators.Expand_1)
-    cy.wait(Timeout.sm)
+    cy.wait(Timeout.md)
     methods.MouseoverWithXpath(locators.ReportOptions)
     methods.clickElementByXPath(locators.Emailthisreport)
     methods.typeElement(locators.emailShare_email, "sarath_tdfect@factors.ai")
@@ -565,6 +583,7 @@ describe('Event Report Login', () => {
     methods.clickElementByXPath(locators.SendEmailBtn)
     methods.assertElementContainsText(locators.notification_popup, "Report Sent SuccessfullyReport has been sent to the selected emails")
     methods.VisibilityofElement(locators.Profile_report_gen)
+    cy.wait(Timeout.md)
     methods.clickElementByXPath(locators.Closed)
     methods.VisibilityofElement(locators.Table_Body_1)
     methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
@@ -573,4 +592,5 @@ describe('Event Report Login', () => {
     methods.clickElementByXPath(locators.confirm)
     cy.wait(Timeout.xs)
   })
+  
 })

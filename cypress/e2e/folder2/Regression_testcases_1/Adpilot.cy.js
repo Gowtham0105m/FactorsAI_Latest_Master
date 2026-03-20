@@ -28,9 +28,10 @@ describe('Adpilot Smart reach', () => {
         const new_campaign = `New Campaign_${nowTime}`;
         const new_campaign1 = `New Campaign_${nowTime}_1`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
@@ -121,9 +122,10 @@ describe('Adpilot Smart reach', () => {
         const new_campaign = `New Campaign_${nowTime}`;
         const new_campaign1 = `New Campaign_${nowTime}_1`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
@@ -190,9 +192,10 @@ describe('Adpilot Smart reach', () => {
         const new_campaign = `New Group Campaign_${nowTime}`;
         const new_campaign1 = `New Group Campaign_${nowTime}_1`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
@@ -282,9 +285,10 @@ describe('Adpilot Smart reach', () => {
         const new_campaign = `New Group Campaign_${nowTime}`;
         const new_campaign1 = `New Group Campaign_${nowTime}_1`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
@@ -349,9 +353,10 @@ describe('Adpilot Smart reach', () => {
         const Add_campaign = `All Ad Accounts_${nowTime}`;
         const Add_campaign1 = `All Ad Accounts_${nowTime}_1`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
@@ -437,9 +442,10 @@ describe('Adpilot Smart reach', () => {
         const Add_campaign = `All Ad Accounts_${nowTime}`;
         const Add_campaign1 = `All Ad Accounts_${nowTime}_1`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
@@ -498,9 +504,10 @@ describe('Adpilot Smart reach', () => {
 
     it('Adpilot Smart reach To verify whether the pause functionality is working has expected', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
@@ -569,9 +576,10 @@ describe('Adpilot Smart reach', () => {
         const nowTime = dayjs().format('H:m:s');
         const new_campaign = `New Campaign Logs_${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
@@ -598,7 +606,7 @@ describe('Adpilot Smart reach', () => {
         methods.assertElementContainsText(locators.notification_popup2, "Failed!duplicate name")
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((Text1) => {
-          	methods.ClearAndTypeWithXpath(`//textarea[text()="${Text1}"]`, new_campaign);
+            methods.ClearAndTypeWithXpath(`//textarea[text()="${Text1}"]`, new_campaign);
             methods.EnterXpath(`//textarea[text()="${new_campaign}"]`);
         });
         methods.clickElementByXPath(locators.adpilot_publish)

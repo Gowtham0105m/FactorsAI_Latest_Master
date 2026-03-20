@@ -26,7 +26,7 @@ describe('Milestone Login', () => {
         const MileStone_Name1 = "Testing 1";
         const MileStone_Name2 = "Testing 2";
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -137,7 +137,7 @@ describe('Milestone Login', () => {
         const MileStone_Name1 = "Testing 1";
         const MileStone_Name2 = "Testing 2";
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)

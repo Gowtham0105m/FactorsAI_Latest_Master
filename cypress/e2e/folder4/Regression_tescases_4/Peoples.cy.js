@@ -22,8 +22,9 @@ describe('Peoples Regression', () => {
 
     it('TC_RE_01 - Peoples_Page Load', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
@@ -38,8 +39,9 @@ describe('Peoples Regression', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
@@ -138,8 +140,9 @@ describe('Peoples Regression', () => {
 
     it('TC_RE_06, TC_RE_07 - People_Search field ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
@@ -163,8 +166,9 @@ describe('Peoples Regression', () => {
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const combination = testName + randomNumber;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
@@ -220,8 +224,9 @@ describe('Peoples Regression', () => {
 
     it('TC_RE_12, TC_RE_13 - People_Brid views ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
@@ -243,8 +248,9 @@ describe('Peoples Regression', () => {
 
     it('TC_RE_14 - People_Birdviews expand ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
@@ -264,8 +270,9 @@ describe('Peoples Regression', () => {
 
     it('TC_RE_15 - People_Birdviews account activity ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)

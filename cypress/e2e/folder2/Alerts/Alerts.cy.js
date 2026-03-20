@@ -25,14 +25,14 @@ describe('Alert Login', () => {
         const testName = `Demo Alert ${nowTime}`;
         const testName1 = `Demo Editted Alert ${nowTime}_1`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.clickElementByXPath(locators.Automation)
 
         // New alert
 
         methods.clickElementByXPath(locators.Realtimealerts)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.ElementToBeClickableXpath(locators.NewAlert)
         methods.clickElementByXPath(locators.NewAlert)
@@ -162,7 +162,7 @@ describe('Alert Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo Copy Alert ${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.clickElementByXPath(locators.Automation)
 
@@ -170,7 +170,7 @@ describe('Alert Login', () => {
         // New alert
 
         methods.clickElementByXPath(locators.Realtimealerts)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.ElementToBeClickableXpath(locators.NewAlert)
         methods.clickElementByXPath(locators.NewAlert)
@@ -266,14 +266,14 @@ describe('Alert Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo Alert Template ${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.clickElementByXPath(locators.Automation)
 
         // New alert
 
         methods.clickElementByXPath(locators.Realtimealerts)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.ElementToBeClickableXpath(locators.NewAlert)
         methods.clickElementByXPath(locators.NewAlert)

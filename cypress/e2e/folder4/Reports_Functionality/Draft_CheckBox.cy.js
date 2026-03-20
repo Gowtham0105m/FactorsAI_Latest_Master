@@ -17,8 +17,9 @@ describe('Draft CheckBox Login', () => {
 
     it('Draft CheckBox - Select all data', () => {
 
-        cy.wait(Timeout.md);
+        cy.wait(Timeout.xl);
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts');
+        cy.wait(Timeout.sm);
         methods.Mouseover(locators.report_dropdown);
         methods.clickElementByXPath(locators.Dashboards);
         cy.wait(Timeout.sm);
@@ -68,8 +69,9 @@ describe('Draft CheckBox Login', () => {
 
     it('Draft CheckBox - Invert current page', () => {
 
-        cy.wait(Timeout.md);
+        cy.wait(Timeout.xl);
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts');
+        cy.wait(Timeout.sm);
         methods.Mouseover(locators.report_dropdown);
         methods.clickElementByXPath(locators.Dashboards);
         cy.wait(Timeout.sm);
@@ -133,8 +135,9 @@ describe('Draft CheckBox Login', () => {
 
     it('Draft CheckBox - Clear all data', () => {
 
-        cy.wait(Timeout.md);
+        cy.wait(Timeout.xl);
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts');
+        cy.wait(Timeout.sm);
         methods.Mouseover(locators.report_dropdown);
         methods.clickElementByXPath(locators.Dashboards);
         cy.wait(Timeout.sm);

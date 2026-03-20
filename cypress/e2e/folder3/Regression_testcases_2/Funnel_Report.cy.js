@@ -21,10 +21,10 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_01 - Funnel Report - New Report', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -38,10 +38,10 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_02 - Funnel Report - Generate the Funnel report', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -61,10 +61,10 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_03 - Funnel Report - adding multiple Event ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -87,10 +87,10 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_04 - Funnel Report - Local filter ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -114,10 +114,10 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_05 - Funnel Report - check the filter option is visible ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -141,10 +141,10 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_06 - Funnel Report - add multiple filter for one session ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -175,10 +175,10 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_07 - Funnel Report - the delete option works ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -202,10 +202,10 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_08, TC_RE_09 - Funnel Report - global filter more than one ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -225,20 +225,22 @@ describe('Funnel Report Rregression', () => {
         methods.clickElement(locators.Linkedin_Paid_Leads)
         methods.clickElementByXPath(locators.Add_New_FilterBy)
         methods.clickElement0(locators.All_Account, 0)
-        methods.typeElementByXPath(locators.Search_Input, "In h")
-        methods.clickElement(locators.In_Hubspot1)
+        methods.clickElementByXPath(locators.pageview_option1)
+        cy.wait(Timeout.sm)
         methods.clickElement(locators.equals_1)
-        methods.clickElement(locators.true)
+        cy.wait(Timeout.sm)
+        methods.clickElementByXPath(locators.pageview_option1)
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Apply1)
 
     })
 
     it('TC_RE_10 - Funnel Report - clicking on the + icon ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -258,10 +260,12 @@ describe('Funnel Report Rregression', () => {
         methods.clickElement(locators.Linkedin_Paid_Leads)
         methods.clickElementByXPath(locators.Add_New_FilterBy)
         methods.clickElement0(locators.All_Account, 0)
-        methods.typeElementByXPath(locators.Search_Input, "In h")
-        methods.clickElement(locators.In_Hubspot1)
+        methods.clickElementByXPath(locators.pageview_option1)
+        cy.wait(Timeout.sm)
         methods.clickElement(locators.equals_1)
-        methods.clickElement(locators.true)
+        cy.wait(Timeout.sm)
+        methods.clickElementByXPath(locators.pageview_option1)
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Apply1)
         methods.clickElementByXPath(locators.Plus_Button)
         methods.clickElement0(locators.All_Account, 0)
@@ -276,10 +280,10 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_11 - Funnel Report - breakdown ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -305,10 +309,10 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_12 - Funnel Report - criteria ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -340,10 +344,10 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_13 - Funnel Report - custom range ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -378,10 +382,10 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_14 - Funnel Report -  KPI, filters and breakdown and run analysis ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -401,14 +405,29 @@ describe('Funnel Report Rregression', () => {
         methods.clickElement(locators.Linkedin_Paid_Leads)
         methods.clickElementByXPath(locators.Add_New_FilterBy)
         methods.clickElement0(locators.All_Account, 0)
-        methods.typeElementByXPath(locators.Search_Input, "In Hu")
-        methods.clickElement(locators.In_Hubspot1)
+        methods.clickElementByXPath(locators.pageview_option1)
+        cy.wait(Timeout.sm)
         methods.clickElement(locators.equals_1)
-        methods.clickElement(locators.true)
+        cy.wait(Timeout.sm)
+        methods.clickElementByXPath(locators.pageview_option1)
+        cy.wait(Timeout.sm)
+        methods.clickElementByXPath(locators.Apply1)
+        cy.wait(Timeout.xs)
+        methods.clickElementByXPath(locators.Add_Plus_button)
+        methods.typeElement(locators.search_1, "Company Tech")
+        methods.clickElement0(locators.Company_Tech, 0)
+        methods.clickElement(locators.equals_1)
+        cy.wait(Timeout.sm)
+        methods.clickElementByXPath(locators.pageview_option1)
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Apply1)
         methods.clickElementByXPath(locators.Add_New_Breakdown)
         methods.clickElement0(locators.All_Account, 0)
         methods.clickElementByXPath(locators.Filter_option1)
+        methods.clickElement0(locators.Select_Analysis_Window, 0)
+        methods.clickElementByXPath(locators.Select_Month)
+        methods.clickElementByXPath(locators.date_choosen)
+        methods.clickElementByXPath(locators.Run_Anal)
         methods.clickElementByXPath(locators.Run_Anal)
         methods.VisibilityofElement(locators.Profile_report_gen)
 
@@ -416,10 +435,10 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_15 - Funnel Report -  download the CSV file ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -439,10 +458,12 @@ describe('Funnel Report Rregression', () => {
         methods.clickElement(locators.Linkedin_Paid_Leads)
         methods.clickElementByXPath(locators.Add_New_FilterBy)
         methods.clickElement0(locators.All_Account, 0)
-        methods.typeElementByXPath(locators.Search_Input, "In h")
-        methods.clickElement(locators.In_Hubspot1)
+        methods.clickElementByXPath(locators.pageview_option1)
+        cy.wait(Timeout.sm)
         methods.clickElement(locators.equals_1)
-        methods.clickElement(locators.true)
+        cy.wait(Timeout.sm)
+        methods.clickElementByXPath(locators.pageview_option1)
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Apply1)
         methods.clickElementByXPath(locators.Add_New_Breakdown)
         methods.clickElement0(locators.All_Account, 0)
@@ -456,10 +477,10 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_16 - Funnel Report -  Search ', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -498,10 +519,10 @@ describe('Funnel Report Rregression', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -549,10 +570,10 @@ describe('Funnel Report Rregression', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)

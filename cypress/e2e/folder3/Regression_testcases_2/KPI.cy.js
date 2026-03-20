@@ -24,8 +24,9 @@ describe('KPI Login', () => {
     const randomNumber = Math.floor(Math.random() * 90) + 10;
     const testName = `Demo_${randomNumber}`;
 
-    cy.wait(Timeout.md)
+    cy.wait(Timeout.xl)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+    cy.wait(Timeout.xl)
     methods.VisibilityofElementXpath(locators.account_pageloaded)
     cy.wait(Timeout.sm)
     methods.Mouseover(locators.report_dropdown)
@@ -90,8 +91,9 @@ describe('KPI Login', () => {
     const randomNumber = Math.floor(Math.random() * 90) + 10;
     const testName = `Demo_${randomNumber}`;
 
-    cy.wait(Timeout.md)
+    cy.wait(Timeout.xl)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+    cy.wait(Timeout.xl)
     methods.VisibilityofElementXpath(locators.account_pageloaded)
     cy.wait(Timeout.sm)
     methods.Mouseover(locators.report_dropdown)

@@ -22,9 +22,10 @@ describe('Intent Upload Login', () => {
 
     const filePath = 'Automation_Data.csv';
 
-    cy.wait(Timeout.md)
+    cy.wait(Timeout.xl)
     methods.scrollWithXpath(locators.Title_page)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+    cy.wait(Timeout.md)
     methods.VisibilityofElementXpath(locators.account_pageloaded)
     methods.clickElement(locators.setting)
     methods.clickElementByXPath(locators.Data_Management)

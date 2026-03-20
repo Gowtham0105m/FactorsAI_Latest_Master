@@ -26,9 +26,10 @@ describe('Google Enhanced Conversions Login', () => {
         const testName = `Demo Google CAPI ${nowTime}`;
         const testName1 = `Demo Google CAPI New ${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
@@ -154,9 +155,10 @@ describe('Google Enhanced Conversions Login', () => {
         const testName = `Demo Google CAPI ${nowTime}`;
         const testName1 = `Demo Google CAPI New ${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
@@ -294,9 +296,10 @@ describe('Google Enhanced Conversions Login', () => {
         const testName = `Demo Google CAPI ${nowTime}`;
         const testName1 = `Demo Google CAPI New ${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
@@ -431,9 +434,10 @@ describe('Google Enhanced Conversions Login', () => {
         const testName = `Demo Google CAPI ${nowTime}`;
         const testName1 = `Demo Google CAPI New ${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
@@ -546,9 +550,10 @@ describe('Google Enhanced Conversions Login', () => {
         const Ad_Account = "7108784795";
         const testName = `Demo Google CAPI ${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
