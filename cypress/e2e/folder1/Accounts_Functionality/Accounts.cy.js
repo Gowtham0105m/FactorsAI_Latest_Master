@@ -28,13 +28,13 @@ describe('Accounts Login', () => {
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const combination = testName + randomNumber;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
-
+        
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -211,7 +211,7 @@ describe('Accounts Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.VisibilityofElementXpath(locators.account_pageloaded)
@@ -298,7 +298,7 @@ describe('Accounts Login', () => {
         const testName = `Demo_${nowTime}`;
         const testName1 = `Demo Segment_${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)

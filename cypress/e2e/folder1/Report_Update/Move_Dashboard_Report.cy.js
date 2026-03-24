@@ -23,7 +23,7 @@ describe('Move Dashboard Report Login', () => {
 
         let reportNames = [];
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
@@ -33,7 +33,9 @@ describe('Move Dashboard Report Login', () => {
         methods.clickElementByXPath(locators.ChooseaTemplate)
         methods.VisibilityofElement(locators.Templete_Popup)
         methods.typeElement(locators.search_1, "Webs")
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.WebsiteVisitorIdentification)
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Showmore)
 
         cy.xpath('//*[text()="Included Reports"]//following-sibling::h6')

@@ -20,11 +20,11 @@ describe('Timeline Login', () => {
 
   it('Account Timeline -- User Properties and Event Properties', () => {
 
-    cy.wait(Timeout.xl)
+    cy.wait(Timeout.ml)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-    cy.wait(Timeout.xl)
+    cy.wait(Timeout.ml)
     methods.VisibilityofElementXpath(locators.account_pageloaded)
-    cy.wait(Timeout.xl)
+    cy.wait(Timeout.md)
     cy.document().then((doc) => {
       const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 

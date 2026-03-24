@@ -133,6 +133,7 @@ describe('KPI Login', () => {
     methods.assertElementContainsText(locators.notification_popup, "Report Saved Successfully")
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Closed)
+    cy.wait(Timeout.sm)
     methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
     methods.clickElementByXPath(locators.Email_this_report)
     methods.typeElement(locators.emailShare_email, 'sarath_tdfect@factors.ai')
