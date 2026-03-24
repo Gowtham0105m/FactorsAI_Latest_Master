@@ -37,7 +37,7 @@ describe('People Login', () => {
 
         // Search username
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElementByXPath(locators.search_button)
         methods.typeElementByXPath(locators.Search1, 'sarath_tdfect@factors.ai')
@@ -130,7 +130,7 @@ describe('People Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
@@ -189,7 +189,7 @@ describe('People Login', () => {
         const testName = `Demo_${nowTime}`;
         const testName1 = `Demo Segment_${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)

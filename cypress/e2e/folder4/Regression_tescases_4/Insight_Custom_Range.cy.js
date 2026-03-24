@@ -22,7 +22,7 @@ describe('Insight custom range', () => {
 
         cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         cy.document().then((doc) => {
@@ -157,7 +157,7 @@ describe('Insight custom range', () => {
 
         cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         cy.document().then((doc) => {

@@ -2,6 +2,7 @@ import Login1 from '../../PageObjects/Login1';
 import { deviceViewport, Timeout } from '../../Utils.js';
 import methods from '../../../support/Common_Method.js';
 import locators from '../../../support/Locators.js';
+import dayjs from 'dayjs';
 
 describe('Enrichment Rules Login', () => {
 
@@ -33,8 +34,6 @@ describe('Enrichment Rules Login', () => {
         cy.wait(Timeout.xs)
         methods.VisibilityofElementXpath(`//*[text()='Factors Data']`)
         cy.wait(Timeout.xs)
-        // methods.MouseoverWithXpath(locators.Integrations1)
-        // cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Acc_Iden_enrich)
         methods.clickElementByXPath(locators.Enrichment_Rules)
         cy.wait(Timeout.xs)
@@ -81,4 +80,5 @@ describe('Enrichment Rules Login', () => {
         methods.GetText(locators.notification_popup, "SuccessSuccessfully updated settings")
         cy.wait(Timeout.xs)
     })
+
 })

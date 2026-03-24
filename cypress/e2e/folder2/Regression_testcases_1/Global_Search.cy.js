@@ -30,7 +30,6 @@ describe('Global search Login', () => {
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
-
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -48,7 +47,6 @@ describe('Global search Login', () => {
                 cy.log("**All Segment has been loaded**");
             }
         });
-
         methods.assertElementContainsTextxpath(locators.AllsegmentMenu, "All segments")
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)

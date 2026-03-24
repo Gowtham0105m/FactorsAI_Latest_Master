@@ -56,6 +56,10 @@ describe('Event Report Login', () => {
     methods.clickElementByXPath(locators.Add_New_Breakdown)
     methods.clickElement(locators.Company_Identification)
     methods.clickElementByXPath(locators.Filter_option1)
+    methods.clickElementIndexXpath(locators.Add_new2, 1)
+    methods.typeElement(locators.select_property, "Hubspot deal pipeline")
+    methods.clickElement(locators.Hubspot_Deal_Pipeline)
+    cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Add_New_FilterBy)
     methods.clickElement0(locators.Linkedin_Company_Engagements, 0)
     methods.clickElementByXPath(locators.pageview_option1)
@@ -67,7 +71,7 @@ describe('Event Report Login', () => {
     methods.clickElementByXPath(locators.Apply1)
     methods.clickElementByXPath(locators.KPI_Cal)
     cy.wait(Timeout.sm)
-    methods.clickElementByXPath(locators.Last_Month)
+    methods.clickElementByXPath(locators.Last_Quarter)
     cy.wait(Timeout.md)
     cy.xpath('//span[text()="Run Analysis"]//preceding::button[1]')
       .invoke('text')
@@ -592,5 +596,5 @@ describe('Event Report Login', () => {
     methods.clickElementByXPath(locators.confirm)
     cy.wait(Timeout.xs)
   })
-  
+
 })
