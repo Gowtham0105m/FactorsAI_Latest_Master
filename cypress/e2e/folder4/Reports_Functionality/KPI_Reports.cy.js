@@ -57,15 +57,11 @@ describe('KPI Report Login', () => {
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.pageview_option1)
         methods.clickElementByXPath(locators.Apply1)
-        methods.clickElement(locators.Add_New_Breakdown_new)
-        methods.typeElement(locators.select_property, 'company name')
-        methods.clickElement(locators.CompanyName)
-
 
         // select date
 
         methods.clickElementByXPath(locators.KPI_Cal)
-        methods.clickElementByXPath(locators.LastWeek)
+        methods.clickElementByXPath(locators.Last_Month)
         methods.clickElementByXPath(locators.Run_Analysis1)
         cy.wait(Timeout.md)
         methods.scroll(locators.table_validation1)
@@ -103,7 +99,7 @@ describe('KPI Report Login', () => {
         methods.VisibilityofElement(locators.Profile_report_gen)
         cy.wait(Timeout.xmd)
         methods.clickElement0(locators.Select_Analysis_Window, 0)
-        methods.clickElementByXPath(locators.Last_Month)
+        methods.clickElementByXPath(locators.Last_7_days)
         methods.VisibilityofElement(locators.Profile_report_gen)
         methods.MouseoverWithXpath(locators.Save_dropdown)
         cy.wait(Timeout.md)
@@ -112,7 +108,7 @@ describe('KPI Report Login', () => {
         methods.typeElement(locators.Report_Name, testName1)
         methods.typeElement(locators.Description_OP, 'Testing Purpose1')
         methods.clickElementByXPath(locators.Save_Report)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.scroll(locators.table_validation1)
         methods.VisibilityofElement(locators.table_validation1)
         methods.clickElementByXPath(locators.close_2)
@@ -492,4 +488,5 @@ describe('KPI Report Login', () => {
         methods.clickElementByXPath(locators.confirm)
         cy.wait(Timeout.md)
     })
+
 })

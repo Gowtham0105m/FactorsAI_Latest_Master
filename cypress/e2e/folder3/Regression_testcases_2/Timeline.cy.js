@@ -67,6 +67,7 @@ describe('Timeline Login', () => {
           methods.clickElementByXPath(locators.Details)
         } else {
           cy.log(`**Element not visible — scroll attempt ${i + 1}**`);
+          cy.wait(Timeout.md)
           cy.get('.rc-virtual-list-holder').scrollTo(0, 500 * (i + 1), { ensureScrollable: false });
           cy.wait(500);
         }

@@ -49,7 +49,7 @@ describe('Google Enhanced Conversions Login', () => {
                 methods.clickElementByXPath(locators.remove_workflows)
                 cy.wait(Timeout.xs)
                 methods.clickElementByXPath(locators.Ok)
-                methods.GetText(locators.notification_popup, "SuccessDeleted Workflow successfully")
+                methods.GetText(locators.notification_popup, "SuccessWorkflow Successfully Deleted!")
                 cy.wait(Timeout.xs)
             } else {
                 cy.log('No rules containing "Demo Google CAPI" found. Skipping deletion.');
@@ -143,7 +143,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.clickElementByXPath(locators.remove_workflows)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
-        methods.GetText(locators.notification_popup, "SuccessDeleted Workflow successfully")
+        methods.GetText(locators.notification_popup, "SuccessWorkflow Successfully Deleted!")
         cy.wait(Timeout.xs)
 
     })
@@ -178,7 +178,7 @@ describe('Google Enhanced Conversions Login', () => {
                 methods.clickElementByXPath(locators.remove_workflows)
                 cy.wait(Timeout.xs)
                 methods.clickElementByXPath(locators.Ok)
-                methods.GetText(locators.notification_popup, "SuccessDeleted Workflow successfully")
+                methods.GetText(locators.notification_popup, "SuccessWorkflow Successfully Deleted!")
                 cy.wait(Timeout.xs)
             } else {
                 cy.log('No rules containing "Demo Google CAPI" found. Skipping deletion.');
@@ -284,7 +284,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.clickElementByXPath(locators.remove_workflows)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
-        methods.GetText(locators.notification_popup, "SuccessDeleted Workflow successfully")
+        methods.GetText(locators.notification_popup, "SuccessWorkflow Successfully Deleted!")
         cy.wait(Timeout.xs)
 
     })
@@ -319,7 +319,7 @@ describe('Google Enhanced Conversions Login', () => {
                 methods.clickElementByXPath(locators.remove_workflows)
                 cy.wait(Timeout.xs)
                 methods.clickElementByXPath(locators.Ok)
-                methods.GetText(locators.notification_popup, "SuccessDeleted Workflow successfully")
+                methods.GetText(locators.notification_popup, "SuccessWorkflow Successfully Deleted!")
                 cy.wait(Timeout.xs)
             } else {
                 cy.log('No rules containing "Demo Google CAPI" found. Skipping deletion.');
@@ -422,7 +422,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.clickElementByXPath(locators.remove_workflows)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
-        methods.GetText(locators.notification_popup, "SuccessDeleted Workflow successfully")
+        methods.GetText(locators.notification_popup, "SuccessWorkflow Successfully Deleted!")
         cy.wait(Timeout.xs)
 
     })
@@ -457,7 +457,7 @@ describe('Google Enhanced Conversions Login', () => {
                 methods.clickElementByXPath(locators.remove_workflows)
                 cy.wait(Timeout.xs)
                 methods.clickElementByXPath(locators.Ok)
-                methods.GetText(locators.notification_popup, "SuccessDeleted Workflow successfully")
+                methods.GetText(locators.notification_popup, "SuccessWorkflow Successfully Deleted!")
                 cy.wait(Timeout.xs)
             } else {
                 cy.log('No rules containing "Demo Google CAPI" found. Skipping deletion.');
@@ -539,7 +539,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.clickElementByXPath(locators.remove_workflows)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
-        methods.GetText(locators.notification_popup, "SuccessDeleted Workflow successfully")
+        methods.GetText(locators.notification_popup, "SuccessWorkflow Successfully Deleted!")
         cy.wait(Timeout.xs)
 
     })
@@ -573,7 +573,7 @@ describe('Google Enhanced Conversions Login', () => {
                 methods.clickElementByXPath(locators.remove_workflows)
                 cy.wait(Timeout.xs)
                 methods.clickElementByXPath(locators.Ok)
-                methods.GetText(locators.notification_popup, "SuccessDeleted Workflow successfully")
+                methods.GetText(locators.notification_popup, "SuccessWorkflow Successfully Deleted!")
                 cy.wait(Timeout.xs)
             } else {
                 cy.log('No rules containing "Demo Google CAPI" found. Skipping deletion.');
@@ -653,7 +653,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.clickElementByXPath(locators.remove_workflows)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
-        methods.GetText(locators.notification_popup, "SuccessDeleted Workflow successfully")
+        methods.GetText(locators.notification_popup, "SuccessWorkflow Successfully Deleted!")
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Google_Capi_Refresh_Btn)
         methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)

@@ -471,7 +471,7 @@ class locators {
     this.FilterthisKPI2 = '//*[text()="B"]//following::button[3]';
     this.KPI_Cal1 = '//*[text()="BREAKDOWN"]//following::button[4]';
     this.LastWeek = "//a[text()='Last Week']";
-    this.userName = '[data-title="User Name"]';
+    this.userName = '[data-title="User Name"]'
     this.UserContinent = '[data-title="User Continent"]';
     this.KPI1Selected = '(//*[text()="A"])[1]//following::span[2]';
     this.FilterByName2 = '(//*[text()="where"])[2]//following::span[1]';
@@ -1045,6 +1045,8 @@ class locators {
     this.Hubspot_Deal_Trumpet_Total_Views = '[data-title="Hubspot Deal Trumpet Total Views"]';
     this.Hubspot_Deal_Pipeline = '[data-title="Hubspot Deal Pipeline"]';
     this.Company_Tech = '[data-title="Company Tech"]';
+    this.Clone_Segment = '//div[text()="Clone Segment"]';
+    this.Subscribe = '//div[text()="Subscribe"]';
 
   }
 }
