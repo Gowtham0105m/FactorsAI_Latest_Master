@@ -85,7 +85,7 @@ describe('Accounts Login', () => {
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Yes)
         methods.NotExist(locators.Loading)
-        methods.assertElementContainsText(locators.notification_popup1, "Segment deleted successfully")
+        methods.assertElementContainsText(locators.notification_popup, "Segment deleted successfully")
 
         // Search Account
 

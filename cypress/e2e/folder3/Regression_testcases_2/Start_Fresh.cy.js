@@ -62,7 +62,7 @@ describe('Start_Fresh_Icon', () => {
         methods.VisibilityofElement(locators.notification_popup)
 
         // search saved segment
-        cy.wait(Timeout.ml)
+        cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
         cy.wait(Timeout.xs)
@@ -86,7 +86,6 @@ describe('Start_Fresh_Icon', () => {
         methods.clickElementByXPath(locators.Yes)
         cy.wait(Timeout.sm)
         methods.NotExist(locators.Loading)
-        cy.wait(Timeout.sm)
         methods.assertElementContainsText(locators.notification_popup, "Segment deleted successfully")
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(`//div[text()="${FolderName}"]//following::span[2]`)
