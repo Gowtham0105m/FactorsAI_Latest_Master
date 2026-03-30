@@ -27,7 +27,7 @@ describe('Accounts Page Login', () => {
         ].map((item) => {
             cy.wait(Timeout.sm)
             methods.clickElement(locators.account_dropdown)
-            cy.xpath(`(//li//h6)[${item.index}]`).click({ force: true });
+            cy.xpath(`(//div//span[contains(@class,"text-sm font-normal")])[${item.index}]`).click({ force: true });
             cy.wait(Timeout.xs)
             methods.navigateToUrl(item.url)
             cy.wait(Timeout.md)
@@ -38,17 +38,16 @@ describe('Accounts Page Login', () => {
 
         cy.wait(Timeout.sm)
         methods.clickElement(locators.account_dropdown)
-        cy.xpath(`(//li//h6)[3]`).click({ force: true });
+        cy.xpath(`(//span[contains(@class,"text-sm font-normal")])[3]`).click({ force: true });
         cy.wait(Timeout.xs)
         methods.navigateToUrl('/reports/visitor_report')
         cy.wait(Timeout.md)
         methods.scroll(locators.Page_title1)
         methods.VisibilityofElement(locators.Page_title1)
         methods.assertElementContainsText(locators.Page_title1, 'Top accounts that visited your website')
-
         cy.wait(Timeout.sm)
         methods.clickElement(locators.account_dropdown)
-        cy.xpath(`(//li//h6)[1]`).click({ force: true });
+        cy.xpath(`(//span[contains(@class,"text-sm font-normal")])[1]`).click({ force: true });
         cy.wait(Timeout.xs)
         methods.navigateToUrl("/")
         methods.scrollWithXpath(locators.Title_page)

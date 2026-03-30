@@ -217,7 +217,7 @@ describe('Segment Alert Login', () => {
             }
         })
 
-        methods.clickElementByXPath(locators.Alert_People)
+        methods.clickElementIndexXpath(locators.Alert_People, 1)
         methods.VisibilityofElementXpath(locators.confirm_Publish_Box)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Yes_proceed)

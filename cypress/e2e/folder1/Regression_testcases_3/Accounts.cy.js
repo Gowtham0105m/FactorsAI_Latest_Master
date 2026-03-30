@@ -207,6 +207,7 @@ describe('Accounts Regression', () => {
         methods.Exist(locators.DownloadCSV_Popup)
         methods.clickElementByXPath(locators.exportCSV)
         methods.assertElementContainsText1(locators.download_header, 'Selects which columns to include')
+        cy.wait(Timeout.md)
         methods.NotExist(locators.DownloadCSV_Popup)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     })

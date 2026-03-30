@@ -24,12 +24,29 @@ describe('Linkedin_Conversion(CAPI) Login', () => {
         const testName = `New linkedin workflow ${nowTime}`;
         const testName1 = `New linkedin workflow ${nowTime}_1`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.sm)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md);
+        cy.document().then((doc) => {
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!demoElement || demoElement.offsetParent === null) {
+                cy.log("**All Segment not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+            } else {
+                cy.log("**All Segment has been loaded**");
+            }
+        });
         methods.clickElementByXPath(locators.Adpilot)
         methods.VisibilityofElementXpath(locators.SmartReach)
         cy.wait(Timeout.xs)

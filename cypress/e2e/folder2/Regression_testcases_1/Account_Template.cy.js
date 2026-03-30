@@ -27,7 +27,7 @@ describe('Account Template Login', () => {
         const folder_name = `Automation Template Folder ${nowTime}`;
         const folder_name1 = `Automation Template Folder 1 ${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
@@ -118,7 +118,7 @@ describe('Account Template Login', () => {
         methods.clickElementByXPath(locators.Yes)
         methods.NotExist(locators.Loading)
         methods.assertElementContainsText(locators.notification_popup, "Segment deleted successfully")
-        cy.wait(Timeout.xmd)
+        cy.wait(Timeout.ml)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
     })
 })

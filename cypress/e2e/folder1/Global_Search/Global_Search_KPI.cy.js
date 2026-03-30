@@ -58,7 +58,7 @@ describe('Global search kpi', () => {
         cy.wait(Timeout.md);
         methods.VisibilityofElement(locators.Profile_report_gen);
         methods.clickElementByXPath(locators.Closed); -
-        methods.VisibilityofElement(locators.Upgrade_validation);
+            methods.VisibilityofElement(locators.Upgrade_validation);
         methods.clickElementByXPath(locators.Close_without_saving);
         cy.wait(Timeout.md);
         methods.VisibilityofElementXpath(locators.SegmentTitle)
@@ -137,11 +137,12 @@ describe('Global search kpi', () => {
         methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
         cy.wait(Timeout.xs);
         methods.clickElementByXPath(locators.View_Report)
+        cy.wait(Timeout.sm);
         methods.VisibilityofElement(locators.Profile_report_gen)
         methods.clickElementByXPath(locators.Expand_1)
         methods.clickElement(locators.Add_New_Breakdown_new)
-        methods.clickElement(locators.HubspotCompany)
-        methods.clickElementByXPath(locators.Filter_option1)
+        methods.typeElement(locators.select_property, 'device model')
+        methods.clickElement(locators.Device_Model)
         methods.clickElementByXPath(locators.Run_Analysis1)
         methods.VisibilityofElement(locators.Profile_report_gen)
         cy.wait(Timeout.sm)

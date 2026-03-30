@@ -32,7 +32,7 @@ describe('Alert Login', () => {
         // New alert
 
         methods.clickElementByXPath(locators.Realtimealerts)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.ElementToBeClickableXpath(locators.NewAlert)
         methods.clickElementByXPath(locators.NewAlert)
@@ -170,12 +170,12 @@ describe('Alert Login', () => {
         // New alert
 
         methods.clickElementByXPath(locators.Realtimealerts)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.ElementToBeClickableXpath(locators.NewAlert)
         methods.clickElementByXPath(locators.NewAlert)
         methods.clickElementByXPath(locators.StartfromScratch)
-        methods.clickElementByXPath(locators.Account_text)
+        methods.clickElementIndexXpath(locators.Account_text, 2)
         methods.VisibilityofElementIndex(locators.alert_page)
 
         // Select event
@@ -273,7 +273,7 @@ describe('Alert Login', () => {
         // New alert
 
         methods.clickElementByXPath(locators.Realtimealerts)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.ElementToBeClickableXpath(locators.NewAlert)
         methods.clickElementByXPath(locators.NewAlert)
