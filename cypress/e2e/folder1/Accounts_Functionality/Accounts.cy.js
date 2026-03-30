@@ -91,7 +91,7 @@ describe('Accounts Login', () => {
 
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElementByXPath(locators.search_button)
-        methods.typeElementByXPath(locators.search_area, 'factors.ai')
+        methods.typeElementByXPath(locators.search_area, 'factors.app')
         methods.EnterXpath(locators.search_area)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
 
@@ -103,11 +103,11 @@ describe('Accounts Login', () => {
                 methods.clickElementByXPath(locators.AllAccount_ActionBtn);
                 methods.clickElementByXPath(locators.Show_hidden_accounts);
                 cy.wait(Timeout.xs);
-                methods.assertElementContainsTextxpath(locators.factors_File, 'factors.ai')
+                methods.assertElementContainsTextxpath(locators.factors_File, 'factors.app')
                 cy.wait(Timeout.xs);
             } else {
                 cy.log("**Search account is visible**");
-                methods.assertElementContainsTextxpath(locators.factors_File, 'factors.ai')
+                methods.assertElementContainsTextxpath(locators.factors_File, 'factors.app')
             }
         });
 
@@ -117,6 +117,7 @@ describe('Accounts Login', () => {
         methods.Exist(locators.DownloadCSV_Popup)
         methods.Titletextcontainsxpath(locators.download_header, 'Selects which columns to include')
         methods.ElementVisibleandClickXpath(locators.exportCSV)
+        cy.wait(Timeout.sm);
         methods.NotExist(locators.DownloadCSV_Popup)
         methods.clickElementByXPath(locators.clear_search)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
@@ -201,7 +202,7 @@ describe('Accounts Login', () => {
         methods.clickElementByXPath(locators.Yes)
         methods.NotExist(locators.Loading)
         methods.assertElementContainsText(locators.Popup_Message, "Folder Deleted")
-        cy.wait(Timeout.lg)
+        cy.wait(Timeout.ml)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
 
     })
@@ -287,7 +288,7 @@ describe('Accounts Login', () => {
         methods.clickElementByXPath(locators.Yes)
         methods.NotExist(locators.Loading)
         methods.assertElementContainsText(locators.notification_popup, "Segment deleted successfully")
-        cy.wait(Timeout.lg)
+        cy.wait(Timeout.ml)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
 
     })
@@ -388,7 +389,7 @@ describe('Accounts Login', () => {
         methods.clickElementByXPath(locators.Yes)
         methods.NotExist(locators.Loading)
         methods.assertElementContainsText(locators.notification_popup, "Segment deleted successfully")
-        cy.wait(Timeout.lg)
+        cy.wait(Timeout.ml)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
 
     })

@@ -167,6 +167,10 @@ class methods {
         cy.get(selector, { timeout: extraTimeOut }).trigger('mouseover', { force: true });
     }
 
+    MouseoverClick(selector) {
+        cy.get(selector, { timeout: extraTimeOut }).trigger('mouseover', { force: true }).click({ force: true });
+    }
+
     MouseoverWithXpath(xpath) {
         cy.xpath(xpath, { timeout: extraTimeOut }).trigger('mouseover', { force: true });
     }
@@ -279,6 +283,14 @@ class methods {
 
     ElementXpathAttrCheckNot(xpath, attrName) {
         cy.xpath(xpath, { timeout: extraTimeOut }).should('not.have.attr', attrName);
+    }
+
+    MouseoverWithIndexXpath(xpath, int) {
+        cy.xpath(xpath, { timeout: extraTimeOut }).eq(int).trigger('mouseover', { force: true });
+    }
+
+    MouseoverWithIndex(selector, int) {
+        cy.get(selector, { timeout: extraTimeOut }).eq(int).trigger('mouseover', { force: true });
     }
 
 }

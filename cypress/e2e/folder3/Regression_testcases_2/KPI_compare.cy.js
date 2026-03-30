@@ -22,7 +22,7 @@ describe('KPI compare Login', () => {
 
         cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)

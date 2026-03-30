@@ -20,7 +20,7 @@ describe('Accounts New flow Login', () => {
 
     it('Accounts New flow', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)

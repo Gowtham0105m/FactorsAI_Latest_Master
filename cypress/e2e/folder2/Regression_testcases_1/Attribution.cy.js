@@ -21,7 +21,7 @@ describe('Attribution Regression', () => {
 
     it('TC_RE_01 - Attribution - page load ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.sm)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -37,7 +37,7 @@ describe('Attribution Regression', () => {
 
     it('TC_RE_02 - Attribution - Add filter ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.sm)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -72,7 +72,7 @@ describe('Attribution Regression', () => {
 
     it('TC_RE_03 - Attribution - attribution Type ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.sm)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -108,7 +108,7 @@ describe('Attribution Regression', () => {
 
     it('TC_RE_04 - Attribution - property ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.sm)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -145,7 +145,7 @@ describe('Attribution Regression', () => {
 
     it('TC_RE_05 - Attribution - Attribution model ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.sm)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -186,7 +186,7 @@ describe('Attribution Regression', () => {
 
     it('TC_RE_06 - Attribution - date range ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.sm)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -231,7 +231,7 @@ describe('Attribution Regression', () => {
 
     it('TC_RE_07 - Attribution - New Attribution created', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.sm)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -282,7 +282,7 @@ describe('Attribution Regression', () => {
 
         let text1, text2, text3, text4;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.sm)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
@@ -306,10 +306,10 @@ describe('Attribution Regression', () => {
         methods.clickElementByXPath(locators.Add_Model)
         methods.clickElement(locators.Last_Touch)
         methods.clickElementByXPath(locators.KPI_Cal)
-        methods.clickElementByXPath(locators.Last_7_days)
+        methods.clickElementByXPath(locators.Last_Quarter)
         methods.clickElementByXPath(locators.Run_Analysis1)
         cy.wait(Timeout.md)
-        methods.clickElement0(locators.Attri_pageloaded, 0)
+        methods.clickElement0(locators.Profile_report_gen, 0)
         methods.scrollWithXpath(locators.chartName)
 
         cy.xpath('(//*[local-name()="svg" and @id="funnel-grouped-svg-chart"])//following::div[2]', { timeout: extraTimeOut }).invoke('text').then((firstText) => {
@@ -334,7 +334,7 @@ describe('Attribution Regression', () => {
         methods.VisibilityofElementXpath(locators.Add_Report)
         cy.wait(Timeout.md)
         methods.scrollWithXpath(`//*[text()="${testName}"]`)
-
+        cy.wait(Timeout.md)
         cy.xpath(`//*[text()='${testName}']//following::div[6]`, { timeout: extraTimeOut }).invoke('text').then((firstText) => {
             text3 = firstText.trim();
             cy.log(`text3 : ${text3}`)
@@ -350,7 +350,7 @@ describe('Attribution Regression', () => {
             expect(text2).to.equal(text4);
             cy.log(`Text2: '${text2}' and Text4: '${text4}' are equal`);
         });
-
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.Delete_Widget)
         methods.clickElementByXPath(locators.confirmbtn)

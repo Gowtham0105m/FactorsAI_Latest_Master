@@ -26,7 +26,7 @@ describe('Accounts Segment Login', () => {
         const testName = `Demo_${nowTime}`;
         const testName1 = `Demo Folder_${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)

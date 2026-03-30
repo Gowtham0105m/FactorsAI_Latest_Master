@@ -51,7 +51,7 @@ describe('Insight Login', () => {
         methods.clickElementByXPath(locators.All_segments)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.InHubspot)
-        cy.wait(Timeout.lg)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElementByXPath(locators.New_Segment)
         methods.clickElementByXPath(locators.StartfromScratch)
@@ -84,7 +84,7 @@ describe('Insight Login', () => {
         methods.clickElementByXPath(locators.Delete_segment)
         methods.clickElementByXPath(locators.Yes)
         methods.VisibilityofElement(locators.notification_popup)
-        cy.wait(Timeout.ml)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
     })
 

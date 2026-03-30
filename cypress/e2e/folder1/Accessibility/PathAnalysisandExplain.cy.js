@@ -22,13 +22,13 @@ describe('Journeys Page Login', () => {
 
     //Journey screen
     [
-      { key: 'Path Analysis', index: 2, url: 'path-analysis' },
-      { key: 'Explain', index: 3, url: 'explain' },
+      { key: 'Path Analysis', index: 5, url: 'path-analysis' },
+      { key: 'Explain', index: 6, url: 'explain' },
     ].map((item) => {
       cy.wait(Timeout.sm)
       methods.Mouseover(locators.report_dropdown)
       cy.wait(Timeout.lg)
-      cy.xpath(`//ul/li[${item.index}]/span/a/h6`, { timeout: extraTimeOut }).click({ force: true });
+      cy.xpath(`(//span[contains(@class,"text-sm font-normal")])[${item.index}]`, { timeout: extraTimeOut }).click({ force: true });
       cy.wait(Timeout.xs);
       methods.navigateToUrljour(item.url)
       methods.VisibilityofElement(locators.Page_title1)

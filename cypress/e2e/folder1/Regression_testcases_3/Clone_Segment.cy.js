@@ -4,7 +4,7 @@ import methods from '../../../support/Common_Method.js';
 import locators from '../../../support/Locators.js';
 import dayjs from 'dayjs';
 
-describe('Accounts Segment Login', () => {
+describe('Clone Segment', () => {
 
     beforeEach(() => {
 
@@ -27,7 +27,7 @@ describe('Accounts Segment Login', () => {
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const combination = testName + randomNumber;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
@@ -78,7 +78,9 @@ describe('Accounts Segment Login', () => {
         cy.wait(Timeout.xl)
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
         cy.wait(Timeout.sm)
+        methods.typeElement(locators.Search_segment, testName)
         methods.clickElementByXPath(`//span[text()='${testName}']//following::span[1]`)
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Subscribe)
         methods.VisibilityofElement(locators.Templete_Popup)
         methods.typeElement(locators.receive_this_digest_Input, "sarath.s@trackdfect.ai")
@@ -187,7 +189,7 @@ describe('Accounts Segment Login', () => {
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const combination = testName + randomNumber;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
@@ -294,6 +296,7 @@ describe('Accounts Segment Login', () => {
         methods.GetTextXpath(locators.SegmentTitle, testName)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.threedot_icon)
+        cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Clone_Segment)
         cy.wait(Timeout.sm)
         methods.assertElementContainsText(locators.Popup_Message, "Cloned segment successfully")

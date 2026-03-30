@@ -4,7 +4,7 @@ import methods from '../../../support/Common_Method.js';
 import locators from '../../../support/Locators.js';
 import dayjs from 'dayjs';
 
-describe('Google Enhanced Conversions Login', () => {
+describe('Google Advanced Conversions Login', () => {
 
     beforeEach(() => {
 
@@ -19,25 +19,25 @@ describe('Google Enhanced Conversions Login', () => {
 
     })
 
-    it('Google Enhanced Conversions - Conversion feedback for Leads with Use the Deal amount', () => {
+    it('Google Advanced Conversions - Conversion feedback for Leads with Use the Deal amount', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const Ad_Account = "7108784795";
         const testName = `Demo Google CAPI ${nowTime}`;
         const testName1 = `Demo Google CAPI New ${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.sm)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
         methods.VisibilityofElementXpath(locators.campaign_title)
         cy.wait(Timeout.xs)
-        methods.clickElementByXPath(locators.GoogleEnhancedConversions)
+        methods.clickElementByXPath(locators.GoogleAdvancedConversions)
         cy.wait(Timeout.xs)
-        methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
+        methods.VisibilityofElementXpath(locators.GoogleEnhancedConversions)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
 
         cy.document().then((doc) => {
@@ -112,7 +112,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         methods.GetText(locators.notification_popup, "SuccessRule Successfully Created!")
         cy.wait(Timeout.sm)
-        methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
+        methods.VisibilityofElementXpath(locators.GoogleEnhancedConversions)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
         methods.clickElementByXPath(`(//*[text()="${testName}"]//following::button/span[@aria-label="more"])[1]`)
         methods.clickElementByXPath(locators.Edit_workflow)
@@ -137,7 +137,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         methods.GetText(locators.notification_popup, "SuccessRule Successfully Updated!")
         cy.wait(Timeout.xs)
-        methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
+        methods.VisibilityofElementXpath(locators.GoogleEnhancedConversions)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
         methods.clickElementByXPath(`(//*[text()="${testName1}"]//following::button/span[@aria-label="more"])[1]`)
         methods.clickElementByXPath(locators.remove_workflows)
@@ -148,25 +148,25 @@ describe('Google Enhanced Conversions Login', () => {
 
     })
 
-    it('Google Enhanced Conversions - Conversion feedback for Leads with Use the custom value', () => {
+    it('Google Advanced Conversions - Conversion feedback for Leads with Use the custom value', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const Ad_Account = "7108784795";
         const testName = `Demo Google CAPI ${nowTime}`;
         const testName1 = `Demo Google CAPI New ${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.sm)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
         methods.VisibilityofElementXpath(locators.campaign_title)
         cy.wait(Timeout.xs)
-        methods.clickElementByXPath(locators.GoogleEnhancedConversions)
+        methods.clickElementByXPath(locators.GoogleAdvancedConversions)
         cy.wait(Timeout.xs)
-        methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
+        methods.VisibilityofElementXpath(locators.GoogleEnhancedConversions)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
 
         cy.document().then((doc) => {
@@ -201,8 +201,8 @@ describe('Google Enhanced Conversions Login', () => {
         methods.typeElement(locators.search_1, "segment_summary_update")
         methods.clickElement0(locators.SEGMENT_SUMMARY_UPDATE, 0)
         methods.clickElementByXPath(locators.Add_a_Filter)
-        methods.typeElement(locators.search_1, 'hubspot contact ip')
-        methods.clickElement0(locators.Hubspot_Contact_IP_Country_Code, 0)
+        methods.typeElement(locators.search_1, 'hubspot company url')
+        methods.clickElement(locators.Hubspot_Company_URL)
         methods.clickElement(locators.equals_1)
         methods.clickElementByXPath(locators.pageview_option1)
         methods.clickElement(locators.Apply)
@@ -214,15 +214,6 @@ describe('Google Enhanced Conversions Login', () => {
         methods.clickElement(locators.equals_1)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.pageview_option1)
-        methods.clickElementByXPath(locators.Apply1)
-        methods.clickElementByXPath(locators.Add_a_Filter)
-        methods.typeElementByXPath(locators.Search_Input, "hubspot deal record id")
-        cy.wait(Timeout.xs)
-        methods.clickElement(locators.Hubspot_Deal_Opt)
-        methods.clickElement(locators.equals_1)
-        cy.wait(Timeout.sm)
-        methods.clickElementByXPath(locators.pageview_option1)
-        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Apply1)
         methods.clickElement(locators.Usethecustomvalue_Option)
         methods.ClearAndType(locators.Defaultconversionvalue_Input, 10)
@@ -254,13 +245,20 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.xs)
         methods.GetText(locators.notification_popup, "SuccessRule Successfully Created!")
         cy.wait(Timeout.sm)
-        methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
+        methods.VisibilityofElementXpath(locators.GoogleEnhancedConversions)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
         methods.clickElementByXPath(`(//*[text()="${testName}"]//following::button/span[@aria-label="more"])[1]`)
         methods.clickElementByXPath(locators.Edit_workflow)
         cy.wait(Timeout.sm)
         methods.VisibilityofElementXpath(`//*[text()="${testName}"]`)
         cy.wait(Timeout.xs)
+        methods.clickElementByXPath(locators.Add_a_Filter)
+        methods.clickElement0(locators.others, 0)
+        methods.clickElementByXPath(locators.pageview_option1)
+        methods.clickElement(locators.equals_1)
+        cy.wait(Timeout.xs)
+        methods.clickElementByXPath(locators.pageview_option1)
+        methods.clickElementByXPath(locators.Apply1)
         methods.clickElementByXPath(locators.GEC_Refresh_Btn)
         methods.GetText(locators.notification_popup, "SuccessRefreshed conversion actions!")
         cy.wait(Timeout.sm)
@@ -278,7 +276,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         methods.GetText(locators.notification_popup, "SuccessRule Successfully Updated!")
         cy.wait(Timeout.xs)
-        methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
+        methods.VisibilityofElementXpath(locators.GoogleEnhancedConversions)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
         methods.clickElementByXPath(`(//*[text()="${testName1}"]//following::button/span[@aria-label="more"])[1]`)
         methods.clickElementByXPath(locators.remove_workflows)
@@ -289,25 +287,25 @@ describe('Google Enhanced Conversions Login', () => {
 
     })
 
-    it('Google Enhanced Conversions - Conversion feedback for Clicks with Use the Deal amount', () => {
+    it('Google Advanced Conversions - Conversion feedback for Clicks with Use the Deal amount', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const Ad_Account = "7108784795";
         const testName = `Demo Google CAPI ${nowTime}`;
         const testName1 = `Demo Google CAPI New ${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.sm)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
         methods.VisibilityofElementXpath(locators.campaign_title)
         cy.wait(Timeout.xs)
-        methods.clickElementByXPath(locators.GoogleEnhancedConversions)
+        methods.clickElementByXPath(locators.GoogleAdvancedConversions)
         cy.wait(Timeout.xs)
-        methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
+        methods.VisibilityofElementXpath(locators.GoogleEnhancedConversions)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
 
         cy.document().then((doc) => {
@@ -356,15 +354,6 @@ describe('Google Enhanced Conversions Login', () => {
         methods.clickElement(locators.equals_1)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.pageview_option1)
-        methods.clickElementByXPath(locators.Apply1)
-        methods.clickElementByXPath(locators.Add_a_Filter)
-        methods.typeElementByXPath(locators.Search_Input, "hubspot deal record id")
-        cy.wait(Timeout.xs)
-        methods.clickElement(locators.Hubspot_Deal_Opt)
-        methods.clickElement(locators.equals_1)
-        cy.wait(Timeout.sm)
-        methods.clickElementByXPath(locators.pageview_option1)
-        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Apply1)
         methods.clickElement(locators.UsetheDealamount_Option)
         cy.wait(Timeout.xs)
@@ -392,13 +381,22 @@ describe('Google Enhanced Conversions Login', () => {
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         methods.GetText(locators.notification_popup, "SuccessRule Successfully Created!")
         cy.wait(Timeout.sm)
-        methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
+        methods.VisibilityofElementXpath(locators.GoogleEnhancedConversions)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
         methods.clickElementByXPath(`(//*[text()="${testName}"]//following::button/span[@aria-label="more"])[1]`)
         methods.clickElementByXPath(locators.Edit_workflow)
         cy.wait(Timeout.sm)
         methods.VisibilityofElementXpath(`//*[text()="${testName}"]`)
         cy.wait(Timeout.xs)
+        methods.clickElementByXPath(locators.Add_a_Filter)
+        methods.typeElementByXPath(locators.Search_Input, "hubspot deal record id")
+        cy.wait(Timeout.xs)
+        methods.clickElement(locators.Hubspot_Deal_Opt)
+        methods.clickElement(locators.equals_1)
+        cy.wait(Timeout.sm)
+        methods.clickElementByXPath(locators.pageview_option1)
+        cy.wait(Timeout.sm)
+        methods.clickElementByXPath(locators.Apply1)
         methods.clickElementByXPath(locators.GEC_Refresh_Btn)
         methods.GetText(locators.notification_popup, "SuccessRefreshed conversion actions!")
         cy.wait(Timeout.sm)
@@ -416,7 +414,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         methods.GetText(locators.notification_popup, "SuccessRule Successfully Updated!")
         cy.wait(Timeout.xs)
-        methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
+        methods.VisibilityofElementXpath(locators.GoogleEnhancedConversions)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
         methods.clickElementByXPath(`(//*[text()="${testName1}"]//following::button/span[@aria-label="more"])[1]`)
         methods.clickElementByXPath(locators.remove_workflows)
@@ -427,25 +425,25 @@ describe('Google Enhanced Conversions Login', () => {
 
     })
 
-    it('Google Enhanced Conversions - Conversion feedback for Clicks with Use the custom value', () => {
+    it('Google Advanced Conversions - Conversion feedback for Clicks with Use the custom value', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const Ad_Account = "7108784795";
         const testName = `Demo Google CAPI ${nowTime}`;
         const testName1 = `Demo Google CAPI New ${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.sm)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
         methods.VisibilityofElementXpath(locators.campaign_title)
         cy.wait(Timeout.xs)
-        methods.clickElementByXPath(locators.GoogleEnhancedConversions)
+        methods.clickElementByXPath(locators.GoogleAdvancedConversions)
         cy.wait(Timeout.xs)
-        methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
+        methods.VisibilityofElementXpath(locators.GoogleEnhancedConversions)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
 
         cy.document().then((doc) => {
@@ -509,7 +507,7 @@ describe('Google Enhanced Conversions Login', () => {
         cy.wait(Timeout.sm)
         methods.GetText(locators.notification_popup, "SuccessRule Successfully Created!")
         cy.wait(Timeout.sm)
-        methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
+        methods.VisibilityofElementXpath(locators.GoogleEnhancedConversions)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
         methods.clickElementByXPath(`(//*[text()="${testName}"]//following::button/span[@aria-label="more"])[1]`)
         methods.clickElementByXPath(locators.Edit_workflow)
@@ -533,7 +531,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         methods.GetText(locators.notification_popup, "SuccessRule Successfully Updated!")
         cy.wait(Timeout.xs)
-        methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
+        methods.VisibilityofElementXpath(locators.GoogleEnhancedConversions)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
         methods.clickElementByXPath(`(//*[text()="${testName1}"]//following::button/span[@aria-label="more"])[1]`)
         methods.clickElementByXPath(locators.remove_workflows)
@@ -544,24 +542,24 @@ describe('Google Enhanced Conversions Login', () => {
 
     })
 
-    it('Google Enhanced Conversions - Search and Refresh flow', () => {
+    it('Google Advanced Conversions - Search and Refresh flow', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const Ad_Account = "7108784795";
         const testName = `Demo Google CAPI ${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.sm)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Adpilot)
         methods.VisibilityofElementXpath(locators.campaign_title)
         cy.wait(Timeout.xs)
-        methods.clickElementByXPath(locators.GoogleEnhancedConversions)
+        methods.clickElementByXPath(locators.GoogleAdvancedConversions)
         cy.wait(Timeout.xs)
-        methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
+        methods.VisibilityofElementXpath(locators.GoogleEnhancedConversions)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
 
         cy.document().then((doc) => {
@@ -640,7 +638,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.ScrollAndClickxpath(locators.adpilot_publish)
         methods.GetText(locators.notification_popup, "SuccessRule Successfully Created!")
         cy.wait(Timeout.sm)
-        methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
+        methods.VisibilityofElementXpath(locators.GoogleEnhancedConversions)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
         methods.clickElementByXPath(locators.Google_Capi_Search_Btn)
         methods.typeElement(locators.Searchreports, testName)
@@ -656,7 +654,7 @@ describe('Google Enhanced Conversions Login', () => {
         methods.GetText(locators.notification_popup, "SuccessWorkflow Successfully Deleted!")
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Google_Capi_Refresh_Btn)
-        methods.VisibilityofElementXpathIndexInput(locators.GoogleEnhancedConversions, 1)
+        methods.VisibilityofElementXpath(locators.GoogleEnhancedConversions)
         methods.VisibilityofElementXpath(locators.GoogleCAPIrules_Title)
         cy.wait(Timeout.xs)
     })

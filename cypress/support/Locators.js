@@ -344,7 +344,7 @@ class locators {
     this.Open_Accenture_Acc = '//a[text()="accenture.com"]//following::button[1]';
     this.Page_view_validation = '.ant-drawer-body';
     this.Event_Properties = '//span[text()="Event Properties"]';
-    this.Details = '(//span[contains(text(),"Linkedin")])[1]'
+    this.Details = '(//span[contains(text(),"Linkedin Paid")])[1]'
     this.Account_Executives = '//button[text()="Account Executives"]';
     this.This_is_correct = '//span[text()="This is correct"]';
     this.Performs_an_event = '[title="Performs an event"]';
@@ -450,7 +450,7 @@ class locators {
     this.ninety_days = '//li[contains(@data-menu-id,"90")]';
     this.form_Submissions = '//*[text()="Form Submissions"]';
     this.offer = '[data-title="Offer"]';
-    this.campaign_title = '//main//div//div//h4[text()="Smart Reach"]';
+    this.campaign_title = '//h4[text()="Smart Reach"]';
     this.all_Accounts_Opt = '//h4[text()="All Accounts"]';
     this.hubspot_Cmpny_Opt = '//*[text()="Hubspot Companies"]';
     this.blinking_Check - '//td[@class="ant-table-cell"]//div//span//span[1]';
@@ -545,7 +545,7 @@ class locators {
     this.Last_Quarter = '//a[text()="Last Quarter"]';
     this.select_custom_range = '//a[text()="Select Custom Range"]';
     this.Preview_Month1 = '//input[@placeholder="Start date"]//following::button[2]';
-    this.Adpilot = '//*[text()="AdPilot"]';
+    this.Adpilot = '//span[text()="AdPilot"]';
     this.Add_new_rule = '//div[text()="Add New Rule"]';
     this.SyncNewAudience = '//div[text()="Sync New Audience"]';
     this.Campaign = '//*[text()="Campaign"]';
@@ -556,7 +556,7 @@ class locators {
     this.adpilot_arrow_left = '//*[local-name()="svg" and @data-icon="arrow-left"]';
     this.adpilot_publish = '//div[text()="Publish"]';
     this.Confirm_publish = '//span[text()="Publish"]';
-    this.All_account_toogle = '//*[text()="Set custom rules based on advanced account conditions"]//preceding::button[1]';
+    this.All_account_toogle = '//*[text()="Set custom rules based on advanced account conditions"]//following::button[1]';
     this.campaign_add_filter = '//*[text()="Add filter"]';
     this.total_clicks_cap = '(//th[text()="Total Clicks Cap"])[2]//following::input[1]';
     this.total_clicks_cap2 = '(//th[text()="Total Clicks Cap"])[2]//following::input[3]';
@@ -979,7 +979,7 @@ class locators {
     this.table_columns = '[data-icon="table-columns"]';
     this.Not_Customers = '[aria-label="Not Customers"]';
     this.Bolt = '(//span[text()="Edit Segment"]//following::button)[1]';
-    this.LinkedIn_Audience_Sync1 = '//*[text()="LinkedIn Audience Sync"]';
+    this.LinkedIn_Audience_Sync1 = '//*[text()="Audience Sync"]';
     this.Search_Properties = '[placeholder="Search Properties"]';
     this.Edit_Segment = '//span[text()="Edit Segment"]';
     this.Insight_Icon = '[data-icon="lightbulb-on"]';
@@ -1032,7 +1032,7 @@ class locators {
     this.Hubspot_Contact_Pipeline = '[data-title="Hubspot Contact Pipeline"]';
     this.Hubspot_Company_URL = '[data-title="Hubspot Company URL"]';
     this.DataManagementHeader = '//h4[contains(@class,"text-base font-normal")]';
-    this.Account_identification1 = '//h6[text()="Account identification"]';
+    this.Account_identification1 = '//*[text()="Account identification"]';
     this.Milestone_Title_Name = '//textarea[text()="Untitled Milestone"]';
     this.Edit_Button = '[data-icon="pen"]';
     this.Linkedin_Paid_Leads = '[data-title="Linkedin Paid Leads"]';
@@ -1047,6 +1047,12 @@ class locators {
     this.Company_Tech = '[data-title="Company Tech"]';
     this.Clone_Segment = '//div[text()="Clone Segment"]';
     this.Subscribe = '//div[text()="Subscribe"]';
+    this.GoogleAdvancedConversions = '//*[text()="Advanced Conversions"]';
+    this.Device_Model = '[data-title="Device Model"]';
+    this.Enhanced_Conversions = '//*[text()="Enhanced Conversions"]';
+    this.Adpilot_Dropdown = '//a[@id="fa-at-link--home"]//following::a[@id="fa-at-link--attribution"]';
+    this.dropdown_adpilot = '//a[@href="/adpilot/linkedIn/smart-reach"]';
+
 
   }
 }
