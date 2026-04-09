@@ -69,7 +69,7 @@ describe('Hidden Accounts', () => {
         cy.wait(Timeout.xs)
         methods.clickElementIndexXpath(locators.AllAccount_ActionBtn, 1);
         methods.clickElementByXPath(locators.Show_hidden_accounts);
-        cy.wait(Timeout.xs);
+        cy.wait(Timeout.md);
         methods.assertElementContainsTextxpath(locators.factors_File, 'trackdfect.com')
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Hide_hidden_accounts);
@@ -86,7 +86,7 @@ describe('Hidden Accounts', () => {
         methods.clickElementByXPath(locators.Hidden_Accounts1)
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.search_button1)
         methods.typeElement(locators.searchType, 'trackdfect.com')
         methods.Enter(locators.searchType)
@@ -97,7 +97,7 @@ describe('Hidden Accounts', () => {
         methods.clickElementByXPath(locators.Unhide_1)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.clear_search)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.search_button1)
         methods.typeElement(locators.searchType, 'trackdfect.com')
         methods.Enter(locators.searchType)
@@ -179,6 +179,7 @@ describe('Hidden Accounts', () => {
         methods.clickElementByXPath(locators.search_button1)
         methods.typeElement(locators.searchType, 'trackdfect.com')
         methods.Enter(locators.searchType)
+        cy.wait(Timeout.md)
         methods.NotExistxpath(locators.organic_table1)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.clear_search)
@@ -199,4 +200,5 @@ describe('Hidden Accounts', () => {
         cy.wait(Timeout.sm)
 
     })
+
 })

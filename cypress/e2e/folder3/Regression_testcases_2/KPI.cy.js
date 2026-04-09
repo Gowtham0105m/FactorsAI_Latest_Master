@@ -24,9 +24,9 @@ describe('KPI Login', () => {
     const randomNumber = Math.floor(Math.random() * 90) + 10;
     const testName = `Demo_${randomNumber}`;
 
-    cy.wait(Timeout.xl)
+    cy.wait(Timeout.sm)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-    cy.wait(Timeout.xl)
+    cy.wait(Timeout.sm)
     methods.VisibilityofElementXpath(locators.account_pageloaded)
     cy.wait(Timeout.sm)
     methods.Mouseover(locators.report_dropdown)
@@ -55,7 +55,7 @@ describe('KPI Login', () => {
     // select date
 
     methods.clickElementByXPath(locators.KPI_Cal)
-    methods.clickElement0(locators.choose_date, 9)
+    methods.clickElementByXPath(locators.Last_Month)
     cy.wait(Timeout.sm)
     methods.clickElementByXPath(locators.Run_Anal)
     methods.VisibilityofElement(locators.table_validation1)
@@ -64,10 +64,10 @@ describe('KPI Login', () => {
     methods.typeElement(locators.Report_Name, testName)
     methods.clickElementByXPath(locators.save1)
     methods.VisibilityofElement(locators.notification_popup)
-    cy.wait(Timeout.xs)
+    cy.wait(Timeout.md)
     methods.VisibilityofElement(locators.table_validation1)
+    methods.VisibilityofElement(locators.table_validation2)
     methods.clickElement(locators.close_kpi)
-    cy.wait(Timeout.sm)
     methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Share_to_slack)
@@ -91,9 +91,9 @@ describe('KPI Login', () => {
     const randomNumber = Math.floor(Math.random() * 90) + 10;
     const testName = `Demo_${randomNumber}`;
 
-    cy.wait(Timeout.xl)
+    cy.wait(Timeout.sm)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-    cy.wait(Timeout.xl)
+    cy.wait(Timeout.sm)
     methods.VisibilityofElementXpath(locators.account_pageloaded)
     cy.wait(Timeout.sm)
     methods.Mouseover(locators.report_dropdown)
@@ -122,18 +122,20 @@ describe('KPI Login', () => {
     // select date
 
     methods.clickElementByXPath(locators.KPI_Cal)
-    methods.clickElement0(locators.choose_date, 9)
+    methods.clickElementByXPath(locators.Last_Month)
+    cy.wait(Timeout.sm)
     methods.clickElementByXPath(locators.Run_Anal)
     methods.VisibilityofElement(locators.table_validation1)
     methods.VisibilityofElement(locators.table_validation2)
-
     methods.clickElementByXPath(locators.Save_1)
     methods.typeElement(locators.Report_Name, testName)
     methods.clickElementByXPath(locators.save1)
     methods.assertElementContainsText(locators.notification_popup, "Report Saved Successfully")
+    cy.wait(Timeout.md)
+    methods.VisibilityofElement(locators.table_validation1)
+    methods.VisibilityofElement(locators.table_validation2)
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Closed)
-    cy.wait(Timeout.sm)
     methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
     methods.clickElementByXPath(locators.Email_this_report)
     methods.typeElement(locators.emailShare_email, 'sarath_tdfect@factors.ai')

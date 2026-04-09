@@ -447,10 +447,10 @@ class locators {
     this.Search_dashboard = '[placeholder="Search dashboard"]';
     this.pageload_Confirmation = '#resizing-table-container-div';
     this.calender_Icon = '//div[@class="flex gap-x-1 items-center"]';
-    this.ninety_days = '//li[contains(@data-menu-id,"90")]';
+    this.ninety_days = '[data-title="Last 90 Days"]';
     this.form_Submissions = '//*[text()="Form Submissions"]';
     this.offer = '[data-title="Offer"]';
-    this.campaign_title = '//h4[text()="Smart Reach"]';
+    this.campaign_title = '//*[text()="Smart Reach"]';
     this.all_Accounts_Opt = '//h4[text()="All Accounts"]';
     this.hubspot_Cmpny_Opt = '//*[text()="Hubspot Companies"]';
     this.blinking_Check - '//td[@class="ant-table-cell"]//div//span//span[1]';
@@ -848,7 +848,7 @@ class locators {
     this.emailShare_email1 = '#emailShare_emails_0_email';
     this.Delete_Email = '//*[text()="Recipients"]//following::button[1]';
     this.SendEmailBtn = '//span[text()="Send Email"]';
-    this.Realtimealerts = '//*[text()="Real time alerts"]';
+    this.RealtimeAlerts = '//*[text()="Real-time Alerts"]';
     this.ShowLogs = '(//span[text()="Show Logs"])[1]';
     this.ActivityLog_Refresh = '//*[contains(text(),"Workflow runs for")]//following::button[1]';
     this.ActivityLog_Search = '//*[contains(text(),"Workflow runs for")]//following::button[2]';
@@ -1047,12 +1047,12 @@ class locators {
     this.Company_Tech = '[data-title="Company Tech"]';
     this.Clone_Segment = '//div[text()="Clone Segment"]';
     this.Subscribe = '//div[text()="Subscribe"]';
-    this.GoogleAdvancedConversions = '//*[text()="Advanced Conversions"]';
     this.Device_Model = '[data-title="Device Model"]';
     this.Enhanced_Conversions = '//*[text()="Enhanced Conversions"]';
-    this.Adpilot_Dropdown = '//a[@id="fa-at-link--home"]//following::a[@id="fa-at-link--attribution"]';
-    this.dropdown_adpilot = '//a[@href="/adpilot/linkedIn/smart-reach"]';
-
+    this.CAPI = '//*[text()="CAPI"]';
+    this.Alerts = '//*[text()="Alerts"]';
+    this.real_time_alerts = '//*[text()="Real time alerts"]';
+    this.searchfieldbox = '(//div[@class="ant-select-selector"])[2]';
 
   }
 }

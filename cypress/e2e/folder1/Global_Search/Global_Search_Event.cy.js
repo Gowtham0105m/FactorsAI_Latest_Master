@@ -21,7 +21,7 @@ describe('Global search event', () => {
 
     it('Global search event without saving', () => {
 
-        cy.wait(Timeout.xl);
+        cy.wait(Timeout.sm);
         methods.scrollWithXpath(locators.Title_page);
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts');
         cy.wait(Timeout.md);
@@ -70,7 +70,7 @@ describe('Global search event', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.xl);
+        cy.wait(Timeout.sm);
         methods.scrollWithXpath(locators.Title_page);
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts');
         cy.wait(Timeout.md);
@@ -108,6 +108,12 @@ describe('Global search event', () => {
         cy.wait(Timeout.sm);
         methods.clickElementByXPath(locators.pageview_option1);
         cy.wait(Timeout.sm);
+        methods.clickElementByXPath(locators.Add_New_FilterBy)
+        methods.clickElement0(locators.Hubspot_Companies, 0)
+        methods.clickElementByXPath(locators.pageview_option1)
+        methods.clickElement(locators.equals_1)
+        methods.clickElementByXPath(locators.pageview_option1)
+        methods.clickElementByXPath(locators.Apply1)
         methods.clickElementByXPath(locators.Run_Analysis1);
         methods.VisibilityofElement(locators.Profile_report_gen);
         cy.wait(Timeout.sm);

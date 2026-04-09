@@ -21,7 +21,7 @@ describe('Global search kpi', () => {
 
     it('Global search kpi without saving', () => {
 
-        cy.wait(Timeout.xl);
+        cy.wait(Timeout.sm);
         methods.scrollWithXpath(locators.Title_page);
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts');
         cy.wait(Timeout.md);
@@ -70,7 +70,7 @@ describe('Global search kpi', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.xl);
+        cy.wait(Timeout.sm);
         methods.scrollWithXpath(locators.Title_page);
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts');
         cy.wait(Timeout.md);
