@@ -21,13 +21,13 @@ describe('Global search ', () => {
 
     it('Global search profile without saving', () => {
 
-        cy.wait(Timeout.xl);
+        cy.wait(Timeout.sm);
         methods.scrollWithXpath(locators.Title_page);
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts');
         cy.wait(Timeout.md);
         methods.VisibilityofElementXpath(locators.account_pageloaded);
         cy.wait(Timeout.md);
-        methods.document().then((doc) => {
+        cy.document().then((doc) => {
             const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
             if (!demoElement || demoElement.offsetParent === null) {
@@ -67,7 +67,7 @@ describe('Global search ', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.xl);
+        cy.wait(Timeout.sm);
         methods.scrollWithXpath(locators.Title_page);
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts');
         cy.wait(Timeout.md);

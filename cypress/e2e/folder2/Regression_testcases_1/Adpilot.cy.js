@@ -52,10 +52,10 @@ describe('Adpilot Smart reach', () => {
                 cy.log("**All Segment has been loaded**");
             }
         });
-        methods.MouseoverAndClick(locators.Adpilot)
+        methods.MouseoverWithXpath(locators.Adpilot)
+        cy.wait(Timeout.sm);
+        methods.clickElementByXPath(locators.campaign_title)
         methods.VisibilityofElementXpath(locators.SmartReach)
-        cy.wait(Timeout.xs)
-        methods.clickElementByXPath(locators.SmartReach)
         cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
             cy.wrap(text.trim()).as('Text1');
         });
@@ -65,8 +65,15 @@ describe('Adpilot Smart reach', () => {
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Campaign)
         methods.clickElementByXPath(locators.select_Campaign)
+        methods.typeElementByXPath(locators.select_Campaign, "TD-MessageAd-Conversions-MatchedAudience-US-0309")
         methods.clickElementByXPath(locators.select_Campaign_value)
+        methods.clickElementByXPath(locators.searchfieldbox)
+        methods.clickElementByXPath(locators.searchfieldbox)
+        methods.typeElementByXPath(locators.searchfieldbox, "TD-Spotlight-WebsiteVisits-Gromo-0609")
         methods.clickElementByXPath(locators.select_Campaign_value1)
+        methods.clickElementByXPath(locators.searchfieldbox)
+        methods.clickElementByXPath(locators.searchfieldbox)
+        methods.typeElementByXPath(locators.searchfieldbox, "TD-MessageAds-WebsiteVisits-Gromo-0609")
         methods.clickElementByXPath(locators.select_Campaign_value2)
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((Text1) => {
@@ -166,7 +173,9 @@ describe('Adpilot Smart reach', () => {
                 cy.log("**All Segment has been loaded**");
             }
         });
-        methods.MouseoverAndClick(locators.Adpilot)
+        methods.MouseoverWithXpath(locators.Adpilot)
+        cy.wait(Timeout.sm);
+        methods.clickElementByXPath(locators.campaign_title)
         methods.VisibilityofElementXpath(locators.SmartReach)
         cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
             cy.wrap(text.trim()).as('Text1');
@@ -177,8 +186,15 @@ describe('Adpilot Smart reach', () => {
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Campaign)
         methods.clickElementByXPath(locators.select_Campaign)
+        methods.typeElementByXPath(locators.select_Campaign, "TD-MessageAd-Conversions-MatchedAudience-US-0309")
         methods.clickElementByXPath(locators.select_Campaign_value)
+        methods.clickElementByXPath(locators.searchfieldbox)
+        methods.clickElementByXPath(locators.searchfieldbox)
+        methods.typeElementByXPath(locators.searchfieldbox, "TD-Spotlight-WebsiteVisits-Gromo-0609")
         methods.clickElementByXPath(locators.select_Campaign_value1)
+        methods.clickElementByXPath(locators.searchfieldbox)
+        methods.clickElementByXPath(locators.searchfieldbox)
+        methods.typeElementByXPath(locators.searchfieldbox, "TD-MessageAds-WebsiteVisits-Gromo-0609")
         methods.clickElementByXPath(locators.select_Campaign_value2)
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((Text1) => {
@@ -254,7 +270,9 @@ describe('Adpilot Smart reach', () => {
                 cy.log("**All Segment has been loaded**");
             }
         });
-        methods.MouseoverAndClick(locators.Adpilot)
+        methods.MouseoverWithXpath(locators.Adpilot)
+        cy.wait(Timeout.sm);
+        methods.clickElementByXPath(locators.campaign_title)
         methods.VisibilityofElementXpath(locators.SmartReach)
         cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
             cy.wrap(text.trim()).as('Text1');
@@ -365,7 +383,9 @@ describe('Adpilot Smart reach', () => {
                 cy.log("**All Segment has been loaded**");
             }
         });
-        methods.MouseoverAndClick(locators.Adpilot)
+        methods.MouseoverWithXpath(locators.Adpilot)
+        cy.wait(Timeout.sm);
+        methods.clickElementByXPath(locators.campaign_title)
         methods.VisibilityofElementXpath(locators.SmartReach)
         cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
             cy.wrap(text.trim()).as('Text1');
@@ -451,7 +471,9 @@ describe('Adpilot Smart reach', () => {
                 cy.log("**All Segment has been loaded**");
             }
         });
-        methods.MouseoverAndClick(locators.Adpilot)
+        methods.MouseoverWithXpath(locators.Adpilot)
+        cy.wait(Timeout.sm);
+        methods.clickElementByXPath(locators.campaign_title)
         methods.VisibilityofElementXpath(locators.SmartReach)
         cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
             cy.wrap(text.trim()).as('Text1');
@@ -558,7 +580,9 @@ describe('Adpilot Smart reach', () => {
                 cy.log("**All Segment has been loaded**");
             }
         });
-        methods.MouseoverAndClick(locators.Adpilot)
+        methods.MouseoverWithXpath(locators.Adpilot)
+        cy.wait(Timeout.sm);
+        methods.clickElementByXPath(locators.campaign_title)
         methods.VisibilityofElementXpath(locators.SmartReach)
         cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
             cy.wrap(text.trim()).as('Text1');
@@ -638,7 +662,9 @@ describe('Adpilot Smart reach', () => {
                 cy.log("**All Segment has been loaded**");
             }
         });
-        methods.MouseoverAndClick(locators.Adpilot)
+        methods.MouseoverWithXpath(locators.Adpilot)
+        cy.wait(Timeout.sm);
+        methods.clickElementByXPath(locators.campaign_title)
         methods.VisibilityofElementXpath(locators.SmartReach)
         cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
             cy.wrap(text.trim()).as('Text1');
@@ -649,8 +675,15 @@ describe('Adpilot Smart reach', () => {
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Campaign)
         methods.clickElementByXPath(locators.select_Campaign)
+        methods.typeElementByXPath(locators.select_Campaign, "TD-MessageAd-Conversions-MatchedAudience-US-0309")
         methods.clickElementByXPath(locators.select_Campaign_value)
+        methods.clickElementByXPath(locators.searchfieldbox)
+        methods.clickElementByXPath(locators.searchfieldbox)
+        methods.typeElementByXPath(locators.searchfieldbox, "TD-Spotlight-WebsiteVisits-Gromo-0609")
         methods.clickElementByXPath(locators.select_Campaign_value1)
+        methods.clickElementByXPath(locators.searchfieldbox)
+        methods.clickElementByXPath(locators.searchfieldbox)
+        methods.typeElementByXPath(locators.searchfieldbox, "TD-MessageAds-WebsiteVisits-Gromo-0609")
         methods.clickElementByXPath(locators.select_Campaign_value2)
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((Text1) => {
@@ -728,7 +761,9 @@ describe('Adpilot Smart reach', () => {
                 cy.log("**All Segment has been loaded**");
             }
         });
-        methods.MouseoverAndClick(locators.Adpilot)
+        methods.MouseoverWithXpath(locators.Adpilot)
+        cy.wait(Timeout.sm);
+        methods.clickElementByXPath(locators.campaign_title)
         methods.VisibilityofElementXpath(locators.SmartReach)
         cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
             cy.wrap(text.trim()).as('Text1');
@@ -739,8 +774,15 @@ describe('Adpilot Smart reach', () => {
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Campaign)
         methods.clickElementByXPath(locators.select_Campaign)
+        methods.typeElementByXPath(locators.select_Campaign, "TD-MessageAd-Conversions-MatchedAudience-US-0309")
         methods.clickElementByXPath(locators.select_Campaign_value)
+        methods.clickElementByXPath(locators.searchfieldbox)
+        methods.clickElementByXPath(locators.searchfieldbox)
+        methods.typeElementByXPath(locators.searchfieldbox, "TD-Spotlight-WebsiteVisits-Gromo-0609")
         methods.clickElementByXPath(locators.select_Campaign_value1)
+        methods.clickElementByXPath(locators.searchfieldbox)
+        methods.clickElementByXPath(locators.searchfieldbox)
+        methods.typeElementByXPath(locators.searchfieldbox, "TD-MessageAds-WebsiteVisits-Gromo-0609")
         methods.clickElementByXPath(locators.select_Campaign_value2)
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((Text1) => {

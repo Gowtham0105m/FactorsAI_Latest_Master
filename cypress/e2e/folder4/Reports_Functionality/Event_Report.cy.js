@@ -132,7 +132,6 @@ describe('Event Report Login', () => {
     cy.wait(Timeout.xs)
     methods.MouseoverWithXpath(`//*[text()='${testName1}']//following::button[1]`)
     methods.clickElementByXPath(locators.View_Report)
-    methods.VisibilityofElement(locators.Profile_report_gen)
     methods.clickElementByXPath(locators.Expand_1)
     methods.clickElement(locators.Add_New_Breakdown_new)
     methods.clickElement0(locators.Hubspot_Companies, 0)

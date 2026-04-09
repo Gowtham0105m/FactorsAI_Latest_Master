@@ -4,6 +4,7 @@ import methods from '../../../support/Common_Method.js';
 import locators from '../../../support/Locators.js';
 import dayjs from 'dayjs';
 
+
 describe('Alert Login', () => {
 
     beforeEach(() => {
@@ -25,13 +26,15 @@ describe('Alert Login', () => {
         const testName = `Demo Alert ${nowTime}`;
         const testName1 = `Demo Editted Alert ${nowTime}_1`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.sm)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        methods.clickElementByXPath(locators.Automation)
+        methods.MouseoverWithXpath(locators.Automation)
+        cy.wait(Timeout.sm);
+        methods.clickElementByXPath(locators.RealtimeAlerts)
 
         // New alert
 
-        methods.clickElementByXPath(locators.Realtimealerts)
+        methods.VisibilityofElementXpathIndexInput(locators.real_time_alerts, 1)
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.ElementToBeClickableXpath(locators.NewAlert)
@@ -92,9 +95,12 @@ describe('Alert Login', () => {
         methods.scrollWithXpath(locators.Enable_button)
         methods.clickElementByXPath(locators.Enable_button)
         methods.clickElementByXPath(locators.Select_Channel1)
+        cy.wait(Timeout.sm)
         methods.typeElementByXPath(locators.SelectClick, 'stagi')
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.alertteststaging)
         methods.clickElementByXPath(locators.Mention_member)
+        cy.wait(Timeout.sm)
         methods.typeElementByXPath(locators.Mention_member, 'sara')
         methods.clickElementByXPath(locators.sarath)
 
@@ -162,14 +168,15 @@ describe('Alert Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo Copy Alert ${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.sm)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        methods.clickElementByXPath(locators.Automation)
-
+        methods.MouseoverWithXpath(locators.Automation)
+        cy.wait(Timeout.sm);
+        methods.clickElementByXPath(locators.RealtimeAlerts)
 
         // New alert
 
-        methods.clickElementByXPath(locators.Realtimealerts)
+        methods.VisibilityofElementXpathIndexInput(locators.real_time_alerts, 1)
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.ElementToBeClickableXpath(locators.NewAlert)
@@ -253,7 +260,6 @@ describe('Alert Login', () => {
         methods.assertElementContainsText(locators.notification_popup, "SuccessDeleted Alert successfully")
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(`//*[text()='Copy of ${testName}']//following::button[2]`)
-        // methods.clickElementByXPath(`//*[text()='${testName}']//following::button[2]`)
         methods.clickElementByXPath(locators.remove_alert)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
@@ -266,13 +272,15 @@ describe('Alert Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo Alert Template ${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.sm)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        methods.clickElementByXPath(locators.Automation)
+        methods.MouseoverWithXpath(locators.Automation)
+        cy.wait(Timeout.sm);
+        methods.clickElementByXPath(locators.RealtimeAlerts)
 
         // New alert
 
-        methods.clickElementByXPath(locators.Realtimealerts)
+        methods.VisibilityofElementXpathIndexInput(locators.real_time_alerts, 1)
         cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.ElementToBeClickableXpath(locators.NewAlert)

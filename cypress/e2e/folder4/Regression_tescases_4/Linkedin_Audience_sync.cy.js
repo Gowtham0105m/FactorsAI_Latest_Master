@@ -48,9 +48,9 @@ describe('Linkedin Audience sync login', () => {
                 cy.log("**All Segment has been loaded**");
             }
         });
-        methods.clickElementByXPath(locators.Adpilot)
-        methods.VisibilityofElementXpath(locators.SmartReach)
-        methods.clickElementIndexXpath(locators.LinkedIn_Audience_Sync1, 2)
+        methods.MouseoverWithXpath(locators.Adpilot)
+        cy.wait(Timeout.sm);
+        methods.clickElementIndexXpath(locators.LinkedIn_Audience_Sync1, 0)
         methods.VisibilityofElementXpath(locators.LinkedInaudiencesync)
         cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
             cy.wrap(text.trim()).as('Text1');
@@ -97,4 +97,5 @@ describe('Linkedin Audience sync login', () => {
         cy.wait(Timeout.sm)
         methods.clickElement(locators.linkedin_refresh_icon)
     })
+
 })

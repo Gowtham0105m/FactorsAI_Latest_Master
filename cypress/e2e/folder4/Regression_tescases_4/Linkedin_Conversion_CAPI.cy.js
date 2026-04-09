@@ -1,4 +1,4 @@
-import Login1 from '../../PageObjects/Login1';
+import Login1 from '../../PageObjects/Login1.js';
 import { deviceViewport, Timeout } from '../../Utils.js';
 import methods from '../../../support/Common_Method.js';
 import locators from '../../../support/Locators.js';
@@ -47,10 +47,9 @@ describe('Linkedin_Conversion(CAPI) Login', () => {
                 cy.log("**All Segment has been loaded**");
             }
         });
-        methods.clickElementByXPath(locators.Adpilot)
-        methods.VisibilityofElementXpath(locators.SmartReach)
-        cy.wait(Timeout.xs)
-        methods.clickElementByXPath(locators.LinkedInCAPI)
+        methods.MouseoverWithXpath(locators.Adpilot)
+        cy.wait(Timeout.sm)
+        methods.clickElementByXPath(locators.CAPI)
         methods.VisibilityofElementXpath(locators.LinkedInCAPITitle)
         cy.wait(Timeout.md);
         cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
