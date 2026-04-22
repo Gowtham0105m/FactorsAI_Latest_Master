@@ -26,11 +26,10 @@ describe('Google Advanced Conversions Login', () => {
         const testName = `Demo Google CAPI ${nowTime}`;
         const testName1 = `Demo Google CAPI New ${nowTime}`;
 
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.MouseoverWithXpath(locators.Adpilot)
         cy.wait(Timeout.sm);
@@ -153,11 +152,10 @@ describe('Google Advanced Conversions Login', () => {
         const testName = `Demo Google CAPI ${nowTime}`;
         const testName1 = `Demo Google CAPI New ${nowTime}`;
 
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.MouseoverWithXpath(locators.Adpilot)
         cy.wait(Timeout.sm);
@@ -186,7 +184,7 @@ describe('Google Advanced Conversions Login', () => {
             cy.wrap(text.trim()).as('Text1');
         });
         methods.clickElementByXPath(locators.SyncNewConversion_Btn)
-        cy.wait(Timeout.xmd)
+        cy.wait(Timeout.lg)
         methods.clickElement0(locators.Search, 0)
         methods.clickElement(`div[title="${Ad_Account}"]`)
         methods.clickElement0(locators.Search, 1)
@@ -290,11 +288,10 @@ describe('Google Advanced Conversions Login', () => {
         const testName = `Demo Google CAPI ${nowTime}`;
         const testName1 = `Demo Google CAPI New ${nowTime}`;
 
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.MouseoverWithXpath(locators.Adpilot)
         cy.wait(Timeout.sm);
@@ -323,7 +320,7 @@ describe('Google Advanced Conversions Login', () => {
             cy.wrap(text.trim()).as('Text1');
         });
         methods.clickElementByXPath(locators.SyncNewConversion_Btn)
-        cy.wait(Timeout.xmd)
+        cy.wait(Timeout.lg)
         methods.clickElement0(locators.Search, 0)
         methods.clickElement(`div[title="${Ad_Account}"]`)
         methods.clickElement(locators.ConversionfeedbackforLeads_Option)
@@ -426,11 +423,10 @@ describe('Google Advanced Conversions Login', () => {
         const testName = `Demo Google CAPI ${nowTime}`;
         const testName1 = `Demo Google CAPI New ${nowTime}`;
 
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.MouseoverWithXpath(locators.Adpilot)
         cy.wait(Timeout.sm);
@@ -459,7 +455,7 @@ describe('Google Advanced Conversions Login', () => {
         });
 
         methods.clickElementByXPath(locators.SyncNewConversion_Btn)
-        cy.wait(Timeout.xmd)
+        cy.wait(Timeout.lg)
         methods.clickElement0(locators.Search, 0)
         methods.clickElement(`div[title="${Ad_Account}"]`)
         methods.clickElement(locators.ConversionfeedbackforLeads_Option)
@@ -539,11 +535,10 @@ describe('Google Advanced Conversions Login', () => {
         const Ad_Account = "7108784795";
         const testName = `Demo Google CAPI ${nowTime}`;
 
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.MouseoverWithXpath(locators.Adpilot)
         cy.wait(Timeout.sm);
@@ -572,7 +567,7 @@ describe('Google Advanced Conversions Login', () => {
             cy.wrap(text.trim()).as('Text1');
         });
         methods.clickElementByXPath(locators.SyncNewConversion_Btn)
-        cy.wait(Timeout.xmd)
+        cy.wait(Timeout.lg)
         methods.clickElement0(locators.Search, 0)
         methods.clickElement(`div[title="${Ad_Account}"]`)
         methods.clickElement0(locators.Search, 1)

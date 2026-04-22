@@ -24,12 +24,21 @@ describe('Insight Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
+        methods.Mouseover(locators.report_dropdown)
+        methods.clickElementByXPath(locators.Dashboards)
+        cy.wait(Timeout.md)
+        methods.VisibilityofElementXpath(locators.SegmentTitle)
+        methods.Mouseover(locators.account_dropdown);
+        cy.wait(Timeout.sm);
+        methods.clickElementIndexXpath(locators.Account, 1);
+        cy.wait(Timeout.xl);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -52,6 +61,8 @@ describe('Insight Login', () => {
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.InHubspot)
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElementByXPath(locators.New_Segment)
         methods.clickElementByXPath(locators.StartfromScratch)
@@ -64,6 +75,7 @@ describe('Insight Login', () => {
         methods.clickElementByXPath(locators.Apply_filter)
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 60 minutes to view the final segment.")
         methods.clickElementByXPath(locators.Save_segments1)
         methods.ClearAndType(locators.Paid_search_visitors, testName)
@@ -71,12 +83,12 @@ describe('Insight Login', () => {
         methods.GetText(locators.notification_popup, "Success!Segment Creation Successful")
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
-        cy.wait(Timeout.ml)
+        cy.wait(Timeout.xl)
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
         cy.wait(Timeout.md)
         methods.scroll(locators.Insight_Icon)
         methods.clickElement(locators.Insight_Icon)
-        cy.wait(Timeout.lg)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.InsightMsg2)
         methods.assertElementContainsTextxpath(locators.InsightMsg1, "We are working hard to build the insights,")
         methods.assertElementContainsTextxpath(locators.InsightMsg2, "Check back in a day's time...")
@@ -84,6 +96,7 @@ describe('Insight Login', () => {
         methods.clickElementByXPath(locators.Delete_segment)
         methods.clickElementByXPath(locators.Yes)
         methods.VisibilityofElement(locators.notification_popup)
+        cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
     })

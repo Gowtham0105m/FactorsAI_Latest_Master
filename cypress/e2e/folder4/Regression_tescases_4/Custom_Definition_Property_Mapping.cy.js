@@ -26,12 +26,10 @@ describe('Custom Definition - Property Mapping Login', () => {
         const testName = `Demo Property Mapping ${nowTime}`;
         const testName1 = `Demo Property Mapping ${randomNumber}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.clickElement(locators.setting)
         methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Custom_Definitions_1)

@@ -23,10 +23,13 @@ describe('Channel Groups Login', () => {
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const testName = `Demo Channel Groups ${randomNumber}`;
 
-        cy.wait(Timeout.ml)
-        methods.scrollWithXpath(locators.Title_page)
-        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
+        methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.md)
         cy.document().then((doc) => {

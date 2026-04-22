@@ -22,16 +22,19 @@ describe('Peoples Regression', () => {
 
     it('TC_RE_01 - Peoples_Page Load', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xmd)
+        methods.Mouseover(locators.report_dropdown)
+        methods.clickElementByXPath(locators.Dashboards)
         cy.wait(Timeout.md)
+        methods.VisibilityofElementXpath(locators.SegmentTitle)
+        methods.Mouseover(locators.account_dropdown);
+        cy.wait(Timeout.sm);
+        methods.clickElementIndexXpath(locators.Account, 1);
+        cy.wait(Timeout.xl);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        methods.Mouseover(locators.account_dropdown)
-        methods.clickElementByXPath(locators.People)
-        cy.wait(Timeout.xs)
-        methods.UrlvalidationPeople()
-        methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
+        cy.wait(Timeout.xmd)
 
     })
 
@@ -39,15 +42,25 @@ describe('Peoples Regression', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xmd)
+        methods.Mouseover(locators.report_dropdown)
+        methods.clickElementByXPath(locators.Dashboards)
         cy.wait(Timeout.md)
+        methods.VisibilityofElementXpath(locators.SegmentTitle)
+        methods.Mouseover(locators.account_dropdown);
+        cy.wait(Timeout.sm);
+        methods.clickElementIndexXpath(locators.Account, 1);
+        cy.wait(Timeout.xl);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
+        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         cy.wait(Timeout.xs)
         methods.UrlvalidationPeople()
         methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElementByXPath(locators.Filter)
         methods.VisibilityofElement(locators.Open_Filter)
@@ -85,7 +98,7 @@ describe('Peoples Regression', () => {
     it.skip('TC_RE_04 - Peoples_Filter clear', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
@@ -117,7 +130,7 @@ describe('Peoples Regression', () => {
 
     it.skip('TC_RE_05 - Peoples_discard changes', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
@@ -140,13 +153,23 @@ describe('Peoples Regression', () => {
 
     it('TC_RE_06, TC_RE_07 - People_Search field ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xmd)
+        methods.Mouseover(locators.report_dropdown)
+        methods.clickElementByXPath(locators.Dashboards)
         cy.wait(Timeout.md)
+        methods.VisibilityofElementXpath(locators.SegmentTitle)
+        methods.Mouseover(locators.account_dropdown);
+        cy.wait(Timeout.sm);
+        methods.clickElementIndexXpath(locators.Account, 1);
+        cy.wait(Timeout.xl);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
+        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         methods.UrlvalidationPeople()
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
 
         // Search username
@@ -166,16 +189,25 @@ describe('Peoples Regression', () => {
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const combination = testName + randomNumber;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xmd)
+        methods.Mouseover(locators.report_dropdown)
+        methods.clickElementByXPath(locators.Dashboards)
         cy.wait(Timeout.md)
+        methods.VisibilityofElementXpath(locators.SegmentTitle)
+        methods.Mouseover(locators.account_dropdown);
+        cy.wait(Timeout.sm);
+        methods.clickElementIndexXpath(locators.Account, 1);
+        cy.wait(Timeout.xl);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
+        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         methods.UrlvalidationPeople()
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
         methods.clickElementByXPath(locators.New_Segment);
-
         methods.clickElementIndexXpath(locators.Add_new2, 0)
         methods.clickElement0(locators.Hubspot_Contacts, 0)
         methods.clickElementByXPath(locators.pageview_option1)
@@ -224,15 +256,25 @@ describe('Peoples Regression', () => {
 
     it('TC_RE_12, TC_RE_13 - People_Brid views ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xmd)
+        methods.Mouseover(locators.report_dropdown)
+        methods.clickElementByXPath(locators.Dashboards)
         cy.wait(Timeout.md)
+        methods.VisibilityofElementXpath(locators.SegmentTitle)
+        methods.Mouseover(locators.account_dropdown);
+        cy.wait(Timeout.sm);
+        methods.clickElementIndexXpath(locators.Account, 1);
+        cy.wait(Timeout.xl);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
+        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         cy.wait(Timeout.lg)
         methods.UrlvalidationPeople()
         methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
 
         // select account & birdview
@@ -248,17 +290,26 @@ describe('Peoples Regression', () => {
 
     it('TC_RE_14 - People_Birdviews expand ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xmd)
+        methods.Mouseover(locators.report_dropdown)
+        methods.clickElementByXPath(locators.Dashboards)
         cy.wait(Timeout.md)
+        methods.VisibilityofElementXpath(locators.SegmentTitle)
+        methods.Mouseover(locators.account_dropdown);
+        cy.wait(Timeout.sm);
+        methods.clickElementIndexXpath(locators.Account, 1);
+        cy.wait(Timeout.xl);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
+        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         cy.wait(Timeout.lg)
         methods.UrlvalidationPeople()
         methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-
         methods.clickElementByXPath(locators.People_download_button)
         methods.typeElementByXPath(locators.Search1, 'sarath_tdfect@factors.ai')
         methods.EnterXpath(locators.Search1)
@@ -270,17 +321,26 @@ describe('Peoples Regression', () => {
 
     it('TC_RE_15 - People_Birdviews account activity ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xmd)
+        methods.Mouseover(locators.report_dropdown)
+        methods.clickElementByXPath(locators.Dashboards)
         cy.wait(Timeout.md)
+        methods.VisibilityofElementXpath(locators.SegmentTitle)
+        methods.Mouseover(locators.account_dropdown);
+        cy.wait(Timeout.sm);
+        methods.clickElementIndexXpath(locators.Account, 1);
+        cy.wait(Timeout.xl);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
+        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         cy.wait(Timeout.lg)
         methods.UrlvalidationPeople()
         methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-
         methods.clickElementByXPath(locators.People_download_button)
         methods.typeElementByXPath(locators.Search1, 'sarath_tdfect@factors.ai')
         methods.EnterXpath(locators.Search1)

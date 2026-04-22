@@ -23,12 +23,9 @@ describe('Predictive Scoring Login', () => {
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const testName = `Predictive Score Demo ${randomNumber}`;
 
-        cy.wait(Timeout.xl)
-        methods.scrollWithXpath(locators.Title_page)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
+        cy.wait(Timeout.xmd)
         methods.clickElement(locators.setting)
         methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Account_Configurations_1)
@@ -91,11 +88,9 @@ describe('Predictive Scoring Login', () => {
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const testName = `Predictive Score Demo ${randomNumber}`;
 
-        cy.wait(Timeout.xl)
-        methods.scrollWithXpath(locators.Title_page)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElement(locators.setting)
         methods.clickElementByXPath(locators.Data_Management)

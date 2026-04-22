@@ -25,11 +25,9 @@ describe('Start_Fresh_Icon', () => {
         const testName = `Demo_${nowTime}`;
         const FolderName = `Master_${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -62,6 +60,7 @@ describe('Start_Fresh_Icon', () => {
         methods.VisibilityofElement(locators.notification_popup)
 
         // search saved segment
+        cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")

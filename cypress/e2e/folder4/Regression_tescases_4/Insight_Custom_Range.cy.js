@@ -20,11 +20,9 @@ describe('Insight custom range', () => {
 
     it('Insight custom range', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -45,6 +43,8 @@ describe('Insight custom range', () => {
         methods.assertElementContainsTextxpath(locators.AllsegmentMenu, "All segments")
         methods.clickElementByXPath(locators.All_segments)
         methods.clickElementByXPath(locators.In_Hubspot)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.scrollWithXpath(locators.In_Hubspot3)
@@ -69,7 +69,7 @@ describe('Insight custom range', () => {
         methods.scrollWithXpath(locators.SalesOpportunityAnalysis)
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
-        cy.wait(Timeout.ml)
+        cy.wait(Timeout.xl)
         methods.Existxpath(locators.Opportunity_Created)
         methods.Existxpath(locators.Pipeline_Created)
         methods.Existxpath(locators.Average_Deal_Size)
@@ -93,7 +93,7 @@ describe('Insight custom range', () => {
         methods.scrollWithXpath(locators.SalesOpportunityAnalysis)
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
-        cy.wait(Timeout.ml)
+        cy.wait(Timeout.xl)
         methods.Existxpath(locators.Opportunity_Created)
         methods.Existxpath(locators.Pipeline_Created)
         methods.Existxpath(locators.Average_Deal_Size)
@@ -155,11 +155,9 @@ describe('Insight custom range', () => {
 
     it('Compare another insight segment', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -181,6 +179,8 @@ describe('Insight custom range', () => {
         methods.clickElementByXPath(locators.All_segments)
         methods.clickElementByXPath(locators.In_Hubspot)
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.scrollWithXpath(locators.In_Hubspot3)
         methods.clickElement(locators.Insight_Icon)
@@ -200,7 +200,9 @@ describe('Insight custom range', () => {
         methods.VisibilityofElementXpath(locators.sales_qualified)
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.SalesOpportunityAnalysis)
+        cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         methods.Existxpath(locators.Opportunity_Created)

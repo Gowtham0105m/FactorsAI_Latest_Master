@@ -814,7 +814,7 @@ class locators {
     this.Eventdetails = '//*[text()="Event details"]';
     this.LinkedInCAPI = '//*[text()="LinkedIn CAPI"]';
     this.LinkedInCAPITitle = '//h4[text()="LinkedIn CAPI"]';
-    this.SelectConversionEvent = '//*[text()="Map user properties"]//preceding::input[1]'
+    this.SelectConversionEvent = '//*[text()="Select the Conversion from LinkedIn to which you wish to stream events"]//following::input[1]'
     this.TrafficDashboard = '//span[text()="Traffic Dashboard"]';
     this.TrafficDashboardTitle = '//h4[text()="Traffic Dashboard"]';
     this.TrafficAddFilter = '//h1[text()="Add" and text()=" filter"]';
@@ -1053,6 +1053,8 @@ class locators {
     this.Alerts = '//*[text()="Alerts"]';
     this.real_time_alerts = '//*[text()="Real time alerts"]';
     this.searchfieldbox = '(//div[@class="ant-select-selector"])[2]';
+    this.Discard_Changes = '//span[text()="Discard Changes"]';
+    this.Any_Page_View = '[data-title="Any Page View"]';
 
   }
 }

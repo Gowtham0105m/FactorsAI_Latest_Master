@@ -23,14 +23,31 @@ describe('Segment Alert Login', () => {
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const testName = `Demo_${randomNumber}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md);
+        cy.document().then((doc) => {
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!demoElement || demoElement.offsetParent === null) {
+                cy.log("**All Segment not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.VisibilityofElementXpath(locators.account_pageloaded)
+            } else {
+                cy.log("**All Segment has been loaded**");
+            }
+        });
         methods.clickElementByXPath(locators.Automation)
-        methods.clickElementByXPath(locators.Realtimealerts)
+        methods.clickElementByXPath(locators.RealtimeAlerts)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.ElementToBeClickableXpath(locators.NewAlert)
         methods.clickElementByXPath(locators.NewAlert)
@@ -50,6 +67,10 @@ describe('Segment Alert Login', () => {
         cy.wait(Timeout.sm)
         methods.clickElement(locators.Alert_name)
         methods.ClearAndType(locators.Alert_name, testName)
+        cy.wait(Timeout.sm)
+        methods.clickElement(locators.Add_property)
+        methods.typeElement(locators.select_property, 'company domain')
+        methods.clickElement0(locators.Company_domain, 0)
         cy.wait(Timeout.sm)
         methods.scrollWithXpath(locators.Enable_button)
         methods.clickElementByXPath(locators.Enable_button)

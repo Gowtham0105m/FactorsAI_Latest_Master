@@ -20,12 +20,24 @@ describe('Hidden Accounts', () => {
 
 
     it('Hidden Accounts', () => {
-
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.md)
+        methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
+        methods.MouseoverWithXpath(locators.Automation)
+        cy.wait(Timeout.sm)
+        methods.clickElementByXPath(locators.workflows_Title)
+        cy.wait(Timeout.sm)
+        methods.VisibilityofElementXpathIndexInput(locators.workflows_Title, 2)
+        cy.wait(Timeout.sm)
+        methods.Mouseover(locators.account_dropdown);
+        cy.wait(Timeout.xs);
+        methods.clickElementIndexXpath(locators.Account, 1);
+        cy.wait(Timeout.xl);
+        cy.wait(Timeout.ml);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
 
         // select Hidden account
 
@@ -58,7 +70,7 @@ describe('Hidden Accounts', () => {
         methods.GetText(locators.MovedSuccessfull_popup, "Selected accounts have been moved to the hidden list")
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.clear_search)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.lg)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElementByXPath(locators.search_button)
         methods.typeElementByXPath(locators.search_area, 'trackdfect.com')
@@ -112,11 +124,12 @@ describe('Hidden Accounts', () => {
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.reload();
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.clickElementByXPath(locators.search_button)
         cy.wait(Timeout.xs)
         methods.typeElementByXPath(locators.search_area, 'trackdfect.com')
         methods.EnterXpath(locators.search_area)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.factors_File, 'trackdfect.com')
         cy.wait(Timeout.sm)
 
@@ -124,11 +137,24 @@ describe('Hidden Accounts', () => {
 
     it('Hidden Accounts - Popup link', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.md)
+        methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
+        methods.MouseoverWithXpath(locators.Automation)
+        cy.wait(Timeout.sm)
+        methods.clickElementByXPath(locators.workflows_Title)
+        cy.wait(Timeout.sm)
+        methods.VisibilityofElementXpathIndexInput(locators.workflows_Title, 2)
+        cy.wait(Timeout.sm)
+        methods.Mouseover(locators.account_dropdown);
+        cy.wait(Timeout.xs);
+        methods.clickElementIndexXpath(locators.Account, 1);
+        cy.wait(Timeout.xl);
+        cy.wait(Timeout.ml);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
 
         // select Hidden account
 
@@ -152,7 +178,7 @@ describe('Hidden Accounts', () => {
         methods.clickElementByXPath(locators.search_button)
         methods.typeElementByXPath(locators.search_area, 'trackdfect.com')
         methods.EnterXpath(locators.search_area)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.lg)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.assertElementContainsTextxpath(locators.factors_File, 'trackdfect.com')
         methods.clickElementByXPath(locators.Checkbox)
@@ -191,11 +217,12 @@ describe('Hidden Accounts', () => {
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.reload();
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.clickElementByXPath(locators.search_button)
         cy.wait(Timeout.xs)
         methods.typeElementByXPath(locators.search_area, 'trackdfect.com')
         methods.EnterXpath(locators.search_area)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.factors_File, 'trackdfect.com')
         cy.wait(Timeout.sm)
 

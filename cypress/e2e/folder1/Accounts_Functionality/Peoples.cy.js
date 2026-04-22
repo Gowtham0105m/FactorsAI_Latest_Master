@@ -28,21 +28,19 @@ describe('People Login', () => {
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const combination = testName + randomNumber;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         methods.UrlvalidationPeople()
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
-
-        // Search username
-
         cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElementByXPath(locators.search_button)
         methods.typeElementByXPath(locators.Search1, 'sarath_tdfect@factors.ai')
         methods.EnterXpath(locators.Search1)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.md)
         methods.assertElementContainsTextxpath(locators.rowname, 'sarath_tdfect@factors.ai')
 
         // add column
@@ -130,13 +128,14 @@ describe('People Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         methods.UrlvalidationPeople()
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElementByXPath(locators.Filter)
         methods.VisibilityofElement(locators.Open_Filter)
@@ -189,13 +188,14 @@ describe('People Login', () => {
         const testName = `Demo_${nowTime}`;
         const testName1 = `Demo Segment_${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         methods.UrlvalidationPeople()
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElementByXPath(locators.Filter)
         methods.VisibilityofElement(locators.Open_Filter)
@@ -250,4 +250,5 @@ describe('People Login', () => {
         cy.wait(Timeout.xs)
 
     })
+
 })

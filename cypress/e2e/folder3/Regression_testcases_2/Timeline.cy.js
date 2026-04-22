@@ -20,9 +20,19 @@ describe('Timeline Login', () => {
 
   it('Account Timeline -- User Properties and Event Properties', () => {
 
-    cy.wait(Timeout.ml)
+    cy.wait(Timeout.xmd)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-    cy.wait(Timeout.ml)
+    cy.wait(Timeout.md)
+    methods.MouseoverWithXpath(locators.Automation)
+    cy.wait(Timeout.sm)
+    methods.clickElementByXPath(locators.workflows_Title)
+    cy.wait(Timeout.sm)
+    methods.VisibilityofElementXpathIndexInput(locators.workflows_Title, 2)
+    cy.wait(Timeout.sm)
+    methods.Mouseover(locators.account_dropdown);
+    cy.wait(Timeout.xs);
+    methods.clickElementIndexXpath(locators.Account, 1);
+    cy.wait(Timeout.xl);
     methods.VisibilityofElementXpath(locators.account_pageloaded)
     cy.wait(Timeout.md)
     cy.document().then((doc) => {
@@ -51,7 +61,7 @@ describe('Timeline Login', () => {
     methods.clickElementByXPath(locators.Open_Accenture_Acc)
     cy.wait(Timeout.md)
     methods.VisibilityofElementXpath(locators.Time_line_Validation)
-    cy.wait(Timeout.sm)
+    cy.wait(Timeout.md)
 
     let found = false;
 

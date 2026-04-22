@@ -27,11 +27,9 @@ describe('Clone Segment', () => {
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const combination = testName + randomNumber;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
 
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
@@ -69,11 +67,13 @@ describe('Clone Segment', () => {
         methods.clickElementByXPath(locators.Apply_filter)
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 60 minutes to view the final segment.")
         methods.clickElementByXPath(locators.Save_segments1)
         methods.ClearAndTypeWithXpath(locators.segment_namefield, testName)
         methods.clickElementByXPath(locators.Save)
         methods.GetText(locators.notification_popup, "Success!Segment Creation Successful")
+        cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
@@ -147,7 +147,8 @@ describe('Clone Segment', () => {
         methods.clickElementByXPath(locators.Save_segments1)
         methods.clickElementByXPath(locators.Save)
         cy.wait(Timeout.xl)
-        cy.wait(Timeout.ml)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
         cy.wait(Timeout.sm)
         methods.typeElement(locators.Search_segment, testName)
@@ -177,7 +178,8 @@ describe('Clone Segment', () => {
         cy.wait(Timeout.sm)
         methods.NotExist(locators.Loading)
         methods.assertElementContainsText(locators.notification_popup, "Segment deleted successfully")
-        cy.wait(Timeout.lg)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
 
     })
@@ -189,11 +191,9 @@ describe('Clone Segment', () => {
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const combination = testName + randomNumber;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
 
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
@@ -231,11 +231,13 @@ describe('Clone Segment', () => {
         methods.clickElementByXPath(locators.Apply_filter)
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 60 minutes to view the final segment.")
         methods.clickElementByXPath(locators.Save_segments1)
         methods.ClearAndTypeWithXpath(locators.segment_namefield, testName)
         methods.clickElementByXPath(locators.Save)
         methods.GetText(locators.notification_popup, "Success!Segment Creation Successful")
+        cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
@@ -306,7 +308,8 @@ describe('Clone Segment', () => {
         methods.clickElementByXPath(locators.Save_segments1)
         methods.clickElementByXPath(locators.Save)
         cy.wait(Timeout.xl)
-        cy.wait(Timeout.ml)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.threedot_icon)
@@ -325,7 +328,8 @@ describe('Clone Segment', () => {
         cy.wait(Timeout.sm)
         methods.NotExist(locators.Loading)
         methods.assertElementContainsText(locators.Popup_Message, "Segment deleted successfully")
-        cy.wait(Timeout.lg)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
 
     })

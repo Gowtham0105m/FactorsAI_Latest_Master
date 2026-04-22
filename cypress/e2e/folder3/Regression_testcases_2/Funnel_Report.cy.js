@@ -21,15 +21,32 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_01 - Funnel Report - New Report', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md);
+        cy.document().then((doc) => {
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!demoElement || demoElement.offsetParent === null) {
+                cy.log("**All Segment not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.VisibilityofElementXpath(locators.account_pageloaded)
+            } else {
+                cy.log("**All Segment has been loaded**");
+            }
+        });
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         methods.ElementToBeClickable(locators.New_Report_CSS)
         cy.wait(Timeout.sm)
@@ -38,15 +55,32 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_02 - Funnel Report - Generate the Funnel report', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md);
+        cy.document().then((doc) => {
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!demoElement || demoElement.offsetParent === null) {
+                cy.log("**All Segment not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.VisibilityofElementXpath(locators.account_pageloaded)
+            } else {
+                cy.log("**All Segment has been loaded**");
+            }
+        });
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -61,12 +95,29 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_03 - Funnel Report - adding multiple Event ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md);
+        cy.document().then((doc) => {
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!demoElement || demoElement.offsetParent === null) {
+                cy.log("**All Segment not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.VisibilityofElementXpath(locators.account_pageloaded)
+            } else {
+                cy.log("**All Segment has been loaded**");
+            }
+        });
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
         cy.wait(Timeout.xs)
@@ -87,15 +138,32 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_04 - Funnel Report - Local filter ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md);
+        cy.document().then((doc) => {
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!demoElement || demoElement.offsetParent === null) {
+                cy.log("**All Segment not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.VisibilityofElementXpath(locators.account_pageloaded)
+            } else {
+                cy.log("**All Segment has been loaded**");
+            }
+        });
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -114,15 +182,32 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_05 - Funnel Report - check the filter option is visible ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md);
+        cy.document().then((doc) => {
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!demoElement || demoElement.offsetParent === null) {
+                cy.log("**All Segment not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.VisibilityofElementXpath(locators.account_pageloaded)
+            } else {
+                cy.log("**All Segment has been loaded**");
+            }
+        });
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -141,15 +226,32 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_06 - Funnel Report - add multiple filter for one session ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md);
+        cy.document().then((doc) => {
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!demoElement || demoElement.offsetParent === null) {
+                cy.log("**All Segment not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.VisibilityofElementXpath(locators.account_pageloaded)
+            } else {
+                cy.log("**All Segment has been loaded**");
+            }
+        });
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -175,15 +277,32 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_07 - Funnel Report - the delete option works ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md);
+        cy.document().then((doc) => {
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!demoElement || demoElement.offsetParent === null) {
+                cy.log("**All Segment not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.VisibilityofElementXpath(locators.account_pageloaded)
+            } else {
+                cy.log("**All Segment has been loaded**");
+            }
+        });
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -202,15 +321,14 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_08, TC_RE_09 - Funnel Report - global filter more than one ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -237,15 +355,14 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_10 - Funnel Report - clicking on the + icon ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -280,15 +397,32 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_11 - Funnel Report - breakdown ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md);
+        cy.document().then((doc) => {
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!demoElement || demoElement.offsetParent === null) {
+                cy.log("**All Segment not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.VisibilityofElementXpath(locators.account_pageloaded)
+            } else {
+                cy.log("**All Segment has been loaded**");
+            }
+        });
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -309,15 +443,32 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_12 - Funnel Report - criteria ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md);
+        cy.document().then((doc) => {
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!demoElement || demoElement.offsetParent === null) {
+                cy.log("**All Segment not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.VisibilityofElementXpath(locators.account_pageloaded)
+            } else {
+                cy.log("**All Segment has been loaded**");
+            }
+        });
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -344,15 +495,32 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_13 - Funnel Report - custom range ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md);
+        cy.document().then((doc) => {
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!demoElement || demoElement.offsetParent === null) {
+                cy.log("**All Segment not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.VisibilityofElementXpath(locators.account_pageloaded)
+            } else {
+                cy.log("**All Segment has been loaded**");
+            }
+        });
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -388,15 +556,32 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_14 - Funnel Report -  KPI, filters and breakdown and run analysis ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md);
+        cy.document().then((doc) => {
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!demoElement || demoElement.offsetParent === null) {
+                cy.log("**All Segment not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.VisibilityofElementXpath(locators.account_pageloaded)
+            } else {
+                cy.log("**All Segment has been loaded**");
+            }
+        });
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -410,8 +595,8 @@ describe('Funnel Report Rregression', () => {
         methods.typeElement(locators.search_1, "linkedin paid leads")
         methods.clickElement(locators.Linkedin_Paid_Leads)
         methods.clickElementByXPath(locators.Add_New_FilterBy)
-        methods.clickElement0(locators.All_Account, 0)
-        methods.clickElementByXPath(locators.pageview_option1)
+        methods.typeElement(locators.search_1, 'company domain')
+        methods.clickElement0(locators.Company_domain, 0)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.equals_1)
         cy.wait(Timeout.sm)
@@ -419,21 +604,12 @@ describe('Funnel Report Rregression', () => {
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Apply1)
         cy.wait(Timeout.xs)
-        methods.clickElementByXPath(locators.Add_Plus_button)
-        methods.typeElement(locators.search_1, "Company Tech")
-        methods.clickElement0(locators.Company_Tech, 0)
-        methods.clickElement(locators.equals_1)
-        cy.wait(Timeout.sm)
-        methods.clickElementByXPath(locators.pageview_option1)
-        cy.wait(Timeout.sm)
-        methods.clickElementByXPath(locators.Apply1)
         methods.clickElementByXPath(locators.Add_New_Breakdown)
-        methods.clickElement0(locators.All_Account, 0)
-        methods.clickElementByXPath(locators.Filter_option1)
+        methods.typeElement(locators.select_property, "Hubspot deal pipeline")
+        methods.clickElement(locators.Hubspot_Deal_Pipeline)
         methods.clickElement0(locators.Select_Analysis_Window, 0)
         methods.clickElementByXPath(locators.Select_Month)
         methods.clickElementByXPath(locators.date_choosen)
-        methods.clickElementByXPath(locators.Run_Anal)
         methods.clickElementByXPath(locators.Run_Anal)
         methods.VisibilityofElement(locators.Profile_report_gen)
 
@@ -441,15 +617,32 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_15 - Funnel Report -  download the CSV file ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md);
+        cy.document().then((doc) => {
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!demoElement || demoElement.offsetParent === null) {
+                cy.log("**All Segment not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.VisibilityofElementXpath(locators.account_pageloaded)
+            } else {
+                cy.log("**All Segment has been loaded**");
+            }
+        });
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -483,15 +676,32 @@ describe('Funnel Report Rregression', () => {
 
     it('TC_RE_16 - Funnel Report -  Search ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md);
+        cy.document().then((doc) => {
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!demoElement || demoElement.offsetParent === null) {
+                cy.log("**All Segment not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.VisibilityofElementXpath(locators.account_pageloaded)
+            } else {
+                cy.log("**All Segment has been loaded**");
+            }
+        });
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -525,15 +735,32 @@ describe('Funnel Report Rregression', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md);
+        cy.document().then((doc) => {
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!demoElement || demoElement.offsetParent === null) {
+                cy.log("**All Segment not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.VisibilityofElementXpath(locators.account_pageloaded)
+            } else {
+                cy.log("**All Segment has been loaded**");
+            }
+        });
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Drafts)
@@ -576,15 +803,32 @@ describe('Funnel Report Rregression', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md);
+        cy.document().then((doc) => {
+            const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!demoElement || demoElement.offsetParent === null) {
+                cy.log("**All Segment not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.VisibilityofElementXpath(locators.account_pageloaded)
+            } else {
+                cy.log("**All Segment has been loaded**");
+            }
+        });
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         methods.typeElement(locators.Search_dashboard, 'Auto')
         methods.clickElementByXPath(locators.Automate)

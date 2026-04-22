@@ -21,12 +21,15 @@ describe('Explain Regression', () => {
 
     it('TC_RE_01  - Explain ', () => {
 
-        cy.wait(Timeout.xl)
-        methods.scrollWithXpath(locators.Title_page)
-        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
+        methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Explain)
         cy.wait(Timeout.lg)
@@ -37,12 +40,15 @@ describe('Explain Regression', () => {
 
     it('TC_RE_02 - Explain create', () => {
 
-        cy.wait(Timeout.xl)
-        methods.scrollWithXpath(locators.Title_page)
-        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
+        methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Explain)
         cy.wait(Timeout.lg)
@@ -61,12 +67,15 @@ describe('Explain Regression', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.xl)
-        methods.scrollWithXpath(locators.Title_page)
-        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
+        methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Explain)
         cy.wait(Timeout.lg)

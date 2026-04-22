@@ -27,10 +27,12 @@ describe('Accounts Segment Login', () => {
         const testName1 = `Demo Folder_${nowTime}`;
 
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xl)
 
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
@@ -50,6 +52,7 @@ describe('Accounts Segment Login', () => {
             }
         });
 
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.AllsegmentMenu, "All segments")
         methods.clickElementByXPath(locators.New_Segment)
         methods.clickElementByXPath(locators.StartfromScratch)
@@ -68,6 +71,7 @@ describe('Accounts Segment Login', () => {
         methods.clickElementByXPath(locators.Apply_filter)
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 60 minutes to view the final segment.")
         methods.clickElementByXPath(locators.Save_segments1)
         methods.clickElementByXPath(locators.All_segments1)
@@ -77,6 +81,7 @@ describe('Accounts Segment Login', () => {
         methods.ClearAndTypeWithXpath(locators.segment_namefield, testName)
         methods.clickElementByXPath(locators.save1)
         methods.VisibilityofElement(locators.notification_popup1)
+        cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
@@ -94,6 +99,8 @@ describe('Accounts Segment Login', () => {
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Yes)
         methods.assertElementContainsText(locators.Popup_Message, "Folder Deleted")
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
+        methods.VisibilityofElementXpath(locators.account_pageloaded)
     })
 })
