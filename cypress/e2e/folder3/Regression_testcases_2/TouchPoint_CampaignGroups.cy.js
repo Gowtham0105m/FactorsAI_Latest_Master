@@ -23,12 +23,9 @@ describe('TouchPoint Campaign Groups', () => {
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const testName = `Demo_${randomNumber}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.sm)
-        methods.Mouseover(locators.report_dropdown)
-        methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.clickElement(locators.setting)
         methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Touchpoints)

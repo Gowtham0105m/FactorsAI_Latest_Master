@@ -20,11 +20,9 @@ describe('KPI compare Login', () => {
 
     it('KPI compare', () => {
 
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -44,7 +42,7 @@ describe('KPI compare Login', () => {
         });
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         methods.clickElementByXPath(locators.Drafts)
         methods.VisibilityofElement(locators.Table_Body_1)

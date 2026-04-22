@@ -21,12 +21,11 @@ describe('Global search event', () => {
 
     it('Global search event without saving', () => {
 
-        cy.wait(Timeout.sm);
-        methods.scrollWithXpath(locators.Title_page);
-        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts');
-        cy.wait(Timeout.md);
-        methods.VisibilityofElementXpath(locators.account_pageloaded);
-        cy.wait(Timeout.md);
+        cy.wait(Timeout.md)
+        methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.md)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -60,7 +59,7 @@ describe('Global search event', () => {
         methods.clickElementByXPath(locators.Closed);
         methods.VisibilityofElement(locators.Upgrade_validation);
         methods.clickElementByXPath(locators.Close_without_saving);
-        cy.wait(Timeout.md);
+        cy.wait(Timeout.xmd);
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm);
     });
@@ -70,12 +69,11 @@ describe('Global search event', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.sm);
-        methods.scrollWithXpath(locators.Title_page);
-        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts');
-        cy.wait(Timeout.md);
-        methods.VisibilityofElementXpath(locators.account_pageloaded);
-        cy.wait(Timeout.md);
+        cy.wait(Timeout.md)
+        methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.md)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -122,9 +120,10 @@ describe('Global search event', () => {
         methods.typeElement(locators.Report_Name, testName)
         methods.typeElement(locators.Description_OP, 'Testing Purpose')
         methods.clickElementByXPath(locators.save1);
-        cy.wait(Timeout.xs);
+        cy.wait(Timeout.md);
         methods.VisibilityofElement(locators.Profile_report_gen);
         methods.clickElementByXPath(locators.Closed);
+        cy.wait(Timeout.md);
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.xs);
         methods.clickElementByXPath(locators.Drafts)

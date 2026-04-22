@@ -24,12 +24,15 @@ describe('Content_groups Login', () => {
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const testName = `Demo Content groups ${randomNumber}`;
 
-        cy.wait(Timeout.ml)
+        cy.wait(Timeout.xl)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 

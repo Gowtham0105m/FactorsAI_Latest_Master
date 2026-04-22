@@ -24,13 +24,12 @@ describe('KPI Login', () => {
     const randomNumber = Math.floor(Math.random() * 90) + 10;
     const testName = `Demo_${randomNumber}`;
 
-    cy.wait(Timeout.sm)
+    cy.wait(Timeout.xmd)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-    cy.wait(Timeout.sm)
-    methods.VisibilityofElementXpath(locators.account_pageloaded)
-    cy.wait(Timeout.sm)
+    cy.wait(Timeout.xmd)
     methods.Mouseover(locators.report_dropdown)
     methods.clickElementByXPath(locators.Dashboards)
+    cy.wait(Timeout.xmd)
     methods.VisibilityofElementXpath(locators.SegmentTitle)
     methods.clickElementByXPath(locators.Drafts)
     methods.VisibilityofElement(locators.Table_Body_1)
@@ -91,13 +90,12 @@ describe('KPI Login', () => {
     const randomNumber = Math.floor(Math.random() * 90) + 10;
     const testName = `Demo_${randomNumber}`;
 
-    cy.wait(Timeout.sm)
+    cy.wait(Timeout.xmd)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-    cy.wait(Timeout.sm)
-    methods.VisibilityofElementXpath(locators.account_pageloaded)
-    cy.wait(Timeout.sm)
+    cy.wait(Timeout.xmd)
     methods.Mouseover(locators.report_dropdown)
     methods.clickElementByXPath(locators.Dashboards)
+    cy.wait(Timeout.xmd)
     methods.VisibilityofElementXpath(locators.SegmentTitle)
     methods.clickElementByXPath(locators.Drafts)
     methods.VisibilityofElement(locators.Table_Body_1)

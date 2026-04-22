@@ -28,6 +28,7 @@ describe('Profile Report Login', () => {
         let selectedDateAfterSave1 = "";
 
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -150,6 +151,7 @@ describe('Profile Report Login', () => {
         let selectedDateBeforeSave1 = "";
         let selectedDateAfterSave1 = "";
 
+        cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)

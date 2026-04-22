@@ -24,12 +24,11 @@ describe('Custom Event Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo Custom Event ${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.clickElement(locators.setting)
         methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Custom_Definitions_1)
@@ -64,6 +63,7 @@ describe('Custom Event Login', () => {
         methods.clickElement(locators.Object_type)
         methods.clickElement(locators.Deal)
         methods.ScrollAndClick(locators.Property_name)
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.property_name_list_selection)
         methods.clickElementByXPath(locators.Record_modified_time)
         methods.scrollWithXpath(locators.Save_1)
@@ -89,13 +89,11 @@ describe('Custom Event Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo Custom Event ${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.clickElement(locators.setting)
         methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Custom_Definitions_1)
@@ -129,6 +127,7 @@ describe('Custom Event Login', () => {
         methods.clickElement(locators.Object_type)
         methods.clickElement(locators.Deal)
         methods.ScrollAndClick(locators.Property_name)
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.property_name_list_selection)
         methods.clickElementByXPath(locators.Event_Select_a_property)
         methods.clickElement(locators.datetime_objProperty)
@@ -157,13 +156,11 @@ describe('Custom Event Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo Custom Event ${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.clickElement(locators.setting)
         methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Custom_Definitions_1)
@@ -198,6 +195,7 @@ describe('Custom Event Login', () => {
         methods.clickElement(locators.Deal)
         methods.clickElementByXPath(locators.Event_Specific_change_in_property)
         methods.ScrollAndClick(locators.Property_name)
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.property_name_list_selection)
         methods.clickElementByXPath(locators.Record_modified_time)
         methods.scrollWithXpath(locators.Save_1)
@@ -222,13 +220,11 @@ describe('Custom Event Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo Custom Event ${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.clickElement(locators.setting)
         methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Custom_Definitions_1)
@@ -263,6 +259,7 @@ describe('Custom Event Login', () => {
         methods.clickElement(locators.Deal)
         methods.clickElementByXPath(locators.Event_Specific_change_in_property)
         methods.ScrollAndClick(locators.Property_name)
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.property_name_list_selection)
         methods.clickElementByXPath(locators.Event_Select_a_property)
         methods.clickElement(locators.datetime_objProperty)

@@ -24,10 +24,9 @@ describe('Segment Alert Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo Segment Alert ${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -48,6 +47,8 @@ describe('Segment Alert Login', () => {
         methods.assertElementContainsTextxpath(locators.AllsegmentMenu, "All segments")
         methods.clickElementByXPath(locators.All_segments)
         methods.clickElementByXPath(locators.In_Hubspot)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
@@ -99,10 +100,9 @@ describe('Segment Alert Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo Segment Alert ${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -123,6 +123,8 @@ describe('Segment Alert Login', () => {
         methods.assertElementContainsTextxpath(locators.AllsegmentMenu, "All segments")
         methods.clickElementByXPath(locators.All_segments)
         methods.clickElementByXPath(locators.In_Hubspot)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
@@ -176,10 +178,9 @@ describe('Segment Alert Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo People Segment Alert ${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -200,6 +201,8 @@ describe('Segment Alert Login', () => {
         methods.assertElementContainsTextxpath(locators.AllsegmentMenu, "All segments")
         methods.clickElementByXPath(locators.All_segments)
         methods.clickElementByXPath(locators.In_Hubspot)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)

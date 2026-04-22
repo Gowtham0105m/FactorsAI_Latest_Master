@@ -24,9 +24,13 @@ describe('Campaign Groups Login', () => {
         const testName = `Demo_Campaign_Groups_${randomNumber}`;
         const valuename = `Test Campaign Groups ${randomNumber}`
 
-        cy.wait(Timeout.ml)
+        cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.md)
         cy.document().then((doc) => {

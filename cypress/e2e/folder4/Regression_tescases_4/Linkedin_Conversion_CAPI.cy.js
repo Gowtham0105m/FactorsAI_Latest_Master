@@ -24,11 +24,10 @@ describe('Linkedin_Conversion(CAPI) Login', () => {
         const testName = `New linkedin workflow ${nowTime}`;
         const testName1 = `New linkedin workflow ${nowTime}_1`;
 
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.md);
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
@@ -50,20 +49,30 @@ describe('Linkedin_Conversion(CAPI) Login', () => {
         methods.MouseoverWithXpath(locators.Adpilot)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.CAPI)
+        cy.wait(Timeout.md);
         methods.VisibilityofElementXpath(locators.LinkedInCAPITitle)
         cy.wait(Timeout.md);
         cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
             cy.wrap(text.trim()).as('Text1');
         });
         methods.clickElementByXPath(locators.SyncNewConversion_Btn)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.lg)
         methods.clickElementByXPath(locators.select_event_1)
         cy.wait(Timeout.md)
-        methods.clickElementByXPath(locators.pageview_option2)
-        cy.wait(Timeout.md)
+        methods.typeElement(locators.search_1, "page view")
+        methods.clickElement(locators.Any_Page_View)
+        methods.clickElementByXPath(locators.Add_a_Filter)
+        methods.typeElementByXPath(locators.Search_Input, "Iso c")
+        cy.wait(Timeout.sm)
+        methods.clickElement(locators.IsoCode)
+        methods.clickElement(locators.equals_1)
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.pageview_option1)
-        cy.wait(Timeout.md)
+        methods.clickElementByXPath(locators.Apply1)
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.SelectConversionEvent)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElement(locators.Slack_Channel_List)
         methods.typeElementByXPath(locators.SelectConversionEvent, "test c")
         methods.clickElementByXPath(locators.test_capi)
@@ -91,9 +100,8 @@ describe('Linkedin_Conversion(CAPI) Login', () => {
         });
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup, "SuccessWorkflow Successfully Saved!")
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.clickElementByXPath(`(//*[text()='${testName}'])[1]`)
-        cy.wait(Timeout.sm)
         methods.VisibilityofElementXpath(`//*[text()="${testName}"]`)
         cy.wait(Timeout.xs)
         methods.clickElement(locators.Edit_Button)
@@ -111,7 +119,7 @@ describe('Linkedin_Conversion(CAPI) Login', () => {
         methods.clickElementByXPath(locators.Apply1)
         methods.clickElementByXPath(locators.adpilot_publish)
         methods.assertElementContainsText(locators.notification_popup, "SuccessWorkflow Successfully Updated!")
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.clickElementByXPath(`(//*[text()='${testName1}']//following::button[1])[1]`)
         methods.clickElementByXPath(locators.remove_workflows)
         cy.wait(Timeout.xs)

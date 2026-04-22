@@ -24,12 +24,11 @@ describe('Global search Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -49,7 +48,7 @@ describe('Global search Login', () => {
         });
         methods.assertElementContainsTextxpath(locators.AllsegmentMenu, "All segments")
         cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
+        methods.VisibilityofElementXpath(locators.global_Search)
         methods.clickElementByXPath(locators.global_Search)
         methods.VisibilityofElementXpath(locators.global_Popup)
         methods.clickElementByXPath(locators.ask_Factors)
@@ -57,6 +56,14 @@ describe('Global search Login', () => {
         methods.EnterXpath(locators.ai_Textfield)
         cy.wait(Timeout.xl)
         methods.NotExistxpath(locators.GlobalSearch_Loading)
+        methods.clickElementByXPath(locators.Expand_1)
+        cy.wait(Timeout.xs)
+        methods.clickElementByXPath(locators.Add_another_KPI)
+        methods.typeElement(locators.search_1, 'Engaged Sessions')
+        methods.Clickwithindexandvalidation(locators.Engaged_Sessions, 0)
+        cy.wait(Timeout.sm)
+        methods.clickElementByXPath(locators.Run_Anal)
+        methods.VisibilityofElementXpath(locators.Graph_Details)
         methods.VisibilityofElementXpath(locators.kpi_Heading)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Expand_1)

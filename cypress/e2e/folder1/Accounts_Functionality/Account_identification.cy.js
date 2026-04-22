@@ -21,7 +21,7 @@ describe('Account Identification Login', () => {
 
     it('Account Identification', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.all_Accounts_Opt, 'All Accounts')
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.Account_identification1)

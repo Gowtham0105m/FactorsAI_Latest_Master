@@ -21,13 +21,11 @@ describe('Path analaysis', () => {
 
     it('TC_RE_01 - Path analysis ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Path_Analysis)
         methods.assertElementContainsText(locators.Page_title1, 'Path Analysis')
@@ -36,13 +34,11 @@ describe('Path analaysis', () => {
 
     it('TC_RE_02, TC_RE_03 - Path analysis create event ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Path_Analysis)
         methods.assertElementContainsText(locators.Page_title1, 'Path Analysis')
@@ -67,13 +63,11 @@ describe('Path analaysis', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Path_Analysis)
         methods.assertElementContainsText(locators.Page_title1, 'Path Analysis')
@@ -121,13 +115,11 @@ describe('Path analaysis', () => {
 
     it('TC_RE_06, TC_RE_07 - Path analysis create event ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Path_Analysis)
         methods.assertElementContainsText(locators.Page_title1, 'Path Analysis')
@@ -159,13 +151,11 @@ describe('Path analaysis', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Path_Analysis)
         methods.assertElementContainsText(locators.Page_title1, 'Path Analysis')

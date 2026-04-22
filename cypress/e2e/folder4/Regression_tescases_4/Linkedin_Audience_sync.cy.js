@@ -25,11 +25,10 @@ describe('Linkedin Audience sync login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `New audience sync ${nowTime}`;
 
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.md);
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
@@ -51,6 +50,7 @@ describe('Linkedin Audience sync login', () => {
         methods.MouseoverWithXpath(locators.Adpilot)
         cy.wait(Timeout.sm);
         methods.clickElementIndexXpath(locators.LinkedIn_Audience_Sync1, 0)
+        cy.wait(Timeout.md);
         methods.VisibilityofElementXpath(locators.LinkedInaudiencesync)
         cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
             cy.wrap(text.trim()).as('Text1');
@@ -62,6 +62,7 @@ describe('Linkedin Audience sync login', () => {
         methods.clickElementByXPath(locators.select_factors_segment)
         methods.clickElementByXPath(locators.Engaged_linkedin)
         methods.clickElementByXPath(locators.select_audiences_linkedin)
+        cy.wait(Timeout.md);
         methods.typeElementByXPath(locators.select_audiences_linkedin, "Test audience | Third-party: Factors AI")
         methods.clickElementByXPath(locators.Testing_audience)
         methods.clickElement(locators.Edit_Button)
@@ -83,7 +84,7 @@ describe('Linkedin Audience sync login', () => {
         methods.clickElementByXPath(`//*[text()="${testName}"]//following::button[1]`)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Edit_workflow)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.linkedin_sync_status)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.adpilot_publish)

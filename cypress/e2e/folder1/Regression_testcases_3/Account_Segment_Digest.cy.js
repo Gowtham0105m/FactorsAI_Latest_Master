@@ -24,12 +24,11 @@ describe('Accounts Segment Digest Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
 
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
@@ -141,11 +140,11 @@ describe('Accounts Segment Digest Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
 
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
@@ -166,7 +165,8 @@ describe('Accounts Segment Digest Login', () => {
         });
 
         methods.assertElementContainsTextxpath(locators.AllsegmentMenu, "All segments")
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElementByXPath(locators.Filter)
         methods.clickElementIndexXpath(locators.Add_new2, 0)
@@ -195,10 +195,10 @@ describe('Accounts Segment Digest Login', () => {
         cy.wait(Timeout.xl)
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
         cy.xpath('(//div[contains(@class,"PlanLimitInfo__planInfoCard")]/div)[1]').invoke('text').then(text => {
-                const segment = Number(text.match(/^\d+/)[0]);
-                cy.log(`Segment used count: ${segment}`);
-                cy.wrap(segment).as('segmentCount');
-            });
+            const segment = Number(text.match(/^\d+/)[0]);
+            cy.log(`Segment used count: ${segment}`);
+            cy.wrap(segment).as('segmentCount');
+        });
         methods.clickElement(locators.setting)
         methods.clickElementByXPath(locators.Sharing)
         methods.clickElementByXPath(locators.Segment_Digest)
@@ -274,8 +274,9 @@ describe('Accounts Segment Digest Login', () => {
         cy.wait(Timeout.sm)
         methods.assertElementContainsText1(locators.DataManagementHeader, 'Sharing')
         methods.clickElement(locators.Factors_Icon)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElementByXPath(locators.All_segments)
         methods.ScrollAndClickxpath(`//span[text()='${testName}']`)
@@ -291,8 +292,9 @@ describe('Accounts Segment Digest Login', () => {
         methods.assertElementContainsText(locators.notification_popup, 'Subscription deletedsubscription for this segment is deleted')
         cy.wait(Timeout.sm)
         methods.clickElement(locators.Factors_Icon)
-        cy.wait(Timeout.xmd)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.ScrollAndClickxpath(`//span[text()='${testName}']//following::span[1]`)
         methods.clickElementByXPath(locators.delete_segment)

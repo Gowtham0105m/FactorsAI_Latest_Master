@@ -21,12 +21,11 @@ describe('Global search ', () => {
 
     it('Global search profile without saving', () => {
 
-        cy.wait(Timeout.sm);
-        methods.scrollWithXpath(locators.Title_page);
-        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts');
-        cy.wait(Timeout.md);
-        methods.VisibilityofElementXpath(locators.account_pageloaded);
-        cy.wait(Timeout.md);
+        cy.wait(Timeout.md)
+        methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.md)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -57,7 +56,7 @@ describe('Global search ', () => {
         methods.clickElementByXPath(locators.Closed);
         methods.VisibilityofElement(locators.Upgrade_validation);
         methods.clickElementByXPath(locators.Close_without_saving);
-        cy.wait(Timeout.md);
+        cy.wait(Timeout.xmd);
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm);
     })
@@ -67,12 +66,11 @@ describe('Global search ', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.sm);
-        methods.scrollWithXpath(locators.Title_page);
-        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts');
-        cy.wait(Timeout.md);
-        methods.VisibilityofElementXpath(locators.account_pageloaded);
-        cy.wait(Timeout.md);
+        cy.wait(Timeout.md)
+        methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.md)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 

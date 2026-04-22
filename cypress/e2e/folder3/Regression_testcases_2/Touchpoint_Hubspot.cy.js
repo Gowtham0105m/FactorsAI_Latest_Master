@@ -20,10 +20,10 @@ describe('TouchPoint Hubspot Login', () => {
 
     it('TouchPoint Hubspot', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
+        methods.VisibilityofElement(locators.setting)
         methods.clickElement(locators.setting)
          methods.clickElementByXPath(locators.Data_Management)
         methods.clickElementByXPath(locators.Touchpoints)

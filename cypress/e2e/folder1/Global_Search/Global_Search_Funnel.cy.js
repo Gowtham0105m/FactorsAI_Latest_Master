@@ -21,12 +21,11 @@ describe('Global search funnel', () => {
 
     it('Global search funnel without saving', () => {
 
-        cy.wait(Timeout.sm);
-        methods.scrollWithXpath(locators.Title_page);
-        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts');
-        cy.wait(Timeout.md);
-        methods.VisibilityofElementXpath(locators.account_pageloaded);
-        cy.wait(Timeout.md);
+        cy.wait(Timeout.md)
+        methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.md)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -75,12 +74,11 @@ describe('Global search funnel', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.sm);
-        methods.scrollWithXpath(locators.Title_page);
-        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts');
-        cy.wait(Timeout.md);
-        methods.VisibilityofElementXpath(locators.account_pageloaded);
-        cy.wait(Timeout.md);
+        cy.wait(Timeout.md)
+        methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.md)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -121,7 +119,7 @@ describe('Global search funnel', () => {
         methods.typeElement(locators.Report_Name, testName)
         methods.typeElement(locators.Description_OP, 'Testing Purpose')
         methods.clickElementByXPath(locators.save1);
-        cy.wait(Timeout.xs);
+        cy.wait(Timeout.lg);
         methods.VisibilityofElement(locators.Profile_report_gen);
         methods.clickElementByXPath(locators.Closed);
         methods.clickElementByXPath(locators.Drafts)

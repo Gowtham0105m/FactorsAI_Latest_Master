@@ -28,14 +28,14 @@ describe('WorkFlow Login', () => {
         const testName1 = `Demo Hubspot New_${nowTime}_1`;
         const IntegrateName = "HubSpot";
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.MouseoverWithXpath(locators.Automation)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.workflows_Title)
         cy.wait(Timeout.sm)
         methods.VisibilityofElementXpathIndexInput(locators.workflows_Title, 2)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.lg)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.ElementToBeClickableXpath(locators.workflow)
         cy.wait(Timeout.sm)
@@ -113,14 +113,14 @@ describe('WorkFlow Login', () => {
         const testName = `Demo Salesforce_${nowTime}`;
         const IntegrateName = "Salesforce";
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.MouseoverWithXpath(locators.Automation)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.workflows_Title)
         cy.wait(Timeout.sm)
         methods.VisibilityofElementXpathIndexInput(locators.workflows_Title, 2)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.lg)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.ElementToBeClickableXpath(locators.workflow)
         cy.wait(Timeout.sm)
@@ -193,15 +193,16 @@ describe('WorkFlow Login', () => {
         const testName = `Zoho_Demo_${nowTime}`;
         const IntegrateName = "Integrate Zoho CRM";
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.MouseoverWithXpath(locators.Automation)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.workflows_Title)
         cy.wait(Timeout.sm)
         methods.VisibilityofElementXpathIndexInput(locators.workflows_Title, 2)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.lg)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.ElementToBeClickableXpath(locators.workflow)
         cy.wait(Timeout.sm)
@@ -288,8 +289,9 @@ describe('WorkFlow Login', () => {
 
     it('WorkFlow - Activity log', () => {
 
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.MouseoverWithXpath(locators.Automation)
         cy.wait(Timeout.sm)

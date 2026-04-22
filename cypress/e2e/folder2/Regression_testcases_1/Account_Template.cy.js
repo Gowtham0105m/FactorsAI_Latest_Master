@@ -28,10 +28,12 @@ describe('Account Template Login', () => {
         const folder_name1 = `Automation Template Folder 1 ${nowTime}`;
 
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xl)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -59,6 +61,7 @@ describe('Account Template Login', () => {
         methods.typeElement(locators.Select_Event, "visi")
         methods.clickElement0(locators.Third_party_Intent_Visit, 0)
         methods.clickElementByXPath(locators.Apply_filter)
+        cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 60 minutes to view the final segment.")
@@ -118,7 +121,8 @@ describe('Account Template Login', () => {
         methods.clickElementByXPath(locators.Yes)
         methods.NotExist(locators.Loading)
         methods.assertElementContainsText(locators.notification_popup, "Segment deleted successfully")
-        cy.wait(Timeout.ml)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
     })
 })

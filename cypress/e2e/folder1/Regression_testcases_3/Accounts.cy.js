@@ -22,17 +22,21 @@ describe('Accounts Regression', () => {
     it('TC_RE_01 - Accounts_Page Load', () => {
 
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
     })
 
     it('TC_RE_02, TC_RE_03 - Accounts_properties filter, Accounts_Event', () => {
 
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
         cy.document().then((doc) => {
@@ -131,8 +135,10 @@ describe('Accounts Regression', () => {
     it('TC_RE_06, TC_RE_07 - Accounts_Search field ', () => {
 
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
         cy.document().then((doc) => {
@@ -154,6 +160,7 @@ describe('Accounts Regression', () => {
         });
         methods.clickElementByXPath(locators.search_button)
         methods.typeElementByXPath(locators.search_area, 'factors.ai')
+        cy.wait(Timeout.md)
         methods.EnterXpath(locators.search_area)
         cy.wait(Timeout.xs)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
@@ -174,7 +181,8 @@ describe('Accounts Regression', () => {
             }
         });
         methods.clickElementByXPath(locators.clear_search)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
 
     })
@@ -182,8 +190,10 @@ describe('Accounts Regression', () => {
     it('TC_RE_08 - Accounts_Exporting CSV ', () => {
 
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
         cy.document().then((doc) => {
@@ -209,14 +219,18 @@ describe('Accounts Regression', () => {
         methods.assertElementContainsText1(locators.download_header, 'Selects which columns to include')
         cy.wait(Timeout.md)
         methods.NotExist(locators.DownloadCSV_Popup)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     })
 
     it('TC_RE_09 - Accounts_Table Properties', () => {
 
-        cy.wait(Timeout.xl);
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts');
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded);
         cy.wait(Timeout.xmd);
         cy.document().then((doc) => {
@@ -255,7 +269,8 @@ describe('Accounts Regression', () => {
         methods.clickElementByXPath(locators.Company_Type);
         cy.wait(Timeout.xs);
         methods.clickElementByXPath(locators.Apply1);
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded);
         cy.wait(Timeout.xmd);
 
@@ -270,8 +285,10 @@ describe('Accounts Regression', () => {
         const combination = testName + randomNumber;
 
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
         cy.document().then((doc) => {
@@ -346,8 +363,10 @@ describe('Accounts Regression', () => {
     it('TC_RE_14, TC_RE_15 - Accounts_Bird views ', () => {
 
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
         cy.document().then((doc) => {
@@ -369,6 +388,7 @@ describe('Accounts Regression', () => {
         });
         methods.clickElementByXPath(locators.search_button)
         methods.typeElementByXPath(locators.search_area, 'infosys.com')
+        cy.wait(Timeout.md)
         methods.EnterXpath(locators.search_area)
         cy.wait(Timeout.xs)
         methods.MouseoverAndClick(locators.open_account)
@@ -380,8 +400,10 @@ describe('Accounts Regression', () => {
     it('TC_RE_16 - Accounts_Timeline Views ', () => {
 
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
         cy.document().then((doc) => {
@@ -403,6 +425,7 @@ describe('Accounts Regression', () => {
         });
         methods.clickElementByXPath(locators.search_button)
         methods.typeElementByXPath(locators.search_area, 'infosys.com')
+        cy.wait(Timeout.md)
         methods.EnterXpath(locators.search_area)
         cy.wait(Timeout.xs)
         methods.MouseoverAndClick(locators.open_account)
@@ -418,8 +441,10 @@ describe('Accounts Regression', () => {
     it('TC_RE_17 - Accounts_Birdviews expand ', () => {
 
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
         cy.document().then((doc) => {
@@ -441,6 +466,7 @@ describe('Accounts Regression', () => {
         });
         methods.clickElementByXPath(locators.search_button)
         methods.typeElementByXPath(locators.search_area, 'infosys.com')
+        cy.wait(Timeout.md)
         methods.EnterXpath(locators.search_area)
         cy.wait(Timeout.xs)
         methods.MouseoverAndClick(locators.open_account)
@@ -453,8 +479,10 @@ describe('Accounts Regression', () => {
     it('TC_RE_18 - Accounts_Birdviews account activity ', () => {
 
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
         cy.document().then((doc) => {
@@ -477,7 +505,7 @@ describe('Accounts Regression', () => {
         methods.clickElementByXPath(locators.search_button)
         cy.wait(Timeout.sm)
         methods.typeElementByXPath(locators.search_area, 'infosys.com')
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.EnterXpath(locators.search_area)
         methods.MouseoverAndClick(locators.open_account)
         cy.wait(Timeout.sm)
@@ -504,8 +532,10 @@ describe('Accounts Regression', () => {
     it('TC_RE_19 - Accounts_Birdviews Properties ', () => {
 
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
         cy.document().then((doc) => {
@@ -528,7 +558,7 @@ describe('Accounts Regression', () => {
         methods.clickElementByXPath(locators.search_button)
         cy.wait(Timeout.sm)
         methods.typeElementByXPath(locators.search_area, 'infosys.com')
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.EnterXpath(locators.search_area)
         methods.MouseoverAndClick(locators.open_account)
         cy.wait(Timeout.sm)
@@ -547,8 +577,10 @@ describe('Accounts Regression', () => {
     it('TC_RE_20 - Accounts Properties - filter Equals - true', () => {
 
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
         cy.document().then((doc) => {

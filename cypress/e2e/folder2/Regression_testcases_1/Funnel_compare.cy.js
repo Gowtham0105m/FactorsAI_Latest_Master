@@ -20,12 +20,15 @@ describe('Funnel compare Login', () => {
 
     it('Funnel compare', () => {
 
-        cy.wait(Timeout.xl)
-        methods.scrollWithXpath(locators.Title_page)
-        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.md)
+        methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
         cy.wait(Timeout.xs)

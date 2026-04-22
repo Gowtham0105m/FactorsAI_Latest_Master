@@ -21,13 +21,15 @@ describe('Account Identification Regression', () => {
 
     it('TC_RE_01, TC_RE_02 - Account Identification ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
+        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.Account_identification)
         methods.Titletextcontainsxpath(locators.account_identification_Title, 'Top accounts that visited your website')
+        cy.wait(Timeout.md)
         methods.VisibilityofElement(locators.Identification_Table)
 
         // Verify table
@@ -40,13 +42,15 @@ describe('Account Identification Regression', () => {
 
     it('TC_RE_03 - Account Identification - Add filters ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
+        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.Account_identification)
         methods.Titletextcontainsxpath(locators.account_identification_Title, 'Top accounts that visited your website')
+        cy.wait(Timeout.md)
         methods.VisibilityofElement(locators.Identification_Table)
         methods.AssertNotEmptyWithXpath(locators.table_row1)
         methods.AssertNotEmptyWithXpath(locators.table_row2)
@@ -73,13 +77,15 @@ describe('Account Identification Regression', () => {
 
     it('TC_RE_04 - Account Identification - Add campaign', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
+        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.Account_identification)
         methods.Titletextcontainsxpath(locators.account_identification_Title, 'Top accounts that visited your website')
+        cy.wait(Timeout.md)
         methods.VisibilityofElement(locators.Identification_Table)
         methods.AssertNotEmpty(locators.identi_table)
         methods.AssertNotEmptyWithXpath(locators.table_row1)
@@ -99,13 +105,15 @@ describe('Account Identification Regression', () => {
 
     it('TC_RE_05 - Account Identification - Page viewed', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
+        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.Account_identification)
         methods.Titletextcontainsxpath(locators.account_identification_Title, 'Top accounts that visited your website')
+        cy.wait(Timeout.md)
         methods.VisibilityofElement(locators.Identification_Table)
         methods.AssertNotEmpty(locators.identi_table)
         methods.AssertNotEmptyWithXpath(locators.table_row1)
@@ -123,10 +131,11 @@ describe('Account Identification Regression', () => {
 
     it('TC_RE_06 - Account Identification - Search field', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
+        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.Account_identification)
         methods.Titletextcontainsxpath(locators.account_identification_Title, 'Top accounts that visited your website')
@@ -143,9 +152,11 @@ describe('Account Identification Regression', () => {
 
     it('TC_RE_07 - Account Identification - Download CSV', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.Account_identification)
@@ -159,10 +170,11 @@ describe('Account Identification Regression', () => {
 
     it('TC_RE_08 - Account Identification - Date range', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
+        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.Account_identification)
         methods.Titletextcontainsxpath(locators.account_identification_Title, 'Top accounts that visited your website')
@@ -178,10 +190,11 @@ describe('Account Identification Regression', () => {
 
     it('TC_RE_09 - Account Identification - Share_Send Once', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
+        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.Account_identification)
         methods.Titletextcontainsxpath(locators.account_identification_Title, 'Top accounts that visited your website')
@@ -197,10 +210,11 @@ describe('Account Identification Regression', () => {
 
     it('TC_RE_10 - Account Identification - Share_Subscribe copy link', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
+        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.Account_identification)
         methods.Titletextcontainsxpath(locators.account_identification_Title, 'Top accounts that visited your website')

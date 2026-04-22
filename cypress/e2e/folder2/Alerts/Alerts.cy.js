@@ -26,7 +26,7 @@ describe('Alert Login', () => {
         const testName = `Demo Alert ${nowTime}`;
         const testName1 = `Demo Editted Alert ${nowTime}_1`;
 
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.MouseoverWithXpath(locators.Automation)
         cy.wait(Timeout.sm);
@@ -47,7 +47,7 @@ describe('Alert Login', () => {
 
         methods.clickElementByXPath(locators.select_event)
         methods.clickElement0(locators.Website_activity, 0)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.pageview_option1)
 
         // Add filters
@@ -61,13 +61,13 @@ describe('Alert Login', () => {
         methods.clickElementByXPath(locators.pageview_option1)
         methods.clickElementByXPath(locators.Apply1)
         methods.clickElementByXPath(locators.Add_a_Filter)
-        methods.clickElement0(locators.Hubspot_Contacts, 0)
+        methods.typeElementByXPath(locators.Search_Input, "Owner Ass")
+        cy.wait(Timeout.xs)
+        methods.clickElement(locators.HubspotDealDate)
+        methods.clickElement(locators.Inthecurrent)
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(locators.pageview_option1)
-        methods.clickElement(locators.equals_1)
-        cy.wait(Timeout.sm)
-        methods.clickElementByXPath(locators.pageview_option1)
-        methods.clickElementByXPath(locators.Apply1)
+        methods.clickElementByXPath(locators.SelectBtn)
+        methods.clickElement(locators.Month)
 
         // alert name
 
@@ -110,7 +110,7 @@ describe('Alert Login', () => {
         methods.clickElementByXPath(locators.Confirm_publish)
         methods.GetText(locators.notification_popup, "Alerts SavedNew Alerts is created and saved successfully.")
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h6[text()="${testName}"]`)
+        methods.clickElementByXPath(`//*[text()="${testName}"]`)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.Alert_name)
         methods.ClearAndType(locators.Alert_name, testName1)
@@ -121,7 +121,7 @@ describe('Alert Login', () => {
         methods.typeElement(locators.search_1, "enrichment")
         methods.clickElement(locators.Enrichment_Source)
         methods.clickElement(locators.equals_1)
-        cy.wait(Timeout.md)
+        cy.wait(Timeout.xmd)
         methods.clickElementByXPath(locators.pageview_option1)
         methods.clickElementByXPath(locators.Apply1)
         cy.wait(Timeout.sm)
@@ -141,20 +141,23 @@ describe('Alert Login', () => {
         methods.clickElementByXPath(locators.Alert_Update_Btn)
         methods.clickElementByXPath(locators.Confirm_publish)
         methods.GetText(locators.notification_popup, "Alerts SavedAlerts is edited and saved successfully.")
-        methods.assertElementContainsTextxpath(`//h6[text()="${testName1}"]//following::td[2]`, "Active")
-        methods.clickElementByXPath(`//h6[text()="${testName1}"]`)
         cy.wait(Timeout.sm)
+        methods.assertElementContainsTextxpath(`//*[text()="${testName1}"]//following::td[2]`, "Active")
+        methods.clickElementByXPath(`//*[text()="${testName1}"]`)
+        cy.wait(Timeout.sm)
+        methods.clickElementByXPath(locators.Discard_Changes)
+        cy.wait(Timeout.xs)
         methods.clickElement0(locators.Alert_Toogle, 0)
         methods.clickElementByXPath(locators.pause)
         cy.wait(Timeout.xs)
         methods.assertElementContainsText(locators.Popup_Message, "Successfully paused alerts.")
         cy.wait(Timeout.sm)
-        methods.assertElementContainsTextxpath(`//h6[text()="${testName1}"]//following::td[2]`, "Paused")
+        methods.assertElementContainsTextxpath(`//*[text()="${testName1}"]//following::td[2]`, "Paused")
 
         // Deleting the alert
 
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(`//h6[text()='${testName1}']//following::button[2]`)
+        methods.clickElementByXPath(`//*[text()='${testName1}']//following::button[2]`)
         methods.clickElementByXPath(locators.remove_alert)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
@@ -168,7 +171,7 @@ describe('Alert Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo Copy Alert ${nowTime}`;
 
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.MouseoverWithXpath(locators.Automation)
         cy.wait(Timeout.sm);
@@ -203,13 +206,13 @@ describe('Alert Login', () => {
         methods.clickElementByXPath(locators.pageview_option1)
         methods.clickElementByXPath(locators.Apply1)
         methods.clickElementByXPath(locators.Add_a_Filter)
-        methods.clickElement0(locators.Hubspot_Contacts, 0)
+        methods.typeElementByXPath(locators.Search_Input, "Owner Ass")
         cy.wait(Timeout.xs)
-        methods.clickElementByXPath(locators.pageview_option1)
-        methods.clickElement(locators.equals_1)
+        methods.clickElement(locators.HubspotDealDate)
+        methods.clickElement(locators.Inthecurrent)
         cy.wait(Timeout.sm)
-        methods.clickElementByXPath(locators.pageview_option1)
-        methods.clickElementByXPath(locators.Apply1)
+        methods.clickElementByXPath(locators.SelectBtn)
+        methods.clickElement(locators.Month)
 
         // alert name
 
@@ -247,7 +250,7 @@ describe('Alert Login', () => {
 
         // Deleting the alert
 
-        methods.clickElementByXPath(`//h6[text()='${testName}']//following::button[2]`)
+        methods.clickElementByXPath(`//*[text()='${testName}']//following::button[2]`)
         methods.clickElementByXPath(locators.CreateCopy)
         methods.assertElementContainsText(locators.notification_popup, "Alert CreatedCopy of alert is created and saved successfully.")
         cy.wait(Timeout.xs)
@@ -272,7 +275,7 @@ describe('Alert Login', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo Alert Template ${nowTime}`;
 
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         methods.MouseoverWithXpath(locators.Automation)
         cy.wait(Timeout.sm);

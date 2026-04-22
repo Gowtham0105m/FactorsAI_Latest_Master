@@ -21,12 +21,12 @@ describe('Profile Report Regression', () => {
 
     it('TC_RE_01 - Profile Report - New Report', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -36,12 +36,12 @@ describe('Profile Report Regression', () => {
 
     it('TC_RE_02 - Profile Report - Add event', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -54,12 +54,12 @@ describe('Profile Report Regression', () => {
 
     it('TC_RE_03 - Profile Report - Add multiple event', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -73,12 +73,12 @@ describe('Profile Report Regression', () => {
 
     it('TC_RE_04 - Profile Report - Add local filter', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -96,12 +96,12 @@ describe('Profile Report Regression', () => {
 
     it('TC_RE_05 - Profile Report - Checking global filter ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -114,12 +114,12 @@ describe('Profile Report Regression', () => {
 
     it('TC_RE_06 - Profile Report - Add multiple local filter ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -145,12 +145,12 @@ describe('Profile Report Regression', () => {
 
     it('TC_RE_07 - Profile Report - Delete event ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -165,12 +165,12 @@ describe('Profile Report Regression', () => {
 
     it('TC_RE_08 - Profile Report - Add global filter ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -188,12 +188,12 @@ describe('Profile Report Regression', () => {
 
     it('TC_RE_09 - Profile Report - Add multiple global filter ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -203,28 +203,33 @@ describe('Profile Report Regression', () => {
         methods.clickElement(locators.Website_Visitors1)
         methods.clickElementByXPath(locators.Add_New_FilterBy)
         methods.clickElement0(locators.Traffic_source, 0)
-        methods.clickElementByXPath(locators.pageview_option1)
-        methods.clickElement(locators.equals_1)
-        methods.clickElementByXPath(locators.false)
-        methods.clickElementByXPath(locators.Apply1)
-        methods.clickElementByXPath(locators.Add_New_FilterBy)
-        methods.clickElement0(locators.User_identification, 0)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.pageview_option1)
+        cy.wait(Timeout.sm)
         methods.clickElement(locators.equals_1)
-        methods.clickElementByXPath(locators.false)
+        cy.wait(Timeout.sm)
+        methods.clickElementByXPath(locators.pageview_option1)
+        cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Apply1)
+        methods.clickElementByXPath(locators.Add_New_FilterBy)
+        methods.clickElement0(locators.search_1, 0)
+        methods.typeElement(locators.search_1, "Total Active Time")
+        methods.clickElement0(locators.User_Total_Active_Time, 0)
+        methods.clickElement(locators.equals_1)
+        methods.clickElementByXPath(locators.EnterValue)
+        methods.typeElement(locators.EnterValueInput, "4")
+        methods.Enter(locators.EnterValueInput)
 
     })
 
     it('TC_RE_10 - Profile Report - Use + button ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -251,12 +256,12 @@ describe('Profile Report Regression', () => {
 
     it('TC_RE_11 - Profile Report - Add breakdown ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -281,12 +286,12 @@ describe('Profile Report Regression', () => {
 
     it('TC_RE_12 - Profile Report - Run analyse ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -309,12 +314,12 @@ describe('Profile Report Regression', () => {
 
     it('TC_RE_13 - Profile Report - Download csv ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -335,12 +340,12 @@ describe('Profile Report Regression', () => {
 
     it('TC_RE_14 - Profile Report - Search ', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.New_Report_CSS)
@@ -373,12 +378,12 @@ describe('Profile Report Regression', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         methods.clickElementByXPath(locators.Drafts)
         methods.clickElement(locators.New_Report_CSS)
@@ -411,12 +416,12 @@ describe('Profile Report Regression', () => {
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
         methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         methods.clickElementByXPath(locators.Drafts)
         methods.VisibilityofElement(locators.Table_Body_1)
