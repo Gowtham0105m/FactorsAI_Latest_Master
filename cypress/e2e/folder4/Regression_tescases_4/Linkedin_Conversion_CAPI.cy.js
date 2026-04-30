@@ -56,8 +56,7 @@ describe('Linkedin_Conversion(CAPI) Login', () => {
             cy.wrap(text.trim()).as('Text1');
         });
         methods.clickElementByXPath(locators.SyncNewConversion_Btn)
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.lg)
+        cy.wait(Timeout.ml)
         methods.clickElementByXPath(locators.select_event_1)
         cy.wait(Timeout.md)
         methods.typeElement(locators.search_1, "page view")

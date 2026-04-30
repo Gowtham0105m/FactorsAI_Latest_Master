@@ -22,7 +22,7 @@ describe('Custom Event Login', () => {
     it('Custom Event -- Any change in property - Record modified time', () => {
 
         const nowTime = dayjs().format('H:m:s');
-        const testName = `Demo Custom Event ${nowTime}`;
+        const testName = `New Demo Custom Event ${nowTime}`;
 
         cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
@@ -87,7 +87,7 @@ describe('Custom Event Login', () => {
     it('Custom Event -- Any change in property - Select a property', () => {
 
         const nowTime = dayjs().format('H:m:s');
-        const testName = `Demo Custom Event ${nowTime}`;
+        const testName = `New Demo Custom Event ${nowTime}`;
 
         cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
@@ -154,7 +154,7 @@ describe('Custom Event Login', () => {
     it('Custom Event -- Specific change in property - Record modified time', () => {
 
         const nowTime = dayjs().format('H:m:s');
-        const testName = `Demo Custom Event ${nowTime}`;
+        const testName = `New Demo Custom Event ${nowTime}`;
 
         cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
@@ -218,7 +218,7 @@ describe('Custom Event Login', () => {
     it('Custom Event -- Specific change in property - Select a property', () => {
 
         const nowTime = dayjs().format('H:m:s');
-        const testName = `Demo Custom Event ${nowTime}`;
+        const testName = `New Demo Custom Event ${nowTime}`;
 
         cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)

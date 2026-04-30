@@ -22,7 +22,7 @@ describe('Interest Group Login', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const testName = `Interest_Group_Page_View ${randomNumber}`;
-        const testName1 = `Interest_Group_Page_View_Edit ${randomNumber}`;
+        const testName1 = `Interest_Group_Page_View Edit ${randomNumber}`;
 
         cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
@@ -103,7 +103,7 @@ describe('Interest Group Login', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const testName = `Interest_Group_Hubspot_Forms ${randomNumber}`;
-        const testName1 = `Interest_Group_Hubspot_Forms_Edit ${randomNumber}`;
+        const testName1 = `Interest Group_Hubspot_Forms_Edit ${randomNumber}`;
 
         cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
@@ -267,7 +267,7 @@ describe('Interest Group Login', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const testName = `Interest_Group_LinkedIn_Ads ${randomNumber}`;
-        const testName1 = `Interest_Group_LinkedIn_Ads_Edit ${randomNumber}`;
+        const testName1 = `Interest_Group LinkedIn_Ads Edit ${randomNumber}`;
 
         cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
@@ -348,8 +348,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - G2 Intent', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `Interest_Group_G2_Intent ${randomNumber}`;
-        const testName1 = `Interest_Group_G2_Intent_Edit ${randomNumber}`;
+        const testName = `Interest Group_G2_Intent ${randomNumber}`;
+        const testName1 = `Interest_Group_G2_Intent Edit ${randomNumber}`;
 
         cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
@@ -429,8 +429,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - Custom Event', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `Interest_Group_Custom_Event ${randomNumber}`;
-        const testName1 = `Interest_Group_Custom_Event_Edit ${randomNumber}`;
+        const testName = `Interest_Group Custom_Event ${randomNumber}`;
+        const testName1 = `Interest_Group_Custom Event_Edit ${randomNumber}`;
 
         cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
@@ -501,7 +501,7 @@ describe('Interest Group Login', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const testName = `Interest_Group_verification ${randomNumber}`;
-        const testName1 = `Interest_Group_verification_Edit ${randomNumber}`;
+        const testName1 = `Interest_Group verification_Edit ${randomNumber}`;
 
         cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)

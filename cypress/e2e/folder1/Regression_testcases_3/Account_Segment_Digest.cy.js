@@ -19,7 +19,7 @@ describe('Accounts Segment Digest Login', () => {
 
     })
 
-    it('Account Segment Digest', () => {
+    it.skip('Account Segment Digest', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
@@ -66,7 +66,7 @@ describe('Accounts Segment Digest Login', () => {
         methods.NotExist(locators.Loader)
         cy.wait(Timeout.ml)
         cy.wait(Timeout.xl)
-        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 60 minutes to view the final segment.")
+        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, then come back in 2 to 6 hours to view the final segment.")
         methods.clickElementByXPath(locators.Save_segments1)
         methods.ClearAndTypeWithXpath(locators.segment_namefield, testName)
         cy.wait(Timeout.sm)
@@ -77,7 +77,7 @@ describe('Accounts Segment Digest Login', () => {
         methods.NotExist(locators.Loader)
         cy.wait(Timeout.ml)
         cy.wait(Timeout.xl)
-        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
+        methods.GetTextXpath(locators.Building_Your_Segment, "Finding the accounts that match your filters. This usually takes up to 2 to 6 hours.")
         methods.clickElementByXPath(locators.segment_summary_Icon)
         methods.VisibilityofElement(locators.Templete_Popup)
         methods.typeElement(locators.receive_this_digest_Input, "sarath.s@trackdfect.ai")
@@ -132,7 +132,8 @@ describe('Accounts Segment Digest Login', () => {
         methods.clickElementByXPath(locators.Yes)
         methods.NotExist(locators.Loading)
         methods.assertElementContainsText(locators.notification_popup, "Segment deleted successfully")
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.xl)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     })
 
     it('Account Segment Digest - Sharing → Segment Digest', () => {
@@ -165,8 +166,7 @@ describe('Accounts Segment Digest Login', () => {
         });
 
         methods.assertElementContainsTextxpath(locators.AllsegmentMenu, "All segments")
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.md)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElementByXPath(locators.Filter)
         methods.clickElementIndexXpath(locators.Add_new2, 0)
@@ -182,7 +182,7 @@ describe('Accounts Segment Digest Login', () => {
         methods.NotExist(locators.Loader)
         cy.wait(Timeout.ml)
         cy.wait(Timeout.xl)
-        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 60 minutes to view the final segment.")
+        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, then come back in 2 to 6 hours to view the final segment.")
         methods.clickElementByXPath(locators.Save_segments1)
         methods.ClearAndTypeWithXpath(locators.segment_namefield, testName)
         cy.wait(Timeout.sm)
@@ -193,7 +193,8 @@ describe('Accounts Segment Digest Login', () => {
         methods.NotExist(locators.Loader)
         cy.wait(Timeout.ml)
         cy.wait(Timeout.xl)
-        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
+        methods.GetTextXpath(locators.Building_Your_Segment, "Finding the accounts that match your filters. This usually takes up to 2 to 6 hours.")
+        cy.wait(Timeout.xs)
         cy.xpath('(//div[contains(@class,"PlanLimitInfo__planInfoCard")]/div)[1]').invoke('text').then(text => {
             const segment = Number(text.match(/^\d+/)[0]);
             cy.log(`Segment used count: ${segment}`);
@@ -303,9 +304,128 @@ describe('Accounts Segment Digest Login', () => {
         cy.wait(Timeout.sm)
         methods.NotExist(locators.Loading)
         methods.assertElementContainsText(locators.notification_popup, "Segment deleted successfully")
-        cy.wait(Timeout.xmd)
+        cy.wait(Timeout.xl)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
 
+    })
+
+    it('Account Segment Digest New Flow', () => {
+
+        const nowTime = dayjs().format('H:m:s');
+        const testName = `Demo_${nowTime}`;
+
+        cy.wait(Timeout.xmd)
+        methods.scrollWithXpath(locators.Title_page)
+        cy.wait(Timeout.xmd)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
+        cy.wait(Timeout.xmd)
+
+        cy.document().then((doc) => {
+            const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!demoElement || demoElement.offsetParent === null) {
+                cy.log("**All Segment not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+            } else {
+                cy.log("**All Segment has been loaded**");
+            }
+        });
+
+        methods.assertElementContainsTextxpath(locators.AllsegmentMenu, "All segments")
+        cy.wait(Timeout.md)
+        methods.VisibilityofElementXpath(locators.account_pageloaded)
+        methods.clickElementByXPath(locators.Filter)
+        methods.clickElementIndexXpath(locators.Add_new2, 0)
+        methods.clickElement(locators.All_Account)
+        methods.typeElementByXPath(locators.Search_Input, "visi")
+        methods.clickElement(locators.Visited_Website)
+        methods.clickElement(locators.equals_1)
+        cy.wait(Timeout.md)
+        methods.clickElement(locators.true)
+        methods.clickElement(locators.Apply)
+        methods.clickElementByXPath(locators.Apply_filter)
+        cy.wait(Timeout.ml)
+        cy.wait(Timeout.ml)
+        methods.NotExist(locators.Loader)
+        cy.wait(Timeout.ml)
+        cy.wait(Timeout.xl)
+        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, then come back in 2 to 6 hours to view the final segment.")
+        methods.clickElementByXPath(locators.Save_segments1)
+        methods.ClearAndTypeWithXpath(locators.segment_namefield, testName)
+        cy.wait(Timeout.sm)
+        methods.clickElementByXPath(locators.Save)
+        methods.GetText(locators.notification_popup, "Success!Segment Creation Successful")
+        cy.wait(Timeout.ml)
+        cy.wait(Timeout.ml)
+        methods.NotExist(locators.Loader)
+        cy.wait(Timeout.ml)
+        cy.wait(Timeout.xl)
+        methods.GetTextXpath(locators.Building_Your_Segment, "Finding the accounts that match your filters. This usually takes up to 2 to 6 hours.")
+        methods.clickElementByXPath(locators.AllsegmentMenu)
+        methods.ScrollAndClickxpath(`//span[text()='${testName}']//following::span[1]`)
+        methods.clickElementByXPath(locators.Subscribe)
+        methods.VisibilityofElement(locators.Templete_Popup)
+        methods.typeElement(locators.receive_this_digest_Input, "sarath.s@trackdfect.ai")
+        methods.assertElementContainsText(locators.Digest_Tooltip, "Some emails are from outside your organization. Be cautious before sharing sensitive information")
+        methods.ClearAndType(locators.receive_this_digest_Input, "sarath_tdfect@factors.ai")
+
+        for (let i = 0; i < 9; i++) {
+            methods.clickElementByXPath(locators.AddEmail)
+            methods.typeElementwithIndex(locators.receive_this_digest_Input, "sarath_tdfect@factors.ai", i + 1)
+            methods.scroll(locators.SelectaDay)
+            cy.wait(Timeout.xs)
+        }
+
+        methods.VisibilityofElementXpath(locators.Email_Limit_ToolTip)
+        methods.scroll(`[title="${testName}"]`)
+
+        for (let j = 0; j < 9; j++) {
+            methods.clickElementIndexXpath(locators.Remove_Digest_Mail, 1)
+            cy.wait(Timeout.xs)
+        }
+
+        methods.clickElement(locators.SelectaDay)
+        methods.clickElement(locators.Mail_Day)
+        methods.clickElement(locators.SelectTime)
+        methods.clickElement(locators.Mail_Time)
+        methods.clickElementByXPath(locators.Digest_properties)
+        methods.clickElementIndexXpath(locators.properties_list_Option, 0)
+        methods.assertElementContainsText(locators.AlertMsg, "at least 4 properties need to be added")
+        methods.clickElementIndexXpath(locators.properties_list_Option, 2)
+        methods.clickElementIndexXpath(locators.properties_list_Option, 4)
+        methods.clickElementIndexXpath(locators.properties_list_Option, 6)
+        methods.clickElementByXPath(locators.Subscribe_Digest_Btn)
+        methods.VisibilityofElement(locators.Templete_Popup)
+        methods.assertElementContainsText2(locators.notification_popup1, `You’re subscribed to the Segment Digest!`)
+        cy.wait(Timeout.sm)
+        methods.VisibilityofElement(locators.Subscribe_Digest_Segment)
+        methods.clickElementByXPath(locators.All_segments)
+        methods.clickElementByXPath(`//span[text()='${testName}']//following::span[1]`)
+        methods.clickElementByXPath(locators.Manage_Subscription)
+        methods.VisibilityofElement(locators.Templete_Popup)
+        methods.clickElementByXPath(locators.AddEmail)
+        methods.typeElementwithIndex(locators.receive_this_digest_Input, "sarath_tdfect@factors.ai", 1)
+        methods.scrollWithXpath(locators.Send_a_test_email)
+        methods.clickElementByXPath(locators.Send_a_test_email)
+        methods.assertElementContainsText(locators.notification_popup1, "Email Send")
+        methods.clickElementByXPath(locators.update_Option)
+        methods.assertElementContainsText(locators.notification_popup1, `You have updated this segment Digest`)
+        cy.wait(Timeout.sm)
+        methods.ScrollAndClickxpath(`//span[text()='${testName}']//following::span[1]`)
+        methods.clickElementByXPath(locators.delete_segment)
+        cy.wait(Timeout.xs)
+        methods.clickElementByXPath(locators.Yes)
+        methods.NotExist(locators.Loading)
+        methods.assertElementContainsText(locators.notification_popup, "Segment deleted successfully")
+        cy.wait(Timeout.xl)
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     })
 
 })

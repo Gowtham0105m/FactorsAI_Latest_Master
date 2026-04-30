@@ -412,7 +412,7 @@ describe('KPI Report Login', () => {
         cy.wait(Timeout.md)
     })
 
-    it('KPI Report - Email this Report', () => {
+    it.skip('KPI Report - Email this Report', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;

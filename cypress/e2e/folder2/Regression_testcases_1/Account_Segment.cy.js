@@ -26,13 +26,10 @@ describe('Accounts Segment Login', () => {
         const testName = `Demo_${nowTime}`;
         const testName1 = `Demo Folder_${nowTime}`;
 
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.xl)
 
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
@@ -52,7 +49,7 @@ describe('Accounts Segment Login', () => {
             }
         });
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.AllsegmentMenu, "All segments")
         methods.clickElementByXPath(locators.New_Segment)
         methods.clickElementByXPath(locators.StartfromScratch)
@@ -70,9 +67,8 @@ describe('Accounts Segment Login', () => {
         methods.clickElement(locators.equals_1)
         methods.clickElementByXPath(locators.Apply_filter)
         cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
-        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 60 minutes to view the final segment.")
+        cy.wait(Timeout.ml)
+        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 6 hours to view the final segment.")
         methods.clickElementByXPath(locators.Save_segments1)
         methods.clickElementByXPath(locators.All_segments1)
         methods.clickElementByXPath(locators.New_folder1)
@@ -82,9 +78,8 @@ describe('Accounts Segment Login', () => {
         methods.clickElementByXPath(locators.save1)
         methods.VisibilityofElement(locators.notification_popup1)
         cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
-        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
+        cy.wait(Timeout.ml)
+        methods.GetTextXpath(locators.Building_Your_Segment, "Finding the accounts that match your filters. This usually takes up to 6 hours.")
         cy.wait(Timeout.xs)
         methods.typeElement(locators.Search_segment, testName)
         methods.clickElementByXPath(`//span[text()='${testName}']//following::span[1]`)
@@ -99,8 +94,7 @@ describe('Accounts Segment Login', () => {
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Yes)
         methods.assertElementContainsText(locators.Popup_Message, "Folder Deleted")
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.ml)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
     })
 })

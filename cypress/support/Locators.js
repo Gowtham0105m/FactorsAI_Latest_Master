@@ -565,7 +565,7 @@ class locators {
     this.total_clicks_cap6 = '(//th[text()="Total Clicks Cap"])[2]//following::input[7]';
     this.total_clicks_cap7 = '(//th[text()="Total Clicks Cap"])[2]//following::input[9]';
     this.delete = '//span[text()="Delete"]';
-    this.discard_changes = '//div[text()="Discard Changes"]'; 
+    this.discard_changes = '//div[text()="Discard Changes"]';
     this.advanced_custome_rule = '//*[text()="Set advanced custom rules"]//following::div[3]';
     this.campaign_group = '//*[text()="Campaign Group"]';
     this.select_campaign_group = '//span[text()="Select Campaign Groups"]';
@@ -580,12 +580,12 @@ class locators {
     this.plans_billing = '(//h4[text()="Plans & Billing"])[1]';
     this.Upgrade = '//div[text()="Upgrade"]';
     this.Basic_add_btn = '(//h3[text()="Basic"]//following::button)[1]';
-    this.Qty  = '(//span[text()="Qty"])[1]';
+    this.Qty = '(//span[text()="Qty"])[1]';
     this.Qty1 = '(//span[text()="Qty"])[2]';
     this.Qty2 = '(//span[text()="Qty"])[3]';
     this.Qty3 = '(//span[text()="Qty"])[4]';
     this.Qty4 = '(//span[text()="Qty"])[5]';
-    this.Qty_value  = '(//div[contains(text(),"2")])[1]';
+    this.Qty_value = '(//div[contains(text(),"2")])[1]';
     this.Qty_value1 = '(//div[contains(text(),"2")])[2]';
     this.Qty_value2 = '(//div[contains(text(),"2")])[3]';
     this.Qty_value3 = '(//div[contains(text(),"2")])[4]';
@@ -600,7 +600,7 @@ class locators {
     this.Delete_segment = '//*[text()="Delete segment"]';
     this.select_event1 = '//input[@placeholder="Select Event"]//following::div[3]';
     this.select_factors_segment = '//th[text()="Factors segment to sync "]//following::span[1]';
-    this.select_audiences_linkedin = '//th[text()="LinkedIn Audience to sync"]//following::input[2]';
+    this.select_audiences_linkedin = '//th[text()="LinkedIn Company Audience to sync to"]//following::input[2]';
     this.Engaged_linkedin = '//div[text()="Engaged on LinkedIn"]';
     this.Testing_audience = '//div[text()="Test audience | Third-party: Factors AI"]';
     this.Edit_workflow = '//a[text()="Edit"]';
@@ -706,7 +706,7 @@ class locators {
     this.Deals = '[data-title="Deals"]';
     this.chartName = '(//*[local-name()="svg" and @id="funnel-grouped-svg-chart"])//following::div[1]';
     this.Removefromthisboard = '//div[text()="Remove from this board"]';
-    this.LinkedInAdAccountField = '//*[text()="Select LinkedIn Ad Account"]//following::span[2]';
+    this.LinkedInAdAccountField = '//*[text()="Select LinkedIn Ad Accounts"]//following::span[2]';
     this.LinkedInAdAccount = '[title="508934217"]';
     this.RenameSegment = '//div[text()="Rename segment"]';
     this.NewDashboard = '//span[text()="New Dashboard"]';
@@ -1055,6 +1055,17 @@ class locators {
     this.searchfieldbox = '(//div[@class="ant-select-selector"])[2]';
     this.Discard_Changes = '//span[text()="Discard Changes"]';
     this.Any_Page_View = '[data-title="Any Page View"]';
+    this.Google_Audience_Sync_GA4 = '//*[text()="Google Audience Sync GA4"]';
+    this.Audience_Sync_GA4 = '//*[text()="Audience Sync GA4"]';
+    this.GA4_Audience_Sync = '//*[text()="GA4 Audience Sync"]';
+    this.Factors = '//*[text()="Factors"]';
+    this.Factors_Segment_To_Sync = '//*[text()="Select the Factors segment to be synced with your Google Audience"]//following::span[2]';
+    this.Create_Google_Audience = '//*[text()="Create a Google Audience"]';
+    this.Create_Audience = '//*[text()="Create Audience"]';
+    this.View = '//*[text()="View"]';
+    this.Google_Audience_GA4_Sync_Status = '//*[text()="Google Audience GA4 Sync Status"]';
+    this.Remove_Google_Audience = '//*[text()="Remove Google Audience"]';
+    this.Building_Your_Segment = '//p[text()="Building your segment.."]//following::*[1]';
 
   }
 }
