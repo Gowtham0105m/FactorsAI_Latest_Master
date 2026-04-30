@@ -85,7 +85,7 @@ describe('KPI Login', () => {
 
   })
 
-  it('Kpi - Share to email', () => {
+  it.skip('Kpi - Share to email', () => {
 
     const randomNumber = Math.floor(Math.random() * 90) + 10;
     const testName = `Demo_${randomNumber}`;

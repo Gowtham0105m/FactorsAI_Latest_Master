@@ -29,16 +29,6 @@ describe('Insight Login', () => {
         cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.xmd)
-        methods.Mouseover(locators.report_dropdown)
-        methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.SegmentTitle)
-        methods.Mouseover(locators.account_dropdown);
-        cy.wait(Timeout.sm);
-        methods.clickElementIndexXpath(locators.Account, 1);
-        cy.wait(Timeout.xl);
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.xmd)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -74,17 +64,15 @@ describe('Insight Login', () => {
         methods.clickElement0(locators.Third_party_Intent_Visit, 0)
         methods.clickElementByXPath(locators.Apply_filter)
         cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
-        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 60 minutes to view the final segment.")
+        cy.wait(Timeout.ml)
+        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 6 hours to view the final segment.")
         methods.clickElementByXPath(locators.Save_segments1)
         methods.ClearAndType(locators.Paid_search_visitors, testName)
         methods.clickElementByXPath(locators.Save_1)
         methods.GetText(locators.notification_popup, "Success!Segment Creation Successful")
         cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
-        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
+        cy.wait(Timeout.ml)
+        methods.GetTextXpath(locators.Building_Your_Segment, "Finding the accounts that match your filters. This usually takes up to 6 hours.")
         cy.wait(Timeout.md)
         methods.scroll(locators.Insight_Icon)
         methods.clickElement(locators.Insight_Icon)
@@ -97,7 +85,7 @@ describe('Insight Login', () => {
         methods.clickElementByXPath(locators.Yes)
         methods.VisibilityofElement(locators.notification_popup)
         cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.ml)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
     })
 

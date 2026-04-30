@@ -52,6 +52,7 @@ describe('Global search Login', () => {
         methods.clickElementByXPath(locators.global_Search)
         methods.VisibilityofElementXpath(locators.global_Popup)
         methods.clickElementByXPath(locators.ask_Factors)
+        cy.wait(Timeout.md)
         methods.ClickandTypeXpath(locators.ai_Textfield, 'Visitors having company industry as software and technology visited last week?')
         methods.EnterXpath(locators.ai_Textfield)
         cy.wait(Timeout.xl)

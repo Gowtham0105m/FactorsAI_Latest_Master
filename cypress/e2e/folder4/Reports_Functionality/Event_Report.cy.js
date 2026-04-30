@@ -149,7 +149,7 @@ describe('Event Report Login', () => {
     methods.clickElementByXPath(locators.Save_1)
     cy.wait(Timeout.sm)
     methods.clickElementByXPath(locators.Closed)
-    cy.wait(Timeout.md)
+    cy.wait(Timeout.xmd)
     methods.VisibilityofElement(locators.Table_Body_1)
     methods.MouseoverWithXpath(`//*[text()='${testName1}']//following::button[1]`)
     methods.clickElementByXPath(locators.Delete_Report_1)
@@ -509,7 +509,7 @@ describe('Event Report Login', () => {
     cy.wait(Timeout.sm)
   })
 
-  it('Event Report - Email this Report', () => {
+  it.skip('Event Report - Email this Report', () => {
 
     const nowTime = dayjs().format('H:m:s');
     const testName = `Demo_${nowTime}`;

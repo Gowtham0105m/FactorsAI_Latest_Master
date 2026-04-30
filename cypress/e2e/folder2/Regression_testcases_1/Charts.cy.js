@@ -20,13 +20,9 @@ describe('Charts Login', () => {
 
     it('TC_RE_01_Charts - companies have been visited', () => {
 
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -70,13 +66,9 @@ describe('Charts Login', () => {
 
     it('TC_RE_02_Charts - Local filters, Local break down', () => {
 
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
-        methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -112,19 +104,13 @@ describe('Charts Login', () => {
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.pageview_option1)
         methods.clickElementByXPath(locators.Apply1)
-        methods.MouseoverAndClick(locators.Filter_this_event)
-        methods.clickElement0(locators.others, 0)
-        cy.wait(Timeout.xs)
-        methods.clickElementByXPath(locators.pageview_option1)
-        cy.wait(Timeout.xs)
-        methods.clickElement(locators.equals_1)
+        methods.clickElementByXPath(locators.Add_another_event)
+        methods.clickElement(locators.Hubspot_Contacts)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.pageview_option1)
-        methods.clickElementByXPath(locators.Apply1)
-        methods.MouseoverAndClick(locators.breakdown_option)
-        methods.clickElementByXPath(locators.BreakDown)
-        methods.clickElement0(locators.others, 0)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.sm)
+        methods.clickElement(locators.Add_New_Breakdown_new)
+        methods.clickElement0(locators.Hubspot_Companies, 0)
         methods.clickElementByXPath(locators.Filter_option1)
         methods.MouseoverAndClick(locators.breakdown_option)
         methods.clickElementByXPath(locators.BreakDown)

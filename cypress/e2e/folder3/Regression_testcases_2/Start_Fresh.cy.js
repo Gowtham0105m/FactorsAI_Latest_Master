@@ -61,9 +61,8 @@ describe('Start_Fresh_Icon', () => {
 
         // search saved segment
         cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
-        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
+        cy.wait(Timeout.ml)
+        methods.GetTextXpath(locators.Building_Your_Segment, "Finding the accounts that match your filters. This usually takes up to 6 hours.")
         cy.wait(Timeout.xs)
         methods.ClearAndType(locators.Search_segment, testName)
         methods.clickElementByXPath(locators.Select_segment)
@@ -93,7 +92,8 @@ describe('Start_Fresh_Icon', () => {
         methods.clickElementByXPath(locators.Yes)
         cy.wait(Timeout.sm)
         methods.assertElementContainsText(locators.Popup_Message, "Folder Deleted")
-        cy.wait(Timeout.sm)
+        cy.wait(Timeout.ml)
+        methods.VisibilityofElementXpath(locators.account_pageloaded)
 
     })
 

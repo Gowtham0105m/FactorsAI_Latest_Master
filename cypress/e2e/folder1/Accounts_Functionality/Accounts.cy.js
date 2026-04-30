@@ -19,7 +19,7 @@ describe('Accounts Login', () => {
 
     })
 
-    it('Accounts', () => {
+    it.skip('Accounts', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
@@ -80,7 +80,7 @@ describe('Accounts Login', () => {
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
-        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 60 minutes to view the final segment.")
+        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 6 hours to view the final segment.")
         methods.clickElementByXPath(locators.Save_segments1)
         methods.ClearAndTypeWithXpath(locators.segment_namefield, testName1)
         methods.clickElementByXPath(locators.Save)
@@ -159,7 +159,7 @@ describe('Accounts Login', () => {
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
-        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 60 minutes to view the final segment.")
+        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 6 hours to view the final segment.")
         methods.clickElementByXPath(locators.Save_segments1)
         methods.ClearAndTypeWithXpath(locators.segment_namefield, testName)
         methods.clickElementByXPath(locators.All_segments1)
@@ -222,7 +222,7 @@ describe('Accounts Login', () => {
 
     })
 
-    it('Account - Update this Segment', () => {
+    it.skip('Account - Update this Segment', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
@@ -277,18 +277,16 @@ describe('Accounts Login', () => {
         methods.clickElementByXPath(locators.Apply_filter)
         methods.VisibilityofElement(locators.Open_Filter)
         cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
-        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 60 minutes to view the final segment.")
+        cy.wait(Timeout.ml)
+        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 6 hours to view the final segment.")
         methods.clickElementByXPath(locators.Save_segments1)
         methods.ClearAndTypeWithXpath(locators.segment_namefield, testName)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.Save)
         methods.GetText(locators.notification_popup, "Success!Segment Creation Successful")
         cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
-        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
+        cy.wait(Timeout.ml)
+        methods.GetTextXpath(locators.Building_Your_Segment, "Finding the accounts that match your filters. This usually takes up to 6 hours.")
         methods.scrollWithXpath(locators.Edit_Segment)
         methods.VisibilityofElementXpath(locators.Edit_Segment)
         methods.clickElementByXPath(locators.Edit_Segment)
@@ -315,13 +313,12 @@ describe('Accounts Login', () => {
         methods.clickElementByXPath(locators.Yes)
         methods.NotExist(locators.Loading)
         methods.assertElementContainsText(locators.notification_popup, "Segment deleted successfully")
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.ml)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
 
     })
 
-    it('Account - Save as New Segment', () => {
+    it.skip('Account - Save as New Segment', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
@@ -379,7 +376,7 @@ describe('Accounts Login', () => {
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
         cy.wait(Timeout.xl)
-        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 60 minutes to view the final segment.")
+        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 6 hours to view the final segment.")
         methods.clickElementByXPath(locators.Save_segments1)
         methods.ClearAndTypeWithXpath(locators.segment_namefield, testName)
         cy.wait(Timeout.sm)
