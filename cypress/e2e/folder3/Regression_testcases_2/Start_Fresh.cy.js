@@ -61,8 +61,7 @@ describe('Start_Fresh_Icon', () => {
 
         // search saved segment
         cy.wait(Timeout.xl)
-        cy.wait(Timeout.ml)
-        methods.GetTextXpath(locators.Building_Your_Segment, "Finding the accounts that match your filters. This usually takes up to 6 hours.")
+        methods.GetTextXpath(locators.Building_Your_Segment, "Finding the accounts that match your filters. This usually takes up to 2 to 6 hours.")
         cy.wait(Timeout.xs)
         methods.ClearAndType(locators.Search_segment, testName)
         methods.clickElementByXPath(locators.Select_segment)

@@ -514,7 +514,7 @@ class locators {
     this.brkdwn_Cancel = '//*[text()="BREAKDOWN"]//following::button[2]';
     this.Add_Filters_value = '//*[text()="Company Identification"]';
     this.Add_Filters_value_searchbar = '(//span[text()="Select Property"]//following::input)[1]';
-    this.Add_Filters_value1 = '//b[text()="Company Country ISO Code"]';
+    this.Add_Filters_value1 = '[data-title="Company Country ISO Code"]';
     this.Add_Event = '//*[text()="Add event"]';
     this.All_segments = '(//div[text()="All segments"])[1]';
     this.not_Set = '//div[@data-title="(Not Set)"]';
@@ -534,7 +534,7 @@ class locators {
     this.Total_visitor_segment = '//*[text()="Total visitors from segment"]//following::span[1]';
     this.Total_PageViews = '//*[text()="TotalPageViews"]//following::span[1]';
     this.Marketing_qualified = '(//*[text()="Marketing Engagement Analysis"]//following::span)[1]';
-    this.sales_qualified = '(//*[text()="Sales Opportunity Analysis"]//following::span)[1]';
+    this.sales_qualified = '(//*[text()="Sales Opportunity Analysis"]//following::h2)[1]';
     this.Opportunity_Created = '//*[text()="Opportunity Created"]';
     this.Pipeline_Created = '//*[text()="Pipeline Created"]';
     this.Average_Deal_Size = '//*[text()="Average Deal Size"]';
@@ -761,7 +761,7 @@ class locators {
     this.person_seniorities = '#apollo_person_seniorities';
     this.max_contacts = '#apollo_max_contacts';
     this.Smartlead = '//button[text()="Smartlead"]';
-    this.SmartLead_Template = '//input[@placeholder="Search"]//following::h4[text()="Add leads to a Smartlead campaign"]';
+    this.SmartLead_Template = '//input[@placeholder="Search"]//following::*[text()="Add leads to a Smartlead campaign"]';
     this.smartlead_campaign_id = '#apollo_smartlead_campaign_id';
     this.Dropdown = '[aria-label="down"]';
     this.Selectalldata = '//span[text()="Select all data"]';
@@ -1066,6 +1066,7 @@ class locators {
     this.Google_Audience_GA4_Sync_Status = '//*[text()="Google Audience GA4 Sync Status"]';
     this.Remove_Google_Audience = '//*[text()="Remove Google Audience"]';
     this.Building_Your_Segment = '//p[text()="Building your segment.."]//following::*[1]';
+    this.Linkedin_Organic_Engagements = '[data-title="Linkedin Organic Engagements"]';
 
   }
 }
