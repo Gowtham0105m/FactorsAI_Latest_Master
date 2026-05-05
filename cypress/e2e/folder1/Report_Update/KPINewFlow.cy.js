@@ -43,7 +43,7 @@ describe('KPI new flow Login', () => {
         methods.typeElement(locators.search_1, 'uniq')
         methods.Clickwithindexandvalidation(locators.UniqueUsers, 0)
         methods.clickElementByXPath(locators.FilterthisKPI)
-        methods.typeElement(locators.search_1, 'name')
+        methods.typeElement(locators.search_1, 'user name')
         methods.Clickwithindexandvalidation(locators.userName, 0)
         cy.wait(Timeout.xs)
         methods.clickElement(locators.equals_1)

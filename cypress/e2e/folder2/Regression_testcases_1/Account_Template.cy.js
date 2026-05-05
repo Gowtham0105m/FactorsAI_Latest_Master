@@ -29,7 +29,7 @@ describe('Account Template Login', () => {
 
         cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
@@ -59,15 +59,13 @@ describe('Account Template Login', () => {
         methods.clickElement0(locators.Third_party_Intent_Visit, 0)
         methods.clickElementByXPath(locators.Apply_filter)
         cy.wait(Timeout.xl)
-        cy.wait(Timeout.ml)
-        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, and come back in around 6 hours to view the final segment.")
+        methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, then come back in 2 to 6 hours to view the final segment.")
         methods.clickElementByXPath(locators.Save_segments1)
         methods.ClearAndTypeWithXpath(locators.save_field, testName)
         methods.clickElementByXPath(locators.Save)
         methods.VisibilityofElement(locators.notification_popup)
         cy.wait(Timeout.xl)
-        cy.wait(Timeout.ml)
-        methods.GetTextXpath(locators.Building_Your_Segment, "Finding the accounts that match your filters. This usually takes up to 6 hours.")
+        methods.GetTextXpath(locators.Building_Your_Segment, "Finding the accounts that match your filters. This usually takes up to 2 to 6 hours.")
         methods.VisibilityofElementXpath(locators.AllsegmentMenu)
         methods.clickElementByXPath(locators.All_segments)
         cy.wait(Timeout.md)

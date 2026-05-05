@@ -21,8 +21,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - Page View', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `Interest_Group_Page_View ${randomNumber}`;
-        const testName1 = `Interest_Group_Page_View Edit ${randomNumber}`;
+        const testName = `IG Page View ${randomNumber}`;
+        const testName1 = `IG Page_View Edit ${randomNumber}`;
 
         cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
@@ -58,7 +58,7 @@ describe('Interest Group Login', () => {
         methods.clickElement(locators.PageUrlIs)
         cy.wait(Timeout.xmd)
         methods.clickElementByXPath(locators.Select_Values)
-        cy.wait(Timeout.ml)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.Select_Values)
         methods.clickElementByXPath(locators.URLoption)
         cy.wait(Timeout.sm)
@@ -102,8 +102,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - Hubspot Forms', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `Interest_Group_Hubspot_Forms ${randomNumber}`;
-        const testName1 = `Interest Group_Hubspot_Forms_Edit ${randomNumber}`;
+        const testName = `IG Hubspot_Forms ${randomNumber}`;
+        const testName1 = `IG Hubspot_Forms_Edit ${randomNumber}`;
 
         cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
@@ -140,7 +140,7 @@ describe('Interest Group Login', () => {
         methods.clickElement(locators.Formtitleis)
         cy.wait(Timeout.xmd)
         methods.clickElementByXPath(locators.Select_Values)
-        cy.wait(Timeout.ml)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.Select_Values)
         methods.clickElementByXPath(locators.URLoption)
         cy.wait(Timeout.sm)
@@ -184,8 +184,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - Salesforce Campaigns', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `Interest_Group_Salesforce ${randomNumber}`;
-        const testName1 = `Interest_Group_Salesforce_Edit ${randomNumber}`;
+        const testName = `IG Salesforce ${randomNumber}`;
+        const testName1 = `IG Salesforce_Edit ${randomNumber}`;
 
         cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
@@ -222,7 +222,7 @@ describe('Interest Group Login', () => {
         methods.clickElement(locators.Campaignnameis)
         cy.wait(Timeout.xmd)
         methods.clickElementByXPath(locators.Select_Values)
-        cy.wait(Timeout.ml)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.Select_Values)
         methods.clickElementByXPath(locators.URLoption)
         cy.wait(Timeout.sm)
@@ -266,8 +266,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - LinkedIn Ads', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `Interest_Group_LinkedIn_Ads ${randomNumber}`;
-        const testName1 = `Interest_Group LinkedIn_Ads Edit ${randomNumber}`;
+        const testName = `IG LinkedIn_Ads ${randomNumber}`;
+        const testName1 = `IG LinkedIn Ads Edit ${randomNumber}`;
 
         cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
@@ -302,7 +302,7 @@ describe('Interest Group Login', () => {
         methods.VisibilityofElementXpath(locators.IGCampaignsCampaignDetails)
         methods.clickElementByXPath(locators.Add_Rule)
         methods.clickElement(locators.Campaignnameis)
-        cy.wait(Timeout.ml)
+        cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.Select_Values)
         cy.wait(Timeout.xmd)
         methods.clickElementByXPath(locators.Select_Values)
@@ -348,8 +348,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - G2 Intent', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `Interest Group_G2_Intent ${randomNumber}`;
-        const testName1 = `Interest_Group_G2_Intent Edit ${randomNumber}`;
+        const testName = `IG G2 Intent ${randomNumber}`;
+        const testName1 = `IG G2 Intent Edit ${randomNumber}`;
 
         cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
@@ -387,6 +387,7 @@ describe('Interest Group Login', () => {
         cy.wait(Timeout.xmd)
         methods.clickElementByXPath(locators.Select_Values)
         cy.wait(Timeout.md)
+        methods.clickElementByXPath(locators.Select_Values)
         methods.clickElementByXPath(locators.URLoption)
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.custom_event_name)
@@ -429,8 +430,8 @@ describe('Interest Group Login', () => {
     it('Interest Group - Custom Event', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `Interest_Group Custom_Event ${randomNumber}`;
-        const testName1 = `Interest_Group_Custom Event_Edit ${randomNumber}`;
+        const testName = `IG Custom Event ${randomNumber}`;
+        const testName1 = `IG Custom Event_Edit ${randomNumber}`;
 
         cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
@@ -500,8 +501,8 @@ describe('Interest Group Login', () => {
     it('Interest group Popup verification', () => {
 
         const randomNumber = Math.floor(Math.random() * 90) + 10;
-        const testName = `Interest_Group_verification ${randomNumber}`;
-        const testName1 = `Interest_Group verification_Edit ${randomNumber}`;
+        const testName = `IG verification ${randomNumber}`;
+        const testName1 = `IG verification_Edit ${randomNumber}`;
 
         cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
