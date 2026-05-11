@@ -91,6 +91,7 @@ describe('Global search Login', () => {
         methods.VisibilityofElementXpath(locators.SegmentTitle)
         methods.clickElementByXPath(locators.Drafts)
         methods.VisibilityofElement(locators.Table_Body_1)
+        methods.VisibilityofElementXpath(`//*[text()='${testName}']`)
         methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.Delete_Report_1)
         cy.wait(Timeout.xs)

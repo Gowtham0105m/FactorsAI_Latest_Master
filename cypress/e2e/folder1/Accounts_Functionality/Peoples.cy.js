@@ -98,6 +98,7 @@ describe('People Login', () => {
 
         // renaming segment
 
+        methods.VisibilityofElementXpath(`//span[text()='${testName}']`)
         methods.clickElementByXPath(`//span[text()='${testName}']//following::span[1]`)
         methods.clickElementByXPath(locators.RenameSegment)
         methods.typeElementByXPath(locators.seg_rename, randomNumber)
@@ -108,6 +109,7 @@ describe('People Login', () => {
 
         //deleting the segment
 
+        methods.VisibilityofElementXpath(`//span[text()='${combination}']`)
         methods.clickElementByXPath(`//span[text()='${combination}']//following::span[1]`)
         methods.clickElementByXPath(locators.Delete_segment)
         cy.wait(Timeout.sm)
@@ -115,6 +117,7 @@ describe('People Login', () => {
         methods.assertElementContainsText(locators.notification_popup, "Segment deleted successfully")
         cy.wait(Timeout.xs)
         methods.Clear(locators.Search_segment)
+        methods.VisibilityofElementXpath(`//div[text()='${Folder}']`)
         methods.clickElementByXPath(`//div[text()='${Folder}']//following::button[1]`)
         methods.clickElementByXPath(locators.Delete_Folder)
         cy.wait(Timeout.xs)
@@ -173,6 +176,7 @@ describe('People Login', () => {
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.All_segments)
         cy.wait(Timeout.xs)
+        methods.VisibilityofElementXpath(`//span[text()='${testName}']`)
         methods.ScrollAndClickxpath(`//span[text()='${testName}']//following::span[1]`)
         methods.clickElementByXPath(locators.delete_segment)
         cy.wait(Timeout.xs)
@@ -236,12 +240,14 @@ describe('People Login', () => {
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.All_segments)
         cy.wait(Timeout.xs)
+        methods.VisibilityofElementXpath(`//span[text()='${testName}']`)
         methods.ScrollAndClickxpath(`//span[text()='${testName}']//following::span[1]`)
         methods.clickElementByXPath(locators.delete_segment)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Yes)
         methods.assertElementContainsText(locators.notification_popup, "Segment deleted successfully")
         cy.wait(Timeout.xs)
+        methods.VisibilityofElementXpath(`//span[text()='${testName1}']`)
         methods.ScrollAndClickxpath(`//span[text()='${testName1}']//following::span[1]`)
         methods.clickElementByXPath(locators.delete_segment)
         cy.wait(Timeout.xs)

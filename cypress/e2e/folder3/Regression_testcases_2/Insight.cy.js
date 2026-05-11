@@ -77,6 +77,7 @@ describe('Insight Login', () => {
         methods.scrollWithXpath(locators.InsightMsg2)
         methods.assertElementContainsTextxpath(locators.InsightMsg1, "We are working hard to build the insights,")
         methods.assertElementContainsTextxpath(locators.InsightMsg2, "Check back in a day's time...")
+        methods.VisibilityofElementXpath(`//span[text()='${testName}']`)
         methods.clickElementByXPath(`//span[text()='${testName}']//following::span[1]`)
         methods.clickElementByXPath(locators.Delete_segment)
         methods.clickElementByXPath(locators.Yes)

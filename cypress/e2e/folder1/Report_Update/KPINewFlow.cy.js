@@ -128,6 +128,7 @@ describe('KPI new flow Login', () => {
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Closed)
         methods.clickElementByXPath(locators.Drafts)
+        methods.VisibilityofElementXpath(`//*[text()='${testName}']`)
         methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.Delete)
         cy.wait(Timeout.xs)

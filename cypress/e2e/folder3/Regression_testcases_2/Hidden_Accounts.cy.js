@@ -34,8 +34,7 @@ describe('Hidden Accounts', () => {
         methods.Mouseover(locators.account_dropdown);
         cy.wait(Timeout.xs);
         methods.clickElementIndexXpath(locators.Account, 1);
-        cy.wait(Timeout.xl);
-        cy.wait(Timeout.xl);
+        cy.wait(Timeout.ml);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
 
@@ -151,8 +150,7 @@ describe('Hidden Accounts', () => {
         methods.Mouseover(locators.account_dropdown);
         cy.wait(Timeout.xs);
         methods.clickElementIndexXpath(locators.Account, 1);
-        cy.wait(Timeout.xl);
-        cy.wait(Timeout.xl);
+        cy.wait(Timeout.ml);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
 

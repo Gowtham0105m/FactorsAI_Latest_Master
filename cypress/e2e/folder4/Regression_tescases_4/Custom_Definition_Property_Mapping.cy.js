@@ -61,6 +61,7 @@ describe('Custom Definition - Property Mapping Login', () => {
         methods.clickElementByXPath(locators.Save_1)
         methods.assertElementContainsText(locators.Popup_Message, 'Property Map added!')
         cy.wait(Timeout.sm)
+        methods.VisibilityofElementXpath(`//span[text()="${testName1}"]`)
         methods.clickElementByXPath(`//span[text()="${testName1}"]//following::span[1]`)
         methods.clickElementByXPath(locators.RemoveProperty)
         cy.wait(Timeout.sm)

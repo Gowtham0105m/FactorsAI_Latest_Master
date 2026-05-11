@@ -142,6 +142,7 @@ describe('Alert Login', () => {
         methods.clickElementByXPath(locators.Confirm_publish)
         methods.GetText(locators.notification_popup, "Alerts SavedAlerts is edited and saved successfully.")
         cy.wait(Timeout.sm)
+        methods.VisibilityofElementXpath(`//*[text()="${testName1}"]`)
         methods.assertElementContainsTextxpath(`//*[text()="${testName1}"]//following::td[2]`, "Active")
         methods.clickElementByXPath(`//*[text()="${testName1}"]`)
         cy.wait(Timeout.sm)
@@ -152,11 +153,13 @@ describe('Alert Login', () => {
         cy.wait(Timeout.xs)
         methods.assertElementContainsText(locators.Popup_Message, "Successfully paused alerts.")
         cy.wait(Timeout.sm)
+        methods.VisibilityofElementXpath(`//*[text()="${testName1}"]`)
         methods.assertElementContainsTextxpath(`//*[text()="${testName1}"]//following::td[2]`, "Paused")
 
         // Deleting the alert
 
         cy.wait(Timeout.sm)
+        methods.VisibilityofElementXpath(`//*[text()="${testName1}"]`)
         methods.clickElementByXPath(`//*[text()='${testName1}']//following::button[2]`)
         methods.clickElementByXPath(locators.remove_alert)
         cy.wait(Timeout.xs)
@@ -250,18 +253,21 @@ describe('Alert Login', () => {
 
         // Deleting the alert
 
+        methods.VisibilityofElementXpath(`//*[text()="${testName}"]`)
         methods.clickElementByXPath(`//*[text()='${testName}']//following::button[2]`)
         methods.clickElementByXPath(locators.CreateCopy)
         methods.assertElementContainsText(locators.notification_popup, "Alert CreatedCopy of alert is created and saved successfully.")
         cy.wait(Timeout.xs)
         methods.assertElementContainsTextxpath(locators.AlertName, `Copy of ${testName}`)
         cy.wait(Timeout.xs)
+        methods.VisibilityofElementXpath(`//*[text()="${testName}"]`)
         methods.clickElementByXPath(`//*[text()='${testName}']//following::button[2]`)
         methods.clickElementByXPath(locators.remove_alert)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Ok)
         methods.assertElementContainsText(locators.notification_popup, "SuccessDeleted Alert successfully")
         cy.wait(Timeout.sm)
+        methods.VisibilityofElementXpath(`//*[text()='Copy of ${testName}']`)
         methods.clickElementByXPath(`//*[text()='Copy of ${testName}']//following::button[2]`)
         methods.clickElementByXPath(locators.remove_alert)
         cy.wait(Timeout.xs)

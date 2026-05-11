@@ -268,7 +268,7 @@ describe('Attribution Regression', () => {
 
         cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
-       cy.wait(Timeout.xmd)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.xmd)
         cy.document().then((doc) => {

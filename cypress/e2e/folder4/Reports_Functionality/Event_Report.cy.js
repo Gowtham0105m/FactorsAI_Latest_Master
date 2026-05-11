@@ -145,11 +145,11 @@ describe('Event Report Login', () => {
     methods.clickElementByXPath(locators.Run_Analysis1)
     cy.wait(Timeout.md)
     methods.VisibilityofElement(locators.Profile_report_gen)
-    cy.wait(Timeout.sm)
+    cy.wait(Timeout.sm)-
     methods.clickElementByXPath(locators.Save_1)
     cy.wait(Timeout.sm)
     methods.clickElementByXPath(locators.Closed)
-    cy.wait(Timeout.xmd)
+    cy.wait(Timeout.sm)
     methods.VisibilityofElement(locators.Table_Body_1)
     methods.MouseoverWithXpath(`//*[text()='${testName1}']//following::button[1]`)
     methods.clickElementByXPath(locators.Delete_Report_1)

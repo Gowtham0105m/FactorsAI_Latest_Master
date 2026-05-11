@@ -32,7 +32,7 @@ describe('Timeline Login', () => {
     methods.Mouseover(locators.account_dropdown);
     cy.wait(Timeout.xs);
     methods.clickElementIndexXpath(locators.Account, 1);
-    cy.wait(Timeout.xl);
+    cy.wait(Timeout.lgr);
     methods.VisibilityofElementXpath(locators.account_pageloaded)
     cy.wait(Timeout.md)
     cy.document().then((doc) => {
@@ -65,7 +65,7 @@ describe('Timeline Login', () => {
 
     let found = false;
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 15; i++) {
       if (found) break;
 
       cy.document().then((doc) => {
@@ -77,7 +77,7 @@ describe('Timeline Login', () => {
           methods.clickElementByXPath(locators.Details)
         } else {
           cy.log(`**Element not visible — scroll attempt ${i + 1}**`);
-          cy.wait(Timeout.md)
+          cy.wait(Timeout.xs)
           cy.get('.rc-virtual-list-holder').scrollTo(0, 500 * (i + 1), { ensureScrollable: false });
           cy.wait(500);
         }
