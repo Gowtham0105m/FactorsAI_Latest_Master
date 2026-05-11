@@ -91,6 +91,7 @@ describe('Accounts Login', () => {
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
         methods.GetTextXpath(locators.SegmentTitle, testName1)
         cy.wait(Timeout.xs)
+        methods.VisibilityofElementXpath(`//span[text()="${testName1}"]`)
         methods.clickElementByXPath(`//span[text()="${testName1}"]//following::span[1]`)
         methods.clickElementByXPath(locators.delete_segment)
         cy.wait(Timeout.xs)
@@ -180,6 +181,7 @@ describe('Accounts Login', () => {
 
         // renaming segment
 
+        methods.VisibilityofElementXpath(`//span[text()="${testName}"]`)
         methods.clickElementByXPath(`//span[text()='${testName}']//following::span[1]`)
         methods.clickElementByXPath(locators.RenameSegment)
         methods.typeElementByXPath(locators.segment_name, randomNumber)
@@ -191,6 +193,7 @@ describe('Accounts Login', () => {
 
         //deleting the segment
 
+        methods.VisibilityofElementXpath(`//span[text()='${combination}']`)
         methods.clickElementByXPath(`//span[text()='${combination}']//following::span[1]`)
         methods.clickElementByXPath(locators.Delete_segment)
         cy.wait(Timeout.sm)
@@ -211,6 +214,7 @@ describe('Accounts Login', () => {
         methods.clickElement(locators.Company_Region);
         methods.clickElementByXPath(locators.Apply1)
         methods.Clear(locators.Search_segment)
+        methods.VisibilityofElementXpath(`//div[text()='${Folder}']`)
         methods.clickElementByXPath(`//div[text()='${Folder}']//following::button[1]`)
         methods.clickElementByXPath(locators.Delete_Folder)
         cy.wait(Timeout.sm)
@@ -307,6 +311,7 @@ describe('Accounts Login', () => {
         methods.assertElementContainsText(locators.Popup_Message, "Segment updated successfully")
         cy.wait(Timeout.sm)
         methods.typeElement(locators.Search_segment, testName)
+        methods.VisibilityofElementXpath(`//span[text()='${testName}']`)
         methods.clickElementByXPath(`//span[text()='${testName}']//following::span[1]`)
         methods.clickElementByXPath(locators.delete_segment)
         cy.wait(Timeout.xs)
@@ -412,6 +417,7 @@ describe('Accounts Login', () => {
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Come back in around 60 minutes to view the final segment.")
         cy.wait(Timeout.sm)
         methods.typeElement(locators.Search_segment, testName1)
+        methods.VisibilityofElementXpath(`//span[text()='${testName1}']`)
         methods.clickElementByXPath(`//span[text()='${testName1}']//following::span[1]`)
         methods.clickElementByXPath(locators.delete_segment)
         cy.wait(Timeout.xs)
@@ -420,6 +426,7 @@ describe('Accounts Login', () => {
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.All_segments)
         cy.wait(Timeout.xs)
+        methods.VisibilityofElementXpath(`//span[text()='${testName}']`)
         methods.ScrollAndClickxpath(`//span[text()='${testName}']//following::span[1]`)
         methods.clickElementByXPath(locators.delete_segment)
         cy.wait(Timeout.xs)

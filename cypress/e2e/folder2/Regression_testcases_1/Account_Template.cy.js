@@ -59,6 +59,7 @@ describe('Account Template Login', () => {
         methods.clickElement0(locators.Third_party_Intent_Visit, 0)
         methods.clickElementByXPath(locators.Apply_filter)
         cy.wait(Timeout.xl)
+        cy.wait(Timeout.ml)
         methods.GetText(locators.PreviewInfo, "This is only a preview of this segment. Save this segment to process the full results, then come back in 2 to 6 hours to view the final segment.")
         methods.clickElementByXPath(locators.Save_segments1)
         methods.ClearAndTypeWithXpath(locators.save_field, testName)

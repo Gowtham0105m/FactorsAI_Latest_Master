@@ -129,6 +129,7 @@ describe('Global search event', () => {
         methods.clickElementByXPath(locators.Drafts)
         methods.VisibilityofElement(locators.Table_Body_1)
         cy.wait(Timeout.sm);
+        methods.VisibilityofElementXpath(`//*[text()='${testName}']`)
         methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.View_Report)
         methods.VisibilityofElement(locators.Profile_report_gen)
@@ -143,6 +144,7 @@ describe('Global search event', () => {
         methods.VisibilityofElement(locators.Upgrade_validation);
         methods.clickElementByXPath(locators.Close_without_saving);
         methods.VisibilityofElement(locators.Table_Body_1)
+        methods.VisibilityofElementXpath(`//*[text()='${testName}']`)
         methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
         cy.wait(Timeout.xs);
         methods.clickElementByXPath(locators.View_Report)
@@ -158,6 +160,7 @@ describe('Global search event', () => {
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Closed)
         methods.VisibilityofElement(locators.Table_Body_1)
+        methods.VisibilityofElementXpath(`//*[text()='${testName}']`)
         methods.MouseoverWithXpath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.Delete_Report_1)
         cy.wait(Timeout.xs)

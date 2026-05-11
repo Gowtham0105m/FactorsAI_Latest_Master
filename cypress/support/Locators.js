@@ -1067,6 +1067,22 @@ class locators {
     this.Remove_Google_Audience = '//*[text()="Remove Google Audience"]';
     this.Building_Your_Segment = '//p[text()="Building your segment.."]//following::*[1]';
     this.Linkedin_Organic_Engagements = '[data-title="Linkedin Organic Engagements"]';
+    this.Audience_Exclusion = '//*[text()="Audience Exclusion"]';
+    this.Create_Exclusion_Rule = '//*[text()="Create Exclusion Rule"]';
+    this.ad_account = '//*[text()="Select Ad Account"]//following::span[2]';
+    this.select_Campaigns = '//*[text()="Select Campaigns"]//following::span[2]';
+    this.please_select_campaigns = '//span[text()="Please select campaigns"]';
+    this.select_value1_campaigns = '[title="Factors | RT | ICP - ABM | Request Demo | Video | US"]';
+    this.select_value2_campaigns = '[title="Factors | TOFU | ICP - ABM | Brand | Video | US (Video Views)"]';
+    this.Bulk_Upload = '//*[text()="Bulk Upload"]';
+    this.Exclude_by_Attributes = '//*[text()="Exclude by Attributes"]';
+    this.Add_Segment = '//span[text()="Add Segment"]';
+    this.please_select_job_titles = '//*[text()="Please select job titles"]';
+    this.automation_engineer = '[title="Automation Engineer"]';
+    this.Please_select_seniorities_to_exclude = '//*[text()="Please select seniorities to exclude"]';
+    this.Unpaid = '[title="Unpaid"]';
+    this.Please_select_Job_function_to_exclude = '//*[text()="Please select Job function to exclude"]';
+    this.Engineering = '[title="Engineering"]';
 
   }
 }

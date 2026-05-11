@@ -34,6 +34,7 @@ describe('Predictive Scoring Login', () => {
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.PredictiveScoring)
         methods.VisibilityofElementXpath(locators.Newprediction)
+        cy.reload();
 
         cy.document().then((doc) => {
 
@@ -74,6 +75,7 @@ describe('Predictive Scoring Login', () => {
         cy.wait(Timeout.sm)
         methods.assertElementContainsText1(locators.DataManagementHeader, 'Predictive Scoring')
         methods.VisibilityofElementXpath(locators.Newprediction)
+        methods.VisibilityofElementXpath(`//*[text()="${testName}"]`)
         methods.assertElementContainsTextxpath(`//*[text()="${testName}"]//following::td[3]`, 'Building')
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(`//*[text()="${testName}"]//following::button[1]`)
@@ -99,6 +101,7 @@ describe('Predictive Scoring Login', () => {
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.PredictiveScoring)
         methods.VisibilityofElementXpath(locators.Newprediction)
+        cy.reload()
 
         cy.document().then((doc) => {
 
@@ -139,6 +142,7 @@ describe('Predictive Scoring Login', () => {
         cy.wait(Timeout.sm)
         methods.assertElementContainsText1(locators.DataManagementHeader, 'Predictive Scoring')
         methods.VisibilityofElementXpath(locators.Newprediction)
+        methods.VisibilityofElementXpath(`//*[text()="${testName}"]`)
         methods.assertElementContainsTextxpath(`//*[text()="${testName}"]//following::td[3]`, 'Building')
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(`//*[text()="${testName}"]//following::button[1]`)
@@ -160,6 +164,7 @@ describe('Predictive Scoring Login', () => {
         cy.wait(Timeout.sm)
         methods.assertElementContainsText1(locators.DataManagementHeader, 'Predictive Scoring')
         methods.VisibilityofElementXpath(locators.Newprediction)
+        methods.VisibilityofElementXpath(`//*[text()="${testName} (Copy)"]`)
         methods.assertElementContainsTextxpath(`//*[text()="${testName} (Copy)"]//following::td[3]`, 'Building')
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(`//*[text()="${testName} (Copy)"]//following::button[1]`)
@@ -167,6 +172,7 @@ describe('Predictive Scoring Login', () => {
         methods.clickElementByXPath(locators.Yes);
         methods.GetText(locators.notification_popup, "Predictive Score deleted successfully");
         cy.wait(Timeout.xs)
+        methods.VisibilityofElementXpath(`//*[text()="${testName}"]`)
         methods.clickElementByXPath(`//*[text()="${testName}"]//following::button[1]`)
         methods.clickElementByXPath(locators.Journey_Delete)
         methods.clickElementByXPath(locators.Yes);

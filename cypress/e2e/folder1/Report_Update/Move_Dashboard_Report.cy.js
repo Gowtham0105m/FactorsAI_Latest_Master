@@ -71,6 +71,7 @@ describe('Move Dashboard Report Login', () => {
         methods.clickElementByXPath(locators.Yes)
         methods.assertElementContainsText(locators.notification_popup, "SuccessDashboard deleted successfully")
         cy.wait(Timeout.sm)
+        methods.VisibilityofElementXpath(`(//div[text()="${testName}"])[1]`)
         methods.clickElementByXPath(`(//div[text()="${testName}"])[1]//following::button[1]`)
         methods.clickElementByXPath(locators.Delete_Folder)
         methods.clickElementByXPath(locators.Yes)

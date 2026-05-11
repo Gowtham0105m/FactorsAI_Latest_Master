@@ -24,15 +24,13 @@ describe('Content_groups Login', () => {
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const testName = `Demo Content groups ${randomNumber}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Title_page)
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`//div[text()="All segments"]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -78,6 +76,7 @@ describe('Content_groups Login', () => {
         methods.clickElementByXPath(locators.Save_1)
         methods.assertElementContainsText(locators.notification_popup, "SuccessContent Group rules created successfully")
         cy.wait(Timeout.sm)
+        methods.VisibilityofElementXpath(`//span[text()="${testName}"]`)
         methods.clickElementByXPath(`//span[text()="${testName}"]//following::button[1]`)
         methods.clickElementByXPath(locators.Remove)
         cy.wait(Timeout.xs)

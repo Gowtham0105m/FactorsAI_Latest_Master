@@ -22,11 +22,9 @@ describe('Funnel compare Login', () => {
 
         cy.wait(Timeout.md)
         methods.scrollWithXpath(locators.Title_page)
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.md)
         methods.Mouseover(locators.report_dropdown)

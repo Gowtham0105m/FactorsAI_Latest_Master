@@ -24,13 +24,11 @@ describe('Custom Kpi Login', () => {
         const testName = `Custom Kpi Default ${randomNumber}`;
 
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.md)
         methods.clickElement(locators.setting)
@@ -67,6 +65,7 @@ describe('Custom Kpi Login', () => {
         methods.clickElementByXPath(locators.Save_1)
         methods.VisibilityofElement(locators.notification_popup)
         methods.scrollWithXpath(`//*[text()='${testName}']`)
+        methods.VisibilityofElementXpath(`//*[text()='${testName}']`)
         methods.clickElementByXPath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.Remove_1)
         methods.VisibilityofElement(locators.notification_popup)
@@ -81,13 +80,11 @@ describe('Custom Kpi Login', () => {
         const testName = `Custom Kpi Derived ${randomNumber}`;
 
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.setting)
@@ -115,6 +112,7 @@ describe('Custom Kpi Login', () => {
         methods.ScrollAndClickxpath(locators.Save_1)
         methods.VisibilityofElement(locators.notification_popup)
         methods.scrollWithXpath(`//*[text()='${testName}']`)
+        methods.VisibilityofElementXpath(`//*[text()='${testName}']`)
         methods.clickElementByXPath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.Remove_1)
         methods.VisibilityofElement(locators.notification_popup)
@@ -128,13 +126,11 @@ describe('Custom Kpi Login', () => {
         const testName = `Custom Kpi Event${randomNumber}`;
 
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.setting)
@@ -166,6 +162,7 @@ describe('Custom Kpi Login', () => {
         methods.clickElementByXPath(locators.Save_1)
         methods.VisibilityofElement(locators.notification_popup2)
         methods.scrollWithXpath(`//*[text()='${testName}']`)
+        methods.VisibilityofElementXpath(`//*[text()='${testName}']`)
         methods.clickElementByXPath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.Remove_1)
         methods.VisibilityofElement(locators.notification_popup)
@@ -178,13 +175,11 @@ describe('Custom Kpi Login', () => {
         const randomNumber = Math.floor(Math.random() * 90) + 10;
         const testName = `Custom Kpi Time${randomNumber}`;
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.setting)
@@ -233,6 +228,7 @@ describe('Custom Kpi Login', () => {
         methods.clickElementByXPath(locators.Save_1)
         methods.VisibilityofElement(locators.notification_popup2)
         methods.scrollWithXpath(`//*[text()='${testName}']`)
+        methods.VisibilityofElementXpath(`//*[text()='${testName}']`)
         methods.clickElementByXPath(`//*[text()='${testName}']//following::button[1]`)
         methods.clickElementByXPath(locators.Remove_1)
         methods.VisibilityofElement(locators.notification_popup)
