@@ -286,7 +286,6 @@ class locators {
     this.Or = '//*[text()="FILTER BY"]//following::h6[2]';
     this.or_1 = '//*[text()="PROFILES TO ANALYSE"]//following::h6[3]';
     this.Add_New_Breakdown = '(//div[@class="flex relative"]//button)';
-    this.Add_New_Breakdown_new = '.m-0 > .flex > .ant-btn > span';
     this.Conversion_Window = '//*[text()="Conversion within"]//following::div[1]';
     this.Tooltip = '[role="tooltip"]';
     this.Date_select = '(//div[@role="tooltip"]//following::span)[2]';
@@ -1068,12 +1067,11 @@ class locators {
     this.Building_Your_Segment = '//p[text()="Building your segment.."]//following::*[1]';
     this.Linkedin_Organic_Engagements = '[data-title="Linkedin Organic Engagements"]';
     this.Audience_Exclusion = '//*[text()="Audience Exclusion"]';
-    this.Create_Exclusion_Rule = '//*[text()="Create Exclusion Rule"]';
+    this.Create_Exclusion_Rule = '//*[text()="Untitled exclusion rule"]';
     this.ad_account = '//*[text()="Select Ad Account"]//following::span[2]';
     this.select_Campaigns = '//*[text()="Select Campaigns"]//following::span[2]';
     this.please_select_campaigns = '//span[text()="Please select campaigns"]';
     this.select_value1_campaigns = '[title="Factors | RT | ICP - ABM | Request Demo | Video | US"]';
-    this.select_value2_campaigns = '[title="Factors | TOFU | ICP - ABM | Brand | Video | US (Video Views)"]';
     this.Bulk_Upload = '//*[text()="Bulk Upload"]';
     this.Exclude_by_Attributes = '//*[text()="Exclude by Attributes"]';
     this.Add_Segment = '//span[text()="Add Segment"]';
@@ -1083,6 +1081,8 @@ class locators {
     this.Unpaid = '[title="Unpaid"]';
     this.Please_select_Job_function_to_exclude = '//*[text()="Please select Job function to exclude"]';
     this.Engineering = '[title="Engineering"]';
+    this.Google_Audience_Sync = '//*[text()="Google Audience Sync"]';
+    this.Google_Audience_Sync_Status = '//*[text()="Google Audience Sync Status"]';
 
   }
 }

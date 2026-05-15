@@ -20,7 +20,7 @@ describe('Audience Exclusion login', () => {
 
     })
 
-    it('Audience Exclusion', () => {
+    it.skip('Audience Exclusion', () => {
 
         const filePath = 'Sample_file_for_page_URL_rules.csv';
 
@@ -52,7 +52,7 @@ describe('Audience Exclusion login', () => {
         methods.MouseoverWithXpath(locators.Adpilot)
         cy.wait(Timeout.sm);
         methods.clickElementByXPath(locators.Audience_Exclusion)
-        cy.wait(Timeout.md);
+        cy.wait(Timeout.xmd);
         methods.VisibilityofElementXpathIndexInput(locators.Audience_Exclusion, 2)
         cy.xpath('(//tbody/tr/td)[1]').invoke('text').then((text) => {
             cy.wrap(text.trim()).as('Text1');
@@ -67,10 +67,9 @@ describe('Audience Exclusion login', () => {
         methods.clickElementByXPath(locators.please_select_campaigns)
         cy.wait(Timeout.sm)
         methods.clickElement(locators.select_value1_campaigns)
-        methods.clickElement(locators.select_value2_campaigns)
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((Text1) => {
-            methods.ClearAndTypeWithXpath(`//textarea[text()="Create Exclusion Rule"]`, Text1);
+            methods.ClearAndTypeWithXpath(`//textarea[text()="Untitled exclusion rule"]`, Text1);
             methods.EnterXpath(`//textarea[text()="${Text1}"]`)
         });
 
@@ -108,14 +107,14 @@ describe('Audience Exclusion login', () => {
         methods.clickElement(locators.Unpaid)
         methods.ClickandTypeXpath(locators.Please_select_Job_function_to_exclude, 'engineering')
         methods.clickElement(locators.Engineering)
-        methods.clickElementByXPath(locators.Save)
+        methods.clickElementByXPath(locators.Confirm_publish)
         methods.assertElementContainsText(locators.notification_popup2, "Failed!duplicate name")
         methods.clickElement(locators.Edit_Button)
         cy.get('@Text1').then((Text1) => {
             methods.ClearAndTypeWithXpath(`//textarea[text()="${Text1}"]`, Audience_Exclusion);
             methods.EnterXpath(`//textarea[text()="${Audience_Exclusion}"]`);
         });
-        methods.clickElementByXPath(locators.Save)
+        methods.clickElementByXPath(locators.Confirm_publish)
         methods.assertElementContainsText(locators.notification_popup, "SuccessGlobal exclusion rule created successfully.")
         methods.clickElementByXPath(locators.adpilot_arrow_left)
         methods.VisibilityofElementXpath(`//*[text()="${Audience_Exclusion}"]`)

@@ -31,6 +31,6 @@ describe('Login Page Login', () => {
         //landing in default screen - All account
         methods.scrollWithXpath(locators.Title_page)
         methods.VisibilityofElementXpath(locators.Title_page)
-        methods.VisibilityofElementXpath(locators.Title_page, 'All Accounts')
+        methods.assertElementContainsText1(locators.Title_page, 'All Accounts')
     });
 })

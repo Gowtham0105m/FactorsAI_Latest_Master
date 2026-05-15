@@ -27,8 +27,7 @@ describe('Funnel Report Login', () => {
         let selectedDateBeforeSave1 = "";
         let selectedDateAfterSave1 = "";
 
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -99,10 +98,10 @@ describe('Funnel Report Login', () => {
         }
         methods.clickElementByXPath(locators.Expand_1)
         cy.wait(Timeout.sm)
-        methods.clickElement(locators.Add_New_Breakdown_new)
+        methods.clickElementIndexXpath(locators.Add_new2, 1)
         methods.clickElement0(locators.Hubspot_Companies, 0)
         methods.clickElementByXPath(locators.Filter_option1)
-        methods.clickElement(locators.Add_New_Breakdown_new)
+        methods.clickElementIndexXpath(locators.Add_new2, 1)
         methods.clickElement0(locators.HubspotDeals, 0)
         methods.clickElementByXPath(locators.Filter_option2)
         cy.wait(Timeout.md)
@@ -160,8 +159,7 @@ describe('Funnel Report Login', () => {
         let selectedDateBeforeSave1 = "";
         let selectedDateAfterSave1 = "";
 
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -246,8 +244,7 @@ describe('Funnel Report Login', () => {
         let selectedDateBeforeSave1 = "";
         let selectedDateAfterSave1 = "";
 
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)

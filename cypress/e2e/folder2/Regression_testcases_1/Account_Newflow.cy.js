@@ -20,13 +20,11 @@ describe('Accounts New flow Login', () => {
 
     it('Accounts New flow', () => {
 
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         methods.clickElementByXPath(locators.Account_FirstValue)
         methods.VisibilityofElementXpath(locators.Account_value)

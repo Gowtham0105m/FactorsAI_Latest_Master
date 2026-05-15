@@ -136,20 +136,19 @@ describe('Event Report Login', () => {
     methods.MouseoverWithXpath(`//*[text()='${testName1}']//following::button[1]`)
     methods.clickElementByXPath(locators.View_Report)
     methods.clickElementByXPath(locators.Expand_1)
-    methods.clickElement(locators.Add_New_Breakdown_new)
+    methods.clickElementIndexXpath(locators.Add_new2, 1)
     methods.clickElement0(locators.Hubspot_Companies, 0)
-    methods.clickElementByXPath(locators.Filter_option1)
+    methods.clickElementByXPath(locators.Filter_option2)
     methods.clickElement(locators.Select_Analysis_Window)
     cy.wait(Timeout.xs)
-    methods.clickElementByXPath(locators.Last_Month)
+    methods.clickElementByXPath(locators.LastWeek)
     methods.clickElementByXPath(locators.Run_Analysis1)
     cy.wait(Timeout.md)
     methods.VisibilityofElement(locators.Profile_report_gen)
-    cy.wait(Timeout.sm)-
+    cy.wait(Timeout.sm)
     methods.clickElementByXPath(locators.Save_1)
     cy.wait(Timeout.sm)
     methods.clickElementByXPath(locators.Closed)
-    cy.wait(Timeout.sm)
     methods.VisibilityofElement(locators.Table_Body_1)
     methods.MouseoverWithXpath(`//*[text()='${testName1}']//following::button[1]`)
     methods.clickElementByXPath(locators.Delete_Report_1)
@@ -262,8 +261,7 @@ describe('Event Report Login', () => {
     const nowTime = dayjs().format('H:m:s');
     const testName = `Demo_${nowTime}`;
 
-    cy.wait(Timeout.xl)
-    cy.wait(Timeout.xl)
+    cy.wait(Timeout.xmd)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     cy.wait(Timeout.sm)
     methods.Mouseover(locators.report_dropdown)
@@ -337,8 +335,7 @@ describe('Event Report Login', () => {
     let selectedDateBeforeSave1 = "";
     let selectedDateAfterSave1 = "";
 
-    cy.wait(Timeout.xl)
-    cy.wait(Timeout.xl)
+    cy.wait(Timeout.xmd)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     cy.wait(Timeout.sm)
     methods.Mouseover(locators.report_dropdown)
@@ -425,8 +422,7 @@ describe('Event Report Login', () => {
     let selectedDateBeforeSave1 = "";
     let selectedDateAfterSave1 = "";
 
-    cy.wait(Timeout.xl)
-    cy.wait(Timeout.xl)
+    cy.wait(Timeout.xmd)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     cy.wait(Timeout.sm)
     methods.Mouseover(locators.report_dropdown)

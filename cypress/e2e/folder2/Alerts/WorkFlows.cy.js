@@ -224,7 +224,7 @@ describe('WorkFlow Login', () => {
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.pageview_option1)
         methods.clickElementByXPath(locators.Add_a_Filter)
-        methods.clickElement0(locators.Hubspot, 0)
+        methods.clickElement0(locators.Hubspot_Companies, 0)
         methods.clickElementByXPath(locators.pageview_option1)
         cy.wait(Timeout.xs)
         methods.clickElement(locators.equals_1)

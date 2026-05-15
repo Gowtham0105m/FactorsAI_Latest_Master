@@ -109,7 +109,7 @@ describe('Charts Login', () => {
         cy.wait(Timeout.sm)
         methods.clickElementByXPath(locators.pageview_option1)
         cy.wait(Timeout.sm)
-        methods.clickElement(locators.Add_New_Breakdown_new)
+        methods.clickElementIndexXpath(locators.Add_new2, 1)
         methods.clickElement0(locators.Hubspot_Companies, 0)
         methods.clickElementByXPath(locators.Filter_option1)
         methods.MouseoverAndClick(locators.breakdown_option)
