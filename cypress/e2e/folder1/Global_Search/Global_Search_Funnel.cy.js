@@ -132,7 +132,7 @@ describe('Global search funnel', () => {
         methods.MouseoverAndClick(locators.View_Report)
         methods.VisibilityofElement(locators.Profile_report_gen)
         methods.clickElementByXPath(locators.Expand_1)
-        methods.clickElement(locators.Add_New_Breakdown_new)
+        methods.clickElementIndexXpath(locators.Add_new2, 1)
         methods.clickElement0(locators.Hubspot_Companies, 0)
         methods.clickElementByXPath(locators.Filter_option1)
         methods.clickElementByXPath(locators.Run_Analysis1)

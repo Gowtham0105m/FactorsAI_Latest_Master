@@ -32,7 +32,7 @@ describe('Journeys Page Login', () => {
       cy.wait(Timeout.xs);
       methods.navigateToUrljour(item.url)
       methods.VisibilityofElement(locators.Page_title1)
-      methods.VisibilityofElement(locators.Page_title1, item.key)
+      methods.Titletextcontains(locators.Page_title1, item.key)
     })
   });
 })

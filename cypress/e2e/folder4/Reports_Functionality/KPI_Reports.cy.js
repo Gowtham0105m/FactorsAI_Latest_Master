@@ -25,8 +25,7 @@ describe('KPI Report Login', () => {
         const testName = `Demo_${nowTime}`;
         const testName1 = `Demo_${nowTime}_1`;
 
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -129,7 +128,7 @@ describe('KPI Report Login', () => {
         cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.View_Report)
         methods.clickElementByXPath(locators.Expand_1)
-        methods.clickElement(locators.Add_New_Breakdown_new)
+        methods.clickElementIndexXpath(locators.Add_new2, 1)
         methods.clickElement0(locators.Company_Identification, 0)
         methods.clickElementByXPath(locators.Filter_option1)
         methods.clickElementByXPath(locators.Run_Anal)
@@ -157,8 +156,7 @@ describe('KPI Report Login', () => {
         let selectedDateBeforeSave1 = "";
         let selectedDateAfterSave1 = "";
 
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -253,8 +251,7 @@ describe('KPI Report Login', () => {
         let selectedDateBeforeSave1 = "";
         let selectedDateAfterSave1 = "";
 
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -332,8 +329,7 @@ describe('KPI Report Login', () => {
         let selectedDateBeforeSave1 = "";
         let selectedDateAfterSave1 = "";
 
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)
@@ -419,8 +415,7 @@ describe('KPI Report Login', () => {
         let selectedDateBeforeSave1 = "";
         let selectedDateAfterSave1 = "";
 
-        cy.wait(Timeout.xl)
-        cy.wait(Timeout.xl)
+        cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.sm)
         methods.Mouseover(locators.report_dropdown)

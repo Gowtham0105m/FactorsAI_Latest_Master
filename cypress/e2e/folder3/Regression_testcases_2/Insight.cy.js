@@ -56,8 +56,6 @@ describe('Insight Login', () => {
         methods.clickElementByXPath(locators.New_Segment)
         methods.clickElementByXPath(locators.StartfromScratch)
         methods.clickElement0(locators.Not_Customers, 0)
-        methods.clickElementByXPath(locators.Show_More)
-        methods.clickElement0(locators.SQLsandOpps, 0)
         methods.clickElementByXPath(locators.Add_Event)
         methods.typeElement(locators.Select_Event, "visi")
         methods.clickElement0(locators.Third_party_Intent_Visit, 0)

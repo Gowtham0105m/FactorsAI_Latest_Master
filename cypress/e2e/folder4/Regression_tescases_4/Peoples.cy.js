@@ -254,7 +254,7 @@ describe('Peoples Regression', () => {
 
     })
 
-    it('TC_RE_12, TC_RE_13 - People_Brid views ', () => {
+    it('TC_RE_12, TC_RE_13 - People_Bird views ', () => {
 
         cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')

@@ -35,6 +35,7 @@ describe('Predictive Scoring Login', () => {
         methods.clickElementByXPath(locators.PredictiveScoring)
         methods.VisibilityofElementXpath(locators.Newprediction)
         cy.reload();
+        methods.VisibilityofElement2(locators.DataManagementHeader, 'Predictive Scoring')
 
         cy.document().then((doc) => {
 
@@ -64,8 +65,8 @@ describe('Predictive Scoring Login', () => {
         methods.EnterXpath(`//textarea[text()="${testName}"]`)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Add_Event)
-        methods.typeElement(locators.Select_Event, 'linkedin organic engagements')
-        methods.clickElement(locators.Linkedin_Organic_Engagements)
+        methods.typeElement(locators.Select_Event, 'website session')
+        methods.clickElement(locators.Website_Session)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Run_a_check)
         methods.assertElementContainsText(locators.notification_popup, 'Data check completed successfully')
@@ -102,6 +103,7 @@ describe('Predictive Scoring Login', () => {
         methods.clickElementByXPath(locators.PredictiveScoring)
         methods.VisibilityofElementXpath(locators.Newprediction)
         cy.reload()
+        methods.VisibilityofElement2(locators.DataManagementHeader, 'Predictive Scoring')
 
         cy.document().then((doc) => {
 
@@ -131,8 +133,8 @@ describe('Predictive Scoring Login', () => {
         methods.EnterXpath(`//textarea[text()="${testName}"]`)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Add_Event)
-        methods.typeElement(locators.Select_Event, 'linkedin organic engagements')
-        methods.clickElement(locators.Linkedin_Organic_Engagements)
+        methods.typeElement(locators.Select_Event, 'website session')
+        methods.clickElement(locators.Website_Session)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Run_a_check)
         methods.assertElementContainsText(locators.notification_popup, 'Data check completed successfully')
