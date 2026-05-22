@@ -67,8 +67,6 @@ describe('Accounts view Login', () => {
         methods.clickElementByXPath(locators.Birdview_option)
         methods.typeElement(locators.Select_Events_to_show, 'Company Created')
         methods.clickElementByXPath(locators.Company_Created1)
-        // cy.wait(Timeout.md)
-        // methods.VisibilityofElementXpath(locators.Views_tab)
         cy.wait(Timeout.sm)
         methods.AssertNotEmpty(locators.Event_validation)
         methods.clickElementByXPath(locators.Birdview_option)
@@ -79,6 +77,7 @@ describe('Accounts view Login', () => {
 
         // user property
 
+        methods.clickElementByXPath(locators.Birdview_option)
         methods.clickElementByXPath(locators.Birdview_properties)
         methods.clickElementByXPath(locators.Birdview_properties_option1)
         methods.AssertNotEmptyWithXpath(locators.property_validation)

@@ -68,14 +68,17 @@ describe('People view Login', () => {
         methods.clickElementByXPath(locators.Birdview_option)
         methods.typeElement(locators.Select_Events_to_Show, "web")
         methods.clickElementByXPath(locators.WebsiteSessionEvent)
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.Views_tab)
         cy.wait(Timeout.sm)
         methods.AssertNotEmptyWithXpath(locators.people_firstvalue)
+        methods.clickElementByXPath(locators.Birdview_option)
+        methods.typeElement(locators.Select_Events_to_Show, "web")
         methods.clickElementByXPath(locators.WebsiteSessionEvent)
+        cy.wait(Timeout.sm)
+        methods.AssertNotEmptyWithXpath(locators.people_firstvalue)
 
         // user millistone
 
+        methods.clickElementByXPath(locators.Birdview_option)
         methods.clickElementByXPath(locators.Milestones_peopleView)
         cy.wait(Timeout.xs)
         methods.clickElementIndexXpath(locators.Milestones_option, 3)
