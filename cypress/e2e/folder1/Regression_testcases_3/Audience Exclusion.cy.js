@@ -92,7 +92,7 @@ describe('Audience Exclusion login', () => {
                 for (let j = 0; j < count; j++) {
 
                     methods.clickElementIndexXpath(locators.Remove_Digest_Mail, 0);
-                    cy.wait(500);
+                    cy.wait(300);
 
                 }
             });
@@ -116,7 +116,30 @@ describe('Audience Exclusion login', () => {
         });
         methods.clickElementByXPath(locators.Confirm_publish)
         methods.assertElementContainsText(locators.notification_popup, "SuccessGlobal exclusion rule created successfully.")
+        methods.clickElementByXPath(locators.active_Toggle1)
+        methods.VisibilityofElement(locators.Upgrade_validation)
+        methods.clickElementByXPath(locators.Ok)
+        cy.wait(Timeout.xs)
+        methods.assertElementContainsText(locators.notification_popup, "SuccessRule paused successfully.")
         methods.clickElementByXPath(locators.adpilot_arrow_left)
+        cy.wait(Timeout.xs)
+        methods.VisibilityofElementXpath(`//*[text()='${Audience_Exclusion}']`)
+        methods.assertElementContainsText1(`//*[text()="${Audience_Exclusion}"]//following::span[6]`, "Paused")
+        cy.wait(Timeout.xs)
+        methods.VisibilityofElementXpathIndexInput(locators.Audience_Exclusion, 2)
+        methods.clickElementByXPath(`//*[text()="${Audience_Exclusion}"]//following::button[1]`)
+        methods.clickElementByXPath(locators.Edit_Rule)
+        cy.wait(Timeout.xs)
+        methods.clickElementByXPath(locators.Enable_button)
+        cy.wait(Timeout.xs)
+        methods.VisibilityofElement(locators.Upgrade_validation)
+        methods.clickElementByXPath(locators.Ok)
+        cy.wait(Timeout.xs)
+        methods.assertElementContainsText(locators.notification_popup, "SuccessRule resumed successfully.")
+        methods.clickElementByXPath(locators.adpilot_arrow_left)
+        methods.VisibilityofElementXpath(`//*[text()='${Audience_Exclusion}']`)
+        methods.assertElementContainsText1(`//*[text()="${Audience_Exclusion}"]//following::span[6]`, "Published")
+        cy.wait(Timeout.sm)
         methods.VisibilityofElementXpath(`//*[text()="${Audience_Exclusion}"]`)
         methods.clickElementByXPath(`//*[text()="${Audience_Exclusion}"]//following::button[1]`)
         methods.clickElementByXPath(locators.Remove_rule)

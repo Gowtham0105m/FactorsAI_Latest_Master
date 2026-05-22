@@ -48,7 +48,7 @@ describe('Event Report Login', () => {
     cy.wait(Timeout.xs)
     methods.clickElementByXPath(locators.Filter_option1)
     methods.clickElementByXPath(locators.add_new_3)
-    methods.Clickwithindexandvalidation(locators.Linkedin_Company_Engagements, 0)
+    methods.Clickwithindexandvalidation(locators.All_Account, 0)
     methods.clickElementByXPath(locators.pageview_option1)
     methods.clickElement(locators.equals_1)
     methods.clickElementByXPath(locators.false)

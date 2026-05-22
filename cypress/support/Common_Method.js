@@ -293,6 +293,20 @@ class methods {
         cy.get(selector, { timeout: extraTimeOut }).eq(int).trigger('mouseover', { force: true });
     }
 
+    verifyExportFile(fileName){
+        cy.readFile(`cypress/downloads/${fileName}.csv`, { timeout: 15000 }).should('exist')
+    }
+
+    verifyDynamicExportFile(fileName) {
+        cy.exec('dir /b cypress\\downloads').then((result) => {
+            const files = result.stdout.split('\r\n')
+            const downloadedFile = files.find(file =>
+                file.includes(fileName)
+            )
+            expect(downloadedFile).to.exist
+        })
+    }
+
 }
 
 export default new methods();

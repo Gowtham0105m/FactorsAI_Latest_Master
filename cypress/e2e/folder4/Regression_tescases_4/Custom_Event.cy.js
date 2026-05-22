@@ -55,7 +55,7 @@ describe('Custom Event Login', () => {
 
 
         methods.clickElementByXPath(locators.New_Event)
-        methods.assertElementContainsText1(locators.DataManagementHeader, 'New Custom Event')
+        methods.assertElementContainsText1(locators.SegmentTitle, 'New Custom Event')
         methods.typeElement(locators.Name, testName)
         methods.typeElement(locators.description, "Automation Testing")
         methods.clickElement(locators.Source)
@@ -121,7 +121,7 @@ describe('Custom Event Login', () => {
         });
 
         methods.clickElementByXPath(locators.New_Event)
-        methods.assertElementContainsText1(locators.DataManagementHeader, 'New Custom Event')
+        methods.assertElementContainsText1(locators.SegmentTitle, 'New Custom Event')
         methods.typeElement(locators.Name, testName)
         methods.typeElement(locators.description, "Automation Testing")
         methods.clickElement(locators.Source)
@@ -190,7 +190,7 @@ describe('Custom Event Login', () => {
         });
 
         methods.clickElementByXPath(locators.New_Event)
-        methods.assertElementContainsText1(locators.DataManagementHeader, 'New Custom Event')
+        methods.assertElementContainsText1(locators.SegmentTitle, 'New Custom Event')
         methods.typeElement(locators.Name, testName)
         methods.typeElement(locators.description, "Automation Testing")
         methods.clickElement(locators.Source)
@@ -256,7 +256,7 @@ describe('Custom Event Login', () => {
         });
 
         methods.clickElementByXPath(locators.New_Event)
-        methods.assertElementContainsText1(locators.DataManagementHeader, 'New Custom Event')
+        methods.assertElementContainsText1(locators.SegmentTitle, 'New Custom Event')
         methods.typeElement(locators.Name, testName)
         methods.typeElement(locators.description, "Automation Testing")
         methods.clickElement(locators.Source)

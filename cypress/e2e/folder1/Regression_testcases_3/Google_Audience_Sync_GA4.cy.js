@@ -24,7 +24,6 @@ describe('Google Audience Sync GA4 login', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const testName = `Google audience sync GA4 ${nowTime}`;
-        const Google_Audience_GA4 = `New Google audience sync GA4 Pause_${nowTime}`;
 
         cy.wait(Timeout.xmd)
         methods.scrollWithXpath(locators.Title_page)

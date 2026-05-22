@@ -126,7 +126,7 @@ describe('Linkedin_Conversion(CAPI) Login', () => {
         methods.clickElementByXPath(locators.Ok)
         methods.GetText(locators.notification_popup, "SuccessWorkflow Successfully Deleted!")
         cy.wait(Timeout.xs)
-        methods.clickElement(locators.linkedin_refresh_icon)
+        methods.clickElementByXPath(locators.linkedin_refresh_icon)
         cy.wait(Timeout.sm)
 
     });

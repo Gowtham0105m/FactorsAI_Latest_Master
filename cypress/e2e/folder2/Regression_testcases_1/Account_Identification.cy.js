@@ -165,7 +165,7 @@ describe('Account Identification Regression', () => {
         methods.AssertNotEmpty(locators.identi_table)
         methods.AssertNotEmptyWithXpath(locators.table_row1)
         methods.clickElementByXPath(locators.download)
-
+        methods.verifyDynamicExportFile('Factors.ai website Visitor Identification report')
     })
 
     it('TC_RE_08 - Account Identification - Date range', () => {
