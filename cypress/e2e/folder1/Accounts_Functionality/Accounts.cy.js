@@ -32,17 +32,7 @@ describe('Accounts Login', () => {
         methods.scrollWithXpath(locators.Title_page)
         cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
-        cy.wait(Timeout.xmd)
-        methods.Mouseover(locators.report_dropdown)
-        methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.SegmentTitle)
-        methods.Mouseover(locators.account_dropdown);
-        cy.wait(Timeout.sm);
-        methods.clickElementIndexXpath(locators.Account, 1);
-        cy.wait(Timeout.xl);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.xmd)
 
         cy.document().then((doc) => {
             const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
@@ -63,7 +53,6 @@ describe('Accounts Login', () => {
         });
 
         methods.assertElementContainsTextxpath(locators.AllsegmentMenu, "All segments")
-        cy.wait(Timeout.xmd)
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.md)
         methods.clickElementByXPath(locators.Filter)

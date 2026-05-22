@@ -98,7 +98,7 @@ describe('Linkedin Audience sync login', () => {
         methods.clickElementByXPath(locators.Ok)
         methods.assertElementContainsText(locators.notification_popup, "SuccessDeleted Workflow successfully")
         cy.wait(Timeout.sm)
-        methods.clickElement(locators.linkedin_refresh_icon)
+        methods.clickElementByXPath(locators.linkedin_refresh_icon)
     })
 
 })

@@ -53,7 +53,6 @@ describe('Account Template Login', () => {
         methods.clickElementByXPath(locators.ChooseaTemplate)
         cy.wait(Timeout.xs)
         methods.ScrollAndClickxpath(locators.Accounts_active_on_website)
-        methods.clickElement0(locators.SQLsandOpps, 0)
         methods.clickElementByXPath(locators.Add_Event)
         methods.typeElement(locators.Select_Event, "visi")
         methods.clickElement0(locators.Third_party_Intent_Visit, 0)

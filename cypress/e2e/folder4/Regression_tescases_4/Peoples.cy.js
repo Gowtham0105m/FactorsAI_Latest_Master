@@ -25,16 +25,32 @@ describe('Peoples Regression', () => {
         cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.xmd)
-        methods.Mouseover(locators.report_dropdown)
-        methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.SegmentTitle)
-        methods.Mouseover(locators.account_dropdown);
-        cy.wait(Timeout.sm);
-        methods.clickElementIndexXpath(locators.Account, 1);
-        cy.wait(Timeout.xl);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
+        methods.Mouseover(locators.account_dropdown)
+        methods.clickElementByXPath(locators.People)
+        cy.wait(Timeout.lg)
+        cy.document().then((doc) => {
+            const peopleElement = doc.evaluate(`(//*[text()="All People"])[2]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!peopleElement || peopleElement.offsetParent === null) {
+                cy.log("**All Peoples not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+            } else {
+                cy.log("**All Peoples has been loaded**");
+            }
+        });
+        methods.UrlvalidationPeople()
+        methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
+        cy.wait(Timeout.xmd)
+        methods.VisibilityofElementXpath(locators.account_pageloaded)
 
     })
 
@@ -45,19 +61,28 @@ describe('Peoples Regression', () => {
         cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.xmd)
-        methods.Mouseover(locators.report_dropdown)
-        methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.SegmentTitle)
-        methods.Mouseover(locators.account_dropdown);
-        cy.wait(Timeout.sm);
-        methods.clickElementIndexXpath(locators.Account, 1);
-        cy.wait(Timeout.xl);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
-        cy.wait(Timeout.xs)
+        cy.wait(Timeout.lg)
+        cy.document().then((doc) => {
+            const peopleElement = doc.evaluate(`(//*[text()="All People"])[2]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!peopleElement || peopleElement.offsetParent === null) {
+                cy.log("**All Peoples not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+            } else {
+                cy.log("**All Peoples has been loaded**");
+            }
+        });
         methods.UrlvalidationPeople()
         methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
         cy.wait(Timeout.xmd)
@@ -156,18 +181,28 @@ describe('Peoples Regression', () => {
         cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.xmd)
-        methods.Mouseover(locators.report_dropdown)
-        methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.SegmentTitle)
-        methods.Mouseover(locators.account_dropdown);
-        cy.wait(Timeout.sm);
-        methods.clickElementIndexXpath(locators.Account, 1);
-        cy.wait(Timeout.xl);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
+        cy.wait(Timeout.lg)
+        cy.document().then((doc) => {
+            const peopleElement = doc.evaluate(`(//*[text()="All People"])[2]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!peopleElement || peopleElement.offsetParent === null) {
+                cy.log("**All Peoples not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+            } else {
+                cy.log("**All Peoples has been loaded**");
+            }
+        });
         methods.UrlvalidationPeople()
         cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
@@ -192,18 +227,28 @@ describe('Peoples Regression', () => {
         cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.xmd)
-        methods.Mouseover(locators.report_dropdown)
-        methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.SegmentTitle)
-        methods.Mouseover(locators.account_dropdown);
-        cy.wait(Timeout.sm);
-        methods.clickElementIndexXpath(locators.Account, 1);
-        cy.wait(Timeout.xl);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
-        methods.Mouseover(locators.account_dropdown)
+       methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
+        cy.wait(Timeout.lg)
+        cy.document().then((doc) => {
+            const peopleElement = doc.evaluate(`(//*[text()="All People"])[2]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!peopleElement || peopleElement.offsetParent === null) {
+                cy.log("**All Peoples not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+            } else {
+                cy.log("**All Peoples has been loaded**");
+            }
+        });
         methods.UrlvalidationPeople()
         cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
@@ -259,19 +304,28 @@ describe('Peoples Regression', () => {
         cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.xmd)
-        methods.Mouseover(locators.report_dropdown)
-        methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.SegmentTitle)
-        methods.Mouseover(locators.account_dropdown);
-        cy.wait(Timeout.sm);
-        methods.clickElementIndexXpath(locators.Account, 1);
-        cy.wait(Timeout.xl);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         cy.wait(Timeout.lg)
+        cy.document().then((doc) => {
+            const peopleElement = doc.evaluate(`(//*[text()="All People"])[2]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!peopleElement || peopleElement.offsetParent === null) {
+                cy.log("**All Peoples not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+            } else {
+                cy.log("**All Peoples has been loaded**");
+            }
+        });
         methods.UrlvalidationPeople()
         methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
         cy.wait(Timeout.xmd)
@@ -293,19 +347,27 @@ describe('Peoples Regression', () => {
         cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.xmd)
-        methods.Mouseover(locators.report_dropdown)
-        methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.SegmentTitle)
-        methods.Mouseover(locators.account_dropdown);
-        cy.wait(Timeout.sm);
-        methods.clickElementIndexXpath(locators.Account, 1);
-        cy.wait(Timeout.xl);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
-        cy.wait(Timeout.xmd)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         cy.wait(Timeout.lg)
+        cy.document().then((doc) => {
+            const peopleElement = doc.evaluate(`(//*[text()="All People"])[2]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!peopleElement || peopleElement.offsetParent === null) {
+                cy.log("**All Peoples not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+            } else {
+                cy.log("**All Peoples has been loaded**");
+            }
+        });
         methods.UrlvalidationPeople()
         methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
         cy.wait(Timeout.xmd)
@@ -324,19 +386,28 @@ describe('Peoples Regression', () => {
         cy.wait(Timeout.xmd)
         methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
         cy.wait(Timeout.xmd)
-        methods.Mouseover(locators.report_dropdown)
-        methods.clickElementByXPath(locators.Dashboards)
-        cy.wait(Timeout.md)
-        methods.VisibilityofElementXpath(locators.SegmentTitle)
-        methods.Mouseover(locators.account_dropdown);
-        cy.wait(Timeout.sm);
-        methods.clickElementIndexXpath(locators.Account, 1);
-        cy.wait(Timeout.xl);
         methods.VisibilityofElementXpath(locators.account_pageloaded)
         cy.wait(Timeout.xmd)
         methods.Mouseover(locators.account_dropdown)
         methods.clickElementByXPath(locators.People)
         cy.wait(Timeout.lg)
+        cy.document().then((doc) => {
+            const peopleElement = doc.evaluate(`(//*[text()="All People"])[2]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+            if (!peopleElement || peopleElement.offsetParent === null) {
+                cy.log("**All Peoples not loaded**");
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementIndexXpath(locators.Account, 1);
+                cy.wait(Timeout.xs);
+                methods.Mouseover(locators.account_dropdown);
+                cy.wait(Timeout.sm);
+                methods.clickElementByXPath(locators.People);
+                cy.wait(Timeout.xs);
+            } else {
+                cy.log("**All Peoples has been loaded**");
+            }
+        });
         methods.UrlvalidationPeople()
         methods.assertElementContainsTextxpath(locators.Title_page, 'All People')
         cy.wait(Timeout.xmd)

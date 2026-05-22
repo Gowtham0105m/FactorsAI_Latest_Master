@@ -23,18 +23,6 @@ describe('Timeline Login', () => {
     cy.wait(Timeout.xmd)
     methods.assertElementContainsTextxpath(locators.Title_page, 'All Accounts')
     cy.wait(Timeout.md)
-    methods.MouseoverWithXpath(locators.Automation)
-    cy.wait(Timeout.sm)
-    methods.clickElementByXPath(locators.workflows_Title)
-    cy.wait(Timeout.sm)
-    methods.VisibilityofElementXpathIndexInput(locators.workflows_Title, 2)
-    cy.wait(Timeout.sm)
-    methods.Mouseover(locators.account_dropdown);
-    cy.wait(Timeout.xs);
-    methods.clickElementIndexXpath(locators.Account, 1);
-    cy.wait(Timeout.lgr);
-    methods.VisibilityofElementXpath(locators.account_pageloaded)
-    cy.wait(Timeout.md)
     cy.document().then((doc) => {
       const demoElement = doc.evaluate(`(//*[text()="All segments"])[1]`, doc, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 
@@ -112,4 +100,5 @@ describe('Timeline Login', () => {
       cy.wait(Timeout.sm)
     })
   })
+
 })

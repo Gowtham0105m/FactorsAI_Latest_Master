@@ -122,6 +122,9 @@ describe('Global search funnel', () => {
         cy.wait(Timeout.lg);
         methods.VisibilityofElement(locators.Profile_report_gen);
         methods.clickElementByXPath(locators.Closed);
+        cy.wait(Timeout.md);
+        methods.VisibilityofElementXpath(locators.SegmentTitle)
+        cy.wait(Timeout.xs);
         methods.clickElementByXPath(locators.Drafts)
         cy.wait(Timeout.md);
         methods.VisibilityofElement(locators.Table_Body_1)

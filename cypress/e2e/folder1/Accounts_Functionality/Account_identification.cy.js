@@ -128,6 +128,7 @@ describe('Account Identification Login', () => {
         // download
 
         methods.clickElementByXPath(locators.download)
+        methods.verifyDynamicExportFile('Factors.ai website Visitor Identification report')
         cy.wait(Timeout.xs)
 
     })

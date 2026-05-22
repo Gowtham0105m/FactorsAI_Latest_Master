@@ -51,14 +51,14 @@ describe('Explain Regression', () => {
         methods.assertElementContainsText(locators.Page_title1, 'Explain')
         methods.VisibilityofElement(locators.Explain_pageload)
         cy.wait(Timeout.xs)
-        methods.clickElement(locators.Explain_CreateNew)
+        methods.clickElementByXPath(locators.Explain_CreateNew)
         methods.clickElement(locators.Select_Analysis_Window)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Last_7_days)
 
     })
 
-    it('TC_RE_03, TC_RE_04, TC_RE_05, TC_RE_06 - Explain create  ', () => {
+    it('TC_RE_03, TC_RE_04, TC_RE_05, TC_RE_06 - Explain create and Add Filters  ', () => {
 
         const nowTime = dayjs().format('H:m:s');
         const testName = `Demo_${nowTime}`;
@@ -76,7 +76,7 @@ describe('Explain Regression', () => {
         methods.assertElementContainsText(locators.Page_title1, 'Explain')
         methods.VisibilityofElement(locators.Explain_pageload)
         cy.wait(Timeout.xs)
-        methods.clickElement(locators.Explain_CreateNew)
+        methods.clickElementByXPath(locators.Explain_CreateNew)
         methods.clickElement(locators.Select_Analysis_Window)
         cy.wait(Timeout.xs)
         methods.clickElementByXPath(locators.Last_7_days)
